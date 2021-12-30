@@ -1,6 +1,9 @@
 # smartversion
 Smartversion create archive with several versions of file or delta compression between versions
 
+Written by Gilles Vollant 2002-2022
+
+https://www.smartversion.com/
 
 For building:
 run ./external_rebuild.sh under Linux or Windows + WSL to generate the external folder
