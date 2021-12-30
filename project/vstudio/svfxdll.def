@@ -1,0 +1,229 @@
+LIBRARY svfxdll.dll
+
+EXPORTS
+        adler32                                  @1
+
+        crc32                                    @3
+        deflate                                  @4
+        deflateCopy                              @5
+        deflateEnd                               @6
+        deflateInit2_                            @7
+        deflateInit_                             @8
+        deflateParams                            @9
+        deflateReset                             @10
+        deflateSetDictionary                     @11
+        
+        inflate                                  @19
+        inflateEnd                               @20
+        inflateInit2_                            @21
+        inflateInit_                             @22
+        inflateReset                             @23
+        inflateSetDictionary                     @24
+        inflateSync                              @25
+
+        zlibVersion                              @27
+
+        zError                                   @36
+        inflateSyncPoint                         @37
+        get_crc_table                            @38
+        
+        inflateCopy                              @42
+
+
+        deflateBound                             @47
+        
+        zlibCompileFlags                         @50
+        deflatePrime                             @51
+
+        unzOpen                                  @61
+        unzClose                                 @62
+        unzGetGlobalInfo                         @63
+        unzGetCurrentFileInfo                    @64
+        unzGoToFirstFile                         @65
+        unzGoToNextFile                          @66
+        unzOpenCurrentFile                       @67
+        unzReadCurrentFile                       @68
+        unzOpenCurrentFile3                      @69
+        unztell                                  @70
+        unzeof                                   @71
+        unzCloseCurrentFile                      @72
+        unzGetGlobalComment                      @73
+        unzStringFileNameCompare                 @74
+        unzLocateFile                            @75
+        unzGetLocalExtrafield                    @76
+        unzOpen2                                 @77
+        unzOpenCurrentFile2                      @78
+        unzOpenCurrentFilePassword               @79
+
+        zipOpen                                  @80
+        zipOpenNewFileInZip                      @81
+        zipWriteInFileInZip                      @82
+        zipCloseFileInZip                        @83
+        zipClose                                 @84
+        zipOpenNewFileInZip2                     @86
+        zipCloseFileInZipRaw                     @87
+        zipOpen2                                 @88
+        zipOpenNewFileInZip3                     @89
+        zipOpenNewFileInZip4                     @90
+
+        unzGetFilePos                            @100
+        unzGoToFilePos                           @101
+
+        fill_win32_filefunc                      @110
+
+
+  ExtractDirectory
+  CheckDirectoryCrcWithRealFileSet
+  DfsRFreeAllDirTag
+  ConvertuLongIntelToLong 
+  ConvertDfsCrcInfoToDfsCrcInfoParam
+  ConvertDfsInfoDateToDfsTm
+  DfsRGetNextDir
+  DfsRGetNextDirIntro
+  DfsRReadGetPostFile
+  DfsFree
+  DfsRReadFileEncoded 
+  DfsMalloc
+;  CloseTagList
+  GetTag
+  DfsROpenNextFileAndTagBeforeFile
+  DfsRGetNextBlockType
+  DfsClose
+;  InsertDirectoryinDfsFile
+  FreeDirectoryInfo
+  DfsOpen
+  ReadDirectoryInfo
+  DfsGetNbDir
+ConvertOldDirectoryCommentStorage 
+dfUnicodeStrcmpi
+ConvertFileNameAndPath
+dfUnicodeStrlen
+ConvertAnsiToUnicode
+ConvertUnicodeToAnsi
+IsUnicodeApiSupported
+fncDestructorFileItem
+fncCompareFileItem
+FreeFileSet
+DfsGetDirType
+CreateFileSetForVersionInDirectory
+InitFileSet
+DeleteArray
+AddArrayElem
+ExtractPatch
+dfUnicodeCopyConcatAlloc
+;DoMakeDifWork 
+CloseApplyDif
+DoApplyDifWork
+ApplyDifInit
+ApplyDifInitEx
+;CloseMakeDif
+;FlushMakeDif 
+;MakeDifInit 
+ConvertDfsTmToDfsInfoDate 
+
+;DoReMixDfs
+;DoReMixDfsEx
+;DoGenerateSubDfsEmulEx
+;DoGenerateSubDfsEmulEx
+GetErrorInfoItemByTag 
+FreeErrorInfoBlock 
+FixIndenticalDifferentSizeInReadDirectoryInfo
+;CreateInsertingForReplaceCurrentDfs
+
+LowLevelRead
+LowLevelClose
+LowLevelCloseEx
+LowLevelGetSize
+OpenLowLevel
+;InitDefaultCompressionParam
+DfsRealloc
+GetCanonicalFileName
+DfsClearStruct
+DoMultiExtracting
+;DoAppendDfs
+;GetPositionConversionMapList
+SetDfsFeatureParam
+;CloseFileFullContentReadBuffer
+;GetFileFullContentReadBuffer
+
+CloseFileFullContentBuffer
+CloseFileFullContentBufferEx
+GetFileFullContentBuffer
+
+;MakeDifStFileIdentical
+
+DfsCrc32
+DfsAdler32
+
+FreeAllDirInfo
+ConvertNum64ToUnformattedStrAnsi
+GetTagBlockFloat
+GetDfsTagBlockFloat
+ReadAllDirInfo
+AdaptDfsFileFeature
+SetVirtualFileNameMaximumMemory = dfsSetVirtualFileNameMaximumMemory
+dfsSetVirtualFileNameMaximumMemory
+SetTempDirectory
+GetPhysicalMemoryKb
+
+CompareUnicodeAndAnsiString
+CompareUnicodeWithSimpleChar
+DispOutUnicodeString
+GetUnicodeLowerCaseSvf
+My_getch_console_char
+DfUnicodeStrcpy
+GetUnicodeStringDot
+ConvertUnicodeStringToLong
+CloseFileSearching
+GetUnicodeStringStar
+GetUnicodeStringDotDot
+DfUnicodeStrcat
+GetUnicodeStringDirectorySeparator
+GetNextItemContent
+SvfGetFullPathName
+InitFileSearching
+BuildFtaArrayFromZipfile
+ClearFileToAddArrayWithDelete
+SvfGetTempFileName
+GetUnicodeSVFPrefix
+MyDeleteFile
+SvfMoveFile
+GetUnicodeStringEmpty
+BuildZipFileFromFileSet
+dfUnicodeCopyAlloc
+BuildFileSetFromZipFile
+
+
+
+SetConst
+ComputeHashFile
+DoComputeHashFile
+DoComputeHashFileEx
+ComputeHashFileReadingBuffer
+ComputeHashFileReadingBufferEx
+ComputeHashFile
+ComputeHashFileEx
+ApplyMonofilePatch
+ApplyMonofilePatchMemory
+ApplyMonofilePatchMemoryEx
+ApplyMonofilePatchMemoryEx2
+ApplyMonofilePatchEx
+ApplyMonofilePatchEx2
+ApplyMultiFilePatchEx3
+ApplyMultiFilePatchMemoryEx3
+ApplyMonofilePatchMemoryToMemory
+ApplyMonofilePatchMemoryToMemoryEx
+GetSvfMonoPatchInfo
+GetSvfMonoPatchInfoEx
+GetSvfMonoPatchInfoMemory
+GetSvfMonoPatchInfoMemoryEx
+InitExtractSvfHelper
+InitExtractSvfHelperEx
+UninitExtractSvfHelper
+
+CompareTwoFile
+
+GetSvfMonoPatchInfoEx2
+GetSvfMonoPatchInfoMemoryEx2
+
+PerformCommandLine

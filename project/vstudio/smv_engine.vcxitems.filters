@@ -1,0 +1,522 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{ed2af0bb-b5be-4d77-ae33-394e66929607}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\lib">
+      <UniqueIdentifier>{4e071608-779a-4975-a525-f2f406aefd3c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\lib\engine">
+      <UniqueIdentifier>{d4f136b3-12cd-41b9-a1db-aec6b7f5ce36}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\lib\engine\patchstream">
+      <UniqueIdentifier>{ef10bebf-8e96-4ea7-a7ce-7e58a9b52b9b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\lib\engine\patchstream\common">
+      <UniqueIdentifier>{c4b3aeda-1cf7-4391-9f11-30231eb36683}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\lib\engine\patchstream\compress">
+      <UniqueIdentifier>{8dadc342-72fb-4330-82b7-ca7b8db13cb5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\lib\engine\patchstream\decompress">
+      <UniqueIdentifier>{358b1d6d-cac2-4232-80cd-40cc6aca2e64}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\lib\engine\patchstream\rebuild">
+      <UniqueIdentifier>{f5288553-30b0-433d-96b0-91412acbc98c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\lib\engine\svfile">
+      <UniqueIdentifier>{a493ea34-d219-415b-9957-c42a20957395}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\lib\engine\svfile\common">
+      <UniqueIdentifier>{80c9f86f-01c2-4f36-a7c0-7962cd717502}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\lib\engine\svfile\compress">
+      <UniqueIdentifier>{8dadc342-72fb-4330-82c7-ca7b8db13cb5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\lib\engine\svfile\decompress">
+      <UniqueIdentifier>{358b1d6d-cac2-4232-8ccd-40cc6aca2e64}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\lib\engine\svfile\rebuild">
+      <UniqueIdentifier>{f5288553-30b0-433d-9cb0-91412acbc98c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\lib\hash">
+      <UniqueIdentifier>{50c0978b-b4d9-4485-9ce2-9c960a7077b5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\lib\hash\internal">
+      <UniqueIdentifier>{2f6711aa-e10a-4bac-986d-79ff0e2c0af8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\lib\helper">
+      <UniqueIdentifier>{9fcf0470-f07a-44ef-b87e-69a3b79ba568}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\lib\helper\compress">
+      <UniqueIdentifier>{3e041eb4-91f8-4d00-8c76-4e3ee3e5f949}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\lib\helper\decompress">
+      <UniqueIdentifier>{e864f005-b2dd-4bbf-a722-701a71dc16c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\lib\helper\rebuild">
+      <UniqueIdentifier>{9e41e8a8-3d36-45ed-a4f0-ef6e8b2ca8c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\misc">
+      <UniqueIdentifier>{4d8547a3-6f68-4e33-8562-3cc0530ab860}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\cli">
+      <UniqueIdentifier>{2e9a7c69-2f75-46f2-a6e1-9a02f44c614d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\misc\minizip">
+      <UniqueIdentifier>{d26afd2e-1879-4d1f-83c0-bdb0adcd6638}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\SvfVersion.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\common\DfsOrigMemoryMap.h">
+      <Filter>src\lib\engine\patchstream\common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\common\DfsTlTyp.h">
+      <Filter>src\lib\engine\patchstream\common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\common\dfsToolWinRT.h">
+      <Filter>src\lib\engine\patchstream\common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\common\DfsType.h">
+      <Filter>src\lib\engine\patchstream\common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\common\difbasic.h">
+      <Filter>src\lib\engine\patchstream\common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\common\difstool.h">
+      <Filter>src\lib\engine\patchstream\common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\common\difstrm.h">
+      <Filter>src\lib\engine\patchstream\common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\common\difstrmi.h">
+      <Filter>src\lib\engine\patchstream\common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\common\fsWrSet.h">
+      <Filter>src\lib\engine\patchstream\common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\common\ltoolsc.h">
+      <Filter>src\lib\engine\patchstream\common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\common\abstractCompressDecompressCommon.h">
+      <Filter>src\lib\engine\patchstream\common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\common\abstractDecompress.h">
+      <Filter>src\lib\engine\patchstream\common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\common\compress_store.h">
+      <Filter>src\lib\engine\patchstream\common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\common\DfsIoHlp.h">
+      <Filter>src\lib\engine\patchstream\common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\common\DfsIOHlpInternal.h">
+      <Filter>src\lib\engine\patchstream\common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\compress\FSeqRept.h">
+      <Filter>src\lib\engine\patchstream\compress</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\compress\makdifst.h">
+      <Filter>src\lib\engine\patchstream\compress</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\compress\MkDifStm.h">
+      <Filter>src\lib\engine\patchstream\compress</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\compress\PreWkFnd.h">
+      <Filter>src\lib\engine\patchstream\compress</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\compress\abstractCompress.h">
+      <Filter>src\lib\engine\patchstream\compress</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\compress\FindSeq.h">
+      <Filter>src\lib\engine\patchstream\compress</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\decompress\ApDifStm.h">
+      <Filter>src\lib\engine\patchstream\decompress</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\decompress\apldifst.h">
+      <Filter>src\lib\engine\patchstream\decompress</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\rebuild\RamDifWk.h">
+      <Filter>src\lib\engine\patchstream\rebuild</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\rebuild\RamDifWS.h">
+      <Filter>src\lib\engine\patchstream\rebuild</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\rebuild\RamDifTl.h">
+      <Filter>src\lib\engine\patchstream\rebuild</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\common\DfsTagBlockFloatEndStruct.h">
+      <Filter>src\lib\engine\svfile\common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\common\DfsTagBlockFloatTool.h">
+      <Filter>src\lib\engine\svfile\common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\common\DfsTagDf.h">
+      <Filter>src\lib\engine\svfile\common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\common\DfsTagMg.h">
+      <Filter>src\lib\engine\svfile\common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\common\DfsTagStruct.h">
+      <Filter>src\lib\engine\svfile\common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\common\DirSet.h">
+      <Filter>src\lib\engine\svfile\common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\common\FileNameIndexer.h">
+      <Filter>src\lib\engine\svfile\common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\common\FileRefCounter.h">
+      <Filter>src\lib\engine\svfile\common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\common\ArrayTl.h">
+      <Filter>src\lib\engine\svfile\common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\common\DfsIntf.h">
+      <Filter>src\lib\engine\svfile\common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\common\DfsIntfInternal.h">
+      <Filter>src\lib\engine\svfile\common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\common\DfsIntfL.h">
+      <Filter>src\lib\engine\svfile\common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\common\DfsIntfWr.h">
+      <Filter>src\lib\engine\svfile\common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\common\DfsMFile.h">
+      <Filter>src\lib\engine\svfile\common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\common\DfsMtStr.h">
+      <Filter>src\lib\engine\svfile\common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\common\DfsSet.h">
+      <Filter>src\lib\engine\svfile\common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\common\DfsSetTl.h">
+      <Filter>src\lib\engine\svfile\common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\common\DfsStruc.h">
+      <Filter>src\lib\engine\svfile\common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\common\DfsTagBlockFloatEnd.h">
+      <Filter>src\lib\engine\svfile\common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\compress\DfsTagBlockFloatEndWr.h">
+      <Filter>src\lib\engine\svfile\compress</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\compress\DfsTagMgWr.h">
+      <Filter>src\lib\engine\svfile\compress</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\compress\DfsWrSet.h">
+      <Filter>src\lib\engine\svfile\compress</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\compress\AddingTool.h">
+      <Filter>src\lib\engine\svfile\compress</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\compress\AppendDfs.h">
+      <Filter>src\lib\engine\svfile\compress</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\decompress\DoExtracting.h">
+      <Filter>src\lib\engine\svfile\decompress</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\decompress\DfsRdSet.h">
+      <Filter>src\lib\engine\svfile\decompress</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\rebuild\DoExtrSubDfs.h">
+      <Filter>src\lib\engine\svfile\rebuild</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\rebuild\ReMixDfs.h">
+      <Filter>src\lib\engine\svfile\rebuild</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\hash\svf_md5.h">
+      <Filter>src\lib\hash</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\hash\svf_sha.h">
+      <Filter>src\lib\hash</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\hash\svf_sha256.h">
+      <Filter>src\lib\hash</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\hash\md5_locl.h">
+      <Filter>src\lib\hash</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\hash\md5ossl.h">
+      <Filter>src\lib\hash</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\hash\md32_common.h">
+      <Filter>src\lib\hash</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\hash\opensslconf.h">
+      <Filter>src\lib\hash</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\hash\opensslv.h">
+      <Filter>src\lib\hash</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\hash\sha.h">
+      <Filter>src\lib\hash</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\hash\sha_locl.h">
+      <Filter>src\lib\hash</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\hash\internal\md32_common.h">
+      <Filter>src\lib\hash\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\helper\SmartVersionBase.h">
+      <Filter>src\lib\helper</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\helper\compress\BuildHelper.h">
+      <Filter>src\lib\helper\compress</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\helper\decompress\ExtractHelper.h">
+      <Filter>src\lib\helper\decompress</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\helper\decompress\SmartVersionExtracter.h">
+      <Filter>src\lib\helper\decompress</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\helper\rebuild\ReMixHelper.h">
+      <Filter>src\lib\helper\rebuild</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\misc\svfdll.h">
+      <Filter>src\misc</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\misc\svfxdll.h">
+      <Filter>src\misc</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\cli\RawCompress.h">
+      <Filter>src\cli</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\cli\DfsCdLin.h">
+      <Filter>src\cli</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\misc\minizip\ioapi.h">
+      <Filter>src\misc\minizip</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\misc\minizip\iowin32.h">
+      <Filter>src\misc\minizip</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\misc\minizip\unzip.h">
+      <Filter>src\misc\minizip</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\misc\minizip\zip.h">
+      <Filter>src\misc\minizip</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\common\DfsIOHlpW.c">
+      <Filter>src\lib\engine\patchstream\common</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\common\DfsIoMemMutex.cpp">
+      <Filter>src\lib\engine\patchstream\common</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\common\dfsTool.c">
+      <Filter>src\lib\engine\patchstream\common</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\common\dfsToolPosix.c">
+      <Filter>src\lib\engine\patchstream\common</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\common\DfsToolsPosixCPP.cpp">
+      <Filter>src\lib\engine\patchstream\common</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\common\dfsToolw.c">
+      <Filter>src\lib\engine\patchstream\common</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\common\dfsToolWinRT.cpp">
+      <Filter>src\lib\engine\patchstream\common</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\common\difstool.c">
+      <Filter>src\lib\engine\patchstream\common</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\common\ltoolsc.c">
+      <Filter>src\lib\engine\patchstream\common</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\common\abstractDecompress.c">
+      <Filter>src\lib\engine\patchstream\common</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\common\compress_store.c">
+      <Filter>src\lib\engine\patchstream\common</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\common\DfsIOHlp.c">
+      <Filter>src\lib\engine\patchstream\common</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\common\DfsIOHlpPosix.c">
+      <Filter>src\lib\engine\patchstream\common</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\compress\makdifId.c">
+      <Filter>src\lib\engine\patchstream\compress</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\compress\makdifst.c">
+      <Filter>src\lib\engine\patchstream\compress</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\compress\MkDifStm.c">
+      <Filter>src\lib\engine\patchstream\compress</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\compress\PreWkFnd.c">
+      <Filter>src\lib\engine\patchstream\compress</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\compress\abstractCompress.c">
+      <Filter>src\lib\engine\patchstream\compress</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\compress\FindSeq.c">
+      <Filter>src\lib\engine\patchstream\compress</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\compress\FSeqRept.c">
+      <Filter>src\lib\engine\patchstream\compress</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\decompress\apldifst.c">
+      <Filter>src\lib\engine\patchstream\decompress</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\decompress\ApDifStm.c">
+      <Filter>src\lib\engine\patchstream\decompress</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\rebuild\RamDifWS.c">
+      <Filter>src\lib\engine\patchstream\rebuild</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\rebuild\RamDifTl.c">
+      <Filter>src\lib\engine\patchstream\rebuild</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\rebuild\RamDifWk.c">
+      <Filter>src\lib\engine\patchstream\rebuild</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\common\DfsTagBlockFloatTool.c">
+      <Filter>src\lib\engine\svfile\common</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\common\DfsTagMg.c">
+      <Filter>src\lib\engine\svfile\common</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\common\DirSet.c">
+      <Filter>src\lib\engine\svfile\common</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\common\FileNameIndexer.c">
+      <Filter>src\lib\engine\svfile\common</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\common\FileRefCounter.c">
+      <Filter>src\lib\engine\svfile\common</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\common\ArrayTl.c">
+      <Filter>src\lib\engine\svfile\common</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\common\DfsIntf.c">
+      <Filter>src\lib\engine\svfile\common</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\common\DfsIntfWr.c">
+      <Filter>src\lib\engine\svfile\common</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\common\DfsMFile.c">
+      <Filter>src\lib\engine\svfile\common</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\common\DfsMTool.c">
+      <Filter>src\lib\engine\svfile\common</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\common\DfsMtStr.c">
+      <Filter>src\lib\engine\svfile\common</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\common\DfsSet.c">
+      <Filter>src\lib\engine\svfile\common</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\common\DfsTagBlockFloatEnd.c">
+      <Filter>src\lib\engine\svfile\common</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\compress\DfsTagMgWr.c">
+      <Filter>src\lib\engine\svfile\compress</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\compress\DfsWrSet.c">
+      <Filter>src\lib\engine\svfile\compress</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\compress\AddingTool.c">
+      <Filter>src\lib\engine\svfile\compress</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\compress\AppendDfs.c">
+      <Filter>src\lib\engine\svfile\compress</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\compress\DfsTagBlockFloatEndWr.c">
+      <Filter>src\lib\engine\svfile\compress</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\decompress\DoExtracting.c">
+      <Filter>src\lib\engine\svfile\decompress</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\decompress\DfsRdSet.c">
+      <Filter>src\lib\engine\svfile\decompress</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\rebuild\ReMixDfs.c">
+      <Filter>src\lib\engine\svfile\rebuild</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\rebuild\DoExtrSubDfs.c">
+      <Filter>src\lib\engine\svfile\rebuild</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\hash\sha256_from_openssl.c">
+      <Filter>src\lib\hash</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\hash\md5_dgst.c">
+      <Filter>src\lib\hash</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\hash\openssl_ia_loc.cpp">
+      <Filter>src\lib\hash</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\hash\sha1dgst.c">
+      <Filter>src\lib\hash</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\helper\compress\BuildHelper.c">
+      <Filter>src\lib\helper\compress</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\helper\decompress\ExtractHelper.c">
+      <Filter>src\lib\helper\decompress</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\helper\rebuild\ReMixHelper.c">
+      <Filter>src\lib\helper\rebuild</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\misc\lzma_sdk_crc_and_crc64_init.cpp">
+      <Filter>src\misc</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\misc\SvfDemo.c">
+      <Filter>src\misc</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\misc\DfsInftTest.c">
+      <Filter>src\misc</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\misc\DfsMainTestDll.c">
+      <Filter>src\misc</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\cli\DifstrmMainPosix.c">
+      <Filter>src\cli</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\cli\RawCompress.c">
+      <Filter>src\cli</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\cli\DfsCdLin.c">
+      <Filter>src\cli</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\cli\DfsMain.c">
+      <Filter>src\cli</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\cli\difstrm.c">
+      <Filter>src\cli</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\helper\decompress\SmartVersionExtracter.c">
+      <Filter>src\lib\helper\decompress</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\common\svf_bzip_error_func.c">
+      <Filter>src\lib\engine\patchstream\common</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\misc\minizip\ioapi.c">
+      <Filter>src\misc\minizip</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\misc\minizip\iowin32.c">
+      <Filter>src\misc\minizip</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\misc\minizip\unzip.c">
+      <Filter>src\misc\minizip</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\misc\minizip\zip.c">
+      <Filter>src\misc\minizip</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\common\CRC_and_CRC64.cpp">
+      <Filter>src\lib\engine\patchstream\common</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

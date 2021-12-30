@@ -1,0 +1,268 @@
+URGENT
+- message d'erreur informatif (1,5 j)
+
+- perf sur gros fichier (3 j)
+- 64 bits (2 j)
+
+
+- joindre deux svf contigu (1,5 j)
+
+- Avoir une boite de dialogue de propriété du fichier (avec commentaire), donner l’information permettant de savoir si le fichier a été renommé (et l’ancien nom) dans les propriétés du fichier et son historique de version (avec boutons previous & next)
+- Améliorer la boite de dialogue permettant de lier les fichiers renommés d’une version à l’autre (actuellement assez laide)
+
+- FAIT: possibilité de choisir le répertoire temporaire, gestion de l’espace restant dans le répertoire temporaire (1 j)
+- FAIT: vérifier que l’on ne tente pas d’ajouter le SVF courant dans lui-même (pour prévenir une erreur lorsque l’on insère le répertoire courant)
+
+
+-----------------------
+
+V 2 discussion FL :
+- revoir menu contextuel treeview
+- XML
+- remplacement DFS : sauver position DFS, mettre fichier temps à la racine
+
+-------------------
+
+projet 1.5 - 2004
+
+- remontée erreur propre
+- 64 bits pour structure taille fichier
+- self extractor
+- sdk
+- fusion de 2 svf (1 : version 0 -> 15, second 15 -> 17)
+- gestion emplacement fichier temp
+
+interface
+- suppression de fichier
+- ajout de fichier
+- boite de dialogue fichier renommé
+- selection fine des fichiers à inclure dans un rep (treeview + check box, template sur extension)
+
+- historique pour chaque fichier (vue orienté fichier et non vue orientée version), avec possibilité suppression
+- white liste/black liste extension
+- DLL localisation (langue)
+- serait-il possible dans la liste des fichiers d'une version d'inclure dans le menu contextuel du
+          clic droit un item propriété donnant accès au propriétés du fichier en question.
+
+1) In the file list window, changed files in later versions could be shown in a different colour to
+      distinguish them and make it easy to see what's altered.
+
+2) When I select "Add new version" I'd like the program to default to the directory from which the
+         last version was created - or at least use the directory which was used as the base for the
+         very first version.
+
+
+eventuellement
+- md5 optionel
+- test très gros fichier
+
+check:
+1) The SmartVersion file cannot be in the same directory as that being stored.  Is this right?
+RE:this can be a problem, smartversion can try read to add SVF currently writing.
+     In an ideal smartversion (in the future, probably), Smartversion must do a check
+     to not includ the SVF file in itself
+
+
+
+---------------------------------------------------------------------------------------------------------
+
+
+
+
+
+- bad icon win95
+- déplacer la treeview fait noircir la status bar!
+- flickering toolbar & statusbar when resize
+
+Project 1.1/2.0 :
+- self extractor
+- pbs fichier renommé (améliorer boite dlg : drop (?), boutons clear, type & wizzard, fonct. remove & multiselect, tri)
+- selection fine des fichiers à inclure dans un rep (treeview + check box, template sur extension)
+- historique pour chaque fichier (vue orienté fichier et non vue orientée version)
+- fusion de 2 svf (1 : version 0 -> 15, second 15 -> 17)
+- delete a file
+    - translation
+
+plus eventuellement:
+- test très gros fichier
+- possibilité supprimer certain fichier (reconstruction)
+- optimisation pour subdfs (pas de recalcul)
+
+- Faire une shell extension comme celle de WinZip qui permet de selectionner un ensemble de fichier
+        et de creer une version
+------------------------------
+
+
+surcin:
+<<
+1) Il faudrait pouvoir supprimer une version
+2) On devrait pouvoir rajouter un fichier dans une version
+>>
+
+renaud_claude@yahoo.fr:
+<<
+- la création d'un SDK  pour pouvoir implémenter les fonctionnalité de versionning avec un outil
+        comme Archive XP de Sinan Karaka Par exemple, ou encore dans ses propre programmes (comme vous
+        l'avez fait avec le winimage sdk);
+- la possibilité de générer des patches autoextractibles (comme on peut déjà générer des images
+        de disquettes avec votre logiciel winimage);
+- Pourquoi ne pas utiliser un autre format de compression autre que le zip et qui soit plus
+        performant comme le format 7zip qui est lui aussi gratuit et ouvert;
+- et une petite dernière, il serait intéressant, plutôt que de devoir recréer des sous-ensemble
+        de patches, voir d'autres versions à un fichiers prêt, si on pouvait directement supprimer un
+        fichier/une version dans un fichier SVF.
+
+
+- serait-il possible dans ce même programme d'afficher la date des fichiers (dans la liste des fichiers
+         que contients une version) selon les paramètres internationaux de l'utilisateur; actuellement
+         le séparateur choisie dans les paramètres internationaux n'est pas respecté dans Smartversion :
+         par exemple, actuellement je vois un "/" alors que dans mes paramètres j'ai sélectionné ".".
+         C'est juste une préférence, une question, ce n'est point crucial.
+- serait-il possible dans la liste des fichiers d'une version d'inclure dans le menu contextuel du
+          clic droit un item propriété donnant accès au propriétés du fichier en question.
+
+
+>>
+
+
+adrian.ives@ntlworld.com:
+<<
+1) The SmartVersion file cannot be in the same directory as that being stored.  Is this right?
+RE:this can be a problem, smartversion can try read to add SVF currently writing.
+     In an ideal smartversion (in the future, probably), Smartversion must do a check
+     to not includ the SVF file in itself
+
+2) When performing updates the program creates copies of the files in the Windows Temp directory.
+ RE: yes. In an ideal Smartversion, a better error message must appear, If there is less space in
+     the Temp directory than the total size of the files in the svf file the process fails.
+
+I have some small suggestions right now ...
+
+1) In the file list window, changed files in later versions could be shown in a different colour to
+      distinguish them and make it easy to see what's altered.
+
+2) When I select "Add new version" I'd like the program to default to the directory from which the
+         last version was created - or at least use the directory which was used as the base for the
+         very first version.
+
+3) The directory that the program uses for temporary files should be user configurable, but default
+          to the Windows Temp directory.
+
+4) How about adding an Explorer handler to allow right clicking an svf file to get the options to add new versions?
+------------------------
+Thanks.  I missed the Status column, but that does exactly what I was looking for.  One other suggestion:
+    When clicking on the version in the tree view in the left hand pane, could the comments (or as much
+    of them as will fit) be displayed in the status bar? I am using the program primarily for version
+    controlling files, and I use the comment field to record what the main change is.
+
+>>
+
+
+Utile:
+- bitmaps
+- (menu contextuel foireux, texte treeview)
+
+
+----------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
+
+- self extractor
+----------------------------------------------------------------------------------
+
+v1.1
+- * revoir les boites de dialogues en intégrant dedans le parcours des répertoires
+
+-v1.5
+- * merger deux DFS comportant une version commune
+- support temps universel (df_timezone_bias) (actually only stored)
+- Pour la génération d'un DFS avec seulement certaines version, optimisez en ne recalculant pas le patch entre deux version déjà adjacente (plus tard...)
+
+
+other idea:
+
+- (multilng)
+- (icon toolbar dans menu)
+
+FUTURE : résolution conflit version (diff3,windiff), client/serveur (dans très longtemps)
+----------------------------------------------------------
+
+---------------------------------------------------------------------------------------------
+---------------------------------------------------------------
+
+
+
+
+--------------------------------------------------------------------------------------------------
+
+- icon treeview (suivant type version)
+----------------------------------
+todo kernel
+----------------------------------------------------
+----------------------------------------------------
+
+
+
+
+
+-----------------------------------------------------------
+-----------------------------------------------------------
+Pour info
+Seule le répertoire wdfistrm concerne l'interface (le reste est commun avec la version console)
+sauf DoExtracting.cpp qui ne contient pas d'interface (je pourrais le déplacer), miscutil.cpp est repris à l'indentique de WinImage (je pique deux ou 3 fonctions dedans)
+loadicon.cpp est à 80% une reprise de winimage (il récupère une icone et une chaine de caractère de description pour une extension de fichier)
+
+lrumenu.cpp est à 99% le fichier du même nom de winimage
+
+
+
+
+
+------------------------------------------------------
+
+
+I'm not really finished testing it out yet.  I've been looking for a program that will do this
+ for some time now, having previously tried a program called Keep-It (http://www.keep-it.com)
+ this does something similar though it hasn't been updated for some time now.  SmartVersion looks better and is easier to use.
+
+I would be using SmartVersion more for keeping "rollback" versions of files that
+    I'm working on rather than for distributing patches, but I can see how useful it could
+    be for that function.  So far I like it, but I'd like to test it for a few more days before making a final judgement.
+
+I have some small suggestions right now ...
+
+1) In the file list window, changed files in later versions could be shown in a different
+   colour to distinguish them and make it easy to see what's altered.
+
+2) When I select "Add new version" I'd like the program to default to the directory from which
+   the last version was created - or at least use the directory which was used as the base for the very first version.
+
+3) The directory that the program uses for temporary files should be user configurable, but default to the Windows Temp directory.
+
+4) How about adding an Explorer handler to allow right clicking an svf file to get the options to add new versions?
+
+
+
+If I find anything more I'll let you know.  Otherwise, if it survives a few more days testing :) then I'll buy it.
+
+
+-----Original Message-----
+From: Gilles Vollant [mailto:info@smartversion.com]
+Sent: 13 February 2003 23:49
+To: 'Adrian D. Ives'
+Subject: RE : SmartVersion 1.00.1000 - Trying to add new version gives Write Error
+
+
+
+1) this can be a problem, smartversion can try read to add SVF currently writing. In an ideal smartversion (in the future, probably), Smartversion must do a check to not includ the SVF file in itself
+
+2) yes. In an ideal Smartversion, a better error message must appear.
+
+I'll note this message in the TO-DO list for future version
+
+
+
+What is your opinion about smartversion (say really what you think, even if you did not find it perfect) ?
+
+

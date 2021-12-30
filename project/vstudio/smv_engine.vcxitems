@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <ItemsProjectGuid>{bcf2e37c-7454-4cce-8fd0-e2f13a90009b}</ItemsProjectGuid>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectCapability Include="SourceItemsFromImports" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\cli\DfsCdLin.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\cli\RawCompress.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\common\abstractCompressDecompressCommon.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\common\abstractDecompress.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\common\compress_store.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\common\DfsIoHlp.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\common\DfsIOHlpInternal.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\common\DfsOrigMemoryMap.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\common\DfsTlTyp.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\common\dfsToolWinRT.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\common\DfsType.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\common\difbasic.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\common\difstool.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\common\difstrm.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\common\difstrmi.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\common\fsWrSet.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\common\ltoolsc.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\compress\abstractCompress.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\compress\FindSeq.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\compress\FSeqRept.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\compress\makdifst.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\compress\MkDifStm.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\compress\PreWkFnd.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\decompress\ApDifStm.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\decompress\apldifst.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\rebuild\RamDifTl.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\rebuild\RamDifWk.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\rebuild\RamDifWS.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\common\ArrayTl.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\common\DfsIntf.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\common\DfsIntfInternal.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\common\DfsIntfL.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\common\DfsIntfWr.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\common\DfsMFile.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\common\DfsMtStr.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\common\DfsSet.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\common\DfsSetTl.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\common\DfsStruc.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\common\DfsTagBlockFloatEnd.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\common\DfsTagBlockFloatEndStruct.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\common\DfsTagBlockFloatTool.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\common\DfsTagDf.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\common\DfsTagMg.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\common\DfsTagStruct.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\common\DirSet.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\common\FileNameIndexer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\common\FileRefCounter.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\compress\AddingTool.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\compress\AppendDfs.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\compress\DfsTagBlockFloatEndWr.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\compress\DfsTagMgWr.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\compress\DfsWrSet.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\decompress\DfsRdSet.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\decompress\DoExtracting.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\rebuild\DoExtrSubDfs.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\rebuild\ReMixDfs.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\hash\internal\md32_common.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\hash\md32_common.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\hash\md5ossl.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\hash\md5_locl.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\hash\opensslconf.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\hash\opensslv.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\hash\sha.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\hash\sha_locl.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\hash\svf_md5.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\hash\svf_sha.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\hash\svf_sha256.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\helper\compress\BuildHelper.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\helper\decompress\ExtractHelper.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\helper\decompress\SmartVersionExtracter.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\helper\rebuild\ReMixHelper.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\lib\helper\SmartVersionBase.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\misc\minizip\ioapi.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\misc\minizip\iowin32.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\misc\minizip\unzip.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\misc\minizip\zip.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\misc\svfdll.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\misc\svfxdll.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\src\SvfVersion.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\cli\DfsCdLin.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\cli\DfsMain.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\cli\difstrm.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\cli\DifstrmMainPosix.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\cli\RawCompress.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\common\abstractDecompress.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\common\compress_store.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\common\CRC_and_CRC64.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\common\DfsIOHlp.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\common\DfsIOHlpPosix.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\common\DfsIOHlpW.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\common\DfsIoMemMutex.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\common\dfsTool.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\common\dfsToolPosix.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\common\DfsToolsPosixCPP.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\common\dfsToolw.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\common\dfsToolWinRT.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\common\difstool.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\common\ltoolsc.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\common\svf_bzip_error_func.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\compress\abstractCompress.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\compress\FindSeq.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\compress\FSeqRept.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\compress\makdifId.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\compress\makdifst.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\compress\MkDifStm.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\compress\PreWkFnd.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\decompress\ApDifStm.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\decompress\apldifst.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\rebuild\RamDifTl.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\rebuild\RamDifWk.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\rebuild\RamDifWS.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\common\ArrayTl.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\common\DfsIntf.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\common\DfsIntfWr.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\common\DfsMFile.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\common\DfsMTool.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\common\DfsMtStr.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\common\DfsSet.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\common\DfsTagBlockFloatEnd.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\common\DfsTagBlockFloatTool.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\common\DfsTagMg.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\common\DirSet.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\common\FileNameIndexer.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\common\FileRefCounter.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\compress\AddingTool.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\compress\AppendDfs.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\compress\DfsTagBlockFloatEndWr.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\compress\DfsTagMgWr.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\compress\DfsWrSet.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\decompress\DfsRdSet.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\decompress\DoExtracting.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\rebuild\DoExtrSubDfs.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\rebuild\ReMixDfs.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\hash\md5_dgst.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\hash\openssl_ia_loc.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\hash\sha1dgst.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\hash\sha256_from_openssl.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\helper\compress\BuildHelper.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\helper\decompress\ExtractHelper.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\helper\decompress\SmartVersionExtracter.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\helper\rebuild\ReMixHelper.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\misc\DfsInftTest.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\misc\DfsMainTestDll.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\misc\lzma_sdk_crc_and_crc64_init.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\misc\minizip\ioapi.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\misc\minizip\iowin32.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\misc\minizip\unzip.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\misc\minizip\zip.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\misc\SvfDemo.c" />
+  </ItemGroup>
+</Project>

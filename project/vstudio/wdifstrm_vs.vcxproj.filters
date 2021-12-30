@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{39cc431a-79a9-4f0f-8fc9-ed84f02c68be}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="WinGui">
+      <UniqueIdentifier>{199432b2-1c52-4821-97e5-b9fb7602f665}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WinGui\DropSrv">
+      <UniqueIdentifier>{41a9f4f0-77c1-4974-8153-d535f814789c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{3bf68b93-7fa7-4cba-9800-51fe665c0918}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+    <Filter Include="Resource Files\dd">
+      <UniqueIdentifier>{961af104-af14-4eaa-aad6-90f5aeef7902}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\wdifstrm\DlgLnkNM.cpp">
+      <Filter>WinGui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\wdifstrm\ExtInfo.cpp">
+      <Filter>WinGui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\wdifstrm\GuiItem.cpp">
+      <Filter>WinGui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\wdifstrm\LoadIcon.cpp">
+      <Filter>WinGui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\wdifstrm\LruMenu.cpp">
+      <Filter>WinGui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\wdifstrm\MISCUTIL.CPP">
+      <Filter>WinGui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\wdifstrm\ml_hyperlink.cpp">
+      <Filter>WinGui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\wdifstrm\SaveParam.cpp">
+      <Filter>WinGui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\wdifstrm\uiMain.cpp">
+      <Filter>WinGui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\wdifstrm\wdifstrm.cpp">
+      <Filter>WinGui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\wdifstrm\DATAOBJ.CPP">
+      <Filter>WinGui\DropSrv</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\wdifstrm\DROPSRC.CPP">
+      <Filter>WinGui\DropSrv</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\wdifstrm\Droputil.cpp">
+      <Filter>WinGui\DropSrv</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\wdifstrm\DrpOleUt.cpp">
+      <Filter>WinGui\DropSrv</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\wdifstrm\ENUMFETC.C">
+      <Filter>WinGui\DropSrv</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\wdifstrm\FXASSERT.CPP">
+      <Filter>WinGui\DropSrv</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\wdifstrm\IDLIST.CPP">
+      <Filter>WinGui\DropSrv</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\wdifstrm\UTIL.CPP">
+      <Filter>WinGui\DropSrv</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\wdifstrm\IOConfig.cpp">
+      <Filter>WinGui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\wdifstrm\ltoolsCPP.cpp">
+      <Filter>WinGui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\wdifstrm\RegCode.cpp">
+      <Filter>WinGui</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="difbasic.h">
+      <Filter>WinGui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\wdifstrm\DlgLnkNM.h">
+      <Filter>WinGui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\wdifstrm\ExtInfo.h">
+      <Filter>WinGui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\wdifstrm\global.h">
+      <Filter>WinGui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\wdifstrm\GuiItem.h">
+      <Filter>WinGui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\wdifstrm\LoadIcon.h">
+      <Filter>WinGui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\wdifstrm\LruMenu.h">
+      <Filter>WinGui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\wdifstrm\MiscUtil.h">
+      <Filter>WinGui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\wdifstrm\ml_hyperlink.h">
+      <Filter>WinGui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\wdifstrm\SaveParam.h">
+      <Filter>WinGui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\wdifstrm\uiMain.h">
+      <Filter>WinGui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\wdifstrm\resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\wdifstrm\IOConfig.h">
+      <Filter>WinGui</Filter>
+    </ClInclude>
+    <ClInclude Include="lzma_dynamic.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ExtractHelper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\wdifstrm\ltoolsCPP.h">
+      <Filter>WinGui</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\src\wdifstrm\Df_multi.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\..\src\wdifstrm\Df_notok.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\..\src\wdifstrm\Df_singl.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\..\src\wdifstrm\down.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\..\src\wdifstrm\ENUMDESK.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\..\src\wdifstrm\large_to.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\..\src\wdifstrm\logosmv2.Bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\..\src\wdifstrm\smvapp4.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\..\src\wdifstrm\SPLIT.CUR">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\..\src\wdifstrm\tb_24_truecolor.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\..\src\wdifstrm\tbar.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\..\src\wdifstrm\wdifstrm.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\..\src\wdifstrm\wDifStrm.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\..\src\wdifstrm\DF_DROPC.CUR">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\..\src\wdifstrm\wdifstrm.rc">
+      <Filter>WinGui</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuildStep Include="md5\sha1-386.obj">
+      <Filter>WinGui</Filter>
+    </CustomBuildStep>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\src\wdifstrm\up.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+</Project>

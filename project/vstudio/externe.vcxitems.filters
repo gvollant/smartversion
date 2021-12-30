@@ -1,0 +1,1145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="bzip">
+      <UniqueIdentifier>{a6964981-1f2e-454b-bd79-559920d74b74}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="fastzlib">
+      <UniqueIdentifier>{8758cd51-3eea-4f6c-ba2e-251e549bc529}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="fastzlib\fastlz">
+      <UniqueIdentifier>{d1d63436-bf31-4e60-9a70-b3195096c61e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="fastzlib\lz4">
+      <UniqueIdentifier>{b41b0b3e-98b0-487a-9845-4c16cb5f012d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="fastzlib\lzfse">
+      <UniqueIdentifier>{226154d1-3cdd-47dd-b976-46710a4b9840}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="fastzlib\lzfse\src">
+      <UniqueIdentifier>{1b8784c9-084a-4209-9f63-dab433e41a1b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lzham">
+      <UniqueIdentifier>{c8364442-cda4-4cae-a81f-415260478fe7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lzham\include">
+      <UniqueIdentifier>{508a4363-f328-4521-9dd7-504f7509a72d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lzham\lzhamcomp">
+      <UniqueIdentifier>{e68bc221-bed3-4888-8735-4e1cae28eb1f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lzham\lzhamdecomp">
+      <UniqueIdentifier>{8796fb3d-b626-4927-93df-fd1c72b8917f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lzham\lzhamlib">
+      <UniqueIdentifier>{9a51121f-4245-4176-81dc-8b212148af57}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LZMASdk_C">
+      <UniqueIdentifier>{77b034d5-9f18-450e-9d78-b2393aabc738}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="xz">
+      <UniqueIdentifier>{91302bbc-4115-4027-a4e7-3b1ffd3d7d6e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="xz\src">
+      <UniqueIdentifier>{e82e1088-8111-42f3-9f8d-3d26e96ebd1a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="xz\src\common">
+      <UniqueIdentifier>{96b38246-0f2b-40cc-b06e-3e98bde2c852}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="xz\src\liblzma">
+      <UniqueIdentifier>{e72887b6-2ce5-4241-bafc-11d07e13a8db}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="xz\src\liblzma\api">
+      <UniqueIdentifier>{6c45893c-ef79-4eb7-b8d4-cb68062f6bb3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="xz\src\liblzma\check">
+      <UniqueIdentifier>{84ba3c2a-98bd-4630-8cb3-034223b26886}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="xz\src\liblzma\common">
+      <UniqueIdentifier>{d754c1f4-2752-4bdf-ae48-8bc6c8248d9d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="xz\src\liblzma\delta">
+      <UniqueIdentifier>{1c5d8ae8-917a-47ed-9842-4869d30ad82a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="xz\src\liblzma\lz">
+      <UniqueIdentifier>{658bf6af-fc0b-4aa1-8c04-95f18c07a99d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="xz\src\liblzma\lzma">
+      <UniqueIdentifier>{327afb9d-8454-4482-8807-14a927a32ce4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="xz\src\liblzma\simple">
+      <UniqueIdentifier>{ebdcaa48-3724-4a0d-9c80-d1122f739fc7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="xz\src\liblzma\rangecoder">
+      <UniqueIdentifier>{18feccb1-ba3d-4d9e-8db5-a416219f1549}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="xz\msvc">
+      <UniqueIdentifier>{c8d4d0eb-6825-4b0a-b519-1eb21ca3d514}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="zlib">
+      <UniqueIdentifier>{4b3a20e8-9e8e-47d4-a91f-c1cf38f92c60}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="zstd">
+      <UniqueIdentifier>{eac4f2e7-6239-4817-9f14-f217b41055fe}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\bzip\blocksort.c">
+      <Filter>bzip</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\bzip\bzlib.c">
+      <Filter>bzip</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\bzip\compress.c">
+      <Filter>bzip</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\bzip\crctable.c">
+      <Filter>bzip</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\bzip\decompress.c">
+      <Filter>bzip</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\bzip\huffman.c">
+      <Filter>bzip</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\bzip\randtable.c">
+      <Filter>bzip</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\fastlzlib\fastlzlib.c">
+      <Filter>fastzlib</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\fastlzlib\fastlz\fastlz.c">
+      <Filter>fastzlib\fastlz</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\fastlzlib\lz4\lz4frame.c">
+      <Filter>fastzlib\lz4</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\fastlzlib\lz4\xxhash.c">
+      <Filter>fastzlib\lz4</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\fastlzlib\lz4\lz4.c">
+      <Filter>fastzlib\lz4</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\fastlzlib\lz4\lz4hc.c">
+      <Filter>fastzlib\lz4</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\fastlzlib\lzfse\src\lzfse_decode.c">
+      <Filter>fastzlib\lzfse\src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\fastlzlib\lzfse\src\lzfse_decode_base.c">
+      <Filter>fastzlib\lzfse\src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\fastlzlib\lzfse\src\lzfse_encode.c">
+      <Filter>fastzlib\lzfse\src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\fastlzlib\lzfse\src\lzfse_encode_base.c">
+      <Filter>fastzlib\lzfse\src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\fastlzlib\lzfse\src\lzfse_fse.c">
+      <Filter>fastzlib\lzfse\src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\fastlzlib\lzfse\src\lzvn_decode_base.c">
+      <Filter>fastzlib\lzfse\src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\fastlzlib\lzfse\src\lzvn_encode_base.c">
+      <Filter>fastzlib\lzfse\src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\lzham\lzhamcomp\lzham_lzbase.cpp">
+      <Filter>lzham\lzhamcomp</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\lzham\lzhamcomp\lzham_lzcomp.cpp">
+      <Filter>lzham\lzhamcomp</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\lzham\lzhamcomp\lzham_lzcomp_internal.cpp">
+      <Filter>lzham\lzhamcomp</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\lzham\lzhamcomp\lzham_lzcomp_state.cpp">
+      <Filter>lzham\lzhamcomp</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\lzham\lzhamcomp\lzham_match_accel.cpp">
+      <Filter>lzham\lzhamcomp</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\lzham\lzhamcomp\lzham_pthreads_threading.cpp">
+      <Filter>lzham\lzhamcomp</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\lzham\lzhamcomp\lzham_win32_threading.cpp">
+      <Filter>lzham\lzhamcomp</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\lzham\lzhamdecomp\lzham_assert.cpp">
+      <Filter>lzham\lzhamdecomp</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\lzham\lzhamdecomp\lzham_checksum.cpp">
+      <Filter>lzham\lzhamdecomp</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\lzham\lzhamdecomp\lzham_huffman_codes.cpp">
+      <Filter>lzham\lzhamdecomp</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\lzham\lzhamdecomp\lzham_lzdecomp.cpp">
+      <Filter>lzham\lzhamdecomp</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\lzham\lzhamdecomp\lzham_lzdecompbase.cpp">
+      <Filter>lzham\lzhamdecomp</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\lzham\lzhamdecomp\lzham_mem.cpp">
+      <Filter>lzham\lzhamdecomp</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\lzham\lzhamdecomp\lzham_platform.cpp">
+      <Filter>lzham\lzhamdecomp</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\lzham\lzhamdecomp\lzham_prefix_coding.cpp">
+      <Filter>lzham\lzhamdecomp</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\lzham\lzhamdecomp\lzham_symbol_codec.cpp">
+      <Filter>lzham\lzhamdecomp</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\lzham\lzhamdecomp\lzham_timer.cpp">
+      <Filter>lzham\lzhamdecomp</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\lzham\lzhamdecomp\lzham_vector.cpp">
+      <Filter>lzham\lzhamdecomp</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\lzham\lzhamlib\lzham_lib.cpp">
+      <Filter>lzham\lzhamlib</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\lzma_sdk\C\7zArcIn.c">
+      <Filter>LZMASdk_C</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\lzma_sdk\C\MtDec.c">
+      <Filter>LZMASdk_C</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\lzma_sdk\C\XzCrc64Opt.c">
+      <Filter>LZMASdk_C</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\lzma_sdk\C\7zAlloc.c">
+      <Filter>LZMASdk_C</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\lzma_sdk\C\7zBuf.c">
+      <Filter>LZMASdk_C</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\lzma_sdk\C\7zBuf2.c">
+      <Filter>LZMASdk_C</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\lzma_sdk\C\7zCrc.c">
+      <Filter>LZMASdk_C</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\lzma_sdk\C\7zCrcOpt.c">
+      <Filter>LZMASdk_C</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\lzma_sdk\C\7zDec.c">
+      <Filter>LZMASdk_C</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\lzma_sdk\C\7zFile.c">
+      <Filter>LZMASdk_C</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\lzma_sdk\C\7zStream.c">
+      <Filter>LZMASdk_C</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\lzma_sdk\C\Alloc.c">
+      <Filter>LZMASdk_C</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\lzma_sdk\C\Bcj2.c">
+      <Filter>LZMASdk_C</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\lzma_sdk\C\Bra.c">
+      <Filter>LZMASdk_C</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\lzma_sdk\C\Bra86.c">
+      <Filter>LZMASdk_C</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\lzma_sdk\C\BraIA64.c">
+      <Filter>LZMASdk_C</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\lzma_sdk\C\CpuArch.c">
+      <Filter>LZMASdk_C</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\lzma_sdk\C\Delta.c">
+      <Filter>LZMASdk_C</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\lzma_sdk\C\LzFind.c">
+      <Filter>LZMASdk_C</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\lzma_sdk\C\LzFindMt.c">
+      <Filter>LZMASdk_C</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\lzma_sdk\C\Lzma2Dec.c">
+      <Filter>LZMASdk_C</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\lzma_sdk\C\Lzma2Enc.c">
+      <Filter>LZMASdk_C</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\lzma_sdk\C\Lzma86Dec.c">
+      <Filter>LZMASdk_C</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\lzma_sdk\C\Lzma86Enc.c">
+      <Filter>LZMASdk_C</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\lzma_sdk\C\LzmaDec.c">
+      <Filter>LZMASdk_C</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\lzma_sdk\C\LzmaEnc.c">
+      <Filter>LZMASdk_C</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\lzma_sdk\C\LzmaLib.c">
+      <Filter>LZMASdk_C</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\lzma_sdk\C\MtCoder.c">
+      <Filter>LZMASdk_C</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\lzma_sdk\C\Ppmd7.c">
+      <Filter>LZMASdk_C</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\lzma_sdk\C\Ppmd7Dec.c">
+      <Filter>LZMASdk_C</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\lzma_sdk\C\Ppmd7Enc.c">
+      <Filter>LZMASdk_C</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\lzma_sdk\C\LZMASDK_Sha256.c">
+      <Filter>LZMASdk_C</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\lzma_sdk\C\Threads.c">
+      <Filter>LZMASdk_C</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\lzma_sdk\C\Xz.c">
+      <Filter>LZMASdk_C</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\lzma_sdk\C\XzCrc64.c">
+      <Filter>LZMASdk_C</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\lzma_sdk\C\XzDec.c">
+      <Filter>LZMASdk_C</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\lzma_sdk\C\XzEnc.c">
+      <Filter>LZMASdk_C</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\lzma_sdk\C\XzIn.c">
+      <Filter>LZMASdk_C</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\common\tuklib_cpucores.c">
+      <Filter>xz\src\common</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\common\tuklib_mbstr_fw.c">
+      <Filter>xz\src\common</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\common\tuklib_mbstr_width.c">
+      <Filter>xz\src\common</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\common\tuklib_open_stdxxx.c">
+      <Filter>xz\src\common</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\common\tuklib_physmem.c">
+      <Filter>xz\src\common</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\common\tuklib_progname.c">
+      <Filter>xz\src\common</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\check\check.c">
+      <Filter>xz\src\liblzma\check</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\check\crc32_fast.c">
+      <Filter>xz\src\liblzma\check</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\check\crc32_table.c">
+      <Filter>xz\src\liblzma\check</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\check\crc64_fast.c">
+      <Filter>xz\src\liblzma\check</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\check\crc64_table.c">
+      <Filter>xz\src\liblzma\check</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\check\sha256.c">
+      <Filter>xz\src\liblzma\check</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\common\alone_decoder.c">
+      <Filter>xz\src\liblzma\common</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\common\alone_encoder.c">
+      <Filter>xz\src\liblzma\common</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\common\auto_decoder.c">
+      <Filter>xz\src\liblzma\common</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\common\block_buffer_decoder.c">
+      <Filter>xz\src\liblzma\common</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\common\block_buffer_encoder.c">
+      <Filter>xz\src\liblzma\common</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\common\block_decoder.c">
+      <Filter>xz\src\liblzma\common</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\common\block_encoder.c">
+      <Filter>xz\src\liblzma\common</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\common\block_header_decoder.c">
+      <Filter>xz\src\liblzma\common</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\common\block_header_encoder.c">
+      <Filter>xz\src\liblzma\common</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\common\block_util.c">
+      <Filter>xz\src\liblzma\common</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\common\common.c">
+      <Filter>xz\src\liblzma\common</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\common\easy_buffer_encoder.c">
+      <Filter>xz\src\liblzma\common</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\common\easy_decoder_memusage.c">
+      <Filter>xz\src\liblzma\common</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\common\easy_encoder.c">
+      <Filter>xz\src\liblzma\common</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\common\easy_encoder_memusage.c">
+      <Filter>xz\src\liblzma\common</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\common\easy_preset.c">
+      <Filter>xz\src\liblzma\common</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\common\filter_buffer_decoder.c">
+      <Filter>xz\src\liblzma\common</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\common\filter_buffer_encoder.c">
+      <Filter>xz\src\liblzma\common</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\common\filter_common.c">
+      <Filter>xz\src\liblzma\common</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\common\filter_decoder.c">
+      <Filter>xz\src\liblzma\common</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\common\filter_encoder.c">
+      <Filter>xz\src\liblzma\common</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\common\filter_flags_decoder.c">
+      <Filter>xz\src\liblzma\common</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\common\filter_flags_encoder.c">
+      <Filter>xz\src\liblzma\common</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\common\hardware_cputhreads.c">
+      <Filter>xz\src\liblzma\common</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\common\hardware_physmem.c">
+      <Filter>xz\src\liblzma\common</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\common\index.c">
+      <Filter>xz\src\liblzma\common</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\common\index_decoder.c">
+      <Filter>xz\src\liblzma\common</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\common\index_encoder.c">
+      <Filter>xz\src\liblzma\common</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\common\index_hash.c">
+      <Filter>xz\src\liblzma\common</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\common\stream_buffer_decoder.c">
+      <Filter>xz\src\liblzma\common</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\common\stream_buffer_encoder.c">
+      <Filter>xz\src\liblzma\common</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\common\stream_decoder.c">
+      <Filter>xz\src\liblzma\common</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\common\stream_encoder.c">
+      <Filter>xz\src\liblzma\common</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\common\stream_flags_common.c">
+      <Filter>xz\src\liblzma\common</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\common\stream_flags_decoder.c">
+      <Filter>xz\src\liblzma\common</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\common\stream_flags_encoder.c">
+      <Filter>xz\src\liblzma\common</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\common\vli_decoder.c">
+      <Filter>xz\src\liblzma\common</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\common\vli_encoder.c">
+      <Filter>xz\src\liblzma\common</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\common\vli_size.c">
+      <Filter>xz\src\liblzma\common</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\common\outqueue.c">
+      <Filter>xz\src\liblzma\common</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\common\stream_encoder_mt.c">
+      <Filter>xz\src\liblzma\common</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\delta\delta_common.c">
+      <Filter>xz\src\liblzma\delta</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\delta\delta_decoder.c">
+      <Filter>xz\src\liblzma\delta</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\delta\delta_encoder.c">
+      <Filter>xz\src\liblzma\delta</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\lz\lz_decoder.c">
+      <Filter>xz\src\liblzma\lz</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\lz\lz_encoder.c">
+      <Filter>xz\src\liblzma\lz</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\lz\lz_encoder_mf.c">
+      <Filter>xz\src\liblzma\lz</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\lzma\fastpos_table.c">
+      <Filter>xz\src\liblzma\lzma</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\lzma\lzma2_decoder.c">
+      <Filter>xz\src\liblzma\lzma</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\lzma\lzma2_encoder.c">
+      <Filter>xz\src\liblzma\lzma</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\lzma\lzma_decoder.c">
+      <Filter>xz\src\liblzma\lzma</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\lzma\lzma_encoder.c">
+      <Filter>xz\src\liblzma\lzma</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\lzma\lzma_encoder_optimum_fast.c">
+      <Filter>xz\src\liblzma\lzma</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\lzma\lzma_encoder_optimum_normal.c">
+      <Filter>xz\src\liblzma\lzma</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\lzma\lzma_encoder_presets.c">
+      <Filter>xz\src\liblzma\lzma</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\simple\arm.c">
+      <Filter>xz\src\liblzma\simple</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\simple\armthumb.c">
+      <Filter>xz\src\liblzma\simple</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\simple\ia64.c">
+      <Filter>xz\src\liblzma\simple</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\simple\powerpc.c">
+      <Filter>xz\src\liblzma\simple</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\simple\simple_coder.c">
+      <Filter>xz\src\liblzma\simple</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\simple\simple_decoder.c">
+      <Filter>xz\src\liblzma\simple</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\simple\simple_encoder.c">
+      <Filter>xz\src\liblzma\simple</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\simple\sparc.c">
+      <Filter>xz\src\liblzma\simple</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\simple\x86.c">
+      <Filter>xz\src\liblzma\simple</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\rangecoder\price_table.c">
+      <Filter>xz\src\liblzma\rangecoder</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\zlib\adler32.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\zlib\deflate.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\zlib\inffast.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\zlib\inflate.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\zlib\inftrees.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\zlib\trees.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\zlib\zutil.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\zstd\lib\common\entropy_common.c">
+      <Filter>zstd</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\zstd\lib\common\error_private.c">
+      <Filter>zstd</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\zstd\lib\common\fse_decompress.c">
+      <Filter>zstd</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\zstd\lib\common\pool.c">
+      <Filter>zstd</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\zstd\lib\common\threading.c">
+      <Filter>zstd</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\zstd\lib\common\zstd_common.c">
+      <Filter>zstd</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\zstd\lib\compress\fse_compress.c">
+      <Filter>zstd</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\zstd\lib\compress\hist.c">
+      <Filter>zstd</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\zstd\lib\compress\huf_compress.c">
+      <Filter>zstd</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\zstd\lib\compress\zstdmt_compress.c">
+      <Filter>zstd</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\zstd\lib\compress\zstd_compress.c">
+      <Filter>zstd</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\zstd\lib\compress\zstd_compress_literals.c">
+      <Filter>zstd</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\zstd\lib\compress\zstd_compress_sequences.c">
+      <Filter>zstd</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\zstd\lib\compress\zstd_compress_superblock.c">
+      <Filter>zstd</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\zstd\lib\compress\zstd_double_fast.c">
+      <Filter>zstd</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\zstd\lib\compress\zstd_fast.c">
+      <Filter>zstd</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\zstd\lib\compress\zstd_lazy.c">
+      <Filter>zstd</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\zstd\lib\compress\zstd_ldm.c">
+      <Filter>zstd</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\zstd\lib\compress\zstd_opt.c">
+      <Filter>zstd</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\zstd\lib\decompress\huf_decompress.c">
+      <Filter>zstd</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\zstd\lib\decompress\zstd_ddict.c">
+      <Filter>zstd</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\zstd\lib\decompress\zstd_decompress.c">
+      <Filter>zstd</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\zstd\lib\decompress\zstd_decompress_block.c">
+      <Filter>zstd</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\zstd\lib\dictBuilder\cover.c">
+      <Filter>zstd</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\zstd\lib\dictBuilder\divsufsort.c">
+      <Filter>zstd</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\zstd\lib\dictBuilder\fastcover.c">
+      <Filter>zstd</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\zstd\lib\dictBuilder\zdict.c">
+      <Filter>zstd</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\zlib\crc32.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\lzma_sdk\C\Sha256Opt.c">
+      <Filter>LZMASdk_C</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\lzma_sdk\C\LzFindOpt.c">
+      <Filter>LZMASdk_C</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\zlib\zlibcompress.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\bzip\bzlib.h">
+      <Filter>bzip</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\bzip\bzlib_private.h">
+      <Filter>bzip</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\fastlzlib\fastlzlib.h">
+      <Filter>fastzlib</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\fastlzlib\fastlz\fastlz.h">
+      <Filter>fastzlib\fastlz</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\fastlzlib\lz4\lz4frame.h">
+      <Filter>fastzlib\lz4</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\fastlzlib\lz4\lz4frame_static.h">
+      <Filter>fastzlib\lz4</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\fastlzlib\lz4\xxhash.h">
+      <Filter>fastzlib\lz4</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\fastlzlib\lz4\lz4.h">
+      <Filter>fastzlib\lz4</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\fastlzlib\lz4\lz4hc.h">
+      <Filter>fastzlib\lz4</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\fastlzlib\lzfse\src\lzfse.h">
+      <Filter>fastzlib\lzfse\src</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\fastlzlib\lzfse\src\lzfse_encode_tables.h">
+      <Filter>fastzlib\lzfse\src</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\fastlzlib\lzfse\src\lzfse_fse.h">
+      <Filter>fastzlib\lzfse\src</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\fastlzlib\lzfse\src\lzfse_internal.h">
+      <Filter>fastzlib\lzfse\src</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\fastlzlib\lzfse\src\lzfse_tunables.h">
+      <Filter>fastzlib\lzfse\src</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\fastlzlib\lzfse\src\lzvn_decode_base.h">
+      <Filter>fastzlib\lzfse\src</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\fastlzlib\lzfse\src\lzvn_encode_base.h">
+      <Filter>fastzlib\lzfse\src</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\lzham\include\lzham.h">
+      <Filter>lzham\include</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\lzham\include\lzham_static_lib.h">
+      <Filter>lzham\include</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\lzham\lzhamcomp\lzham_comp.h">
+      <Filter>lzham\lzhamcomp</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\lzham\lzhamcomp\lzham_lzbase.h">
+      <Filter>lzham\lzhamcomp</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\lzham\lzhamcomp\lzham_lzcomp_internal.h">
+      <Filter>lzham\lzhamcomp</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\lzham\lzhamcomp\lzham_match_accel.h">
+      <Filter>lzham\lzhamcomp</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\lzham\lzhamcomp\lzham_null_threading.h">
+      <Filter>lzham\lzhamcomp</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\lzham\lzhamcomp\lzham_pthreads_threading.h">
+      <Filter>lzham\lzhamcomp</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\lzham\lzhamcomp\lzham_threading.h">
+      <Filter>lzham\lzhamcomp</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\lzham\lzhamcomp\lzham_win32_threading.h">
+      <Filter>lzham\lzhamcomp</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\lzham\lzhamdecomp\lzham_assert.h">
+      <Filter>lzham\lzhamdecomp</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\lzham\lzhamdecomp\lzham_checksum.h">
+      <Filter>lzham\lzhamdecomp</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\lzham\lzhamdecomp\lzham_config.h">
+      <Filter>lzham\lzhamdecomp</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\lzham\lzhamdecomp\lzham_core.h">
+      <Filter>lzham\lzhamdecomp</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\lzham\lzhamdecomp\lzham_decomp.h">
+      <Filter>lzham\lzhamdecomp</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\lzham\lzhamdecomp\lzham_helpers.h">
+      <Filter>lzham\lzhamdecomp</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\lzham\lzhamdecomp\lzham_huffman_codes.h">
+      <Filter>lzham\lzhamdecomp</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\lzham\lzhamdecomp\lzham_lzdecompbase.h">
+      <Filter>lzham\lzhamdecomp</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\lzham\lzhamdecomp\lzham_math.h">
+      <Filter>lzham\lzhamdecomp</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\lzham\lzhamdecomp\lzham_mem.h">
+      <Filter>lzham\lzhamdecomp</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\lzham\lzhamdecomp\lzham_platform.h">
+      <Filter>lzham\lzhamdecomp</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\lzham\lzhamdecomp\lzham_prefix_coding.h">
+      <Filter>lzham\lzhamdecomp</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\lzham\lzhamdecomp\lzham_symbol_codec.h">
+      <Filter>lzham\lzhamdecomp</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\lzham\lzhamdecomp\lzham_timer.h">
+      <Filter>lzham\lzhamdecomp</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\lzham\lzhamdecomp\lzham_traits.h">
+      <Filter>lzham\lzhamdecomp</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\lzham\lzhamdecomp\lzham_types.h">
+      <Filter>lzham\lzhamdecomp</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\lzham\lzhamdecomp\lzham_utils.h">
+      <Filter>lzham\lzhamdecomp</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\lzham\lzhamdecomp\lzham_vector.h">
+      <Filter>lzham\lzhamdecomp</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\lzma_sdk\C\7z.h">
+      <Filter>LZMASdk_C</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\lzma_sdk\C\7zAlloc.h">
+      <Filter>LZMASdk_C</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\lzma_sdk\C\7zBuf.h">
+      <Filter>LZMASdk_C</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\lzma_sdk\C\7zCrc.h">
+      <Filter>LZMASdk_C</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\lzma_sdk\C\7zFile.h">
+      <Filter>LZMASdk_C</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\lzma_sdk\C\7zVersion.h">
+      <Filter>LZMASdk_C</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\lzma_sdk\C\Alloc.h">
+      <Filter>LZMASdk_C</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\lzma_sdk\C\Bcj2.h">
+      <Filter>LZMASdk_C</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\lzma_sdk\C\Bra.h">
+      <Filter>LZMASdk_C</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\lzma_sdk\C\CpuArch.h">
+      <Filter>LZMASdk_C</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\lzma_sdk\C\Delta.h">
+      <Filter>LZMASdk_C</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\lzma_sdk\C\LzFind.h">
+      <Filter>LZMASdk_C</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\lzma_sdk\C\LzFindMt.h">
+      <Filter>LZMASdk_C</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\lzma_sdk\C\LzHash.h">
+      <Filter>LZMASdk_C</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\lzma_sdk\C\Lzma2Dec.h">
+      <Filter>LZMASdk_C</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\lzma_sdk\C\Lzma2Enc.h">
+      <Filter>LZMASdk_C</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\lzma_sdk\C\Lzma86.h">
+      <Filter>LZMASdk_C</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\lzma_sdk\C\LzmaDec.h">
+      <Filter>LZMASdk_C</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\lzma_sdk\C\LzmaEnc.h">
+      <Filter>LZMASdk_C</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\lzma_sdk\C\LzmaLib.h">
+      <Filter>LZMASdk_C</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\lzma_sdk\C\MtCoder.h">
+      <Filter>LZMASdk_C</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\lzma_sdk\C\Ppmd.h">
+      <Filter>LZMASdk_C</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\lzma_sdk\C\Ppmd7.h">
+      <Filter>LZMASdk_C</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\lzma_sdk\C\RotateDefs.h">
+      <Filter>LZMASdk_C</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\lzma_sdk\C\Sha256.h">
+      <Filter>LZMASdk_C</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\lzma_sdk\C\Threads.h">
+      <Filter>LZMASdk_C</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\lzma_sdk\C\Types.h">
+      <Filter>LZMASdk_C</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\lzma_sdk\C\Xz.h">
+      <Filter>LZMASdk_C</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\lzma_sdk\C\XzCrc64.h">
+      <Filter>LZMASdk_C</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\lzma_sdk\C\XzEnc.h">
+      <Filter>LZMASdk_C</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\common\mythread.h">
+      <Filter>xz\src\common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\common\sysdefs.h">
+      <Filter>xz\src\common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\common\tuklib_common.h">
+      <Filter>xz\src\common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\common\tuklib_config.h">
+      <Filter>xz\src\common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\common\tuklib_cpucores.h">
+      <Filter>xz\src\common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\common\tuklib_exit.h">
+      <Filter>xz\src\common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\common\tuklib_gettext.h">
+      <Filter>xz\src\common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\common\tuklib_integer.h">
+      <Filter>xz\src\common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\common\tuklib_mbstr.h">
+      <Filter>xz\src\common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\common\tuklib_open_stdxxx.h">
+      <Filter>xz\src\common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\common\tuklib_physmem.h">
+      <Filter>xz\src\common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\common\tuklib_progname.h">
+      <Filter>xz\src\common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\api\lzma.h">
+      <Filter>xz\src\liblzma\api</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\check\check.h">
+      <Filter>xz\src\liblzma\check</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\check\crc32_table_be.h">
+      <Filter>xz\src\liblzma\check</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\check\crc32_table_le.h">
+      <Filter>xz\src\liblzma\check</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\check\crc64_table_be.h">
+      <Filter>xz\src\liblzma\check</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\check\crc64_table_le.h">
+      <Filter>xz\src\liblzma\check</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\check\crc_macros.h">
+      <Filter>xz\src\liblzma\check</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\common\alone_decoder.h">
+      <Filter>xz\src\liblzma\common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\common\block_decoder.h">
+      <Filter>xz\src\liblzma\common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\common\block_encoder.h">
+      <Filter>xz\src\liblzma\common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\common\common.h">
+      <Filter>xz\src\liblzma\common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\common\easy_preset.h">
+      <Filter>xz\src\liblzma\common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\common\filter_common.h">
+      <Filter>xz\src\liblzma\common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\common\filter_decoder.h">
+      <Filter>xz\src\liblzma\common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\common\filter_encoder.h">
+      <Filter>xz\src\liblzma\common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\common\index.h">
+      <Filter>xz\src\liblzma\common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\common\index_encoder.h">
+      <Filter>xz\src\liblzma\common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\common\stream_decoder.h">
+      <Filter>xz\src\liblzma\common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\common\stream_encoder.h">
+      <Filter>xz\src\liblzma\common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\common\stream_flags_common.h">
+      <Filter>xz\src\liblzma\common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\common\outqueue.h">
+      <Filter>xz\src\liblzma\common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\delta\delta_common.h">
+      <Filter>xz\src\liblzma\delta</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\delta\delta_decoder.h">
+      <Filter>xz\src\liblzma\delta</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\delta\delta_encoder.h">
+      <Filter>xz\src\liblzma\delta</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\delta\delta_private.h">
+      <Filter>xz\src\liblzma\delta</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\lz\lz_decoder.h">
+      <Filter>xz\src\liblzma\lz</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\lz\lz_encoder.h">
+      <Filter>xz\src\liblzma\lz</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\lz\lz_encoder_hash.h">
+      <Filter>xz\src\liblzma\lz</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\lz\lz_encoder_hash_table.h">
+      <Filter>xz\src\liblzma\lz</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\lzma\fastpos.h">
+      <Filter>xz\src\liblzma\lzma</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\lzma\lzma2_decoder.h">
+      <Filter>xz\src\liblzma\lzma</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\lzma\lzma2_encoder.h">
+      <Filter>xz\src\liblzma\lzma</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\lzma\lzma_common.h">
+      <Filter>xz\src\liblzma\lzma</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\lzma\lzma_decoder.h">
+      <Filter>xz\src\liblzma\lzma</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\lzma\lzma_encoder.h">
+      <Filter>xz\src\liblzma\lzma</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\lzma\lzma_encoder_private.h">
+      <Filter>xz\src\liblzma\lzma</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\simple\simple_coder.h">
+      <Filter>xz\src\liblzma\simple</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\simple\simple_decoder.h">
+      <Filter>xz\src\liblzma\simple</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\simple\simple_encoder.h">
+      <Filter>xz\src\liblzma\simple</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\simple\simple_private.h">
+      <Filter>xz\src\liblzma\simple</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\rangecoder\price.h">
+      <Filter>xz\src\liblzma\rangecoder</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\rangecoder\range_common.h">
+      <Filter>xz\src\liblzma\rangecoder</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\rangecoder\range_decoder.h">
+      <Filter>xz\src\liblzma\rangecoder</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\rangecoder\range_encoder.h">
+      <Filter>xz\src\liblzma\rangecoder</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\xz\msvc\config.h">
+      <Filter>xz\msvc</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\zlib\deflate.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\zlib\inffast.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\zlib\inffixed.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\zlib\inftrees.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\zlib\trees.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\zlib\zconf.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\zlib\zlib.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\zlib\zutil.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\zstd\lib\common\bitstream.h">
+      <Filter>zstd</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\zstd\lib\common\error_private.h">
+      <Filter>zstd</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\zstd\lib\common\error_public.h">
+      <Filter>zstd</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\zstd\lib\common\fse.h">
+      <Filter>zstd</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\zstd\lib\common\huf.h">
+      <Filter>zstd</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\zstd\lib\common\mem.h">
+      <Filter>zstd</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\zstd\lib\common\threading.h">
+      <Filter>zstd</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\zstd\lib\common\xxhash.h">
+      <Filter>zstd</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\zstd\lib\common\zbuff.h">
+      <Filter>zstd</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\zstd\lib\common\zstd_internal.h">
+      <Filter>zstd</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\zstd\lib\common\zstd_trace.h">
+      <Filter>zstd</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\zstd\lib\compress\hist.h">
+      <Filter>zstd</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\zstd\lib\compress\zstdmt_compress.h">
+      <Filter>zstd</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\zstd\lib\compress\zstd_compress_literals.h">
+      <Filter>zstd</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\zstd\lib\compress\zstd_compress_sequences.h">
+      <Filter>zstd</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\zstd\lib\compress\zstd_compress_superblock.h">
+      <Filter>zstd</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\zstd\lib\compress\zstd_opt.h">
+      <Filter>zstd</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\zstd\lib\zstd.h">
+      <Filter>zstd</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\zlib\crc32.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\common\Makefile.inc">
+      <Filter>xz\src\liblzma\common</Filter>
+    </None>
+  </ItemGroup>
+</Project>

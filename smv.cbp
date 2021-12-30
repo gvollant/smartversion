@@ -1,0 +1,1091 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="smv" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/smv" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/smv" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-flto" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+			<Target title="Linux64Release">
+				<Option platforms="Unix;" />
+				<Option output="bin/Release64/smv" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release64/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O3" />
+					<Add option="-std=gnu99 -m64 -flto -fvisibility=hidden -fvisibility-inlines-hidden -ffunction-sections -fdata-sections" />
+					<Add option="-DCOMPILE_WRAP_MEMCPY_AS_MEMMOVE" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-Wl,--wrap=memcpy" />
+				</Linker>
+			</Target>
+			<Target title="Linux32Release">
+				<Option platforms="Unix;" />
+				<Option output="bin/Release32/smv" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release32/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O3" />
+					<Add option="-m32" />
+					<Add option="-std=gnu99 -m32 -flto -fvisibility=hidden -fvisibility-inlines-hidden -ffunction-sections -fdata-sections" />
+					<Add option="-D_FILE_OFFSET_BITS=64" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-m32" />
+				</Linker>
+			</Target>
+			<Target title="Linux64StaticRelease">
+				<Option platforms="Unix;" />
+				<Option output="bin/ReleaseStatic64/smv" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/ReleaseStatic64/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O3" />
+					<Add option="-std=gnu99 -m64 -flto -fvisibility=hidden -fvisibility-inlines-hidden -ffunction-sections -fdata-sections" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-static -lpthread" />
+				</Linker>
+			</Target>
+			<Target title="Linux32StaticRelease">
+				<Option platforms="Unix;" />
+				<Option output="bin/ReleaseStatic32/smv" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/ReleaseStatic32/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O3" />
+					<Add option="-m32" />
+					<Add option="-std=gnu99 -m32 -flto -fvisibility=hidden -fvisibility-inlines-hidden -ffunction-sections -fdata-sections" />
+					<Add option="-D_FILE_OFFSET_BITS=64" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-m32" />
+				</Linker>
+			</Target>
+			<Target title="Linux64ReleaseClang">
+				<Option platforms="Unix;" />
+				<Option output="bin/Release64Clang/smv" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release64Clang/" />
+				<Option type="1" />
+				<Option compiler="clang" />
+				<Compiler>
+					<Add option="-O3" />
+					<Add option="-m64 -fvisibility=hidden -fvisibility-inlines-hidden -ffunction-sections -fdata-sections" />
+					<Add option="-DCOMPILE_WRAP_MEMCPY_AS_MEMMOVE" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-Wl,--wrap=memcpy" />
+					<Add option="-static-libgcc" />
+					<Add option="-static-libstdc++" />
+				</Linker>
+			</Target>
+			<Target title="Linux64ReleaseStaticClang">
+				<Option platforms="Unix;" />
+				<Option output="bin/Release64StaticClang/smv" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release64StaticClang/" />
+				<Option type="1" />
+				<Option compiler="clang" />
+				<Compiler>
+					<Add option="-O3" />
+					<Add option="-m64 -fvisibility=hidden -fvisibility-inlines-hidden -ffunction-sections -fdata-sections" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-static -lpthread" />
+				</Linker>
+			</Target>
+			<Target title="Debug32">
+				<Option output="bin/Debug32/smv" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug32/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-m32" />
+					<Add option="-g" />
+					<Add option="-std=gnu99 -m32" />
+					<Add option="-D_FILE_OFFSET_BITS=64" />
+				</Compiler>
+				<Linker>
+					<Add option="-m32" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+			<Add option="-DPREVENT_COMPILE_PATCHBUILDER_EXT" />
+			<Add option="-DNO_OPENSSL_ASM" />
+			<Add option="-DDYNAMIC_CRC_TABLE" />
+			<Add option="-DNOCRYPT" />
+			<Add option="-DNOUNCRYPT" />
+			<Add option="-DHAVE_BZIP2" />
+			<Add option="-DHAVE_LZMASDK_DECOMPRESS" />
+			<Add option="-DTUKLIB_PHYSMEM_SYSCONF" />
+			<Add option="-D_7ZIP_ST" />
+			<Add option="-DHAVE_ZSTD" />
+			<Add option="-DXXzzH_NAMESPACE=" />
+			<Add option="-DZSTD_STATIC_LINKING_ONLY" />
+			<Add option="-DHAVE_FAST_LZLIB" />
+			<Add option="-DZFAST_USE_LZ4" />
+			<Add option="-DZFAST_USE_FASTLZ" />
+			<Add option="-DZFASTEXTERN=" />
+			<Add option="-DHAVE_CONFIG_H" />
+			<Add option="-DTUKLIB_SYMBOL_PREFIX=lzma_" />
+			<Add option="-DHAVE_XZUTILS" />
+			<Add option="-DLZMA_API_STATIC" />
+			<Add option="-DLZMA_INCLUDE_COMMON" />
+			<Add option="-DMYTHREAD_POSIX" />
+			<Add option="-DBZ_NO_STDIO" />
+			<Add option="-DHAS_STDINT_H=1" />
+			<Add option="-DPREVENT_COMPILE_XZEMBEDDED" />
+			<Add option="-DCOMPRESS_XZUTILS" />
+			<Add option="-DNO_XZ_CRC32_IN_CONFIG" />
+			<Add option="-DOPENSSL_NO_ASM" />
+			<Add option="-DNEVER_ASM" />
+			<Add option="-DOPENSSL_NO_INLINE_ASM" />
+			<Add option="-DTUKLIB_DOSLIKE" />
+			<Add option="-DLINUX" />
+			<Add option="-DUNCOMPRESS_LZHAM" />
+			<Add option="-DUSE_LZHAM_MINI_DECOMP_LIB" />
+			<Add option="-DLZHAM_INCLUDE_STDINT" />
+			<Add directory="external/xz/src/liblzma/api" />
+			<Add directory="external/xz/lib" />
+			<Add directory="external/xz/src/common" />
+			<Add directory="external/xz/src/liblzma/common" />
+			<Add directory="external/xz/src/liblzma/check" />
+			<Add directory="external/xz/src/liblzma/rangecoder" />
+			<Add directory="external/xz/src/liblzma/lz" />
+			<Add directory="external/xz/src/liblzma/lzma" />
+			<Add directory="external/xz/src/liblzma/delta" />
+			<Add directory="external/xz/src/liblzma/simple" />
+			<Add directory="external/xz" />
+			<Add directory="external/xz-embedded/include" />
+			<Add directory="external/xz-embedded/include/linux" />
+			<Add directory="external/zstd/lib" />
+			<Add directory="external/zstd/lib/common" />
+			<Add directory="external/zstd/lib/compress" />
+			<Add directory="external/zstd/lib/dictBuilder" />
+			<Add directory="external/zstd/lib/decompress" />
+			<Add directory="external/zlib" />
+			<Add directory="external/bzip" />
+			<Add directory="external/fastlzlib" />
+			<Add directory="external/fastlzlib/lz4" />
+			<Add directory="external/md5" />
+			<Add directory="external/liblzma" />
+			<Add directory="external/lzham" />
+			<Add directory="external/lzham/lzhamdecomp" />
+			<Add directory="external/lzham/lzhamcomp" />
+			<Add directory="external/lzham/include" />
+			<Add directory="external/lzham/lzhamlib" />
+			<Add directory="external/lzma_sdk/C" />
+			<Add directory="external" />
+			<Add directory="src/misc/minizip" />
+			<Add directory="." />
+		</Compiler>
+		<Linker>
+			<Add library="pthread" />
+		</Linker>
+		<Unit filename="external/bzip/blocksort.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/bzip/bzlib.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/bzip/bzlib.h" />
+		<Unit filename="external/bzip/bzlib_private.h" />
+		<Unit filename="external/bzip/compress.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/bzip/crctable.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/bzip/decompress.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/bzip/huffman.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/bzip/randtable.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/fastlzlib/fastlz/fastlz.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/fastlzlib/fastlzlib.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/fastlzlib/lz4/lz4.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/fastlzlib/lz4/lz4frame.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/fastlzlib/lz4/lz4hc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/fastlzlib/lz4/xxhash.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/lzham/include/lzham.h" />
+		<Unit filename="external/lzham/include/lzham_dynamic_lib.h" />
+		<Unit filename="external/lzham/include/lzham_static_lib.h" />
+		<Unit filename="external/lzham/lzhamcomp/lzham_comp.h" />
+		<Unit filename="external/lzham/lzhamcomp/lzham_lzbase.cpp">
+			<Option compile="0" />
+			<Option link="0" />
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="external/lzham/lzhamcomp/lzham_lzbase.h" />
+		<Unit filename="external/lzham/lzhamcomp/lzham_lzcomp.cpp">
+			<Option compile="0" />
+			<Option link="0" />
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="external/lzham/lzhamcomp/lzham_lzcomp_internal.cpp">
+			<Option compile="0" />
+			<Option link="0" />
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="external/lzham/lzhamcomp/lzham_lzcomp_internal.h" />
+		<Unit filename="external/lzham/lzhamcomp/lzham_lzcomp_state.cpp">
+			<Option compile="0" />
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="external/lzham/lzhamcomp/lzham_match_accel.cpp">
+			<Option compile="0" />
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="external/lzham/lzhamcomp/lzham_match_accel.h" />
+		<Unit filename="external/lzham/lzhamcomp/lzham_null_threading.h" />
+		<Unit filename="external/lzham/lzhamcomp/lzham_pthreads_threading.cpp">
+			<Option compile="0" />
+			<Option link="0" />
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="external/lzham/lzhamcomp/lzham_pthreads_threading.h" />
+		<Unit filename="external/lzham/lzhamcomp/lzham_threading.h" />
+		<Unit filename="external/lzham/lzhamcomp/lzham_win32_threading.cpp">
+			<Option compile="0" />
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="external/lzham/lzhamcomp/lzham_win32_threading.h" />
+		<Unit filename="external/lzham/lzhamdecomp/lzham_assert.cpp" />
+		<Unit filename="external/lzham/lzhamdecomp/lzham_assert.h" />
+		<Unit filename="external/lzham/lzhamdecomp/lzham_checksum.cpp" />
+		<Unit filename="external/lzham/lzhamdecomp/lzham_checksum.h" />
+		<Unit filename="external/lzham/lzhamdecomp/lzham_config.h" />
+		<Unit filename="external/lzham/lzhamdecomp/lzham_core.h" />
+		<Unit filename="external/lzham/lzhamdecomp/lzham_decomp.h" />
+		<Unit filename="external/lzham/lzhamdecomp/lzham_helpers.h" />
+		<Unit filename="external/lzham/lzhamdecomp/lzham_huffman_codes.cpp" />
+		<Unit filename="external/lzham/lzhamdecomp/lzham_huffman_codes.h" />
+		<Unit filename="external/lzham/lzhamdecomp/lzham_lzdecomp.cpp" />
+		<Unit filename="external/lzham/lzhamdecomp/lzham_lzdecompbase.cpp" />
+		<Unit filename="external/lzham/lzhamdecomp/lzham_lzdecompbase.h" />
+		<Unit filename="external/lzham/lzhamdecomp/lzham_math.h" />
+		<Unit filename="external/lzham/lzhamdecomp/lzham_mem.cpp" />
+		<Unit filename="external/lzham/lzhamdecomp/lzham_mem.h" />
+		<Unit filename="external/lzham/lzhamdecomp/lzham_platform.cpp" />
+		<Unit filename="external/lzham/lzhamdecomp/lzham_platform.h" />
+		<Unit filename="external/lzham/lzhamdecomp/lzham_prefix_coding.cpp" />
+		<Unit filename="external/lzham/lzhamdecomp/lzham_prefix_coding.h" />
+		<Unit filename="external/lzham/lzhamdecomp/lzham_symbol_codec.cpp" />
+		<Unit filename="external/lzham/lzhamdecomp/lzham_symbol_codec.h" />
+		<Unit filename="external/lzham/lzhamdecomp/lzham_timer.cpp" />
+		<Unit filename="external/lzham/lzhamdecomp/lzham_timer.h" />
+		<Unit filename="external/lzham/lzhamdecomp/lzham_traits.h" />
+		<Unit filename="external/lzham/lzhamdecomp/lzham_types.h" />
+		<Unit filename="external/lzham/lzhamdecomp/lzham_utils.h" />
+		<Unit filename="external/lzham/lzhamdecomp/lzham_vector.cpp" />
+		<Unit filename="external/lzham/lzhamdecomp/lzham_vector.h" />
+		<Unit filename="external/lzham/lzhamlib/lzham_decomplib.cpp" />
+		<Unit filename="external/lzham/lzhamlib/lzham_decomplib.h" />
+		<Unit filename="external/lzham/lzhamlib/lzham_lib.cpp">
+			<Option compile="0" />
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="external/lzma_sdk/C/7zAlloc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/lzma_sdk/C/7zArcIn.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/lzma_sdk/C/7zBuf.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/lzma_sdk/C/7zBuf2.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/lzma_sdk/C/7zCrc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/lzma_sdk/C/7zCrcOpt.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/lzma_sdk/C/7zDec.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/lzma_sdk/C/7zFile.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/lzma_sdk/C/7zStream.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/lzma_sdk/C/Alloc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/lzma_sdk/C/Bcj2.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/lzma_sdk/C/Bra.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/lzma_sdk/C/Bra86.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/lzma_sdk/C/BraIA64.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/lzma_sdk/C/CpuArch.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/lzma_sdk/C/CpuArch.h" />
+		<Unit filename="external/lzma_sdk/C/Delta.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/lzma_sdk/C/LZMASDK_Sha256.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/lzma_sdk/C/LzFind.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/lzma_sdk/C/LzFindOpt.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/lzma_sdk/C/Lzma2Dec.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/lzma_sdk/C/Lzma86Dec.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/lzma_sdk/C/LzmaDec.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/lzma_sdk/C/LzmaEnc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/lzma_sdk/C/Ppmd7.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/lzma_sdk/C/Ppmd7Dec.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/lzma_sdk/C/Ppmd7Enc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/lzma_sdk/C/Sha256Opt.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/lzma_sdk/C/Xz.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/lzma_sdk/C/XzCrc64.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/lzma_sdk/C/XzCrc64Opt.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/lzma_sdk/C/XzDec.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/lzma_sdk/C/XzIn.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/xz/src/common/tuklib_cpucores.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/xz/src/common/tuklib_mbstr_fw.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/xz/src/common/tuklib_mbstr_width.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/xz/src/common/tuklib_open_stdxxx.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/xz/src/common/tuklib_physmem.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/xz/src/common/tuklib_progname.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/xz/src/liblzma/check/check.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/xz/src/liblzma/check/crc32_fast.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/xz/src/liblzma/check/crc32_table.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/xz/src/liblzma/check/crc64_fast.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/xz/src/liblzma/check/crc64_table.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/xz/src/liblzma/check/sha256.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/xz/src/liblzma/common/alone_decoder.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/xz/src/liblzma/common/alone_encoder.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/xz/src/liblzma/common/auto_decoder.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/xz/src/liblzma/common/block_buffer_decoder.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/xz/src/liblzma/common/block_buffer_encoder.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/xz/src/liblzma/common/block_decoder.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/xz/src/liblzma/common/block_encoder.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/xz/src/liblzma/common/block_header_decoder.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/xz/src/liblzma/common/block_header_encoder.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/xz/src/liblzma/common/block_util.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/xz/src/liblzma/common/common.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/xz/src/liblzma/common/easy_buffer_encoder.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/xz/src/liblzma/common/easy_decoder_memusage.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/xz/src/liblzma/common/easy_encoder.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/xz/src/liblzma/common/easy_encoder_memusage.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/xz/src/liblzma/common/easy_preset.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/xz/src/liblzma/common/filter_buffer_decoder.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/xz/src/liblzma/common/filter_buffer_encoder.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/xz/src/liblzma/common/filter_common.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/xz/src/liblzma/common/filter_decoder.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/xz/src/liblzma/common/filter_encoder.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/xz/src/liblzma/common/filter_flags_decoder.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/xz/src/liblzma/common/filter_flags_encoder.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/xz/src/liblzma/common/hardware_cputhreads.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/xz/src/liblzma/common/hardware_physmem.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/xz/src/liblzma/common/index.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/xz/src/liblzma/common/index_decoder.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/xz/src/liblzma/common/index_encoder.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/xz/src/liblzma/common/index_hash.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/xz/src/liblzma/common/outqueue.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/xz/src/liblzma/common/outqueue.h" />
+		<Unit filename="external/xz/src/liblzma/common/stream_buffer_decoder.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/xz/src/liblzma/common/stream_buffer_encoder.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/xz/src/liblzma/common/stream_decoder.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/xz/src/liblzma/common/stream_encoder.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/xz/src/liblzma/common/stream_encoder_mt.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/xz/src/liblzma/common/stream_flags_common.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/xz/src/liblzma/common/stream_flags_decoder.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/xz/src/liblzma/common/stream_flags_encoder.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/xz/src/liblzma/common/vli_decoder.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/xz/src/liblzma/common/vli_encoder.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/xz/src/liblzma/common/vli_size.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/xz/src/liblzma/delta/delta_common.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/xz/src/liblzma/delta/delta_decoder.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/xz/src/liblzma/delta/delta_encoder.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/xz/src/liblzma/lz/lz_decoder.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/xz/src/liblzma/lz/lz_encoder.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/xz/src/liblzma/lz/lz_encoder_mf.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/xz/src/liblzma/lzma/fastpos_table.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/xz/src/liblzma/lzma/lzma2_decoder.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/xz/src/liblzma/lzma/lzma2_encoder.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/xz/src/liblzma/lzma/lzma_decoder.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/xz/src/liblzma/lzma/lzma_encoder.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/xz/src/liblzma/lzma/lzma_encoder_optimum_fast.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/xz/src/liblzma/lzma/lzma_encoder_optimum_normal.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/xz/src/liblzma/lzma/lzma_encoder_presets.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/xz/src/liblzma/rangecoder/price_table.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/xz/src/liblzma/simple/arm.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/xz/src/liblzma/simple/armthumb.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/xz/src/liblzma/simple/ia64.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/xz/src/liblzma/simple/powerpc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/xz/src/liblzma/simple/simple_coder.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/xz/src/liblzma/simple/simple_decoder.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/xz/src/liblzma/simple/simple_encoder.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/xz/src/liblzma/simple/sparc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/xz/src/liblzma/simple/x86.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/zlib/adler32.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/zlib/crc32.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/zlib/crc32.h" />
+		<Unit filename="external/zlib/deflate.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/zlib/inffast.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/zlib/inflate.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/zlib/inftrees.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/zlib/trees.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/zlib/zlibcompress.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/zlib/zutil.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/zstd/lib/common/bitstream.h" />
+		<Unit filename="external/zstd/lib/common/compiler.h" />
+		<Unit filename="external/zstd/lib/common/cpu.h" />
+		<Unit filename="external/zstd/lib/common/debug.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/zstd/lib/common/debug.h" />
+		<Unit filename="external/zstd/lib/common/entropy_common.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/zstd/lib/common/error_private.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/zstd/lib/common/error_private.h" />
+		<Unit filename="external/zstd/lib/common/fse.h" />
+		<Unit filename="external/zstd/lib/common/fse_decompress.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/zstd/lib/common/huf.h" />
+		<Unit filename="external/zstd/lib/common/mem.h" />
+		<Unit filename="external/zstd/lib/common/pool.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/zstd/lib/common/pool.h" />
+		<Unit filename="external/zstd/lib/common/portability_macros.h" />
+		<Unit filename="external/zstd/lib/common/threading.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/zstd/lib/common/threading.h" />
+		<Unit filename="external/zstd/lib/common/xxhash.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/zstd/lib/common/xxhash.h" />
+		<Unit filename="external/zstd/lib/common/zstd_common.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/zstd/lib/common/zstd_deps.h" />
+		<Unit filename="external/zstd/lib/common/zstd_internal.h" />
+		<Unit filename="external/zstd/lib/common/zstd_trace.h" />
+		<Unit filename="external/zstd/lib/compress/clevels.h" />
+		<Unit filename="external/zstd/lib/compress/fse_compress.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/zstd/lib/compress/hist.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/zstd/lib/compress/hist.h" />
+		<Unit filename="external/zstd/lib/compress/huf_compress.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/zstd/lib/compress/zstd_compress.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/zstd/lib/compress/zstd_compress_internal.h" />
+		<Unit filename="external/zstd/lib/compress/zstd_compress_literals.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/zstd/lib/compress/zstd_compress_literals.h" />
+		<Unit filename="external/zstd/lib/compress/zstd_compress_sequences.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/zstd/lib/compress/zstd_compress_sequences.h" />
+		<Unit filename="external/zstd/lib/compress/zstd_compress_superblock.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/zstd/lib/compress/zstd_compress_superblock.h" />
+		<Unit filename="external/zstd/lib/compress/zstd_cwksp.h" />
+		<Unit filename="external/zstd/lib/compress/zstd_double_fast.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/zstd/lib/compress/zstd_double_fast.h" />
+		<Unit filename="external/zstd/lib/compress/zstd_fast.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/zstd/lib/compress/zstd_fast.h" />
+		<Unit filename="external/zstd/lib/compress/zstd_lazy.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/zstd/lib/compress/zstd_lazy.h" />
+		<Unit filename="external/zstd/lib/compress/zstd_ldm.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/zstd/lib/compress/zstd_ldm.h" />
+		<Unit filename="external/zstd/lib/compress/zstd_ldm_geartab.h" />
+		<Unit filename="external/zstd/lib/compress/zstd_opt.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/zstd/lib/compress/zstd_opt.h" />
+		<Unit filename="external/zstd/lib/compress/zstdmt_compress.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/zstd/lib/compress/zstdmt_compress.h" />
+		<Unit filename="external/zstd/lib/decompress/huf_decompress.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/zstd/lib/decompress/huf_decompress_amd64.S" />
+		<Unit filename="external/zstd/lib/decompress/zstd_ddict.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/zstd/lib/decompress/zstd_ddict.h" />
+		<Unit filename="external/zstd/lib/decompress/zstd_decompress.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/zstd/lib/decompress/zstd_decompress_block.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/zstd/lib/decompress/zstd_decompress_block.h" />
+		<Unit filename="external/zstd/lib/decompress/zstd_decompress_internal.h" />
+		<Unit filename="external/zstd/lib/dictBuilder/cover.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/zstd/lib/dictBuilder/cover.h" />
+		<Unit filename="external/zstd/lib/dictBuilder/divsufsort.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/zstd/lib/dictBuilder/divsufsort.h" />
+		<Unit filename="external/zstd/lib/dictBuilder/fastcover.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/zstd/lib/dictBuilder/zdict.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/zstd/lib/legacy/zstd_legacy.h" />
+		<Unit filename="external/zstd/lib/legacy/zstd_v01.h" />
+		<Unit filename="external/zstd/lib/legacy/zstd_v02.h" />
+		<Unit filename="external/zstd/lib/legacy/zstd_v03.h" />
+		<Unit filename="external/zstd/lib/legacy/zstd_v04.h" />
+		<Unit filename="external/zstd/lib/legacy/zstd_v05.h" />
+		<Unit filename="external/zstd/lib/legacy/zstd_v06.h" />
+		<Unit filename="external/zstd/lib/legacy/zstd_v07.h" />
+		<Unit filename="external/zstd/lib/zdict.h" />
+		<Unit filename="external/zstd/lib/zstd.h" />
+		<Unit filename="external/zstd/lib/zstd_errors.h" />
+		<Unit filename="src/cli/DfsCdLin.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/cli/DfsCdLin.h" />
+		<Unit filename="src/cli/DifstrmMainPosix.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/cli/RawCompress.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/cli/RawCompress.h" />
+		<Unit filename="src/lib/engine/patchstream/common/ArrayTl.h" />
+		<Unit filename="src/lib/engine/patchstream/common/CRC_and_CRC64.cpp" />
+		<Unit filename="src/lib/engine/patchstream/common/DfsIOHlp.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/lib/engine/patchstream/common/DfsIOHlpInternal.h" />
+		<Unit filename="src/lib/engine/patchstream/common/DfsIOHlpPosix.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/lib/engine/patchstream/common/DfsIOHlpW.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/lib/engine/patchstream/common/DfsIntfL.h" />
+		<Unit filename="src/lib/engine/patchstream/common/DfsIoHlp.h" />
+		<Unit filename="src/lib/engine/patchstream/common/DfsIoMemMutex.cpp" />
+		<Unit filename="src/lib/engine/patchstream/common/DfsMFile.h" />
+		<Unit filename="src/lib/engine/patchstream/common/DfsMtStr.h" />
+		<Unit filename="src/lib/engine/patchstream/common/DfsOrigMemoryMap.h" />
+		<Unit filename="src/lib/engine/patchstream/common/DfsTlTyp.h" />
+		<Unit filename="src/lib/engine/patchstream/common/DfsToolsPosixCPP.cpp" />
+		<Unit filename="src/lib/engine/patchstream/common/DfsType.h" />
+		<Unit filename="src/lib/engine/patchstream/common/PreWkFnd.h" />
+		<Unit filename="src/lib/engine/patchstream/common/abstractCompress.h" />
+		<Unit filename="src/lib/engine/patchstream/common/abstractCompressDecompressCommon.h" />
+		<Unit filename="src/lib/engine/patchstream/common/abstractDecompress.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/lib/engine/patchstream/common/abstractDecompress.h" />
+		<Unit filename="src/lib/engine/patchstream/common/compress_store.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/lib/engine/patchstream/common/compress_store.h" />
+		<Unit filename="src/lib/engine/patchstream/common/dfsTool.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/lib/engine/patchstream/common/dfsToolPosix.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/lib/engine/patchstream/common/dfsToolWinRT.cpp" />
+		<Unit filename="src/lib/engine/patchstream/common/dfsToolWinRT.h" />
+		<Unit filename="src/lib/engine/patchstream/common/dfsToolw.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/lib/engine/patchstream/common/difbasic.h" />
+		<Unit filename="src/lib/engine/patchstream/common/difstool.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/lib/engine/patchstream/common/difstool.h" />
+		<Unit filename="src/lib/engine/patchstream/common/difstrm.h" />
+		<Unit filename="src/lib/engine/patchstream/common/difstrmi.h" />
+		<Unit filename="src/lib/engine/patchstream/common/fsWrSet.h" />
+		<Unit filename="src/lib/engine/patchstream/common/ltoolsc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/lib/engine/patchstream/common/ltoolsc.h" />
+		<Unit filename="src/lib/engine/patchstream/common/svf_bzip_error_func.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/lib/engine/patchstream/compress/FSeqRept.h" />
+		<Unit filename="src/lib/engine/patchstream/compress/FindSeq.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/lib/engine/patchstream/compress/FindSeq.h" />
+		<Unit filename="src/lib/engine/patchstream/compress/MkDifStm.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/lib/engine/patchstream/compress/MkDifStm.h" />
+		<Unit filename="src/lib/engine/patchstream/compress/PreWkFnd.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/lib/engine/patchstream/compress/PreWkFnd.h" />
+		<Unit filename="src/lib/engine/patchstream/compress/abstractCompress.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/lib/engine/patchstream/compress/abstractCompress.h" />
+		<Unit filename="src/lib/engine/patchstream/compress/makdifId.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/lib/engine/patchstream/compress/makdifst.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/lib/engine/patchstream/compress/makdifst.h" />
+		<Unit filename="src/lib/engine/patchstream/decompress/ApDifStm.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/lib/engine/patchstream/decompress/ApDifStm.h" />
+		<Unit filename="src/lib/engine/patchstream/decompress/apldifst.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/lib/engine/patchstream/decompress/apldifst.h" />
+		<Unit filename="src/lib/engine/patchstream/rebuild/RamDifTl.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/lib/engine/patchstream/rebuild/RamDifTl.h" />
+		<Unit filename="src/lib/engine/patchstream/rebuild/RamDifWS.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/lib/engine/patchstream/rebuild/RamDifWS.h" />
+		<Unit filename="src/lib/engine/patchstream/rebuild/RamDifWk.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/lib/engine/patchstream/rebuild/RamDifWk.h" />
+		<Unit filename="src/lib/engine/svfile/common/ArrayTl.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/lib/engine/svfile/common/ArrayTl.h" />
+		<Unit filename="src/lib/engine/svfile/common/DfsIntf.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/lib/engine/svfile/common/DfsIntf.h" />
+		<Unit filename="src/lib/engine/svfile/common/DfsIntfInternal.h" />
+		<Unit filename="src/lib/engine/svfile/common/DfsIntfWr.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/lib/engine/svfile/common/DfsIntfWr.h" />
+		<Unit filename="src/lib/engine/svfile/common/DfsMFile.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/lib/engine/svfile/common/DfsMTool.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/lib/engine/svfile/common/DfsMtStr.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/lib/engine/svfile/common/DfsSet.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/lib/engine/svfile/common/DfsSet.h" />
+		<Unit filename="src/lib/engine/svfile/common/DfsSetTl.h" />
+		<Unit filename="src/lib/engine/svfile/common/DfsStruc.h" />
+		<Unit filename="src/lib/engine/svfile/common/DfsTagBlockFloatEnd.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/lib/engine/svfile/common/DfsTagBlockFloatEnd.h" />
+		<Unit filename="src/lib/engine/svfile/common/DfsTagBlockFloatEndStruct.h" />
+		<Unit filename="src/lib/engine/svfile/common/DfsTagBlockFloatTool.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/lib/engine/svfile/common/DfsTagBlockFloatTool.h" />
+		<Unit filename="src/lib/engine/svfile/common/DfsTagDf.h" />
+		<Unit filename="src/lib/engine/svfile/common/DfsTagMg.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/lib/engine/svfile/common/DfsTagMg.h" />
+		<Unit filename="src/lib/engine/svfile/common/DfsTagStruct.h" />
+		<Unit filename="src/lib/engine/svfile/common/DirSet.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/lib/engine/svfile/common/DirSet.h" />
+		<Unit filename="src/lib/engine/svfile/common/FileNameIndexer.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/lib/engine/svfile/common/FileNameIndexer.h" />
+		<Unit filename="src/lib/engine/svfile/common/FileRefCounter.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/lib/engine/svfile/common/FileRefCounter.h" />
+		<Unit filename="src/lib/engine/svfile/compress/AddingTool.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/lib/engine/svfile/compress/AddingTool.h" />
+		<Unit filename="src/lib/engine/svfile/compress/AppendDfs.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/lib/engine/svfile/compress/AppendDfs.h" />
+		<Unit filename="src/lib/engine/svfile/compress/DfsTagBlockFloatEndWr.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/lib/engine/svfile/compress/DfsTagBlockFloatEndWr.h" />
+		<Unit filename="src/lib/engine/svfile/compress/DfsTagMgWr.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/lib/engine/svfile/compress/DfsTagMgWr.h" />
+		<Unit filename="src/lib/engine/svfile/compress/DfsWrSet.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/lib/engine/svfile/compress/DfsWrSet.h" />
+		<Unit filename="src/lib/engine/svfile/decompress/DfsRdSet.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/lib/engine/svfile/decompress/DfsRdSet.h" />
+		<Unit filename="src/lib/engine/svfile/decompress/DirSet.h" />
+		<Unit filename="src/lib/engine/svfile/decompress/DoExtracting.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/lib/engine/svfile/decompress/DoExtracting.h" />
+		<Unit filename="src/lib/engine/svfile/rebuild/DoExtrSubDfs.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/lib/engine/svfile/rebuild/DoExtrSubDfs.h" />
+		<Unit filename="src/lib/engine/svfile/rebuild/ReMixDfs.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/lib/engine/svfile/rebuild/ReMixDfs.h" />
+		<Unit filename="src/lib/hash/md32_common.h" />
+		<Unit filename="src/lib/hash/md5_dgst.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/lib/hash/md5_locl.h" />
+		<Unit filename="src/lib/hash/md5ossl.h" />
+		<Unit filename="src/lib/hash/mem_clr.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/lib/hash/opensslconf.h" />
+		<Unit filename="src/lib/hash/opensslv.h" />
+		<Unit filename="src/lib/hash/sha.h" />
+		<Unit filename="src/lib/hash/sha1dgst.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/lib/hash/sha256_from_openssl.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/lib/hash/sha_locl.h" />
+		<Unit filename="src/lib/hash/svf_md5.h" />
+		<Unit filename="src/lib/hash/svf_sha.h" />
+		<Unit filename="src/lib/hash/svf_sha256.h" />
+		<Unit filename="src/lib/helper/SmartVersionBase.h" />
+		<Unit filename="src/lib/helper/compress/BuildHelper.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/lib/helper/compress/BuildHelper.h" />
+		<Unit filename="src/lib/helper/decompress/ExtractHelper.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/lib/helper/decompress/ExtractHelper.h" />
+		<Unit filename="src/lib/helper/decompress/SmartVersionExtracter.h" />
+		<Unit filename="src/lib/helper/rebuild/ReMixHelper.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/lib/helper/rebuild/ReMixHelper.h" />
+		<Unit filename="src/misc/SvfVersion.h" />
+		<Unit filename="src/misc/lzma_sdk_crc_and_crc64_init.cpp" />
+		<Unit filename="src/misc/minizip/ioapi.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/misc/minizip/ioapi.h" />
+		<Unit filename="src/misc/minizip/iowin32.h" />
+		<Unit filename="src/misc/minizip/unzip.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/misc/minizip/unzip.h" />
+		<Unit filename="src/misc/minizip/zip.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/misc/minizip/zip.h" />
+		<Unit filename="src/misc/svfdll.h" />
+		<Unit filename="src/misc/svfxdll.h" />
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

@@ -1,0 +1,1270 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+#include "../SvfVersion.h"
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef VISUALSTUDIO6
+#include "afxres.h"
+#else
+#include <windows.h>
+#include <windowsx.h>
+#define IDC_STATIC -1
+#endif
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEU)
+#ifdef _WIN32
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_APPICON             ICON                    "smvapp4.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_SPLITTER            CURSOR                  "SPLIT.CUR"
+DRPFIL_NOTALLOWED       CURSOR                  "DF_NOTOK.CUR"
+DRPFIL_SINGLE           CURSOR                  "DF_SINGL.CUR"
+DRPFIL_MULTIPLE         CURSOR                  "DF_MULTI.CUR"
+DRPFIL_DROPCP           CURSOR                  "DF_DROPC.CUR"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// RT_MANIFEST
+//
+#ifndef RT_MANIFEST
+#define RT_MANIFEST                        24
+#define CREATEPROCESS_MANIFEST_RESOURCE_ID  1
+#endif
+
+
+#ifdef WINX64
+CREATEPROCESS_MANIFEST_RESOURCE_ID RT_MANIFEST "manifestx64.txt"
+#else
+#ifdef WINIA64
+CREATEPROCESS_MANIFEST_RESOURCE_ID RT_MANIFEST "manifestia64.txt"
+#else
+// 32 bits
+CREATEPROCESS_MANIFEST_RESOURCE_ID RT_MANIFEST "manifest.txt"
+#endif
+#endif
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_TOOLBAR_LARGE_TRUECOLOR BITMAP                  "tb_24_truecolor.bmp"
+IDB_APPICONABOUT        BITMAP                  "logosmv2.bmp"
+IDB_TOOLBAR_BITMAP      BITMAP                  "tbar.bmp"
+IDB_LARGE_TOOLBAR_BITMAP BITMAP                  "large_to.bmp"
+IDB_BITMAPDOWN          BITMAP                  "down.bmp"
+IDB_BITMAPUP            BITMAP                  "up.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 0,0,0,4
+ PRODUCTVERSION 0,0,0,4
+ FILEFLAGSMASK 0x17L
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x0L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "CompanyName", "Gilles Vollant Software"
+            VALUE "FileDescription", "SmartVersion"
+            VALUE "FileVersion", SVF_VERSION_STRING
+            VALUE "InternalName", "SmartVersion"
+            VALUE "LegalCopyright", "Copyright (C) 2002-" SVF_VERSION_YEAR_STRING " Gilles Vollant Software"
+            VALUE "OriginalFilename", "SmartVersion.exe"
+            VALUE "ProductName", "SmartVersion"
+            VALUE "ProductVersion", SVF_VERSION_STRING "." SVF_VERSION_YEAR_STRING
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+#endif
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDM_MAIN MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New...\tCtrl+N",             IDM_FILE_NEW
+        MENUITEM "New from &zipfile...",        IDM_FILE_NEW_FROM_ZIP
+        MENUITEM "&Open...\tCtrl+O",            IDM_FILE_OPEN
+        MENUITEM "Close",                       IDM_FILE_CLOSE
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       IDM_EXIT
+    END
+    POPUP "&Version"
+    BEGIN
+        MENUITEM "E&xtract...\tCtrl+X",         IDM_VERSION_EXTRACT
+        MENUITEM "Extract a version in a &zipfile...", IDM_VERSION_ZIPFILE
+        MENUITEM SEPARATOR
+MENUITEM "File properties...",         IDM_FILEPROPERTIES // crippleBeta
+        MENUITEM "Delete Files...",              IDM_FILESDELETE
+        MENUITEM "Insert Files...",              IDM_INSERTFILES
+        MENUITEM SEPARATOR
+        MENUITEM "&Add new version...",         IDM_VERSION_ADDNEWVERSION
+        MENUITEM "Add new version from z&ipfile...", 
+                                                IDM_VERSION_ADDNEWVERSIONFROMZIP
+
+        MENUITEM "Append version from SVF...",  IDM_APPENDSVFTOSVF
+        MENUITEM SEPARATOR
+        MENUITEM "Specify &base directory of a version...", 
+                                                IDM_VERSION_SPECIFYBASEDIR
+        MENUITEM "Version &properties...",      IDM_VERSION_VERSIONPROPERTIES
+
+        MENUITEM SEPARATOR
+        MENUITEM "Delete selected version...", IDM_VERSION_DELETE
+        MENUITEM "&Generate a SVF with version subset...", 
+                                                IDM_VERSION_GENERATESUBDFS
+    END
+    POPUP "Vie&w"
+    BEGIN
+        MENUITEM "Large Ico&ns",                IDM_VIEW_LARGEICON
+        MENUITEM "&Small Icons",                IDM_VIEW_SMALLICONS
+        MENUITEM "&List",                       IDM_VIEW_LIST
+        MENUITEM "&Details",                    IDM_VIEW_DETAILS
+    END
+    POPUP "&Options"
+    BEGIN
+        MENUITEM "Application setti&ngs...",    IDM_OPTION_SETTINGS
+        MENUITEM SEPARATOR
+        MENUITEM "&Registering...",             IDM_OPTION_REGISTER
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Contents",                   IDM_HELP_CONTENTS
+        MENUITEM "&Registering information",    IDM_HELP_CONTENTSORDER
+        MENUITEM SEPARATOR
+        MENUITEM "&SmartVersion home page",     IDM_HELP_WEBSITE
+        MENUITEM "Smart&Version registration page", IDM_HELP_WEBORDERSITE
+        MENUITEM "&WinImage home page",         IDM_HELP_WEBSITEWINIMAGE
+        MENUITEM SEPARATOR
+        MENUITEM "&About...",                   IDM_HELP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+ACCEL ACCELERATORS 
+BEGIN
+    "^N",           IDM_FILE_NEW,           ASCII   
+    VK_F1,          IDM_HELP_CONTENTS,      VIRTKEY 
+    VK_HELP,        IDM_HELP_CONTENTS,      VIRTKEY
+    VK_F12,         IDM_FILE_OPEN,          VIRTKEY, CONTROL
+    VK_INSERT,      IDM_VERSION_ADDNEWVERSION, VIRTKEY 
+    "^O",           IDM_FILE_OPEN,          ASCII   
+    "^X",           IDM_VERSION_EXTRACT,    ASCII   
+    VK_DELETE,      IDM_KEYBOARD_MENUDELETE, VIRTKEY
+    VK_F4,          IDM_SAVEPRNF, ALT, SHIFT, VIRTKEY
+    VK_F6,          IDM_SWITCHPANE,VIRTKEY
+//#VK_DELETE        
+//VK_HELP           
+END
+
+
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#ifndef VISUALSTUDIO6\r\n"
+    "#include ""afxres.h""\r\n"
+    "#else\r\n"
+    "#include <windows.h>\r\n"
+    "#include <windowsx.h>\r\n"
+    "#define IDC_STATIC -1\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUT DIALOGEX 72, 22, 257, 213
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "About SmartVersion"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    LTEXT           FULL_STRING_SMARTVERSION_VERSION ,IDC_STATIC,80,7,170,10
+//    LTEXT           "Copyright © 2002-2020 Gilles Vollant",IDC_STATIC,80,18,120,
+    LTEXT           FULL_STRING_SMARTVERSION_COPYRIGHT,IDC_STATIC,80,18,120,
+                    10
+    LTEXT           "Portions ©  Microsoft Corporation",IDC_STATIC,80,36,170,
+                    9
+    LTEXT           "Portions ©  Jean-loup Gailly and Mark Adler (ZLib)",
+                    IDC_STATIC,80,47,170,9
+    LTEXT           "Portions ©  François Liger",IDC_STATIC,80,58,170,9
+    LTEXT           FULL_STRING_SMARTVERSION_COPYRIGHT_2,IDC_STATIC,7,69,243,50
+    LTEXT           FULL_STRING_SMARTVERSION_COPYRIGHT_3,IDC_STATIC,7,129,243,50
+    LTEXT           "Internet email: info@winimage.com",IDC_STATIC,7,174,243,
+                    10
+
+
+
+    DEFPUSHBUTTON   "OK",IDOK,210,7+8,40,14
+
+    CONTROL         "http://www.smartversion.com",IDC_WEBSITELINKHL2,
+                    "mHyperlink",WS_TABSTOP,7,185,243,10
+    CONTROL         "http://www.winimage.com/winimage.htm",IDC_WEBSITELINKHL,
+                    "mHyperlink",WS_TABSTOP,7,196,243,10
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,80,31,170,1
+END
+
+IDD_SPLASH DIALOGEX 72, 22, 245, 170
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Smartversion"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    LTEXT           FULL_STRING_SMARTVERSION_VERSION,IDC_STATIC,65,5,180,10
+    LTEXT           FULL_STRING_SMARTVERSION_COPYRIGHT,IDC_STATIC,65,26,120,9
+    LTEXT           "Internet email: info@winimage.com",IDC_STATIC,65,36,180,
+                    9
+    LTEXT           "Portions ©  François Liger",IDC_STATIC,20,58,127,9
+    LTEXT           "Portions ©  Microsoft Corporation",IDC_STATIC,20,67,127,
+                    9
+    LTEXT           "Portions ©  Jean-loup Gailly and Mark Adler (ZLib)",
+                    IDC_STATIC,20,76,170,9
+    LTEXT           "English version",IDC_STATIC,20,102,224,9
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,20,112,210,1
+    LTEXT           "Unregistred version",IDC_REGLINE1,20,118,210,10
+    LTEXT           "DON'T FORGET TO REGISTER !",IDC_REGLINE2,20,130,210,20
+    DEFPUSHBUTTON   "OK",IDOK,102,150,40,14
+    CONTROL         "http://www.smartversion.com",IDC_WEBSITELINKHL,
+                    "mHyperlink",WS_TABSTOP,20,92,224,9
+END
+
+/*
+IDD_NEWVERSION_OLD DIALOGEX 0, 0, 270, 276
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Create a new SmartVersion File"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Initial &version name:",IDC_STATIC,7,4,256,30
+    EDITTEXT        IDC_EDITVERSIONNAME,14,14,244,14,ES_AUTOHSCROLL
+    GROUPBOX        "Files selection",IDC_STATIC,7,36,256,96
+    RADIOBUTTON     "Select one or several files",IDC_ADDFILE,14,50,240,10
+    EDITTEXT        IDC_EDITFILELIST,25,63,176,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "&Browse...",IDC_BROWSE_FILELIST,206,63,50,14
+    RADIOBUTTON     "Select a complete directory",IDC_ADDDIR,15,85,240,10
+    EDITTEXT        IDC_EDITDIR,25,98,176,15,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse...",IDC_BROWSE_DIR,206,98,50,14
+    CONTROL         "Include sub-&folders",IDC_INCLUDESUBDIR,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,25,117,230,10
+    GROUPBOX        "Storage",IDC_STATIC,7,135,256,42
+    RADIOBUTTON     "Store files content",IDC_STORECONTENT,15,147,84,10
+    RADIOBUTTON     "Only store files dates, sizes and checksums",
+                    IDC_STORECRC,15,160,154,10
+    GROUPBOX        "Version &Comment",IDC_STATIC,7,181,256,71
+    EDITTEXT        IDC_VERSIONPROPCOMMENT,14,192,244,55,ES_MULTILINE | 
+                    ES_AUTOHSCROLL | ES_WANTRETURN
+    PUSHBUTTON      "OK",IDOK,105,255,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,159,255,50,14
+    PUSHBUTTON      "&Help",IDC_GETHELP,213,255,50,14
+END
+
+IDD_ADDVERSION_OLD DIALOGEX 0, 0, 270, 278
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Add a new version"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Version &name",IDC_STATIC,7,2,256,30
+    EDITTEXT        IDC_EDITVERSIONNAME,14,13,244,14,ES_AUTOHSCROLL
+    GROUPBOX        "Files selection",IDC_STATIC,7,34,256,95
+    RADIOBUTTON     "Select one or several files",IDC_ADDFILE,14,48,240,10
+    EDITTEXT        IDC_EDITFILELIST,25,61,176,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "&Browse...",IDC_BROWSE_FILELIST,205,61,50,14
+    RADIOBUTTON     "Select a folder",IDC_ADDDIR,14,83,240,10
+    EDITTEXT        IDC_EDITDIR,25,96,176,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "B&rowse...",IDC_BROWSE_DIR,205,96,50,14
+    CONTROL         "Include sub-&folders",IDC_INCLUDESUBDIR,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,25,113,230,10
+    CONTROL         "Keep previous files not present in new version",
+                    IDC_ADDPREVIOUSFILEREMOVEDASIDENTICAL,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,14,142,240,10
+    GROUPBOX        "Files settings",IDC_STATIC,7,130,256,54
+    RADIOBUTTON     "Only add files already present in previous version",
+                    IDC_STOREONLYPRESENT,14,156,240,10
+    RADIOBUTTON     "Store all files, including new files",IDC_STOREALSONEW,
+                    14,168,240,10
+    GROUPBOX        "Version &Comment",IDC_STATIC,7,187,256,71
+    EDITTEXT        IDC_VERSIONPROPCOMMENT,14,199,244,55,ES_MULTILINE | 
+                    ES_AUTOHSCROLL | ES_WANTRETURN
+    PUSHBUTTON      "OK",IDOK,105,261,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,159,261,50,14
+    PUSHBUTTON      "&Help",IDC_GETHELP,213,261,50,14
+END
+*/
+
+IDD_COMPRESSION_PREF DIALOGEX 0, 0, 234, 365+(26*1)
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Settings"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "&Compression Preferences",IDC_STATIC,7,2,220,206 + (26*1)
+    GROUPBOX        "Compression method of chunk",IDC_STATIC,15,12,204,84 + (26*1)
+    RADIOBUTTON     "Compress using lz4 (ultrafast, incompatible with 3.00)", IDC_COMPRESSLZ4, 24, 24, 192, 10
+    RADIOBUTTON     "Compress using zstd (fast, incompatible with 3.60)", IDC_COMPRESSZSTD, 24, 34, 192, 10
+    RADIOBUTTON     "Compress using deflate",IDC_COMPRESSDEFLATE,24,44,192,10
+    RADIOBUTTON     "Compress using lzham (small, incompatible with 3.60)", IDC_COMPRESSLZHAM, 24, 54, 192, 10
+    RADIOBUTTON     "Compress using xz-l&zma (smaller, incompatible with 2.00)",IDC_COMPRESSLZMA,24,64,192,10
+    CTEXT           "Select if you would rather prefer a faster compression (larger file) or a smaller file (slower)",IDC_STATIC,25,54 + (26*1),184,38
+    CONTROL         "",IDC_SLIDECOMPRPREF,"msctls_trackbar32",TBS_AUTOTICKS | TBS_NOTICKS | WS_TABSTOP,24,70 + (26*1),186,15
+    LTEXT           "Smaller",IDC_STATIC,25,84 + (26*1),40,8
+	
+    CTEXT           "",IDC_STATICCOMPPREF,86,84 + (26*1),40,8
+    RTEXT           "Faster",IDC_STATIC,162,84 + (26*1),40,8
+    CONTROL         "&Manually select blocksize preference",IDC_MANUALYSELECTCPRPREF,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,100 + (26*1),140,10
+    LTEXT           "Select if you would rather prefer a faster search (larger file) or a smaller file (slower and more memory used)",IDC_STATIC,13,112 + (26*1),208,38
+    CONTROL         "",IDC_SLIDERCOMPRESSION,"msctls_trackbar32",TBS_AUTOTICKS | TBS_NOTICKS | WS_TABSTOP,13,130 + (26*1),208,15
+    LTEXT           "Smaller",IDC_STATIC,13,144 + (26*1),40,8
+	
+    CTEXT           "",IDC_STATICBLOCKSIZE,86,144 + (26*1),40,8
+    RTEXT           "Faster",IDC_STATIC,173,144 + (26*1),40,8
+    CONTROL         "S&trip identical file information (incompatible with 1.00)",IDC_STRIPIDENTICAL,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,16,158 + (26*1),200,10
+    CONTROL         "Compute &MD5 Checksum",IDC_MD5,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,16,173 + (26*1),200,10
+    CONTROL         "Compute &SHA1 Checksum",IDC_SHA1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,16,185 + (26*1),90,10
+    CONTROL         "Compute S&HA256 Checksum",IDC_SHA256,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,110,185 + (26*1),90,10
+    GROUPBOX        "&Files Preferences",IDC_STATIC,7,201 + (26*1),220,36
+    CONTROL         "&overwriting warning when extracting file",IDC_OVERWRITE,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,16,217 + (26*1),200,10
+    GROUPBOX        "&Temporary files",IDC_STATIC,7,241 + (26*1),220,67
+    CONTROL         "&Limit size of memory cache",IDC_CHECKCUSTVALUEMEMTEMPCACHE,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,253 + (26*1),140,10
+    EDITTEXT        IDC_EDITCUSTVALUEMEMTEMPCACHE,164,251 + (26*1),30,14
+    LTEXT           "KB",IDC_STATICCUSTVALUEMEMTEMPCACHE,200,253 + (26*1),20,10
+    CONTROL         "&Select a custom temporary directory",IDC_CHECKSELECTTEMPDIR,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,273 + (26*1),200,10
+    EDITTEXT        IDC_EDITTEMPDIR,14,287 + (26*1),154,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "&Browse",IDC_BROWSETEMPDIR,169,287 + (26*1),50,14
+    GROUPBOX        "User Interface",IDC_STATIC,7,311 + (26*1),220,30
+    LTEXT           "&Langage",IDC_STATIC,15,325 + (26*1),40,8
+    COMBOBOX        IDC_COMBOLANGAGESELECT,70,323 + (26*1),100,56,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "OK",IDOK,123,347 + (26*1),50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,177,347 + (26*1),50,14
+END
+
+IDD_COMPRESSION_PREF_OLD DIALOGEX 0, 0, 234, 220+14+30+22+12
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Settings"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "&Compression Preferences",IDC_STATIC,7,2,220,70+14+6+22+12
+
+    CONTROL         "&Manually select blocksize preference",
+                    IDC_MANUALYSELECTCPRPREF	,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,15,14,140,10
+
+    LTEXT           "Select if you would rather prefer a faster compression (larger file) or a smaller file (slower and more memory used)",
+                    IDC_STATIC,13,24,208,38
+    CONTROL         "",IDC_SLIDERCOMPRESSION,"msctls_trackbar32",
+                    TBS_AUTOTICKS | TBS_NOTICKS | WS_TABSTOP,13,49,208,15
+    LTEXT           "Smaller",IDC_STATIC,13,64,40,8
+    CTEXT           "",IDC_STATICBLOCKSIZE,86,64,40,8
+    RTEXT           "Faster",IDC_STATIC,173,64,40,8
+
+    CONTROL         "S&trip identical file information (incompatible with 1.00)",
+                    IDC_STRIPIDENTICAL,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,16,76,200,10
+
+
+    CONTROL         "Compress using xz-l&zma (incompatible with 2.00)",
+                    IDC_COMPRESSLZMA,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,16,86,200,10
+
+    CONTROL         "Compute &MD5 Checksum",
+                    IDC_MD5,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,16,86+2+12,200,10
+    CONTROL         "Compute &SHA1 Checksum",
+                    IDC_SHA1,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,16,96+4+12,80,10
+
+    CONTROL         "Compute S&HA256 Checksum",
+                    IDC_SHA256,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,110,96+4+12,80,10
+
+
+    GROUPBOX        "&Files Preferences",IDC_STATIC,7,84+14+22+12,220,36
+    CONTROL         "&overwriting warning when extracting file",IDC_OVERWRITE,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,16,100+14+22+12,200,10
+    GROUPBOX        "&Temporary files",IDC_STATIC,7,124+14+22+12,220,67
+
+    CONTROL         "&Limit size of memory cache",
+                    IDC_CHECKCUSTVALUEMEMTEMPCACHE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,15,136+14+22+12,140,10
+
+    EDITTEXT        IDC_EDITCUSTVALUEMEMTEMPCACHE,164,134+14+22+12,30,14,0
+    LTEXT           "KB",IDC_STATICCUSTVALUEMEMTEMPCACHE,200,136+14+22+12,20,10
+
+    CONTROL         "&Select a custom temporary directory",
+                    IDC_CHECKSELECTTEMPDIR,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,15,156+14+22+12,200,10
+    EDITTEXT        IDC_EDITTEMPDIR,14,170+14+22+12,154,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "&Browse",IDC_BROWSETEMPDIR,169,170+14+22+12,50,14
+
+    GROUPBOX        "User Interface",IDC_STATIC,7,208+22+12,220,30
+    LTEXT           "&Langage",IDC_STATIC,15,222+22+12,40,8
+    COMBOBOX        IDC_COMBOLANGAGESELECT,70,220+22+12,100,56,CBS_DROPDOWNLIST |
+        WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "OK",IDOK,123,200+14+30+22+12,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,177,200+14+30+22+12,50,14
+END
+
+IDD_BUILDSUBVERSION DIALOGEX 0, 0, 252, 130
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Generate a SmartVersion File with version subset"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    LTEXT           "You will create a Smartversion file which contain only the selected version",
+                    IDC_STATIC,7,7,238,26
+    GROUPBOX        "Initial version storage",IDC_STATIC,7,36,238,42
+    RADIOBUTTON     "&Store files content",IDC_STORECONTENT,15,50,75,10
+    RADIOBUTTON     "Only store files dates, sizes and &checksums",
+                    IDC_STORECRC,15,62,154,10
+    CONTROL         "&Recompress all data",
+                    IDC_PERFORMNEWCOMPRESSION,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,
+                    81,177,10
+    CONTROL         "&Load the new SmartVersion File after generating it",
+                    IDC_LOADNEWDFS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,
+                    93,177,10
+    DEFPUSHBUTTON   "OK",IDOK,87,109,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,141,109,50,14
+    PUSHBUTTON      "&Help",IDC_GETHELP,195,109,50,14
+END
+
+
+IDD_YESNOCANCALL DIALOGEX 10, 20, 269, 70
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            32514,IDC_ICONDB,7,12,21,20
+    CTEXT           "",IDC_LINE1,37,5,225,39,NOT WS_GROUP
+    DEFPUSHBUTTON   "&Yes",IDYES,29,49,40,14
+    PUSHBUTTON      "Yes to &all",IDC_YESALL,74,49,40,14
+    PUSHBUTTON      "&No",IDNO,119,49,40,14
+    PUSHBUTTON      "No to a&ll",IDC_NOALL,164,49,40,14
+    PUSHBUTTON      "Cancel",IDCANCEL,209,49,40,14
+END
+
+IDD_NEWVERSION_NOFILESELINFO DIALOGEX 0, 0, 270, 180
+//STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+STYLE  DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU| WS_POPUP | WS_THICKFRAME//|WS_CLIPCHILDREN
+CAPTION "Create a new SmartVersion File"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Initial &version name:",IDC_GROUPFIRSTVER,7,4,256,30
+    EDITTEXT        IDC_EDITVERSIONNAME,14,14,244,14,ES_AUTOHSCROLL
+    GROUPBOX        "Storage of first version",IDC_GROUPPREF,7,39,256,42
+    RADIOBUTTON     "Store files content",IDC_STORECONTENT,15,51,240,10
+    RADIOBUTTON     "Only store files dates, sizes and checksums",
+                    IDC_STORECRC,15,64,240,10
+    GROUPBOX        "Version &Comment:",IDC_GROUPCOMMENT,7,85,256,71
+    EDITTEXT        IDC_VERSIONPROPCOMMENT,14,96,244,55,ES_MULTILINE | 
+                    ES_AUTOHSCROLL | ES_WANTRETURN
+    PUSHBUTTON      "OK",IDOK,105,159,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,159,159,50,14
+    PUSHBUTTON      "&Help",IDC_GETHELP,213,159,50,14
+END
+
+IDD_ADDVERSION_NOFILESELINFO DIALOGEX 0, 0, 270, 185
+STYLE  DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU| WS_POPUP | WS_THICKFRAME//|WS_CLIPCHILDREN
+//STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION |   WS_SYSMENU
+CAPTION "Add a new version"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Version &name",IDC_GROUPFIRSTVER,7,2,256,30
+    EDITTEXT        IDC_EDITVERSIONNAME,14,14,244,14,ES_AUTOHSCROLL
+    GROUPBOX        "Files Settings",IDC_GROUPPREF,7,37,256,54
+    CONTROL         "&Keep previous files not present in new version",
+                    IDC_ADDPREVIOUSFILEREMOVEDASIDENTICAL,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,14,49,240,10
+    RADIOBUTTON     "Only add files already &present in previous version",
+                    IDC_STOREONLYPRESENT,14,63,240,10
+    RADIOBUTTON     "Store &all files, including new files",IDC_STOREALSONEW,
+                    14,75,240,10
+    GROUPBOX        "Version &Comment",IDC_GROUPCOMMENT,7,93,256,71
+    EDITTEXT        IDC_VERSIONPROPCOMMENT,14,105,244,55,ES_MULTILINE | 
+                    ES_AUTOHSCROLL | ES_WANTRETURN
+    PUSHBUTTON      "OK",IDOK,105,168,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,159,168,50,14
+    PUSHBUTTON      "&Help",IDC_GETHELP,213,168,50,14
+END
+
+IDD_REGISTER DIALOGEX 51, 55, 257, 71
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "SmartVersion Registration"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    LTEXT           "&Name:",-1,7,14,30,8
+    EDITTEXT        IDC_EDITNAMEREG,86,12,163,12,ES_AUTOHSCROLL
+    LTEXT           "&Registration code:",-1,7,33,67,8
+    EDITTEXT        IDC_EDITCRCREG,86,30,88,12,ES_PASSWORD | ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,28,49,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,83,49,50,14
+    PUSHBUTTON      "&Help",IDC_GETHELP,138,49,50,14
+END
+
+IDD_LINKRENAMED DIALOGEX 0, 0, 339, 292
+// STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+STYLE  DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU| WS_POPUP | WS_THICKFRAME|WS_CLIPCHILDREN
+CAPTION "Linking renamed files"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    LTEXT           "Select a file on both list below and then Select Add to link renamed file",IDC_STATIC_EXPLAIN_LINK,7,3,325,24
+    LTEXT           "&Type of file:",IDC_COMBO_LISTTYPE_STATICTEXT,7,26,75,8
+    COMBOBOX        IDC_COMBO_LISTTYPE,99,24,214,30,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    
+    LTEXT           "File in &latest recorded version:",IDC_STATIC_FILE_LATEST_RECORDED,7,54,118,8
+    LISTBOX         IDC_LB_LISTOLDNAME,7,66,130,90,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_HSCROLL | 
+                    WS_TABSTOP
+    PUSHBUTTON      "&Remove",IDC_BUTTON_REMOVELINK,145,134,50,14
+    PUSHBUTTON      "&Add",IDC_BUTTON_ADDLINK,145,111,50,14
+    LTEXT           "File in version &currently added:",IDC_STATIC_FILE_CUR_ADDED,201,52,
+                    118,8
+    LISTBOX         IDC_LB_LISTNEWNAME,202,66,130,90,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_HSCROLL | 
+                    WS_TABSTOP
+    LISTBOX         IDC_LB_LISTLINKNAME,7,176,325,76,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | LBS_EXTENDEDSEL | WS_VSCROLL | 
+                    WS_HSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "OK",IDOK,213,271,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,282,271,50,14
+END
+
+IDD_YESNOCANDOUBLEALL2 DIALOGEX 10, 20, 269, 70
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            32514,IDC_ICONDB,7,12,21,20
+    CTEXT           "",IDC_LINE1,37,5,225,39,NOT WS_GROUP
+    DEFPUSHBUTTON   "&Yes",IDYES,49,49,40,14
+    PUSHBUTTON      "&All",IDC_ALL,93,49,40,14
+    PUSHBUTTON      "&No",IDNO,137,49,40,14
+    PUSHBUTTON      "Cancel",IDCANCEL,181,49,40,14
+END
+
+
+IDD_ADDFILESINEXISTINGVERSION DIALOGEX 0, 0, 314, 180
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Add files in existing versions"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,257,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,257,24,50,14
+    LTEXT           "You have selected %s files occupying %s bytes to add in existing versions",
+                    IDC_STATIC,19,19,203,23
+    GROUPBOX        "Versions where files will be inserted",IDC_STATIC,7,54,
+                    286,119
+    CONTROL         "",IDC_LISTSELVERSION,"SysListView32",LVS_REPORT | 
+                    LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,27,74,254,74
+END
+
+IDD_VERSIONPROPERTIES DIALOGEX 0, 0, 270, 230
+//STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+STYLE  DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU| WS_POPUP | WS_THICKFRAME|WS_CLIPCHILDREN
+CAPTION "Version properties"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    LTEXT           "&Version name:",IDC_STATIC,7,14,69,8
+    EDITTEXT        IDC_EDITVERSIONNAME,78,12,185,14,ES_AUTOHSCROLL
+    LTEXT           "Version Number:",IDC_STATIC,7,32,69,8
+    LTEXT           "",IDC_VERSIONPROPNUMBER,78,32,185,8
+    LTEXT           "Type:",IDC_STATIC,7,46,69,8
+    LTEXT           "",IDC_VERSIONPROPTYPE,78,46,185,8
+    LTEXT           "Size:",IDC_STATIC,7,60,69,8
+    LTEXT           "",IDC_VERSIONPROPSIZE,78,60,185,8
+    LTEXT           "Packed Size:",IDC_STATIC,7,74,69,8
+    LTEXT           "",IDC_VERSIONPROPPACKED,78,74,185,8
+    LTEXT           "Ratio:",IDC_STATIC,7,88,69,8
+    LTEXT           "",IDC_VERSIONPROPRATIO,78,88,185,8
+    LTEXT           "Base folder:",IDC_STATIC,7,102,69,8
+    LTEXT           "",IDC_VERSIONPROPBASE,78,102,185,8
+    LTEXT           "Modified:",IDC_STATIC,7,116,69,8
+    LTEXT           "",IDC_VERSIONPROPDATEMODIFIED,78,116,185,8
+    LTEXT           "Version comment:",IDC_STATIC,7,135,96,8
+    EDITTEXT        IDC_VERSIONPROPCOMMENT,7,149,256,55,ES_MULTILINE | 
+                    ES_AUTOHSCROLL | ES_WANTRETURN
+    PUSHBUTTON      "OK",IDOK,105,208,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,159,208,50,14
+    PUSHBUTTON      "&Help",IDC_GETHELP,213,208,50,14
+END
+
+/*
+IDD_FILEPROPERTIES DIALOGEX 0, 0, 315, 297
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Single File properties"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Filename :",IDC_STATIC,7,22,34,8
+    PUSHBUTTON      "OK",IDOK,86,276,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,140,276,50,14
+    PUSHBUTTON      "&Help",IDC_GETHELP,194,276,50,14
+    EDITTEXT        IDC_EDITVERSIONNAME,55,20,185,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDITVERSIONNAME2,54,42,185,14,ES_AUTOHSCROLL
+    LTEXT           "Path location:",IDC_STATIC,7,44,45,8
+    CONTROL         "",IDC_LIST1,"SysListView32",LVS_ALIGNLEFT | WS_BORDER | 
+                    WS_TABSTOP,24,161,226,73
+    GROUPBOX        "Version file file evolution",IDC_STATIC,7,147,301,119
+    PUSHBUTTON      "Add/Change/remove linked file",IDC_BUTTON1,127,243,112,
+                    16
+END
+*/
+
+IDD_FILEPROPERTIES DIALOGEX 0, 0, 350, 249+28
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "File properties"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    //LTEXT           "",IDC_STATICFILEPROPSUBTITLE,68,20,175,8
+
+    LTEXT           "version &number:",IDC_STATICFILEPROPVERNUM,7,8,58,12
+    EDITTEXT        IDC_EDITFILEPROPVERNUM,65,8,178,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_BORDER,WS_EX_TRANSPARENT
+
+    LTEXT           "vers&ion name:",IDC_STATICFILEPROPVERNAME,7,20,58,12
+    EDITTEXT        IDC_EDITFILEPROPVERNAME,65,20,275,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_BORDER,WS_EX_TRANSPARENT
+
+
+    CONTROL         "",IDC_FILEPROPLINEUPPER,"Static",SS_ETCHEDHORZ,7,40,236,1
+
+    LTEXT           "&Filename:",IDC_STATICFILEPROPFILENAME,7,44,58,12
+    EDITTEXT        IDC_EDITFILEPROPFILENAME,65,44,275,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_BORDER,WS_EX_TRANSPARENT
+
+    LTEXT           "&Path:",IDC_STATICFILEPROPPATH,7,58,58,12
+    EDITTEXT        IDC_EDITFILEPROPPATH,65,58,275,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_BORDER,WS_EX_TRANSPARENT
+
+    LTEXT           "&Type of file:",IDC_STATICFILEPROPTYPE,7,72,58,12
+    EDITTEXT        IDC_EDITFILEPROPTYPE,65,72,178,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_BORDER,WS_EX_TRANSPARENT
+
+    LTEXT           "Dat&e:",IDC_STATICFILEPROPDATE,7,86,58,12
+    EDITTEXT        IDC_EDITFILEPROPDATE,65,86,178,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_BORDER,WS_EX_TRANSPARENT
+
+    LTEXT           "&Size:",IDC_STATICFILEPROPSIZE,7,100,58,12
+    EDITTEXT        IDC_EDITFILEPROPSIZE,65,100,178,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_BORDER,WS_EX_TRANSPARENT
+
+    LTEXT           "St&atus:",IDC_STATICFILEPROPSTATUS,7,114,58,12
+    EDITTEXT        IDC_EDITFILEPROPSTATUS,65,114,178,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_BORDER,WS_EX_TRANSPARENT
+
+    LTEXT           "Pa&cked size:",IDC_STATICFILEPROPACKED,7,128,58,12
+    EDITTEXT        IDC_EDITFILEPROPPACKED,65,128,178,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_BORDER,WS_EX_TRANSPARENT
+
+    LTEXT           "Rati&o:",IDC_STATICFILEPROPRATIO,7,142,58,12
+    EDITTEXT        IDC_EDITFILEPROPRATIO,65,142,178,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_BORDER,WS_EX_TRANSPARENT
+
+    LTEXT           "C&rc32:",IDC_STATICFILEPPROPCRC,7,156,58,12
+    EDITTEXT        IDC_EDITFILEPROPCRC,65,156,178,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_BORDER,WS_EX_TRANSPARENT
+
+    LTEXT           "M&D5:",IDC_STATICFILEPROPMD5,7,170,58,12
+    EDITTEXT        IDC_EDITFILEPROPMD5,65,170,178,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_BORDER,WS_EX_TRANSPARENT
+    LTEXT           "S&HA1:",IDC_STATICFILEPROPSHA1,7,170+14,58,12
+    EDITTEXT        IDC_EDITFILEPROPSHA1,65,170+14,178,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_BORDER,WS_EX_TRANSPARENT
+
+    LTEXT           "S&HA256:",IDC_STATICFILEPROPSHA256,7,170+28,58,12
+    EDITTEXT        IDC_EDITFILEPROPSHA256,65,170+28,275,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_BORDER,WS_EX_TRANSPARENT
+
+    PUSHBUTTON      "Pre&vious version",IDC_FILEPROPPREVIOUSBUTTON,36,185+28,68,
+                    14
+    PUSHBUTTON      "Previous &modified",IDC_FILEPROPPREVIOUSMODIFIEDBUTTON,
+                    36,206+28,68,14
+    PUSHBUTTON      "&Next version",IDC_FILEPROPNEXTBUTTON,146,185+28,68,14
+    PUSHBUTTON      "Ne&xt modified",IDC_FILEPROPNEXTMODIFIEDBUTTON,146,206+28,
+                    68,14
+//    DEFPUSHBUTTON   "OK",IDOK,63,228+28,50,14
+//    PUSHBUTTON      "Cancel",IDCANCEL,137,228+28,50,14
+    DEFPUSHBUTTON   "OK",IDOK,100,228+28,50,14
+END
+
+IDD_DELETESEVERALFILES DIALOGEX 0, 0, 310, 190
+//STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+STYLE  DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU| WS_POPUP | WS_THICKFRAME|WS_CLIPCHILDREN
+CAPTION "Delete several files"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "You have selected %u files occupying %u bytes for suppression",
+                    IDC_STATICDELETEINFO,3,15,243,22
+    
+    LTEXT           "Select the versions set where files must be deleted",
+                    IDC_STATIC,7,26,243,8
+    CONTROL         "",IDC_LISTSELVERSION,"SysListView32",LVS_REPORT | 
+                    LVS_SHOWSELALWAYS | LVS_SHAREIMAGELISTS | LVS_ALIGNLEFT | 
+                    LVS_OWNERDATA | WS_BORDER | WS_TABSTOP,7,44,296,110
+    DEFPUSHBUTTON   "OK",IDOK,253,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,253,24,50,14
+
+  PUSHBUTTON      "&Select All",IDC_SELECTALLVER,23,158,56,14
+  PUSHBUTTON      "&Unselect All",IDC_UNSELECTALLVER,126,158,56,14
+  PUSHBUTTON      "&Help",IDC_GETHELP,229,158,56,14
+//    PUSHBUTTON      "&Help",IDC_GETHELP,253,41,50,14
+//    PUSHBUTTON      "foo",-1,253,58,50,14
+    CONTROL         "Suppress also the same file when it is renamed",
+                    IDC_ALSODELETERENAMED,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,176,296,10
+END
+
+
+IDD_INSERTFILES DIALOGEX 0, 0, 310, 284
+//STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+//STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU|WS_THICKFRAME|WS_CLIPCHILDREN
+    STYLE  DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU| WS_POPUP | WS_THICKFRAME|WS_CLIPCHILDREN
+//STYLE  0x16cf0000
+//STYLE  DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU| WS_POPUP | WS_THICKFRAME | WS_CLIPCHILDREN  // |WS_CLIPSIBLINGS   
+//STYLE WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | WS_CLIPCHILDREN |    WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "Insert several files in existing version"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "This dialog box allow you insert several &files in existing version of your SmartVersion file.",
+                    IDC_STATICSELFILES,7,14,227,20
+    DEFPUSHBUTTON   "OK",IDOK,253,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,253,24,50,14
+    CONTROL         "",IDC_LISTSELFILES,"SysListView32",LVS_REPORT | 
+                    LVS_SHOWSELALWAYS | LVS_SHAREIMAGELISTS | LVS_ALIGNLEFT | 
+                    LVS_OWNERDATA | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | 
+                    WS_BORDER | WS_TABSTOP,7,44,296,87
+    PUSHBUTTON      "Add files...",IDC_ADDFILES,25,134,50,14
+    PUSHBUTTON      "Add folder...",IDC_ADDDIR,95,134,50,14
+    PUSHBUTTON      "Remove...",IDC_REMOVEFILES,165,134,50,14
+    PUSHBUTTON      "Clear All",IDC_CLEARLISTFILE,235,134,50,14
+    CONTROL         "",IDC_STATICSEPARATOR,"Static",SS_ETCHEDHORZ,7,155,296,
+                    1
+    LTEXT           "Select the contiguous &versions set where files must be inserted",
+                    IDC_STATICSELVERSION,7,162,296,8
+    CONTROL         "",IDC_LISTSELVERSION,"SysListView32",LVS_REPORT | 
+                    LVS_SHOWSELALWAYS | LVS_SHAREIMAGELISTS | LVS_ALIGNLEFT | 
+                    LVS_OWNERDATA | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | 
+                    WS_BORDER | WS_TABSTOP,7,175,296,88
+  PUSHBUTTON      "&Select All",IDC_SELECTALLVER,23,266,56,14
+  PUSHBUTTON      "&Unselect All",IDC_UNSELECTALLVER,126,266,56,14
+  PUSHBUTTON      "&Help",IDC_GETHELP,229,266,56,14
+END
+
+
+IDD_NEWVERSION DIALOGEX 0, 0, 288, 278
+    STYLE  DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU| WS_POPUP | WS_THICKFRAME|WS_CLIPCHILDREN
+CAPTION "Create a new SmartVersion File"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Initial version &name:",IDC_STATICVERSIONNAME,7,2,274,8
+    EDITTEXT        IDC_EDITVERSIONNAME,7,12,274,14,ES_AUTOHSCROLL
+    CONTROL         "",IDC_STATICSEPARATOR1,"Static",SS_ETCHEDHORZ,7,30,274,
+                    1
+    LTEXT           "File &list:",IDC_STATICFILELIST,7,34,274,8
+    CONTROL         "",IDC_LISTSELFILES,"SysListView32",LVS_REPORT | 
+                    LVS_SHOWSELALWAYS | LVS_SHAREIMAGELISTS | LVS_ALIGNLEFT | 
+                    LVS_OWNERDATA | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | 
+                    WS_BORDER | WS_TABSTOP,7,43,274,78+4
+
+    PUSHBUTTON      "Add files...",IDC_ADDFILES,14,124+4,50,14
+    PUSHBUTTON      "Add folder...",IDC_ADDDIR,84,124+4,50,14
+    PUSHBUTTON      "Remove...",IDC_REMOVEFILES,154,124+4,50,14
+    PUSHBUTTON      "Clear All",IDC_CLEARLISTFILE,224,124+4,50,14
+    CONTROL         "",IDC_STATICSEPARATOR2,"Static",SS_ETCHEDHORZ,7,142+4,274,
+                    1
+
+
+    LTEXT           "&Storage:",IDC_STATICSTORAGEFIRSTVERSION,7,147+4,274,10
+
+
+
+
+    RADIOBUTTON     "Store files content",IDC_STORECONTENT,14,163,267,10
+    RADIOBUTTON     "Only store files dates, sizes and checksums",
+                    IDC_STORECRC,14,175,267,10
+
+
+    CONTROL         "",IDC_STATICSEPARATOR3,"Static",SS_ETCHEDHORZ,7,187,274,
+                    1
+    LTEXT           "Version &Comment",IDC_STATICCOMMENT,7,192,274,8
+    EDITTEXT        IDC_VERSIONPROPCOMMENT,7,202,274,55,ES_MULTILINE | 
+                    ES_AUTOHSCROLL | ES_WANTRETURN
+    PUSHBUTTON      "OK",IDOK,91,261,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,161,261,50,14
+    PUSHBUTTON      "&Help",IDC_GETHELP,231,261,50,14
+END
+
+IDD_ADDVERSION DIALOGEX 0, 0, 288, 278
+    STYLE  DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU| WS_POPUP | WS_THICKFRAME|WS_CLIPCHILDREN
+CAPTION "Add a new version"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Version &Name",IDC_STATICVERSIONNAME,7,2,274,8
+    EDITTEXT        IDC_EDITVERSIONNAME,7,12,274,14,ES_AUTOHSCROLL
+    CONTROL         "",IDC_STATICSEPARATOR1,"Static",SS_ETCHEDHORZ,7,30,274,
+                    1
+    LTEXT           "File &list:",IDC_STATICFILELIST,7,34,274,8
+    CONTROL         "",IDC_LISTSELFILES,"SysListView32",LVS_REPORT | 
+                    LVS_SHOWSELALWAYS | LVS_SHAREIMAGELISTS | LVS_ALIGNLEFT | 
+                    LVS_OWNERDATA | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | 
+                    WS_BORDER | WS_TABSTOP,7,43,274,78
+
+    PUSHBUTTON      "Add files...",IDC_ADDFILES,14,124,50,14
+    PUSHBUTTON      "Add folder...",IDC_ADDDIR,84,124,50,14
+    PUSHBUTTON      "Remove...",IDC_REMOVEFILES,154,124,50,14
+    PUSHBUTTON      "Clear All",IDC_CLEARLISTFILE,224,124,50,14
+    CONTROL         "",IDC_STATICSEPARATOR2,"Static",SS_ETCHEDHORZ,7,142,274,
+                    1
+
+    CONTROL         "Keep previous files not present in new version",
+                    IDC_ADDPREVIOUSFILEREMOVEDASIDENTICAL,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,14,147,267,10
+    RADIOBUTTON     "Only add files already present in previous version",
+                    IDC_STOREONLYPRESENT,14,163,267,10
+    RADIOBUTTON     "Store all files, including new files",IDC_STOREALSONEW,
+                    14,175,267,10
+    CONTROL         "",IDC_STATICSEPARATOR3,"Static",SS_ETCHEDHORZ,7,187,274,
+                    1
+    LTEXT           "Version &Comment",IDC_STATICCOMMENT,7,192,274,8
+    EDITTEXT        IDC_VERSIONPROPCOMMENT,7,202,274,55,ES_MULTILINE | 
+                    ES_AUTOHSCROLL | ES_WANTRETURN
+    PUSHBUTTON      "OK",IDOK,91,261,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,161,261,50,14
+    PUSHBUTTON      "&Help",IDC_GETHELP,231,261,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 250
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 106
+    END
+
+    IDD_NEWVERSION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 263
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 269
+    END
+
+    IDD_ADDVERSION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 263
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 275
+    END
+
+    IDD_COMPRESSION_PREF, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 227
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 143
+    END
+
+    IDD_BUILDSUBVERSION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 245
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 111
+    END
+
+    IDD_VERSIONPROPERTIES, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 263
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 223
+    END
+
+    IDD_YESNOCANCALL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 262
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 63
+    END
+
+    IDD_NEWVERSION_NOFILESELINFO, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 263
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 173
+    END
+
+    IDD_ADDVERSION_NOFILESELINFO, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 263
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 182
+    END
+
+    IDD_YESNOCANDOUBLEALL2, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 262
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 63
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_APPNAME             "SmartVersion"
+    IDS_DESCRIPTION         "SmartVersion application"
+    IDS_TYPEOPENDFS         "SmartVersion File (*.svf)|*.svf"
+    IDS_CURVERSIONUNSELECTED "The current version is not selected"
+    IDS_NOTCONTIGUOUSVERSIONSELECTED 
+                            "The set of version selected is not contiguous"
+    IDS_CANNOTDELETEFILEINTODFS 
+                            "Error in deleting files into Smartversion file"
+    IDS_CONFIRMREPLACEININSERTINGTITLE "Confirm file replace"
+    IDS_CONFIRMREPLACEININSERTINGMSG 
+                            "Would you like to replace the existing file %ws in version %u\nby content of %ws"
+    IDS_CUT                 "CUT"
+    IDS_COPY                "IDS_COPY"
+    IDS_PASTE               "PASTE"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STATUS_IDENTICAL    "Identical"
+    IDS_STATUS_MODIFIED     "Modified"
+    IDS_STATUS_NEW          "New"
+    IDM_OPTION_SETTINGS     "Application settings"
+    IDM_VERSION_GENERATESUBDFS "Select some versions for creating a SVF file"
+    IDS_TYPEOPENZIP         "Zip File (*.zip)|*.zip"
+    IDM_VERSION_ZIPFILE     "Export a version as Zipfile"
+    IDS_STATUSBAR_INFO_ROOT "%u versions"
+    IDS_STATUSBAR_INFO_SELECTION "%u files selected (%s bytes)"
+    IDS_STATUSBAR_INFO_NOSELECTION "%u files (%s bytes)"
+    IDM_HELP_CONTENTS       "Display help contents"
+    IDM_VERSION_VERSIONPROPERTIES "Display properties of current version"
+    IDM_VERSION_ADDNEWVERSIONFROMZIP 
+                            "Add a new version of the fileset from a zipfile"
+    IDS_CONFIRMOVERWRITEEXTRCAPT "Confirm overwriting"
+    IDS_CONFIRMOVERWRITEEXTRFORMAT 
+                            "%s already exists. Replacing existing file?"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_TYPEOPENDFS_ORALL   "SmartVersion File (*.svf)|*.svf|All Files (*.*)|*.*"
+    IDS_TYPEOPENZIP_ORALL   "Zip File (*.zip)|*.zip|All Files (*.*)|*.*"
+    IDM_FILE_NEW_FROM_ZIP   "Create a new SmartVersion File from a zip file"
+    IDM_OPTION_REGISTER     "Fill out registration information"
+    IDS_GOODREGISTER        "Your registration code is valid.\nYou are now a registered user.\nThank you for registering."
+    IDS_BADREGISTER         "Registering information is invalid"
+    IDS_REGISTER            "SmartVersion Registration"
+    IDS_TITLE_UNREG_FMTFILE "SmartVersion (unregistered) - %s"
+    IDS_TITLE_UNREG_NONAMED "SmartVersion (unregistered) - (Untitled)"
+    IDS_TITLE_UNREG_NOFILE  "SmartVersion (unregistered)"
+    IDS_LINE1SPLASHFMT      "You're on evaluation day %u/%u of SmartVersion"
+    IDS_LINE2EVALFINISHED   "You've tried SmartVersion more than the 30 days evaluation period, you need register now!"
+    IDS_UNNAMEDVERSIONAME   "(unnamed version %u)"
+    IDM_HELP_WEBSITE        "Visit the SmartVersion home page (http://www.smartversion.com)"
+    IDM_HELP_WEBSITEWINIMAGE 
+                            "Visit the WinImage home page (http://www.winimage.com)"
+    IDM_HELP_WEBORDERSITE   "Visit the SmartVersion registration page (http://www.smartversion.com/order.htm)"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_TITLECOLUMNFILELIST8 "Status"
+    IDS_TITLECOLUMNFILELIST9 "Path"
+    IDS_TITLECOLUMNFILELISTDISKLOCATION "File location"
+    IDS_TITLECOLUMNDIRLIST1 "Version Name"
+    IDS_TITLECOLUMNDIRLIST2 "#"
+    IDS_TITLECOLUMNDIRLIST3 "Type"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_TITLECOLUMNDIRLIST4 "Size"
+    IDS_TITLECOLUMNDIRLIST5 "Modified"
+    IDS_TITLECOLUMNDIRLIST6 "Ratio"
+    IDS_TITLECOLUMNDIRLIST7 "Packed"
+    IDS_TITLECOLUMNDIRLIST8 "Base Folder"
+    IDS_TITLECOLUMNDIRLIST9 "(nothing)"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_TITLECOLUMNFILELIST1 "Name"
+    IDS_TITLECOLUMNFILELIST2 "Type"
+    IDS_TITLECOLUMNFILELIST3 "Size"
+    IDS_TITLECOLUMNFILELIST4 "Modified"
+    IDS_TITLECOLUMNFILELIST5 "Ratio"
+    IDS_TITLECOLUMNFILELIST6 "Packed"
+    IDS_TITLECOLUMNFILELIST7 "CRC-32"
+END
+
+STRINGTABLE 
+BEGIN
+    IDM_HELP_ABOUT          "About SmartVersion application"
+    IDM_VERSION_EXTRACT     "Extract some files from a version"
+    IDM_VERSION_ADDNEWVERSION "Add a new version of the fileset"
+    IDM_VERSION_CHECK       "Check a version"
+    IDM_FILE_OPEN           "Open a SmartVersion File"
+    IDM_FILE_NEW            "Create a new SmartVersion File"
+    IDM_FILE_CLOSE          "Close current SmartVersion File"
+    IDS_SYSMENU             "Move, size, or close application window"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_TYPEDIR_PATCHFROMPREVIOUS "File Patch"
+    IDS_FMTVERSION          "Version %u %ws : %s"
+    IDS_ASKBASEDIR          "The initial version of the SmartVersion file was not inserted\nDo you want to specify the folder where the files are stored?"
+    IDS_ASKBASEDIRTITLE     "Base SmartVersion Folder"
+    IDS_TXTERRORCOMPARE     "An error occured while comparing file %ws on your computer with file %ws in the SmartVersion file.\n%s\nDo you want to load the SmartVersion file anyway?"
+    IDS_ERROR_COMPARE_NOTFOUD "File not found."
+    IDS_ERROR_COMPARE_BADSIZE "File size does not match."
+    IDS_ERROR_COMPARE_PROBLEMREAD "There was a problem reading the file."
+    IDS_ERROR_COMPARE_BADCRC "File content does not match."
+    IDS_NOBASEDIR           "You must specify a base folder for a version before extracting files or adding new versions"
+    IDM_VERSION_SPECIFYBASEDIR "Specify new base folder for a version"
+    IDS_NOBASEDIRADAPTED    "You must specify a previous base folder for a version before extracting files or adding new versions"
+    IDS_ERRORNOFILETOADD    "Cannot add: no file selected"
+    IDS_ERROR_EXTRACTING    "An error occured while extracting files.\nError on file %ws\n%ws"
+    IDS_ERRORWRITING        "An error occured while writing the SmartVersion File"
+    IDS_ERROROPENING        "An error occured while opening file %ws\n%ws"
+    IDS_ERROR_INSERTING     "An error occured while insterting files.\nError on file %ws\n%ws"
+    IDS_ERROR_DELETING      "An error occured while deleting files.\nError on file %ws\n%ws"
+    IDS_ERROR_WRITING       "An error occured while writing files.\nError on file %ws\n%ws"
+    IDS_STATUS_REFERENCE    "Reference"
+END
+
+STRINGTABLE 
+BEGIN
+    IDM_HELP_CONTENTSORDER  "Help on the SmartVersion registration"
+    IDS_HELP_WEBSITE_URL    "http://www.smartversion.com"
+    IDS_HELP_WEBSITEWINIMAGE_URL "http://www.winimage.com"
+    IDS_HELP_WEBORDERSITE_URL "http://www.smartversion.com/order.htm"
+    IDM_FILEPROPERTIES      "Display properties of selected file"
+    IDM_FILESDELETE         "Delete selected file"
+    IDM_INSERTFILES         "Insert somes files in existing version"
+
+    IDM_VERSION_DELETE              "Delete the selected version from current SmartVersion file" 
+    IDS_MESSAGECONFIRMDELVERSION    "You have selected %u versions.\nAre you sure you want delete them"
+    IDS_TITLECONFIRMDELVERSION      "Delete versions"
+    IDM_APPENDSVFTOSVF           "Append version from compatible SVF file"
+    IDS_NOCOMPATIBLEVERSIONFOUND    "No compatible version found"
+END
+
+STRINGTABLE 
+BEGIN
+    IDM_EXIT                "Exit the SmartVersion application"
+END
+
+STRINGTABLE 
+BEGIN
+    IDM_VIEW_LARGEICON      "View file as large icon"
+    IDM_VIEW_DETAILS        "View files as details"
+    IDM_VIEW_SMALLICONS     "View file as Small icons"
+    IDM_VIEW_LIST           "View files as list"
+    IDS_TYPEOPENALL         "All Files (*.*)|*.*"
+    IDS_TITLE_FMTFILE       "SmartVersion - %s"
+    IDS_TITLE_NONAMED       "SmartVersion - (Untitled)"
+    IDS_TITLE_NOFILE        "SmartVersion"
+    IDS_TYPEDIR_FILECRCONLY "CRC only"
+    IDS_TYPEDIR_FILEINSERTING_STORE "Stored File"
+    IDS_TYPEDIR_FILEINSERTING_DEFLATE "Compressed File"
+
+IDS_LANGID      "9"
+IDS_NAMELANGAGE     "English"
+IDS_SIGN        "ENU"
+IDS_WININISLANGAGE  "ENU|ENG"
+IDS_CHMFILENAME "smartvs.chm"
+IDS_FILEALREADYOPEN "The file %s is already open"
+IDS_SMVVERSION SVF_VERSION_STRING
+
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// French (France) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_FRA)
+#ifdef _WIN32
+LANGUAGE LANG_FRENCH, SUBLANG_FRENCH
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_DELETESEVERALFILES, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 303
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 189
+    END
+
+    IDD_ADDFILESINEXISTINGVERSION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 307
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 173
+    END
+
+    IDD_FILEPROPERTIES, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 308
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 290
+    END
+
+    IDD_INSERTFILES, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 303
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 263
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // French (France) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,1251 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|ARM">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|ARM64">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseClang|ARM">
+      <Configuration>ReleaseClang</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseClang|ARM64">
+      <Configuration>ReleaseClang</Configuration>
+      <Platform>ARM64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseClang|Win32">
+      <Configuration>ReleaseClang</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseClang|x64">
+      <Configuration>ReleaseClang</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseDebugInfo|ARM">
+      <Configuration>ReleaseDebugInfo</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseDebugInfo|ARM64">
+      <Configuration>ReleaseDebugInfo</Configuration>
+      <Platform>ARM64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseDebugInfo|Win32">
+      <Configuration>ReleaseDebugInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseDebugInfo|x64">
+      <Configuration>ReleaseDebugInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM">
+      <Configuration>Release</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM64">
+      <Configuration>Release</Configuration>
+      <Platform>ARM64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Template|ARM">
+      <Configuration>Template</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Template|ARM64">
+      <Configuration>Template</Configuration>
+      <Platform>ARM64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Template|Win32">
+      <Configuration>Template</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Template|x64">
+      <Configuration>Template</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{83C862DC-2019-4B36-A219-486E9319C76A}</ProjectGuid>
+    <RootNamespace>difstrm_vs</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Template|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141_xp</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Template|ARM'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141_xp</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDebugInfo|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v141_xp</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDebugInfo|ARM'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v141_xp</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v142</PlatformToolset>
+    <WindowsSDKDesktopARMSupport>true</WindowsSDKDesktopARMSupport>
+    <WindowsSDKDesktopARM64Support>true</WindowsSDKDesktopARM64Support>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseClang|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v141_xp</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseClang|ARM'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v141_xp</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141_xp</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Template|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141_xp</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Template|ARM64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141_xp</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDebugInfo|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v141_xp</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDebugInfo|ARM64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v141_xp</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <WindowsSDKDesktopARMSupport>true</WindowsSDKDesktopARMSupport>
+    <WindowsSDKDesktopARM64Support>true</WindowsSDKDesktopARM64Support>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseClang|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>ClangCL</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseClang|ARM64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v141_xp</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141_xp</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+    <Import Project="externe.vcxitems" Label="Shared" />
+    <Import Project="smv_engine.vcxitems" Label="Shared" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Template|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Template|ARM'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDebugInfo|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDebugInfo|ARM'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseClang|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseClang|ARM'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Template|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Template|ARM64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDebugInfo|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDebugInfo|ARM64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseClang|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseClang|ARM64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Platform)\$(ProjectName)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">$(Platform)\$(ProjectName)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Platform)\$(ProjectName)\$(Configuration)\tmp\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">$(Platform)\$(ProjectName)\$(Configuration)\tmp\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</GenerateManifest>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">false</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(ProjectName)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">$(Platform)\$(ProjectName)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(ProjectName)\$(Configuration)\tmp\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">$(Platform)\$(ProjectName)\$(Configuration)\tmp\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</GenerateManifest>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">false</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Platform)\$(ProjectName)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">$(Platform)\$(ProjectName)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='ReleaseClang|Win32'">$(Platform)\$(ProjectName)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='ReleaseClang|ARM'">$(Platform)\$(ProjectName)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Platform)\$(ProjectName)\$(Configuration)\tmp\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">$(Platform)\$(ProjectName)\$(Configuration)\tmp\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='ReleaseClang|Win32'">$(Platform)\$(ProjectName)\$(Configuration)\tmp\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='ReleaseClang|ARM'">$(Platform)\$(ProjectName)\$(Configuration)\tmp\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='ReleaseClang|Win32'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='ReleaseClang|ARM'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</GenerateManifest>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">false</GenerateManifest>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='ReleaseClang|Win32'">false</GenerateManifest>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='ReleaseClang|ARM'">false</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(ProjectName)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">$(Platform)\$(ProjectName)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='ReleaseClang|x64'">$(Platform)\$(ProjectName)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='ReleaseClang|ARM64'">$(Platform)\$(ProjectName)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(ProjectName)\$(Configuration)\tmp\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">$(Platform)\$(ProjectName)\$(Configuration)\tmp\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='ReleaseClang|x64'">$(Platform)\$(ProjectName)\$(Configuration)\tmp\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='ReleaseClang|ARM64'">$(Platform)\$(ProjectName)\$(Configuration)\tmp\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='ReleaseClang|x64'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='ReleaseClang|ARM64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</GenerateManifest>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">false</GenerateManifest>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='ReleaseClang|x64'">false</GenerateManifest>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='ReleaseClang|ARM64'">false</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='ReleaseDebugInfo|Win32'">$(Platform)\$(ProjectName)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='ReleaseDebugInfo|ARM'">$(Platform)\$(ProjectName)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='ReleaseDebugInfo|Win32'">$(Platform)\$(ProjectName)\$(Configuration)\tmp\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='ReleaseDebugInfo|ARM'">$(Platform)\$(ProjectName)\$(Configuration)\tmp\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='ReleaseDebugInfo|Win32'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='ReleaseDebugInfo|ARM'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='ReleaseDebugInfo|Win32'">false</GenerateManifest>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='ReleaseDebugInfo|ARM'">false</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='ReleaseDebugInfo|x64'">$(Platform)\$(ProjectName)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='ReleaseDebugInfo|ARM64'">$(Platform)\$(ProjectName)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='ReleaseDebugInfo|x64'">$(Platform)\$(ProjectName)\$(Configuration)\tmp\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='ReleaseDebugInfo|ARM64'">$(Platform)\$(ProjectName)\$(Configuration)\tmp\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='ReleaseDebugInfo|x64'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='ReleaseDebugInfo|ARM64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='ReleaseDebugInfo|x64'">false</GenerateManifest>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='ReleaseDebugInfo|ARM64'">false</GenerateManifest>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='ReleaseDebugInfo|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='ReleaseDebugInfo|ARM'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='ReleaseDebugInfo|Win32'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='ReleaseDebugInfo|ARM'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='ReleaseDebugInfo|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='ReleaseDebugInfo|ARM'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='ReleaseDebugInfo|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='ReleaseDebugInfo|ARM64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='ReleaseDebugInfo|x64'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='ReleaseDebugInfo|ARM64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='ReleaseDebugInfo|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='ReleaseDebugInfo|ARM64'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='ReleaseClang|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='ReleaseClang|ARM'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='ReleaseClang|Win32'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='ReleaseClang|ARM'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='ReleaseClang|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='ReleaseClang|ARM'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='ReleaseClang|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='ReleaseClang|ARM64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='ReleaseClang|x64'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='ReleaseClang|ARM64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='ReleaseClang|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='ReleaseClang|ARM64'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Template|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Template|ARM'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Template|Win32'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Template|ARM'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Template|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Template|ARM'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Template|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Template|ARM64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Template|x64'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Template|ARM64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Template|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Template|ARM64'" />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <TargetName>smv</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+    <TargetName>smv</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <TargetName>smv</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+    <TargetName>smv</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseClang|Win32'">
+    <TargetName>smv</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseClang|ARM'">
+    <TargetName>smv</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Template|Win32'">
+    <TargetName>smv</TargetName>
+    <OutDir>$(Platform)\$(ProjectName)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(ProjectName)\$(Configuration)\tmp\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Template|ARM'">
+    <TargetName>smv</TargetName>
+    <OutDir>$(Platform)\$(ProjectName)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(ProjectName)\$(Configuration)\tmp\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDebugInfo|Win32'">
+    <TargetName>smv</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDebugInfo|ARM'">
+    <TargetName>smv</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <TargetName>smv</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">
+    <TargetName>smv</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <TargetName>smv</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">
+    <TargetName>smv</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseClang|x64'">
+    <TargetName>smv</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseClang|ARM64'">
+    <TargetName>smv</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Template|x64'">
+    <TargetName>smv</TargetName>
+    <OutDir>$(Platform)\$(ProjectName)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(ProjectName)\$(Configuration)\tmp\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Template|ARM64'">
+    <TargetName>smv</TargetName>
+    <OutDir>$(Platform)\$(ProjectName)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(ProjectName)\$(Configuration)\tmp\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDebugInfo|x64'">
+    <TargetName>smv</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDebugInfo|ARM64'">
+    <TargetName>smv</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <TypeLibraryName>.\Debug/difstrm.tlb</TypeLibraryName>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\external;..\..\external\xz\src\liblzma\api;..\..\external\xz\msvc;..\..\external\xz\lib;..\..\external\xz\windows\vs2019;..\..\external\xz\windows\vs2022;..\..\external\xz\windows;..\..\external\xz\src\common;..\..\external\xz\src\liblzma\common;..\..\external\xz\src\liblzma\check;..\..\external\xz\src\liblzma\rangecoder;..\..\external\xz\src\liblzma\lz;..\..\external\xz\src\liblzma\lzma;..\..\external\xz\src\liblzma\delta;..\..\external\xz\src\liblzma\simple;..\..\external\zlib;..\..\external\bzip;..\..\external\lzham;..\..\external\lzham\include;..\..\external\lzham\lzhamdecomp;..\..\external\lzham\lzhamcomp;..\..\external\fastlzlib;..\..\external\fastlzlib\lz4;..\..\external\zstd\lib;..\..\external\zstd\lib\dictBuilder;..\..\external\zstd\lib\common;..\..\external\xz-embedded\include\linux;..\..\src\lib\hash;..\..\src\misc\minizip;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;noDO_STATIS;WIN32;_CONSOLE;WINDOWS;__STDC__;noASMV;nnooASMINF;noMD5_ASM;noSHA1_ASM;noBOUND_CHECKER;DYNAMIC_CRC_TABLE;NOCRYPT;NOUNCRYPT;HAVE_BZIP2;HAVE_LZMASDK_DECOMPRESS;HAVE_ZSTD;XXH_NAMESPACE=;ZSTD_MULTITHREAD;ZSTD_STATIC_LINKING_ONLY;HAVE_LZHAM;HAVE_FAST_LZLIB;ZFAST_USE_LZ4;ZFAST_USE_FASTLZ;ZFAST_USE_LZFSE;ZFASTEXTERN=;HAVE_CONFIG_H;TUKLIB_SYMBOL_PREFIX=lzma_;alloca=_alloca;SUPPORT_XP_WIN2003_64;HAVE_XZUTILS;LZMA_API_STATIC;MYTHREAD_VISTA;SMARTVERSION_MAIN;LZMA_INCLUDE_COMMON;BZ_NO_STDIO;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <PrecompiledHeaderOutputFile>$(IntDir)difstrm.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(OutDir)</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(OutDir)</ProgramDataBaseFileName>
+      <BrowseInformation>true</BrowseInformation>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalOptions>/FIXED:NO /SAFESEH:NO %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>..\..\src\lib\hash\x86cpuid.obj;..\..\src\lib\hash\md5-586.obj;..\..\src\lib\hash\sha1-586.obj;..\..\src\lib\hash\md5-586.obj;%(AdditionalDependencies)</AdditionalDependencies>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <LargeAddressAware>true</LargeAddressAware>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <Profile>true</Profile>
+      <IgnoreSpecificDefaultLibraries>
+      </IgnoreSpecificDefaultLibraries>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+    <Midl>
+      <TypeLibraryName>.\Debug/difstrm.tlb</TypeLibraryName>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\external;..\..\external\xz\src\liblzma\api;..\..\external\xz\msvc;..\..\external\xz\lib;..\..\external\xz\windows\vs2019;..\..\external\xz\windows\vs2022;..\..\external\xz\windows;..\..\external\xz\src\common;..\..\external\xz\src\liblzma\common;..\..\external\xz\src\liblzma\check;..\..\external\xz\src\liblzma\rangecoder;..\..\external\xz\src\liblzma\lz;..\..\external\xz\src\liblzma\lzma;..\..\external\xz\src\liblzma\delta;..\..\external\xz\src\liblzma\simple;..\..\external\zlib;..\..\external\bzip;..\..\external\lzham;..\..\external\lzham\include;..\..\external\lzham\lzhamdecomp;..\..\external\lzham\lzhamcomp;..\..\external\fastlzlib;..\..\external\fastlzlib\lz4;..\..\external\zstd\lib;..\..\external\zstd\lib\dictBuilder;..\..\external\zstd\lib\common;..\..\external\xz-embedded\include\linux;..\..\src\lib\hash;..\..\src\misc\minizip;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;noDO_STATIS;WIN32;_CONSOLE;WINDOWS;__STDC__;noASMV;nnooASMINF;noMD5_ASM;noSHA1_ASM;noBOUND_CHECKER;DYNAMIC_CRC_TABLE;NOCRYPT;NOUNCRYPT;HAVE_BZIP2;HAVE_LZMASDK_DECOMPRESS;HAVE_ZSTD;XXH_NAMESPACE=;ZSTD_MULTITHREAD;ZSTD_STATIC_LINKING_ONLY;HAVE_LZHAM;HAVE_FAST_LZLIB;ZFAST_USE_LZ4;ZFAST_USE_FASTLZ;ZFAST_USE_LZFSE;ZFASTEXTERN=;HAVE_CONFIG_H;TUKLIB_SYMBOL_PREFIX=lzma_;alloca=_alloca;SUPPORT_XP_WIN2003_64;HAVE_XZUTILS;LZMA_API_STATIC;MYTHREAD_VISTA;SMARTVERSION_MAIN;LZMA_INCLUDE_COMMON;BZ_NO_STDIO;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <PrecompiledHeaderOutputFile>$(IntDir)difstrm.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(OutDir)</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(OutDir)</ProgramDataBaseFileName>
+      <BrowseInformation>true</BrowseInformation>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalOptions>/FIXED:NO /SAFESEH:NO %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>..\..\src\lib\hash\x86cpuid.obj;..\..\src\lib\hash\md5-586.obj;..\..\src\lib\hash\sha1-586.obj;..\..\src\lib\hash\md5-586.obj;%(AdditionalDependencies)</AdditionalDependencies>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)smv.pdb</ProgramDatabaseFile>
+      <SubSystem>Console</SubSystem>
+      <LargeAddressAware>true</LargeAddressAware>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <Profile>true</Profile>
+      <IgnoreSpecificDefaultLibraries>
+      </IgnoreSpecificDefaultLibraries>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+      <TypeLibraryName>.\Debug/difstrm.tlb</TypeLibraryName>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\external;..\..\external\xz\src\liblzma\api;..\..\external\xz\msvc;..\..\external\xz\lib;..\..\external\xz\windows\vs2019;..\..\external\xz\windows\vs2022;..\..\external\xz\windows;..\..\external\xz\src\common;..\..\external\xz\src\liblzma\common;..\..\external\xz\src\liblzma\check;..\..\external\xz\src\liblzma\rangecoder;..\..\external\xz\src\liblzma\lz;..\..\external\xz\src\liblzma\lzma;..\..\external\xz\src\liblzma\delta;..\..\external\xz\src\liblzma\simple;..\..\external\zlib;..\..\external\bzip;..\..\external\lzham;..\..\external\lzham\include;..\..\external\lzham\lzhamdecomp;..\..\external\lzham\lzhamcomp;..\..\external\fastlzlib;..\..\external\fastlzlib\lz4;..\..\external\zstd\lib;..\..\external\zstd\lib\dictBuilder;..\..\external\zstd\lib\common;..\..\external\xz-embedded\include\linux;..\..\src\lib\hash;..\..\src\misc\minizip;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;WIN32;noDO_STATIS;_CONSOLE;WINDOWS;__STDC__;ASMVno;MD5_ASM;SHA1_ASM;SHA256_ASM;SHA256FROMOPENSSL;noBOUND_CHECKER;DYNAMIC_CRC_TABLE;NOCRYPT;NOUNCRYPT;HAVE_BZIP2;HAVE_LZMASDK_DECOMPRESS;HAVE_ZSTD;XXH_NAMESPACE=;ZSTD_MULTITHREAD;ZSTD_STATIC_LINKING_ONLY;HAVE_LZHAM;HAVE_FAST_LZLIB;ZFAST_USE_LZ4;ZFAST_USE_FASTLZ;ZFAST_USE_LZFSE;ZFASTEXTERN=;HAVE_CONFIG_H;TUKLIB_SYMBOL_PREFIX=lzma_;alloca=_alloca;SUPPORT_XP_WIN2003_64;HAVE_XZUTILS;LZMA_API_STATIC;MYTHREAD_VISTA;SMARTVERSION_MAIN;LZMA_INCLUDE_COMMON;BZ_NO_STDIO;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;WIN64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <PrecompiledHeaderOutputFile>$(IntDir)difstrm.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(OutDir)</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(OutDir)</ProgramDataBaseFileName>
+      <BrowseInformation>true</BrowseInformation>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>;..\..\src\lib\hash\x86_64cpuid.obj;..\..\src\lib\hash\sha1-x86_64.obj;..\..\src\lib\hash\md5-x86_64.obj;..\..\src\lib\hash\sha256-x86_64.obj;%(AdditionalDependencies)</AdditionalDependencies>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <LargeAddressAware>true</LargeAddressAware>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <TargetMachine>MachineX64</TargetMachine>
+      <Profile>true</Profile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">
+    <Midl>
+      <TypeLibraryName>.\Debug/difstrm.tlb</TypeLibraryName>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\external;..\..\external\xz\src\liblzma\api;..\..\external\xz\msvc;..\..\external\xz\lib;..\..\external\xz\windows\vs2019;..\..\external\xz\windows\vs2022;..\..\external\xz\windows;..\..\external\xz\src\common;..\..\external\xz\src\liblzma\common;..\..\external\xz\src\liblzma\check;..\..\external\xz\src\liblzma\rangecoder;..\..\external\xz\src\liblzma\lz;..\..\external\xz\src\liblzma\lzma;..\..\external\xz\src\liblzma\delta;..\..\external\xz\src\liblzma\simple;..\..\external\zlib;..\..\external\bzip;..\..\external\lzham;..\..\external\lzham\include;..\..\external\lzham\lzhamdecomp;..\..\external\lzham\lzhamcomp;..\..\external\fastlzlib;..\..\external\fastlzlib\lz4;..\..\external\zstd\lib;..\..\external\zstd\lib\dictBuilder;..\..\external\zstd\lib\common;..\..\external\xz-embedded\include\linux;..\..\src\lib\hash;..\..\src\misc\minizip;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;WIN32;noDO_STATIS;_CONSOLE;WINDOWS;__STDC__;ASMVno;MD5_ASM;SHA1_ASM;SHA256_ASM;SHA256FROMOPENSSL;noBOUND_CHECKER;DYNAMIC_CRC_TABLE;NOCRYPT;NOUNCRYPT;HAVE_BZIP2;HAVE_LZMASDK_DECOMPRESS;HAVE_ZSTD;XXH_NAMESPACE=;ZSTD_MULTITHREAD;ZSTD_STATIC_LINKING_ONLY;HAVE_LZHAM;HAVE_FAST_LZLIB;ZFAST_USE_LZ4;ZFAST_USE_FASTLZ;ZFAST_USE_LZFSE;ZFASTEXTERN=;HAVE_CONFIG_H;TUKLIB_SYMBOL_PREFIX=lzma_;alloca=_alloca;SUPPORT_XP_WIN2003_64;HAVE_XZUTILS;LZMA_API_STATIC;MYTHREAD_VISTA;SMARTVERSION_MAIN;LZMA_INCLUDE_COMMON;BZ_NO_STDIO;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;WIN64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <PrecompiledHeaderOutputFile>$(IntDir)difstrm.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(OutDir)</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(OutDir)</ProgramDataBaseFileName>
+      <BrowseInformation>true</BrowseInformation>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>;..\..\src\lib\hash\x86_64cpuid.obj;..\..\src\lib\hash\sha1-x86_64.obj;..\..\src\lib\hash\md5-x86_64.obj;..\..\src\lib\hash\sha256-x86_64.obj;%(AdditionalDependencies)</AdditionalDependencies>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)smv.pdb</ProgramDatabaseFile>
+      <SubSystem>Console</SubSystem>
+      <LargeAddressAware>true</LargeAddressAware>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <Profile>true</Profile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <TypeLibraryName>$(OutDir)difstrm.tlb</TypeLibraryName>
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>..\..\external;..\..\external\xz\src\liblzma\api;..\..\external\xz\msvc;..\..\external\xz\lib;..\..\external\xz\windows\vs2019;..\..\external\xz\windows\vs2022;..\..\external\xz\windows;..\..\external\xz\src\common;..\..\external\xz\src\liblzma\common;..\..\external\xz\src\liblzma\check;..\..\external\xz\src\liblzma\rangecoder;..\..\external\xz\src\liblzma\lz;..\..\external\xz\src\liblzma\lzma;..\..\external\xz\src\liblzma\delta;..\..\external\xz\src\liblzma\simple;..\..\external\zlib;..\..\external\bzip;..\..\external\lzham;..\..\external\lzham\include;..\..\external\lzham\lzhamdecomp;..\..\external\lzham\lzhamcomp;..\..\external\fastlzlib;..\..\external\fastlzlib\lz4;..\..\external\zstd\lib;..\..\external\zstd\lib\dictBuilder;..\..\external\zstd\lib\common;..\..\external\xz-embedded\include\linux;..\..\src\lib\hash;..\..\src\misc\minizip;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;WIN32;_CONSOLE;PREVENT_COMPILE_PATCHBUILDER_EXT;noASMV;noASMINF;MD5_ASM;SHA1_ASM;noBOUND_CHECKER;noDO_STATIS;__STDC__;DYNAMIC_CRC_TABLE;NOCRYPT;NOUNCRYPT;HAVE_BZIP2;HAVE_LZMASDK_DECOMPRESS;HAVE_ZSTD;XXH_NAMESPACE=;ZSTD_MULTITHREAD;ZSTD_STATIC_LINKING_ONLY;HAVE_LZHAM;HAVE_FAST_LZLIB;ZFAST_USE_LZ4;ZFAST_USE_FASTLZ;ZFAST_USE_LZFSE;ZFASTEXTERN=;HAVE_CONFIG_H;TUKLIB_SYMBOL_PREFIX=lzma_;alloca=_alloca;SUPPORT_XP_WIN2003_64;HAVE_XZUTILS;LZMA_API_STATIC;MYTHREAD_WIN95;SMARTVERSION_MAIN;LZMA_INCLUDE_COMMON;BZ_NO_STDIO;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;NO_MSCVER_FILE64_FUNC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <PrecompiledHeaderOutputFile>$(IntDir)difstrm.pch</PrecompiledHeaderOutputFile>
+      <AssemblerOutput>AssemblyAndSourceCode</AssemblerOutput>
+      <AssemblerListingLocation>$(OutDir)</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(OutDir)</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x040c</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalOptions> /FIXED:NO  /SAFESEH:NO %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>..\..\src\lib\hash\x86cpuid.obj;..\..\src\lib\hash\md5-586.obj;;;..\..\src\lib\hash\sha1-586.obj;..\..\src\lib\hash\md5-586.obj;;pgort.lib;;%(AdditionalDependencies)</AdditionalDependencies>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <LargeAddressAware>true</LargeAddressAware>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+    <Midl>
+      <TypeLibraryName>$(OutDir)difstrm.tlb</TypeLibraryName>
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>..\..\external;..\..\external\xz\src\liblzma\api;..\..\external\xz\msvc;..\..\external\xz\lib;..\..\external\xz\windows\vs2019;..\..\external\xz\windows\vs2022;..\..\external\xz\windows;..\..\external\xz\src\common;..\..\external\xz\src\liblzma\common;..\..\external\xz\src\liblzma\check;..\..\external\xz\src\liblzma\rangecoder;..\..\external\xz\src\liblzma\lz;..\..\external\xz\src\liblzma\lzma;..\..\external\xz\src\liblzma\delta;..\..\external\xz\src\liblzma\simple;..\..\external\zlib;..\..\external\bzip;..\..\external\lzham;..\..\external\lzham\include;..\..\external\lzham\lzhamdecomp;..\..\external\lzham\lzhamcomp;..\..\external\fastlzlib;..\..\external\fastlzlib\lz4;..\..\external\zstd\lib;..\..\external\zstd\lib\dictBuilder;..\..\external\zstd\lib\common;..\..\external\xz-embedded\include\linux;..\..\src\lib\hash;..\..\src\misc\minizip;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;WIN32;_CONSOLE;PREVENT_LZHAM_USE_INTRINSIC;PREVENT_USE_BITSCANFORWARD64;DUMMY_OPENSSL_CLEANSE;PREVENT_COMPILE_PATCHBUILDER_EXT;noASMV;noASMINF;noMD5_ASM;noSHA1_ASM;noBOUND_CHECKER;noDO_STATIS;__STDC__;DYNAMIC_CRC_TABLE;NOCRYPT;NOUNCRYPT;HAVE_BZIP2;HAVE_LZMASDK_DECOMPRESS;HAVE_ZSTD;XXH_NAMESPACE=;ZSTD_MULTITHREAD;ZSTD_STATIC_LINKING_ONLY;HAVE_LZHAM;HAVE_FAST_LZLIB;ZFAST_USE_LZ4;ZFAST_USE_FASTLZ;ZFAST_USE_LZFSE;ZFASTEXTERN=;HAVE_CONFIG_H;TUKLIB_SYMBOL_PREFIX=lzma_;alloca=_alloca;SUPPORT_XP_WIN2003_64;HAVE_XZUTILS;LZMA_API_STATIC;MYTHREAD_VISTA;SMARTVERSION_MAIN;LZMA_INCLUDE_COMMON;BZ_NO_STDIO;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;NO_MSCVER_FILE64_FUNC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <PrecompiledHeaderOutputFile>$(IntDir)difstrm.pch</PrecompiledHeaderOutputFile>
+      <AssemblerOutput>AssemblyAndSourceCode</AssemblerOutput>
+      <AssemblerListingLocation>$(OutDir)</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(OutDir)</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x040c</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalOptions> /FIXED:NO  /SAFESEH:NO %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>pgort.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)smv.pdb</ProgramDatabaseFile>
+      <SubSystem>Console</SubSystem>
+      <LargeAddressAware>true</LargeAddressAware>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseClang|Win32'">
+    <Midl>
+      <TypeLibraryName>$(OutDir)difstrm.tlb</TypeLibraryName>
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>..\..\external;..\..\external\xz\src\liblzma\api;..\..\external\xz\msvc;..\..\external\xz\lib;..\..\external\xz\windows\vs2019;..\..\external\xz\windows\vs2022;..\..\external\xz\windows;..\..\external\xz\src\common;..\..\external\xz\src\liblzma\common;..\..\external\xz\src\liblzma\check;..\..\external\xz\src\liblzma\rangecoder;..\..\external\xz\src\liblzma\lz;..\..\external\xz\src\liblzma\lzma;..\..\external\xz\src\liblzma\delta;..\..\external\xz\src\liblzma\simple;..\..\external\zlib;..\..\external\bzip;..\..\external\lzham;..\..\external\lzham\include;..\..\external\lzham\lzhamdecomp;..\..\external\lzham\lzhamcomp;..\..\external\fastlzlib;..\..\external\fastlzlib\lz4;..\..\external\zstd\lib;..\..\external\zstd\lib\dictBuilder;..\..\external\zstd\lib\common;..\..\external\xz-embedded\include\linux;..\..\src\lib\hash;..\..\src\misc\minizip;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;WIN32;_CONSOLE;PREVENT_COMPILE_PATCHBUILDER_EXT;ASMV;ASMINF;MD5_ASM;SHA1_ASM;noBOUND_CHECKER;noDO_STATIS;__STDC__;DYNAMIC_CRC_TABLE;NOCRYPT;NOUNCRYPT;HAVE_BZIP2;HAVE_LZMASDK_DECOMPRESS;HAVE_ZSTD;XXH_NAMESPACE=;ZSTD_MULTITHREAD;ZSTD_STATIC_LINKING_ONLY;HAVE_LZHAM;HAVE_FAST_LZLIB;ZFAST_USE_LZ4;ZFAST_USE_FASTLZ;ZFAST_USE_LZFSE;ZFASTEXTERN=;HAVE_CONFIG_H;TUKLIB_SYMBOL_PREFIX=lzma_;alloca=_alloca;SUPPORT_XP_WIN2003_64;HAVE_XZUTILS;LZMA_API_STATIC;MYTHREAD_VISTA;SMARTVERSION_MAIN;LZMA_INCLUDE_COMMON;BZ_NO_STDIO;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;NO_MSCVER_FILE64_FUNC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <PrecompiledHeaderOutputFile>$(IntDir)difstrm.pch</PrecompiledHeaderOutputFile>
+      <AssemblerOutput>AssemblyAndSourceCode</AssemblerOutput>
+      <AssemblerListingLocation>$(OutDir)</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(OutDir)</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x040c</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalOptions> /FIXED:NO  /SAFESEH:NO %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>;;;..\..\src\lib\hash\sha1-586.obj;..\..\src\lib\hash\md5-586.obj;;pgort.lib;;%(AdditionalDependencies)</AdditionalDependencies>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)smv.pdb</ProgramDatabaseFile>
+      <SubSystem>Console</SubSystem>
+      <LargeAddressAware>true</LargeAddressAware>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseClang|ARM'">
+    <Midl>
+      <TypeLibraryName>$(OutDir)difstrm.tlb</TypeLibraryName>
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>..\..\external;..\..\external\xz\src\liblzma\api;..\..\external\xz\msvc;..\..\external\xz\lib;..\..\external\xz\windows\vs2019;..\..\external\xz\windows\vs2022;..\..\external\xz\windows;..\..\external\xz\src\common;..\..\external\xz\src\liblzma\common;..\..\external\xz\src\liblzma\check;..\..\external\xz\src\liblzma\rangecoder;..\..\external\xz\src\liblzma\lz;..\..\external\xz\src\liblzma\lzma;..\..\external\xz\src\liblzma\delta;..\..\external\xz\src\liblzma\simple;..\..\external\zlib;..\..\external\bzip;..\..\external\lzham;..\..\external\lzham\include;..\..\external\lzham\lzhamdecomp;..\..\external\lzham\lzhamcomp;..\..\external\fastlzlib;..\..\external\fastlzlib\lz4;..\..\external\zstd\lib;..\..\external\zstd\lib\dictBuilder;..\..\external\zstd\lib\common;..\..\external\xz-embedded\include\linux;..\..\src\lib\hash;..\..\src\misc\minizip;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;WIN32;_CONSOLE;PREVENT_COMPILE_PATCHBUILDER_EXT;ASMV;ASMINF;MD5_ASM;SHA1_ASM;noBOUND_CHECKER;noDO_STATIS;__STDC__;DYNAMIC_CRC_TABLE;NOCRYPT;NOUNCRYPT;HAVE_BZIP2;HAVE_LZMASDK_DECOMPRESS;HAVE_ZSTD;XXH_NAMESPACE=;ZSTD_MULTITHREAD;ZSTD_STATIC_LINKING_ONLY;HAVE_LZHAM;HAVE_FAST_LZLIB;ZFAST_USE_LZ4;ZFAST_USE_FASTLZ;ZFAST_USE_LZFSE;ZFASTEXTERN=;HAVE_CONFIG_H;TUKLIB_SYMBOL_PREFIX=lzma_;alloca=_alloca;SUPPORT_XP_WIN2003_64;HAVE_XZUTILS;LZMA_API_STATIC;MYTHREAD_VISTA;SMARTVERSION_MAIN;LZMA_INCLUDE_COMMON;BZ_NO_STDIO;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;NO_MSCVER_FILE64_FUNC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <PrecompiledHeaderOutputFile>$(IntDir)difstrm.pch</PrecompiledHeaderOutputFile>
+      <AssemblerOutput>AssemblyAndSourceCode</AssemblerOutput>
+      <AssemblerListingLocation>$(OutDir)</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(OutDir)</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x040c</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalOptions> /FIXED:NO  /SAFESEH:NO %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>;;;..\..\src\lib\hash\sha1-586.obj;..\..\src\lib\hash\md5-586.obj;;pgort.lib;;%(AdditionalDependencies)</AdditionalDependencies>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)smv.pdb</ProgramDatabaseFile>
+      <SubSystem>Console</SubSystem>
+      <LargeAddressAware>true</LargeAddressAware>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+      <TypeLibraryName>$(OutDir)difstrm.tlb</TypeLibraryName>
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>..\..\external;..\..\external\xz\src\liblzma\api;..\..\external\xz\msvc;..\..\external\xz\lib;..\..\external\xz\windows\vs2019;..\..\external\xz\windows\vs2022;..\..\external\xz\windows;..\..\external\xz\src\common;..\..\external\xz\src\liblzma\common;..\..\external\xz\src\liblzma\check;..\..\external\xz\src\liblzma\rangecoder;..\..\external\xz\src\liblzma\lz;..\..\external\xz\src\liblzma\lzma;..\..\external\xz\src\liblzma\delta;..\..\external\xz\src\liblzma\simple;..\..\external\zlib;..\..\external\bzip;..\..\external\lzham;..\..\external\lzham\include;..\..\external\lzham\lzhamdecomp;..\..\external\lzham\lzhamcomp;..\..\external\fastlzlib;..\..\external\fastlzlib\lz4;..\..\external\zstd\lib;..\..\external\zstd\lib\dictBuilder;..\..\external\zstd\lib\common;..\..\external\xz-embedded\include\linux;..\..\src\lib\hash;..\..\src\misc\minizip;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;WIN32;PREVENT_COMPILE_PATCHBUILDER_EXT;MD5_ASM;SHA1_ASM;SHA256_ASM;SHA256FROMOPENSSL;noBOUND_CHECKER;noDO_STATIS;__STDC__;DYNAMIC_CRC_TABLE;NOCRYPT;NOUNCRYPT;HAVE_BZIP2;HAVE_LZMASDK_DECOMPRESS;HAVE_ZSTD;XXH_NAMESPACE=;ZSTD_MULTITHREAD;ZSTD_STATIC_LINKING_ONLY;HAVE_LZHAM;HAVE_FAST_LZLIB;ZFAST_USE_LZ4;ZFAST_USE_FASTLZ;ZFAST_USE_LZFSE;ZFASTEXTERN=;HAVE_CONFIG_H;TUKLIB_SYMBOL_PREFIX=lzma_;alloca=_alloca;SUPPORT_XP_WIN2003_64;HAVE_XZUTILS;LZMA_API_STATIC;MYTHREAD_VISTA;SMARTVERSION_MAIN;LZMA_INCLUDE_COMMON;BZ_NO_STDIO;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;WIN64;NO_MSCVER_FILE64_FUNC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <PrecompiledHeaderOutputFile>$(IntDir)difstrm.pch</PrecompiledHeaderOutputFile>
+      <AssemblerOutput>AssemblyAndSourceCode</AssemblerOutput>
+      <AssemblerListingLocation>$(OutDir)</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(OutDir)</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <CompileAs>Default</CompileAs>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x040c</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>pgort.lib;..\..\src\lib\hash\x86_64cpuid.obj;..\..\src\lib\hash\sha1-x86_64.obj;..\..\src\lib\hash\md5-x86_64.obj;..\..\src\lib\hash\sha256-x86_64.obj;%(AdditionalDependencies)</AdditionalDependencies>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <SubSystem>Console</SubSystem>
+      <LargeAddressAware>true</LargeAddressAware>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <TargetMachine>MachineX64</TargetMachine>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">
+    <Midl>
+      <TypeLibraryName>$(OutDir)difstrm.tlb</TypeLibraryName>
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>..\..\external;..\..\external\xz\src\liblzma\api;..\..\external\xz\msvc;..\..\external\xz\lib;..\..\external\xz\windows\vs2019;..\..\external\xz\windows\vs2022;..\..\external\xz\windows;..\..\external\xz\src\common;..\..\external\xz\src\liblzma\common;..\..\external\xz\src\liblzma\check;..\..\external\xz\src\liblzma\rangecoder;..\..\external\xz\src\liblzma\lz;..\..\external\xz\src\liblzma\lzma;..\..\external\xz\src\liblzma\delta;..\..\external\xz\src\liblzma\simple;..\..\external\zlib;..\..\external\bzip;..\..\external\lzham;..\..\external\lzham\include;..\..\external\lzham\lzhamdecomp;..\..\external\lzham\lzhamcomp;..\..\external\fastlzlib;..\..\external\fastlzlib\lz4;..\..\external\zstd\lib;..\..\external\zstd\lib\dictBuilder;..\..\external\zstd\lib\common;..\..\external\xz-embedded\include\linux;..\..\src\lib\hash;..\..\src\misc\minizip;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;WIN32;PREVENT_COMPILE_PATCHBUILDER_EXT;PREVENT_LZHAM_USE_INTRINSIC;DUMMY_OPENSSL_CLEANSE;noMD5_ASM;noSHA1_ASM;noSHA256_ASM;SHA256FROMOPENSSL;noBOUND_CHECKER;noDO_STATIS;__STDC__;DYNAMIC_CRC_TABLE;NOCRYPT;NOUNCRYPT;HAVE_BZIP2;HAVE_LZMASDK_DECOMPRESS;HAVE_ZSTD;XXH_NAMESPACE=;ZSTD_MULTITHREAD;ZSTD_STATIC_LINKING_ONLY;HAVE_LZHAM;HAVE_FAST_LZLIB;ZFAST_USE_LZ4;ZFAST_USE_FASTLZ;ZFAST_USE_LZFSE;ZFASTEXTERN=;HAVE_CONFIG_H;TUKLIB_SYMBOL_PREFIX=lzma_;alloca=_alloca;SUPPORT_XP_WIN2003_64;HAVE_XZUTILS;LZMA_API_STATIC;MYTHREAD_VISTA;SMARTVERSION_MAIN;LZMA_INCLUDE_COMMON;BZ_NO_STDIO;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;WIN64;NO_MSCVER_FILE64_FUNC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <PrecompiledHeaderOutputFile>$(IntDir)difstrm.pch</PrecompiledHeaderOutputFile>
+      <AssemblerOutput>AssemblyAndSourceCode</AssemblerOutput>
+      <AssemblerListingLocation>$(OutDir)</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(OutDir)</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x040c</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>pgort.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)smv.pdb</ProgramDatabaseFile>
+      <SubSystem>Console</SubSystem>
+      <LargeAddressAware>true</LargeAddressAware>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseClang|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+      <TypeLibraryName>$(OutDir)difstrm.tlb</TypeLibraryName>
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>..\..\external;..\..\external\xz\src\liblzma\api;..\..\external\xz\msvc;..\..\external\xz\lib;..\..\external\xz\windows\vs2019;..\..\external\xz\windows\vs2022;..\..\external\xz\windows;..\..\external\xz\src\common;..\..\external\xz\src\liblzma\common;..\..\external\xz\src\liblzma\check;..\..\external\xz\src\liblzma\rangecoder;..\..\external\xz\src\liblzma\lz;..\..\external\xz\src\liblzma\lzma;..\..\external\xz\src\liblzma\delta;..\..\external\xz\src\liblzma\simple;..\..\external\zlib;..\..\external\bzip;..\..\external\lzham;..\..\external\lzham\include;..\..\external\lzham\lzhamdecomp;..\..\external\lzham\lzhamcomp;..\..\external\fastlzlib;..\..\external\fastlzlib\lz4;..\..\external\zstd\lib;..\..\external\zstd\lib\dictBuilder;..\..\external\zstd\lib\common;..\..\external\xz-embedded\include\linux;..\..\src\lib\hash;..\..\src\misc\minizip;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;PREVENT_COMPILE_PATCHBUILDER_EXT;MD5_ASM;SHA1_ASM;noBOUND_CHECKER;noDO_STATIS;__STDC__;DYNAMIC_CRC_TABLE;NOCRYPT;NOUNCRYPT;HAVE_BZIP2;HAVE_LZMASDK_DECOMPRESS;HAVE_ZSTD;XXH_NAMESPACE=;ZSTD_MULTITHREAD;ZSTD_STATIC_LINKING_ONLY;HAVE_LZHAM;LZHAM_STANDARD_ALLOCATION;HAVE_FAST_LZLIB;ZFAST_USE_LZ4;ZFAST_USE_FASTLZ;ZFAST_USE_LZFSE;ZFASTEXTERN=;HAVE_CONFIG_H;TUKLIB_SYMBOL_PREFIX=lzma_;alloca=_alloca;SUPPORT_XP_WIN2003_64;HAVE_XZUTILS;LZMA_API_STATIC;MYTHREAD_VISTA;SMARTVERSION_MAIN;LZMA_INCLUDE_COMMON;BZ_NO_STDIO;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;WIN64;NO_MSCVER_FILE64_FUNC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <PrecompiledHeaderOutputFile>$(IntDir)difstrm.pch</PrecompiledHeaderOutputFile>
+      <AssemblerOutput>AssemblyAndSourceCode</AssemblerOutput>
+      <AssemblerListingLocation>$(OutDir)</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(OutDir)</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x040c</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>;;;..\..\src\lib\hash\md5-x86_64.obj;md5\sha1-x64.obj;%(AdditionalDependencies)</AdditionalDependencies>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)smv.pdb</ProgramDatabaseFile>
+      <SubSystem>Console</SubSystem>
+      <LargeAddressAware>true</LargeAddressAware>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseClang|ARM64'">
+    <Midl>
+      <TypeLibraryName>$(OutDir)difstrm.tlb</TypeLibraryName>
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>..\..\external;..\..\external\xz\src\liblzma\api;..\..\external\xz\msvc;..\..\external\xz\lib;..\..\external\xz\windows\vs2019;..\..\external\xz\windows\vs2022;..\..\external\xz\windows;..\..\external\xz\src\common;..\..\external\xz\src\liblzma\common;..\..\external\xz\src\liblzma\check;..\..\external\xz\src\liblzma\rangecoder;..\..\external\xz\src\liblzma\lz;..\..\external\xz\src\liblzma\lzma;..\..\external\xz\src\liblzma\delta;..\..\external\xz\src\liblzma\simple;..\..\external\zlib;..\..\external\bzip;..\..\external\lzham;..\..\external\lzham\include;..\..\external\lzham\lzhamdecomp;..\..\external\lzham\lzhamcomp;..\..\external\fastlzlib;..\..\external\fastlzlib\lz4;..\..\external\zstd\lib;..\..\external\zstd\lib\dictBuilder;..\..\external\zstd\lib\common;..\..\external\xz-embedded\include\linux;..\..\src\lib\hash;..\..\src\misc\minizip;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;PREVENT_COMPILE_PATCHBUILDER_EXT;MD5_ASM;SHA1_ASM;noBOUND_CHECKER;noDO_STATIS;__STDC__;DYNAMIC_CRC_TABLE;NOCRYPT;NOUNCRYPT;HAVE_BZIP2;HAVE_LZMASDK_DECOMPRESS;HAVE_ZSTD;XXH_NAMESPACE=;ZSTD_MULTITHREAD;ZSTD_STATIC_LINKING_ONLY;HAVE_LZHAM;HAVE_FAST_LZLIB;ZFAST_USE_LZ4;ZFAST_USE_FASTLZ;ZFAST_USE_LZFSE;ZFASTEXTERN=;HAVE_CONFIG_H;TUKLIB_SYMBOL_PREFIX=lzma_;alloca=_alloca;SUPPORT_XP_WIN2003_64;HAVE_XZUTILS;LZMA_API_STATIC;MYTHREAD_VISTA;SMARTVERSION_MAIN;LZMA_INCLUDE_COMMON;BZ_NO_STDIO;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;WIN64;NO_MSCVER_FILE64_FUNC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <PrecompiledHeaderOutputFile>$(IntDir)difstrm.pch</PrecompiledHeaderOutputFile>
+      <AssemblerOutput>AssemblyAndSourceCode</AssemblerOutput>
+      <AssemblerListingLocation>$(OutDir)</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(OutDir)</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x040c</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>;pgort.lib;;;..\..\src\lib\hash\md5-x86_64.obj;md5\sha1-x64.obj;%(AdditionalDependencies)</AdditionalDependencies>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)smv.pdb</ProgramDatabaseFile>
+      <SubSystem>Console</SubSystem>
+      <LargeAddressAware>true</LargeAddressAware>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDebugInfo|Win32'">
+    <Midl>
+      <TypeLibraryName>$(OutDir)difstrm.tlb</TypeLibraryName>
+    </Midl>
+    <ClCompile>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>..\..\external;..\..\external\xz\src\liblzma\api;..\..\external\xz\msvc;..\..\external\xz\lib;..\..\external\xz\windows\vs2019;..\..\external\xz\windows\vs2022;..\..\external\xz\windows;..\..\external\xz\src\common;..\..\external\xz\src\liblzma\common;..\..\external\xz\src\liblzma\check;..\..\external\xz\src\liblzma\rangecoder;..\..\external\xz\src\liblzma\lz;..\..\external\xz\src\liblzma\lzma;..\..\external\xz\src\liblzma\delta;..\..\external\xz\src\liblzma\simple;..\..\external\zlib;..\..\external\bzip;..\..\external\lzham;..\..\external\lzham\include;..\..\external\lzham\lzhamdecomp;..\..\external\lzham\lzhamcomp;..\..\external\fastlzlib;..\..\external\fastlzlib\lz4;..\..\external\zstd\lib;..\..\external\zstd\lib\dictBuilder;..\..\external\zstd\lib\common;..\..\external\xz-embedded\include\linux;..\..\src\lib\hash;..\..\src\misc\minizip;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;WIN32;_CONSOLE;ASMV;ASMINF;MD5_ASM;SHA1_ASM;noBOUND_CHECKER;noDO_STATIS;__STDC__;DYNAMIC_CRC_TABLE;NOCRYPT;NOUNCRYPT;HAVE_BZIP2;HAVE_LZMASDK_DECOMPRESS;HAVE_ZSTD;XXH_NAMESPACE=;ZSTD_MULTITHREAD;ZSTD_STATIC_LINKING_ONLY;HAVE_LZHAM;HAVE_FAST_LZLIB;ZFAST_USE_LZ4;ZFAST_USE_FASTLZ;ZFAST_USE_LZFSE;ZFASTEXTERN=;HAVE_CONFIG_H;TUKLIB_SYMBOL_PREFIX=lzma_;alloca=_alloca;SUPPORT_XP_WIN2003_64;HAVE_XZUTILS;HAVE_LZMASDK_DECOMPRESS;HAVE_ZSTD;XXH_NAMESPACE=;ZSTD_MULTITHREAD;ZSTD_STATIC_LINKING_ONLY;HAVE_LZHAM;HAVE_FAST_LZLIB;ZFAST_USE_LZ4;ZFAST_USE_FASTLZ;ZFAST_USE_LZFSE;ZFASTEXTERN=;HAVE_CONFIG_H;LZMA_API_STATIC;MYTHREAD_VISTA;SMARTVERSION_MAIN;LZMA_INCLUDE_COMMON;BZ_NO_STDIO;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <PrecompiledHeaderOutputFile>$(IntDir)difstrm.pch</PrecompiledHeaderOutputFile>
+      <AssemblerOutput>
+      </AssemblerOutput>
+      <AssemblerListingLocation>$(OutDir)</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(OutDir)</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x040c</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>crtdll.lib;int64lib.lib;;;..\..\src\lib\hash\md5-586.obj;md5\sha1-386.obj;%(AdditionalDependencies)</AdditionalDependencies>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)smv.pdb</ProgramDatabaseFile>
+      <SubSystem>Console</SubSystem>
+      <LargeAddressAware>true</LargeAddressAware>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDebugInfo|ARM'">
+    <Midl>
+      <TypeLibraryName>$(OutDir)difstrm.tlb</TypeLibraryName>
+    </Midl>
+    <ClCompile>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>..\..\external;..\..\external\xz\src\liblzma\api;..\..\external\xz\msvc;..\..\external\xz\lib;..\..\external\xz\windows\vs2019;..\..\external\xz\windows\vs2022;..\..\external\xz\windows;..\..\external\xz\src\common;..\..\external\xz\src\liblzma\common;..\..\external\xz\src\liblzma\check;..\..\external\xz\src\liblzma\rangecoder;..\..\external\xz\src\liblzma\lz;..\..\external\xz\src\liblzma\lzma;..\..\external\xz\src\liblzma\delta;..\..\external\xz\src\liblzma\simple;..\..\external\zlib;..\..\external\bzip;..\..\external\lzham;..\..\external\lzham\include;..\..\external\lzham\lzhamdecomp;..\..\external\lzham\lzhamcomp;..\..\external\fastlzlib;..\..\external\fastlzlib\lz4;..\..\external\zstd\lib;..\..\external\zstd\lib\dictBuilder;..\..\external\zstd\lib\common;..\..\external\xz-embedded\include\linux;..\..\src\lib\hash;..\..\src\misc\minizip;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;WIN32;_CONSOLE;ASMV;ASMINF;MD5_ASM;SHA1_ASM;noBOUND_CHECKER;noDO_STATIS;__STDC__;DYNAMIC_CRC_TABLE;NOCRYPT;NOUNCRYPT;HAVE_BZIP2;HAVE_LZMASDK_DECOMPRESS;HAVE_ZSTD;XXH_NAMESPACE=;ZSTD_MULTITHREAD;ZSTD_STATIC_LINKING_ONLY;HAVE_LZHAM;HAVE_FAST_LZLIB;ZFAST_USE_LZ4;ZFAST_USE_FASTLZ;ZFAST_USE_LZFSE;ZFASTEXTERN=;HAVE_CONFIG_H;TUKLIB_SYMBOL_PREFIX=lzma_;alloca=_alloca;SUPPORT_XP_WIN2003_64;HAVE_XZUTILS;HAVE_LZMASDK_DECOMPRESS;HAVE_ZSTD;XXH_NAMESPACE=;ZSTD_MULTITHREAD;ZSTD_STATIC_LINKING_ONLY;HAVE_LZHAM;HAVE_FAST_LZLIB;ZFAST_USE_LZ4;ZFAST_USE_FASTLZ;ZFAST_USE_LZFSE;ZFASTEXTERN=;HAVE_CONFIG_H;LZMA_API_STATIC;MYTHREAD_VISTA;SMARTVERSION_MAIN;LZMA_INCLUDE_COMMON;BZ_NO_STDIO;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <PrecompiledHeaderOutputFile>$(IntDir)difstrm.pch</PrecompiledHeaderOutputFile>
+      <AssemblerOutput>
+      </AssemblerOutput>
+      <AssemblerListingLocation>$(OutDir)</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(OutDir)</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x040c</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>crtdll.lib;int64lib.lib;;;..\..\src\lib\hash\md5-586.obj;md5\sha1-386.obj;%(AdditionalDependencies)</AdditionalDependencies>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)smv.pdb</ProgramDatabaseFile>
+      <SubSystem>Console</SubSystem>
+      <LargeAddressAware>true</LargeAddressAware>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDebugInfo|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+      <TypeLibraryName>$(OutDir)difstrm.tlb</TypeLibraryName>
+    </Midl>
+    <ClCompile>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>..\..\external;..\..\external\xz\src\liblzma\api;..\..\external\xz\msvc;..\..\external\xz\lib;..\..\external\xz\windows\vs2019;..\..\external\xz\windows\vs2022;..\..\external\xz\windows;..\..\external\xz\src\common;..\..\external\xz\src\liblzma\common;..\..\external\xz\src\liblzma\check;..\..\external\xz\src\liblzma\rangecoder;..\..\external\xz\src\liblzma\lz;..\..\external\xz\src\liblzma\lzma;..\..\external\xz\src\liblzma\delta;..\..\external\xz\src\liblzma\simple;..\..\external\zlib;..\..\external\bzip;..\..\external\lzham;..\..\external\lzham\include;..\..\external\lzham\lzhamdecomp;..\..\external\lzham\lzhamcomp;..\..\external\fastlzlib;..\..\external\fastlzlib\lz4;..\..\external\zstd\lib;..\..\external\zstd\lib\dictBuilder;..\..\external\zstd\lib\common;..\..\external\xz-embedded\include\linux;..\..\src\lib\hash;..\..\src\misc\minizip;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;WIN32;ASMV;ASMINF;MD5_ASM;SHA1_ASM;noBOUND_CHECKER;noDO_STATIS;__STDC__;DYNAMIC_CRC_TABLE;NOCRYPT;NOUNCRYPT;HAVE_BZIP2;HAVE_LZMASDK_DECOMPRESS;HAVE_ZSTD;XXH_NAMESPACE=;ZSTD_MULTITHREAD;ZSTD_STATIC_LINKING_ONLY;HAVE_LZHAM;HAVE_FAST_LZLIB;ZFAST_USE_LZ4;ZFAST_USE_FASTLZ;ZFAST_USE_LZFSE;ZFASTEXTERN=;HAVE_CONFIG_H;TUKLIB_SYMBOL_PREFIX=lzma_;alloca=_alloca;SUPPORT_XP_WIN2003_64;HAVE_XZUTILS;HAVE_LZMASDK_DECOMPRESS;HAVE_ZSTD;XXH_NAMESPACE=;ZSTD_MULTITHREAD;ZSTD_STATIC_LINKING_ONLY;HAVE_LZHAM;HAVE_FAST_LZLIB;ZFAST_USE_LZ4;ZFAST_USE_FASTLZ;ZFAST_USE_LZFSE;ZFASTEXTERN=;HAVE_CONFIG_H;LZMA_API_STATIC;MYTHREAD_VISTA;SMARTVERSION_MAIN;LZMA_INCLUDE_COMMON;BZ_NO_STDIO;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;WIN64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <PrecompiledHeaderOutputFile>$(IntDir)difstrm.pch</PrecompiledHeaderOutputFile>
+      <AssemblerOutput>All</AssemblerOutput>
+      <AssemblerListingLocation>$(OutDir)</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(OutDir)</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x040c</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>msvcrt_amd64.lib;zlib\gvmat64.obj;zlib\inffasx64.obj;..\..\src\lib\hash\md5-x86_64.obj;md5\sha1-x64.obj;%(AdditionalDependencies)</AdditionalDependencies>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)smv.pdb</ProgramDatabaseFile>
+      <SubSystem>Console</SubSystem>
+      <LargeAddressAware>true</LargeAddressAware>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDebugInfo|ARM64'">
+    <Midl>
+      <TypeLibraryName>$(OutDir)difstrm.tlb</TypeLibraryName>
+    </Midl>
+    <ClCompile>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>..\..\external;..\..\external\xz\src\liblzma\api;..\..\external\xz\msvc;..\..\external\xz\lib;..\..\external\xz\windows\vs2019;..\..\external\xz\windows\vs2022;..\..\external\xz\windows;..\..\external\xz\src\common;..\..\external\xz\src\liblzma\common;..\..\external\xz\src\liblzma\check;..\..\external\xz\src\liblzma\rangecoder;..\..\external\xz\src\liblzma\lz;..\..\external\xz\src\liblzma\lzma;..\..\external\xz\src\liblzma\delta;..\..\external\xz\src\liblzma\simple;..\..\external\zlib;..\..\external\bzip;..\..\external\lzham;..\..\external\lzham\include;..\..\external\lzham\lzhamdecomp;..\..\external\lzham\lzhamcomp;..\..\external\fastlzlib;..\..\external\fastlzlib\lz4;..\..\external\zstd\lib;..\..\external\zstd\lib\dictBuilder;..\..\external\zstd\lib\common;..\..\external\xz-embedded\include\linux;..\..\src\lib\hash;..\..\src\misc\minizip;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;WIN32;ASMV;ASMINF;MD5_ASM;SHA1_ASM;noBOUND_CHECKER;noDO_STATIS;__STDC__;DYNAMIC_CRC_TABLE;NOCRYPT;NOUNCRYPT;HAVE_BZIP2;HAVE_LZMASDK_DECOMPRESS;HAVE_ZSTD;XXH_NAMESPACE=;ZSTD_MULTITHREAD;ZSTD_STATIC_LINKING_ONLY;HAVE_LZHAM;HAVE_FAST_LZLIB;ZFAST_USE_LZ4;ZFAST_USE_FASTLZ;ZFAST_USE_LZFSE;ZFASTEXTERN=;HAVE_CONFIG_H;TUKLIB_SYMBOL_PREFIX=lzma_;alloca=_alloca;SUPPORT_XP_WIN2003_64;HAVE_XZUTILS;HAVE_LZMASDK_DECOMPRESS;HAVE_ZSTD;XXH_NAMESPACE=;ZSTD_MULTITHREAD;ZSTD_STATIC_LINKING_ONLY;HAVE_LZHAM;HAVE_FAST_LZLIB;ZFAST_USE_LZ4;ZFAST_USE_FASTLZ;ZFAST_USE_LZFSE;ZFASTEXTERN=;HAVE_CONFIG_H;LZMA_API_STATIC;MYTHREAD_VISTA;SMARTVERSION_MAIN;LZMA_INCLUDE_COMMON;BZ_NO_STDIO;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;WIN64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <PrecompiledHeaderOutputFile>$(IntDir)difstrm.pch</PrecompiledHeaderOutputFile>
+      <AssemblerOutput>All</AssemblerOutput>
+      <AssemblerListingLocation>$(OutDir)</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(OutDir)</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x040c</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>msvcrt_amd64.lib;zlib\gvmat64.obj;zlib\inffasx64.obj;..\..\src\lib\hash\md5-x86_64.obj;md5\sha1-x64.obj;%(AdditionalDependencies)</AdditionalDependencies>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)smv.pdb</ProgramDatabaseFile>
+      <SubSystem>Console</SubSystem>
+      <LargeAddressAware>true</LargeAddressAware>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Template|ARM'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\external;..\..\external\xz\src\liblzma\api;..\..\external\xz\msvc;..\..\external\xz\lib;..\..\external\xz\windows\vs2019;..\..\external\xz\windows\vs2022;..\..\external\xz\windows;..\..\external\xz\src\common;..\..\external\xz\src\liblzma\common;..\..\external\xz\src\liblzma\check;..\..\external\xz\src\liblzma\rangecoder;..\..\external\xz\src\liblzma\lz;..\..\external\xz\src\liblzma\lzma;..\..\external\xz\src\liblzma\delta;..\..\external\xz\src\liblzma\simple;..\..\external\zlib;..\..\external\bzip;..\..\external\lzham;..\..\external\lzham\include;..\..\external\lzham\lzhamdecomp;..\..\external\lzham\lzhamcomp;..\..\external\fastlzlib;..\..\external\fastlzlib\lz4;..\..\external\zstd\lib;..\..\external\zstd\lib\dictBuilder;..\..\external\zstd\lib\common;..\..\external\xz-embedded\include\linux;..\..\src\lib\hash;..\..\src\misc\minizip;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Template|ARM64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\external;..\..\external\xz\src\liblzma\api;..\..\external\xz\msvc;..\..\external\xz\lib;..\..\external\xz\windows\vs2019;..\..\external\xz\windows\vs2022;..\..\external\xz\windows;..\..\external\xz\src\common;..\..\external\xz\src\liblzma\common;..\..\external\xz\src\liblzma\check;..\..\external\xz\src\liblzma\rangecoder;..\..\external\xz\src\liblzma\lz;..\..\external\xz\src\liblzma\lzma;..\..\external\xz\src\liblzma\delta;..\..\external\xz\src\liblzma\simple;..\..\external\zlib;..\..\external\bzip;..\..\external\lzham;..\..\external\lzham\include;..\..\external\lzham\lzhamdecomp;..\..\external\lzham\lzhamcomp;..\..\external\fastlzlib;..\..\external\fastlzlib\lz4;..\..\external\zstd\lib;..\..\external\zstd\lib\dictBuilder;..\..\external\zstd\lib\common;..\..\external\xz-embedded\include\linux;..\..\src\lib\hash;..\..\src\misc\minizip;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Template|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\external;..\..\external\xz\src\liblzma\api;..\..\external\xz\msvc;..\..\external\xz\lib;..\..\external\xz\windows\vs2019;..\..\external\xz\windows\vs2022;..\..\external\xz\windows;..\..\external\xz\src\common;..\..\external\xz\src\liblzma\common;..\..\external\xz\src\liblzma\check;..\..\external\xz\src\liblzma\rangecoder;..\..\external\xz\src\liblzma\lz;..\..\external\xz\src\liblzma\lzma;..\..\external\xz\src\liblzma\delta;..\..\external\xz\src\liblzma\simple;..\..\external\zlib;..\..\external\bzip;..\..\external\lzham;..\..\external\lzham\include;..\..\external\lzham\lzhamdecomp;..\..\external\lzham\lzhamcomp;..\..\external\fastlzlib;..\..\external\fastlzlib\lz4;..\..\external\zstd\lib;..\..\external\zstd\lib\dictBuilder;..\..\external\zstd\lib\common;..\..\external\xz-embedded\include\linux;..\..\src\lib\hash;..\..\src\misc\minizip;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Template|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\external;..\..\external\xz\src\liblzma\api;..\..\external\xz\msvc;..\..\external\xz\lib;..\..\external\xz\windows\vs2019;..\..\external\xz\windows\vs2022;..\..\external\xz\windows;..\..\external\xz\src\common;..\..\external\xz\src\liblzma\common;..\..\external\xz\src\liblzma\check;..\..\external\xz\src\liblzma\rangecoder;..\..\external\xz\src\liblzma\lz;..\..\external\xz\src\liblzma\lzma;..\..\external\xz\src\liblzma\delta;..\..\external\xz\src\liblzma\simple;..\..\external\zlib;..\..\external\bzip;..\..\external\lzham;..\..\external\lzham\include;..\..\external\lzham\lzhamdecomp;..\..\external\lzham\lzhamcomp;..\..\external\fastlzlib;..\..\external\fastlzlib\lz4;..\..\external\zstd\lib;..\..\external\zstd\lib\dictBuilder;..\..\external\zstd\lib\common;..\..\external\xz-embedded\include\linux;..\..\src\lib\hash;..\..\src\misc\minizip;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties DevPartner_IsInstrumented="0" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
