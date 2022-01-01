@@ -24,7 +24,7 @@ cd lzfse
 tar xvf ../../../rbldext/lzfse.tar.gz  --strip-components=1
 cd ..
 
-cd .. 
+cd ..
 
 mkdir bzip
 cd bzip
@@ -72,5 +72,8 @@ cd C
 mv Sha256.c LZMASDK_Sha256.c
 cd ..
 cd ..
+cd ..
+
+pwd
 
 mv newext external
