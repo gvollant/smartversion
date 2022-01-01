@@ -212,6 +212,7 @@
 			<Add directory="external/lzma_sdk/C" />
 			<Add directory="external" />
 			<Add directory="src/misc/minizip" />
+			<Add directory="src/lib/hash" />
 			<Add directory="." />
 		</Compiler>
 		<Linker>

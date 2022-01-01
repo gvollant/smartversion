@@ -35,7 +35,7 @@
 
 #define SVF_VERSION_YEAR 2022
 
-// for windows resource
+/* for windows resource */
 #define FULL_STRING_SMARTVERSION_VERSION "SmartVersion 3.84"
 #define FULL_STRING_SMARTVERSION_COPYRIGHT "Copyright © 2002-2022 Gilles Vollant."
 #define FULL_STRING_SMARTVERSION_COPYRIGHT_2 "Portion Copyright Gilles Vollant (collaborate with Amabis and Hubbi), Francois Liger (of Lemma Factory), Facebook and Yann Colet (Zstd, xxhash and lz4), OpenSSL (hash), Rich Geldreich (lzham)"
@@ -43,8 +43,7 @@
 
 
 
-
-////////////////////
+/* /////////////////// */
 
 #define SVF_STRINGIFY(s) #s
 #define XSVF_STRINGIFY(s) SVF_STRINGIFY(s)

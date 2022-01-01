@@ -10,3 +10,7 @@ run ./external_rebuild.sh under Linux or Windows + WSL to generate the external 
 
 open smv.cbp under CodeBlocks for Linux
 open smartversion\project\vstudio\smv_vs.sln under Visual Studio 2019 or 2022 under MS Windows
+
+under linux, you can also run
+make -f smv.cbp.mak linux32staticrelease -j8
+make -f smv.cbp.mak linux64staticrelease -j8
