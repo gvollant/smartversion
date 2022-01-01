@@ -10,8 +10,8 @@ do_download()
 rm -rf  rbldext
 mkdir rbldext
 cd rbldext
-do_download https://github.com/gvollant/lzham_codec/archive/refs/tags/v1_0_stable2_compat.zip lzham.zip
-do_download https://github.com/gvollant/lzham_codec/archive/refs/tags/v1_0_stable2_compat.tar.gz lzham.tar.gz
+do_download https://github.com/gvollant/lzham_codec/archive/refs/tags/v1_0_stable3_compat.zip lzham.zip
+do_download https://github.com/gvollant/lzham_codec/archive/refs/tags/v1_0_stable3_compat.tar.gz lzham.tar.gz
 
 do_download https://github.com/gvollant/fastlzlib/archive/refs/tags/fastlzlib_with_lzfse.zip fastlzlib.zip
 do_download https://github.com/gvollant/fastlzlib/archive/refs/tags/fastlzlib_with_lzfse.tar.gz fastlzlib.tar.gz

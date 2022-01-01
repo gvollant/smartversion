@@ -75,7 +75,7 @@ progress bar  -> FAIT
 
 #include "../common/DfsSet.h"
 
-#include "../../patchstream/common/dfsOrigMemoryMap.h"
+#include "../../patchstream/common/DfsOrigMemoryMap.h"
 
 #include "../../patchstream/rebuild/RamDifWk.h"
 #include "../../patchstream/rebuild/RamDifTl.h"
