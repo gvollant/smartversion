@@ -89,6 +89,10 @@ typedef int BOOL;
 #define DECLARE_DFHANDLE(name)    struct name##__ { int _name##_unused; }; \
                                   typedef const struct name##__ * name
 
+#ifndef SMARTVERSION_DISCARD_UNUSED
+#define SMARTVERSION_DISCARD_UNUSED(v) ((void)(v));
+#endif
+
 #ifndef BASIC_INT_TYPE_DEFINED
 #define BASIC_INT_TYPE_DEFINED
 

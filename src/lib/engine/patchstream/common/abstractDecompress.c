@@ -188,6 +188,7 @@ int zlib_store_abstract_decompress(struct abs_stream_s* strm,int flush)
 
 int zlib_store_abstract_decompress_end(struct abs_stream_s* strm)
 {
+	SMARTVERSION_DISCARD_UNUSED(strm);
     //union_native_stream* native_stream = (union_native_stream*)strm->p_native_stream;
 	return ABSTR_DECOMPRESS_Z_OK;
 }
@@ -195,12 +196,15 @@ int zlib_store_abstract_decompress_end(struct abs_stream_s* strm)
 
 int error_abstract_decompress(struct abs_stream_s* strm,int flush)
 {
+	SMARTVERSION_DISCARD_UNUSED(strm);
+	SMARTVERSION_DISCARD_UNUSED(flush);
 	return ABSTR_DECOMPRESS_Z_ERRNO;
 }
 
 
 int error_abstract_decompress_end(struct abs_stream_s* strm)
 {
+	SMARTVERSION_DISCARD_UNUSED(strm);
 	return ABSTR_DECOMPRESS_Z_ERRNO;
 }
 
@@ -349,6 +353,7 @@ void ClearZstdDecompressStream(z_stream* strm)
 
 static int zstd_zlib_mini_wrap_inflate (z_streamp strm, int flush)
 {
+  SMARTVERSION_DISCARD_UNUSED(flush);
   ZSTD_DStream* zwd = (ZSTD_DStream*)strm->state;
   ZSTD_inBuffer in;
   ZSTD_outBuffer out;

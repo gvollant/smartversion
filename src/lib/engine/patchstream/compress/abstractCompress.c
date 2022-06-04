@@ -575,6 +575,7 @@ static int zstd_mt_zlib_mini_wrap_clone_deflateEnd (z_streamp strm)
 
 static int zstd_mt_zlib_mini_wrap_clone_deflateInit (z_streamp strm, int level, int longwindow, int mt)
 {
+  SMARTVERSION_DISCARD_UNUSED(mt);
   ZSTD_CCtx* zwc=ZSTD_createCCtx();
   /* ZSTD_CStreamInSize(); ZSTD_CStreamOutSize(); */
   /*
@@ -1020,6 +1021,7 @@ static int zlib_store_abstract_compress(struct abstract_compress_stream_s* strm,
 
 static int zlib_store_abstract_compress_end(struct abstract_compress_stream_s* strm)
 {
+	SMARTVERSION_DISCARD_UNUSED(strm);
 	return ABSTR_COMPRESS_Z_OK;
 }
 
