@@ -120,6 +120,11 @@
 
 
 #if defined(HAVE_ZSTD) || defined(COMPRESS_ZSTD) || defined(UNCOMPRESS_ZSTD)
+
+#if defined(ZSTD_DECLARE_STATIC_LINKING_ONLY) && (!defined(ZSTD_STATIC_LINKING_ONLY))
+#define ZSTD_STATIC_LINKING_ONLY
+#endif
+
 #include "zstd.h"
 #endif
 
