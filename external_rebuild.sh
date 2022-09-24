@@ -32,8 +32,8 @@ do_download https://tukaani.org/xz/xz-5.2.5.tar.gz xz.tar.gz
 
 do_download https://tukaani.org/xz/xz-embedded-20210201.tar.gz xz-embedded.tar.gz
 
-do_download http://zlib.net/zlib-1.2.11.tar.gz zlib.tar.gz
-do_download http://zlib.net/zlib1211.zip zlib.zip
+do_download http://zlib.net/zlib-1.2.12.tar.gz zlib.tar.gz
+do_download http://zlib.net/zlib1212.zip zlib.zip
 
 
 do_download https://github.com/facebook/zstd/archive/refs/tags/v1.5.2.tar.gz zstd.tar.gz
