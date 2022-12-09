@@ -439,13 +439,13 @@ static int abstract_init_compress_lz4_complevel(abstract_compress_stream* strm, 
 	memset(native_stream, 0, sizeof(union_native_compress_stream));
 	lz4_z_stream=&native_stream->lz4_z_stream;
 
+	memset(&prefs, 0, sizeof(LZ4F_preferences_t));
 	prefs.frameInfo.blockSizeID = LZ4F_max64KB;
 	if (nbbits>=18) prefs.frameInfo.blockSizeID = LZ4F_max256KB;
 	if (nbbits>=20) prefs.frameInfo.blockSizeID = LZ4F_max1MB;
 	if (nbbits>=22) prefs.frameInfo.blockSizeID = LZ4F_max4MB;
 	prefs.favorDecSpeed=favorDecSpeed;
 
-	memset(&prefs, 0, sizeof(LZ4F_preferences_t));
 	prefs.autoFlush = 1;
 	prefs.compressionLevel = level;
 	prefs.frameInfo.blockMode = LZ4F_blockLinked;
