@@ -394,7 +394,6 @@ static int lz4_abstract_compress(struct abstract_compress_stream_s* strm, int fl
 		int write_directly_out = (strm->avail_out >= lz4_z_stream->max_flush_size_end_or_flush);
 		void* dst_buffer = write_directly_out ? strm->next_out : lz4_z_stream->flush_buf;
 		size_t dst_buffer_size = write_directly_out ? strm->avail_out : lz4_z_stream->max_flush_size_end_or_flush;
-		int result_finish=ABSTR_COMPRESS_Z_STREAM_END;
 		size_t outSize= (flush == ABSTR_COMPRESS_Z_SYNC_FLUSH) ?
 			LZ4F_flush(lz4_z_stream->ctx, dst_buffer, dst_buffer_size,&compressOptions) :
 			LZ4F_compressEnd(lz4_z_stream->ctx, dst_buffer, dst_buffer_size, &compressOptions);
@@ -430,7 +429,6 @@ static int FIO_LZ4_GetBlockSize_FromBlockId(int id) { return (1 << (8 + (2 * id)
 
 static int abstract_init_compress_lz4_complevel(abstract_compress_stream* strm, int level,int nbbits,unsigned favorDecSpeed)
 {
-	int retValue = ABSTR_COMPRESS_Z_OK;
 	lz4_compress_strm* lz4_z_stream;
 	LZ4F_preferences_t prefs;
 	union_native_compress_stream* native_stream = (union_native_compress_stream*)malloc(sizeof(union_native_compress_stream));
