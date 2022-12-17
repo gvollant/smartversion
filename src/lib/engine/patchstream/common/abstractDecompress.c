@@ -233,6 +233,8 @@ static int lz4_zlib_mini_wrap_inflate(z_streamp strm, int flush)
 	size_t srcSizePtr=(size_t)strm->avail_in;
 	size_t number_bytes_read, number_bytes_write;
 
+	((void)(flush));
+
 	errorCode = LZ4F_decompress(dCtx, dstBuffer, &dstSizePtr, srcBuffer, &srcSizePtr, NULL);
 	if (LZ4F_isError(errorCode)) {
 		LZ4_LOG_WRAPPER("ERROR: lz4_zlib_mini_wrap_inflate %s\n", LZ4F_getErrorName(errorCode));
