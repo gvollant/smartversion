@@ -85,6 +85,7 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{83C862DC-2019-4B36-A219-486E9319C76A}</ProjectGuid>
     <RootNamespace>difstrm_vs</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Template|Win32'" Label="Configuration">
@@ -898,7 +899,7 @@
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
       <AdditionalIncludeDirectories>..\..\external;..\..\external\xz\src\liblzma\api;..\..\external\xz\msvc;..\..\external\xz\lib;..\..\external\xz\windows\vs2019;..\..\external\xz\windows\vs2022;..\..\external\xz\windows;..\..\external\xz\src\common;..\..\external\xz\src\liblzma\common;..\..\external\xz\src\liblzma\check;..\..\external\xz\src\liblzma\rangecoder;..\..\external\xz\src\liblzma\lz;..\..\external\xz\src\liblzma\lzma;..\..\external\xz\src\liblzma\delta;..\..\external\xz\src\liblzma\simple;..\..\external\zlib;..\..\external\bzip;..\..\external\lzham;..\..\external\lzham\include;..\..\external\lzham\lzhamdecomp;..\..\external\lzham\lzhamcomp;..\..\external\fastlzlib;..\..\external\fastlzlib\lz4;..\..\external\zstd\lib;..\..\external\zstd\lib\dictBuilder;..\..\external\zstd\lib\common;..\..\external\xz-embedded\include\linux;..\..\src\lib\hash;..\..\src\misc\minizip;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>NDEBUG;_CONSOLE;WIN32;PREVENT_COMPILE_PATCHBUILDER_EXT;PREVENT_LZHAM_USE_INTRINSIC;DUMMY_OPENSSL_CLEANSE;noMD5_ASM;noSHA1_ASM;noSHA256_ASM;SHA256FROMOPENSSL;noBOUND_CHECKER;noDO_STATIS;__STDC__;DYNAMIC_CRC_TABLE;NOCRYPT;NOUNCRYPT;HAVE_BZIP2;HAVE_LZMASDK_DECOMPRESS;HAVE_ZSTD;XXH_NAMESPACE=;ZSTD_MULTITHREAD;ZSTD_STATIC_LINKING_ONLY;HAVE_LZHAM;HAVE_FAST_LZLIB;ZFAST_USE_LZ4;ZFAST_USE_FASTLZ;ZFAST_USE_LZFSE;ZFASTEXTERN=;HAVE_CONFIG_H;TUKLIB_SYMBOL_PREFIX=lzma_;alloca=_alloca;SUPPORT_XP_WIN2003_64;HAVE_XZUTILS;LZMA_API_STATIC;MYTHREAD_VISTA;SMARTVERSION_MAIN;LZMA_INCLUDE_COMMON;BZ_NO_STDIO;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;WIN64;NO_MSCVER_FILE64_FUNC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NDEBUG;DUMMY_OPENSSL_CLEANSE;_CONSOLE;WIN32;PREVENT_COMPILE_PATCHBUILDER_EXT;PREVENT_LZHAM_USE_INTRINSIC;DUMMY_OPENSSL_CLEANSE;noMD5_ASM;noSHA1_ASM;noSHA256_ASM;SHA256FROMOPENSSL;noBOUND_CHECKER;noDO_STATIS;__STDC__;DYNAMIC_CRC_TABLE;NOCRYPT;NOUNCRYPT;HAVE_BZIP2;HAVE_LZMASDK_DECOMPRESS;HAVE_ZSTD;XXH_NAMESPACE=;ZSTD_MULTITHREAD;ZSTD_STATIC_LINKING_ONLY;HAVE_LZHAM;HAVE_FAST_LZLIB;ZFAST_USE_LZ4;ZFAST_USE_FASTLZ;ZFAST_USE_LZFSE;ZFASTEXTERN=;HAVE_CONFIG_H;TUKLIB_SYMBOL_PREFIX=lzma_;alloca=_alloca;SUPPORT_XP_WIN2003_64;HAVE_XZUTILS;LZMA_API_STATIC;MYTHREAD_VISTA;SMARTVERSION_MAIN;LZMA_INCLUDE_COMMON;BZ_NO_STDIO;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;WIN64;NO_MSCVER_FILE64_FUNC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <ExceptionHandling>
       </ExceptionHandling>
@@ -926,7 +927,6 @@
     </ResourceCompile>
     <Link>
       <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
-      <AdditionalDependencies>pgort.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>

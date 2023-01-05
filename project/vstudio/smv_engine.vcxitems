@@ -149,6 +149,7 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\decompress\DoExtracting.c" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\rebuild\DoExtrSubDfs.c" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\svfile\rebuild\ReMixDfs.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\hash\dummy_openssl_cleanse.c" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\hash\md5_dgst.c" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\hash\openssl_ia_loc.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\hash\sha1dgst.c" />

@@ -518,5 +518,8 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\engine\patchstream\common\CRC_and_CRC64.cpp">
       <Filter>src\lib\engine\patchstream\common</Filter>
     </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\src\lib\hash\dummy_openssl_cleanse.c">
+      <Filter>src\lib\hash</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
