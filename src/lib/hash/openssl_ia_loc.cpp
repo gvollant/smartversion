@@ -225,6 +225,11 @@ void OPENSSL_cpuid_setup(void)
 #endif
 #endif
 
+# if defined(__i386) || defined(__i386__) || defined(_M_IX86) || \
+     defined( __i486 ) || defined( __i586 ) || defined( __i686 ) || \
+     defined( __i486__ ) || defined( __i586__ ) || defined( __i686__ ) || \
+     defined(__x86_64) || defined(__x86_64__) || defined(_M_AMD64) || defined(_M_X64)
+
 int OPENSSL_cpuid_auto_setup(void)
 {
 	OPENSSL_ia32cap_P[0] = OPENSSL_ia32cap_P[1] = OPENSSL_ia32cap_P[2] = OPENSSL_ia32cap_P[3] = 0;
@@ -276,3 +281,4 @@ int OPENSSL_cpuid_auto_setup(void)
 }
 
 int perform_setup = OPENSSL_cpuid_auto_setup();
+#endif
