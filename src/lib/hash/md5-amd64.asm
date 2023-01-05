@@ -17,23 +17,23 @@ md5_block_asm_host_order PROC
 	push	r14
 	push	r15
     push    rsi
-    push    rdi	
+    push    rdi
 ; parameter 1 in rcx, param 2 in rdx , param 3 in r8
 
 ; see http://weblogs.asp.net/oldnewthing/archive/2004/01/14/58579.aspx and
 ; http://msdn.microsoft.com/library/en-us/kmarch/hh/kmarch/64bitAMD_8e951dd2-ee77-4728-8702-55ce4b5dd24a.xml.asp
 ;
 ; All registers must be preserved across the call, except for
-;   rax, rcx, rdx, r8, r-9, r10, and r11, which are scratch.	
+;   rax, rcx, rdx, r8, r-9, r10, and r11, which are scratch.
 
 	;# rdi = arg #1 (ctx, MD5_CTX pointer)
 	;# rsi = arg #2 (ptr, data pointer)
 	;# rdx = arg #3 (nbr, number of 16-word blocks to process)
-	
+
 	;mov rdi,rcx
 	mov rsi,rdx
 	mov edx,r8d
-	
+
 	mov	r12,rcx	;# rbp = ctx
 	shl	rdx,6	;# rdx = nbr in bytes
 	lea	rdi,[rsi+rdx];	# rdi = end
@@ -364,7 +364,7 @@ lab2:	;# save old values of A, B, C, D
 	add	ebx , ecx			;/* dst += x */
  mov	r10d , (5*4)[rsi]		;/* (NEXT STEP) X[5] */
  mov	r11d , ecx		;/* (NEXT STEP) y' = %ecx */
-	lea	eax,DWORD PTR 0fffa3942h [ eax * 1 +r10d ]		;/* Const + dst + ... */    
+	lea	eax,DWORD PTR 0fffa3942h [ eax * 1 +r10d ]		;/* Const + dst + ... */
 	mov	r10d,DWORD PTR (8*4)[rsi]		;/* (NEXT STEP) X[8] */
 	xor	r11d,edx			;/* z ^ ... */
 	xor	r11d,ebx				;/* x ^ ... */
@@ -372,7 +372,7 @@ lab2:	;# save old values of A, B, C, D
 	rol	eax , 4			;/* dst <<< s */
 	mov	r11d , ebx			;/* (NEXT STEP) y' = ebx */
 	add	eax , ebx			;/* dst += x */
-	lea	edx,DWORD PTR 08771f681h [ edx * 1 +r10d ]		;/* Const + dst + ... */    
+	lea	edx,DWORD PTR 08771f681h [ edx * 1 +r10d ]		;/* Const + dst + ... */
 	mov	r10d,DWORD PTR (11*4)[rsi]		;/* (NEXT STEP) X[11] */
 	xor	r11d,ecx			;/* z ^ ... */
 	xor	r11d,eax				;/* x ^ ... */
@@ -380,7 +380,7 @@ lab2:	;# save old values of A, B, C, D
 	rol	edx , 11			;/* dst <<< s */
 	mov	r11d , eax			;/* (NEXT STEP) y' = eax */
 	add	edx , eax			;/* dst += x */
-	lea	ecx,DWORD PTR 06d9d6122h [ ecx * 1 +r10d ]		;/* Const + dst + ... */    
+	lea	ecx,DWORD PTR 06d9d6122h [ ecx * 1 +r10d ]		;/* Const + dst + ... */
 	mov	r10d,DWORD PTR (14*4)[rsi]		;/* (NEXT STEP) X[14] */
 	xor	r11d,ebx			;/* z ^ ... */
 	xor	r11d,edx				;/* x ^ ... */
@@ -388,7 +388,7 @@ lab2:	;# save old values of A, B, C, D
 	rol	ecx , 16			;/* dst <<< s */
 	mov	r11d , edx			;/* (NEXT STEP) y' = edx */
 	add	ecx , edx			;/* dst += x */
-	lea	ebx,DWORD PTR 0fde5380ch [ ebx * 1 +r10d ]		;/* Const + dst + ... */    
+	lea	ebx,DWORD PTR 0fde5380ch [ ebx * 1 +r10d ]		;/* Const + dst + ... */
 	mov	r10d,DWORD PTR (1*4)[rsi]		;/* (NEXT STEP) X[1] */
 	xor	r11d,eax			;/* z ^ ... */
 	xor	r11d,ecx				;/* x ^ ... */
@@ -396,7 +396,7 @@ lab2:	;# save old values of A, B, C, D
 	rol	ebx , 23			;/* dst <<< s */
 	mov	r11d , ecx			;/* (NEXT STEP) y' = ecx */
 	add	ebx , ecx			;/* dst += x */
-	lea	eax,DWORD PTR 0a4beea44h [ eax * 1 +r10d ]		;/* Const + dst + ... */    
+	lea	eax,DWORD PTR 0a4beea44h [ eax * 1 +r10d ]		;/* Const + dst + ... */
 	mov	r10d,DWORD PTR (4*4)[rsi]		;/* (NEXT STEP) X[4] */
 	xor	r11d,edx			;/* z ^ ... */
 	xor	r11d,ebx				;/* x ^ ... */
@@ -404,7 +404,7 @@ lab2:	;# save old values of A, B, C, D
 	rol	eax , 4			;/* dst <<< s */
 	mov	r11d , ebx			;/* (NEXT STEP) y' = ebx */
 	add	eax , ebx			;/* dst += x */
-	lea	edx,DWORD PTR 04bdecfa9h [ edx * 1 +r10d ]		;/* Const + dst + ... */    
+	lea	edx,DWORD PTR 04bdecfa9h [ edx * 1 +r10d ]		;/* Const + dst + ... */
 	mov	r10d,DWORD PTR (7*4)[rsi]		;/* (NEXT STEP) X[7] */
 	xor	r11d,ecx			;/* z ^ ... */
 	xor	r11d,eax				;/* x ^ ... */
@@ -412,7 +412,7 @@ lab2:	;# save old values of A, B, C, D
 	rol	edx , 11			;/* dst <<< s */
 	mov	r11d , eax			;/* (NEXT STEP) y' = eax */
 	add	edx , eax			;/* dst += x */
-	lea	ecx,DWORD PTR 0f6bb4b60h [ ecx * 1 +r10d ]		;/* Const + dst + ... */    
+	lea	ecx,DWORD PTR 0f6bb4b60h [ ecx * 1 +r10d ]		;/* Const + dst + ... */
 	mov	r10d,DWORD PTR (10*4)[rsi]		;/* (NEXT STEP) X[10] */
 	xor	r11d,ebx			;/* z ^ ... */
 	xor	r11d,edx				;/* x ^ ... */
@@ -420,7 +420,7 @@ lab2:	;# save old values of A, B, C, D
 	rol	ecx , 16			;/* dst <<< s */
 	mov	r11d , edx			;/* (NEXT STEP) y' = edx */
 	add	ecx , edx			;/* dst += x */
-	lea	ebx,DWORD PTR 0bebfbc70h [ ebx * 1 +r10d ]		;/* Const + dst + ... */    
+	lea	ebx,DWORD PTR 0bebfbc70h [ ebx * 1 +r10d ]		;/* Const + dst + ... */
 	mov	r10d,DWORD PTR (13*4)[rsi]		;/* (NEXT STEP) X[13] */
 	xor	r11d,eax			;/* z ^ ... */
 	xor	r11d,ecx				;/* x ^ ... */
@@ -428,7 +428,7 @@ lab2:	;# save old values of A, B, C, D
 	rol	ebx , 23			;/* dst <<< s */
 	mov	r11d , ecx			;/* (NEXT STEP) y' = ecx */
 	add	ebx , ecx			;/* dst += x */
-	lea	eax,DWORD PTR 0289b7ec6h [ eax * 1 +r10d ]		;/* Const + dst + ... */    
+	lea	eax,DWORD PTR 0289b7ec6h [ eax * 1 +r10d ]		;/* Const + dst + ... */
 	mov	r10d,DWORD PTR (0*4)[rsi]		;/* (NEXT STEP) X[0] */
 	xor	r11d,edx			;/* z ^ ... */
 	xor	r11d,ebx				;/* x ^ ... */
@@ -436,7 +436,7 @@ lab2:	;# save old values of A, B, C, D
 	rol	eax , 4			;/* dst <<< s */
 	mov	r11d , ebx			;/* (NEXT STEP) y' = ebx */
 	add	eax , ebx			;/* dst += x */
-	lea	edx,DWORD PTR 0eaa127fah [ edx * 1 +r10d ]		;/* Const + dst + ... */    
+	lea	edx,DWORD PTR 0eaa127fah [ edx * 1 +r10d ]		;/* Const + dst + ... */
 	mov	r10d,DWORD PTR (3*4)[rsi]		;/* (NEXT STEP) X[3] */
 	xor	r11d,ecx			;/* z ^ ... */
 	xor	r11d,eax				;/* x ^ ... */
@@ -444,7 +444,7 @@ lab2:	;# save old values of A, B, C, D
 	rol	edx , 11			;/* dst <<< s */
 	mov	r11d , eax			;/* (NEXT STEP) y' = eax */
 	add	edx , eax			;/* dst += x */
-	lea	ecx,DWORD PTR 0d4ef3085h [ ecx * 1 +r10d ]		;/* Const + dst + ... */    
+	lea	ecx,DWORD PTR 0d4ef3085h [ ecx * 1 +r10d ]		;/* Const + dst + ... */
 	mov	r10d,DWORD PTR (6*4)[rsi]		;/* (NEXT STEP) X[6] */
 	xor	r11d,ebx			;/* z ^ ... */
 	xor	r11d,edx				;/* x ^ ... */
@@ -452,7 +452,7 @@ lab2:	;# save old values of A, B, C, D
 	rol	ecx , 16			;/* dst <<< s */
 	mov	r11d , edx			;/* (NEXT STEP) y' = edx */
 	add	ecx , edx			;/* dst += x */
-	lea	ebx,DWORD PTR 04881d05h [ ebx * 1 +r10d ]		;/* Const + dst + ... */    
+	lea	ebx,DWORD PTR 04881d05h [ ebx * 1 +r10d ]		;/* Const + dst + ... */
 	mov	r10d,DWORD PTR (9*4)[rsi]		;/* (NEXT STEP) X[9] */
 	xor	r11d,eax			;/* z ^ ... */
 	xor	r11d,ecx				;/* x ^ ... */
@@ -460,7 +460,7 @@ lab2:	;# save old values of A, B, C, D
 	rol	ebx , 23			;/* dst <<< s */
 	mov	r11d , ecx			;/* (NEXT STEP) y' = ecx */
 	add	ebx , ecx			;/* dst += x */
-	lea	eax,DWORD PTR 0d9d4d039h [ eax * 1 +r10d ]		;/* Const + dst + ... */    
+	lea	eax,DWORD PTR 0d9d4d039h [ eax * 1 +r10d ]		;/* Const + dst + ... */
 	mov	r10d,DWORD PTR (12*4)[rsi]		;/* (NEXT STEP) X[12] */
 	xor	r11d,edx			;/* z ^ ... */
 	xor	r11d,ebx				;/* x ^ ... */
@@ -468,7 +468,7 @@ lab2:	;# save old values of A, B, C, D
 	rol	eax , 4			;/* dst <<< s */
 	mov	r11d , ebx			;/* (NEXT STEP) y' = ebx */
 	add	eax , ebx			;/* dst += x */
-	lea	edx,DWORD PTR 0e6db99e5h [ edx * 1 +r10d ]		;/* Const + dst + ... */    
+	lea	edx,DWORD PTR 0e6db99e5h [ edx * 1 +r10d ]		;/* Const + dst + ... */
 	mov	r10d,DWORD PTR (15*4)[rsi]		;/* (NEXT STEP) X[15] */
 	xor	r11d,ecx			;/* z ^ ... */
 	xor	r11d,eax				;/* x ^ ... */
@@ -476,7 +476,7 @@ lab2:	;# save old values of A, B, C, D
 	rol	edx , 11			;/* dst <<< s */
 	mov	r11d , eax			;/* (NEXT STEP) y' = eax */
 	add	edx , eax			;/* dst += x */
-	lea	ecx,DWORD PTR 01fa27cf8h [ ecx * 1 +r10d ]		;/* Const + dst + ... */    
+	lea	ecx,DWORD PTR 01fa27cf8h [ ecx * 1 +r10d ]		;/* Const + dst + ... */
 	mov	r10d,DWORD PTR (2*4)[rsi]		;/* (NEXT STEP) X[2] */
 	xor	r11d,ebx			;/* z ^ ... */
 	xor	r11d,edx				;/* x ^ ... */
@@ -484,7 +484,7 @@ lab2:	;# save old values of A, B, C, D
 	rol	ecx , 16			;/* dst <<< s */
 	mov	r11d , edx			;/* (NEXT STEP) y' = edx */
 	add	ecx , edx			;/* dst += x */
-	lea	ebx,DWORD PTR 0c4ac5665h [ ebx * 1 +r10d ]		;/* Const + dst + ... */    
+	lea	ebx,DWORD PTR 0c4ac5665h [ ebx * 1 +r10d ]		;/* Const + dst + ... */
 	mov	r10d,DWORD PTR (0*4)[rsi]		;/* (NEXT STEP) X[0] */
 	xor	r11d,eax			;/* z ^ ... */
 	xor	r11d,ecx				;/* x ^ ... */
@@ -495,7 +495,7 @@ lab2:	;# save old values of A, B, C, D
  mov	r10d , (0*4)[rsi]		;/* (NEXT STEP) X[0] */
  mov	r11d , r13d ;0ffffffffh	;%r11d
  xor	r11d , edx		;/* (NEXT STEP) not z' = not %edx*/
-	lea	eax,DWORD PTR 0f4292244h [ eax * 1 +r10d ]		;/* Const + dst + ... */    
+	lea	eax,DWORD PTR 0f4292244h [ eax * 1 +r10d ]		;/* Const + dst + ... */
 	or	r11d , ebx			;/* x | ... */
 	xor	r11d , ecx			;/* y ^ ... */
 	add	eax , r11d			;/* dst += ... */
@@ -504,7 +504,7 @@ lab2:	;# save old values of A, B, C, D
 	rol	eax , 6			;/* dst <<< s */
 	xor	r11d , ecx			;/* (NEXT STEP) not z' = not ecx */
 	add	eax , ebx			;/* dst += x */
-	lea	edx,DWORD PTR 0432aff97h [ edx * 1 +r10d ]		;/* Const + dst + ... */    
+	lea	edx,DWORD PTR 0432aff97h [ edx * 1 +r10d ]		;/* Const + dst + ... */
 	or	r11d , eax			;/* x | ... */
 	xor	r11d , ebx			;/* y ^ ... */
 	add	edx , r11d			;/* dst += ... */
@@ -513,7 +513,7 @@ lab2:	;# save old values of A, B, C, D
 	rol	edx , 10			;/* dst <<< s */
 	xor	r11d , ebx			;/* (NEXT STEP) not z' = not ebx */
 	add	edx , eax			;/* dst += x */
-	lea	ecx,DWORD PTR 0ab9423a7h [ ecx * 1 +r10d ]		;/* Const + dst + ... */    
+	lea	ecx,DWORD PTR 0ab9423a7h [ ecx * 1 +r10d ]		;/* Const + dst + ... */
 	or	r11d , edx			;/* x | ... */
 	xor	r11d , eax			;/* y ^ ... */
 	add	ecx , r11d			;/* dst += ... */
@@ -522,7 +522,7 @@ lab2:	;# save old values of A, B, C, D
 	rol	ecx , 15			;/* dst <<< s */
 	xor	r11d , eax			;/* (NEXT STEP) not z' = not eax */
 	add	ecx , edx			;/* dst += x */
-	lea	ebx,DWORD PTR 0fc93a039h [ ebx * 1 +r10d ]		;/* Const + dst + ... */    
+	lea	ebx,DWORD PTR 0fc93a039h [ ebx * 1 +r10d ]		;/* Const + dst + ... */
 	or	r11d , ecx			;/* x | ... */
 	xor	r11d , edx			;/* y ^ ... */
 	add	ebx , r11d			;/* dst += ... */
@@ -531,7 +531,7 @@ lab2:	;# save old values of A, B, C, D
 	rol	ebx , 21			;/* dst <<< s */
 	xor	r11d , edx			;/* (NEXT STEP) not z' = not edx */
 	add	ebx , ecx			;/* dst += x */
-	lea	eax,DWORD PTR 0655b59c3h [ eax * 1 +r10d ]		;/* Const + dst + ... */    
+	lea	eax,DWORD PTR 0655b59c3h [ eax * 1 +r10d ]		;/* Const + dst + ... */
 	or	r11d , ebx			;/* x | ... */
 	xor	r11d , ecx			;/* y ^ ... */
 	add	eax , r11d			;/* dst += ... */
@@ -540,7 +540,7 @@ lab2:	;# save old values of A, B, C, D
 	rol	eax , 6			;/* dst <<< s */
 	xor	r11d , ecx			;/* (NEXT STEP) not z' = not ecx */
 	add	eax , ebx			;/* dst += x */
-	lea	edx,DWORD PTR 08f0ccc92h [ edx * 1 +r10d ]		;/* Const + dst + ... */    
+	lea	edx,DWORD PTR 08f0ccc92h [ edx * 1 +r10d ]		;/* Const + dst + ... */
 	or	r11d , eax			;/* x | ... */
 	xor	r11d , ebx			;/* y ^ ... */
 	add	edx , r11d			;/* dst += ... */
@@ -549,7 +549,7 @@ lab2:	;# save old values of A, B, C, D
 	rol	edx , 10			;/* dst <<< s */
 	xor	r11d , ebx			;/* (NEXT STEP) not z' = not ebx */
 	add	edx , eax			;/* dst += x */
-	lea	ecx,DWORD PTR 0ffeff47dh [ ecx * 1 +r10d ]		;/* Const + dst + ... */    
+	lea	ecx,DWORD PTR 0ffeff47dh [ ecx * 1 +r10d ]		;/* Const + dst + ... */
 	or	r11d , edx			;/* x | ... */
 	xor	r11d , eax			;/* y ^ ... */
 	add	ecx , r11d			;/* dst += ... */
@@ -558,7 +558,7 @@ lab2:	;# save old values of A, B, C, D
 	rol	ecx , 15			;/* dst <<< s */
 	xor	r11d , eax			;/* (NEXT STEP) not z' = not eax */
 	add	ecx , edx			;/* dst += x */
-	lea	ebx,DWORD PTR 085845dd1h [ ebx * 1 +r10d ]		;/* Const + dst + ... */    
+	lea	ebx,DWORD PTR 085845dd1h [ ebx * 1 +r10d ]		;/* Const + dst + ... */
 	or	r11d , ecx			;/* x | ... */
 	xor	r11d , edx			;/* y ^ ... */
 	add	ebx , r11d			;/* dst += ... */
@@ -567,7 +567,7 @@ lab2:	;# save old values of A, B, C, D
 	rol	ebx , 21			;/* dst <<< s */
 	xor	r11d , edx			;/* (NEXT STEP) not z' = not edx */
 	add	ebx , ecx			;/* dst += x */
-	lea	eax,DWORD PTR 06fa87e4fh [ eax * 1 +r10d ]		;/* Const + dst + ... */    
+	lea	eax,DWORD PTR 06fa87e4fh [ eax * 1 +r10d ]		;/* Const + dst + ... */
 	or	r11d , ebx			;/* x | ... */
 	xor	r11d , ecx			;/* y ^ ... */
 	add	eax , r11d			;/* dst += ... */
@@ -576,7 +576,7 @@ lab2:	;# save old values of A, B, C, D
 	rol	eax , 6			;/* dst <<< s */
 	xor	r11d , ecx			;/* (NEXT STEP) not z' = not ecx */
 	add	eax , ebx			;/* dst += x */
-	lea	edx,DWORD PTR 0fe2ce6e0h [ edx * 1 +r10d ]		;/* Const + dst + ... */    
+	lea	edx,DWORD PTR 0fe2ce6e0h [ edx * 1 +r10d ]		;/* Const + dst + ... */
 	or	r11d , eax			;/* x | ... */
 	xor	r11d , ebx			;/* y ^ ... */
 	add	edx , r11d			;/* dst += ... */
@@ -585,7 +585,7 @@ lab2:	;# save old values of A, B, C, D
 	rol	edx , 10			;/* dst <<< s */
 	xor	r11d , ebx			;/* (NEXT STEP) not z' = not ebx */
 	add	edx , eax			;/* dst += x */
-	lea	ecx,DWORD PTR 0a3014314h [ ecx * 1 +r10d ]		;/* Const + dst + ... */    
+	lea	ecx,DWORD PTR 0a3014314h [ ecx * 1 +r10d ]		;/* Const + dst + ... */
 	or	r11d , edx			;/* x | ... */
 	xor	r11d , eax			;/* y ^ ... */
 	add	ecx , r11d			;/* dst += ... */
@@ -594,7 +594,7 @@ lab2:	;# save old values of A, B, C, D
 	rol	ecx , 15			;/* dst <<< s */
 	xor	r11d , eax			;/* (NEXT STEP) not z' = not eax */
 	add	ecx , edx			;/* dst += x */
-	lea	ebx,DWORD PTR 04e0811a1h [ ebx * 1 +r10d ]		;/* Const + dst + ... */    
+	lea	ebx,DWORD PTR 04e0811a1h [ ebx * 1 +r10d ]		;/* Const + dst + ... */
 	or	r11d , ecx			;/* x | ... */
 	xor	r11d , edx			;/* y ^ ... */
 	add	ebx , r11d			;/* dst += ... */
@@ -603,7 +603,7 @@ lab2:	;# save old values of A, B, C, D
 	rol	ebx , 21			;/* dst <<< s */
 	xor	r11d , edx			;/* (NEXT STEP) not z' = not edx */
 	add	ebx , ecx			;/* dst += x */
-	lea	eax,DWORD PTR 0f7537e82h [ eax * 1 +r10d ]		;/* Const + dst + ... */    
+	lea	eax,DWORD PTR 0f7537e82h [ eax * 1 +r10d ]		;/* Const + dst + ... */
 	or	r11d , ebx			;/* x | ... */
 	xor	r11d , ecx			;/* y ^ ... */
 	add	eax , r11d			;/* dst += ... */
@@ -612,7 +612,7 @@ lab2:	;# save old values of A, B, C, D
 	rol	eax , 6			;/* dst <<< s */
 	xor	r11d , ecx			;/* (NEXT STEP) not z' = not ecx */
 	add	eax , ebx			;/* dst += x */
-	lea	edx,DWORD PTR 0bd3af235h [ edx * 1 +r10d ]		;/* Const + dst + ... */    
+	lea	edx,DWORD PTR 0bd3af235h [ edx * 1 +r10d ]		;/* Const + dst + ... */
 	or	r11d , eax			;/* x | ... */
 	xor	r11d , ebx			;/* y ^ ... */
 	add	edx , r11d			;/* dst += ... */
@@ -621,7 +621,7 @@ lab2:	;# save old values of A, B, C, D
 	rol	edx , 10			;/* dst <<< s */
 	xor	r11d , ebx			;/* (NEXT STEP) not z' = not ebx */
 	add	edx , eax			;/* dst += x */
-	lea	ecx,DWORD PTR 02ad7d2bbh [ ecx * 1 +r10d ]		;/* Const + dst + ... */    
+	lea	ecx,DWORD PTR 02ad7d2bbh [ ecx * 1 +r10d ]		;/* Const + dst + ... */
 	or	r11d , edx			;/* x | ... */
 	xor	r11d , eax			;/* y ^ ... */
 	add	ecx , r11d			;/* dst += ... */
@@ -630,7 +630,7 @@ lab2:	;# save old values of A, B, C, D
 	rol	ecx , 15			;/* dst <<< s */
 	xor	r11d , eax			;/* (NEXT STEP) not z' = not eax */
 	add	ecx , edx			;/* dst += x */
-	lea	ebx,DWORD PTR 0eb86d391h [ ebx * 1 +r10d ]		;/* Const + dst + ... */    
+	lea	ebx,DWORD PTR 0eb86d391h [ ebx * 1 +r10d ]		;/* Const + dst + ... */
 	or	r11d , ecx			;/* x | ... */
 	xor	r11d , edx			;/* y ^ ... */
 	add	ebx , r11d			;/* dst += ... */

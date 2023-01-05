@@ -3,7 +3,7 @@
 	; Which is a perl program used to generate the x86 assember for
 	; any of ELF, a.out, COFF, Win32, ...
 	; eric <eay@cryptsoft.com>
-	; 
+	;
 	TITLE	sha1-386.asm
         .486
 .model FLAT
@@ -111,7 +111,7 @@ _sha1_block_asm_data_order PROC NEAR
 	; First we need to setup the X array
 $L000start:
 	; First, load the words onto the stack in network byte order
- 	
+ 
 
 mov [esp-8],ebx
 mov [esp-4],edx
@@ -130,7 +130,7 @@ MULSWAP (56)
 mov ebx,[esp-8]
 mov edx,[esp-4]
 $L001shortcut::
-	; 
+	;
 	; Start processing
 	mov	eax,		DWORD PTR [ebp]
 	mov	ecx,		DWORD PTR 4[ebp]
@@ -1475,7 +1475,7 @@ $L001shortcut::
 	lea	edi,		DWORD PTR 3395469782[ebp*1+edi]
 	add	edi,		edx
 	; End processing
-	; 
+	;
 	mov	ebp,		DWORD PTR 128[esp]
 	mov	edx,		DWORD PTR 12[ebp]
 	add	edx,		ecx

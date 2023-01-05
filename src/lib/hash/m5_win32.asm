@@ -3,7 +3,7 @@
 	; Which is a perl program used to generate the x86 assember for
 	; any of elf, a.out, BSDI, Win32, gaswin (for GNU as on Win32) or Solaris
 	; eric <eay@cryptsoft.com>
-	; 
+	;
 	TITLE	md5-586.asm
         .386
 .model FLAT
@@ -27,7 +27,7 @@ _md5_block_asm_host_order PROC NEAR
 	mov	ecx,		DWORD PTR 8[edi]
 	mov	edx,		DWORD PTR 12[edi]
 $L000start:
-	; 
+	;
 	; R0 section
 	mov	edi,		ecx
 	mov	ebp,		DWORD PTR [esi]
@@ -191,7 +191,7 @@ $L000start:
 	rol	ebx,		22
 	mov	ebp,		DWORD PTR 4[esi]
 	add	ebx,		ecx
-	; 
+	;
 	; R1 section
 	; R1 16
 	lea	eax,		DWORD PTR 4129170786[ebp*1+eax]
@@ -353,7 +353,7 @@ $L000start:
 	mov	edi,		ecx
 	rol	ebx,		20
 	add	ebx,		ecx
-	; 
+	;
 	; R2 section
 	; R2 32
 	xor	edi,		edx
@@ -499,7 +499,7 @@ $L000start:
 	mov	edi,		-1
 	rol	ebx,		23
 	add	ebx,		ecx
-	; 
+	;
 	; R3 section
 	; R3 48
 	xor	edi,		edx

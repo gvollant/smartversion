@@ -90,7 +90,7 @@ sub round3_step
     $code .= " mov	r10d , (5*4)[rsi]		;/* (NEXT STEP) X[5] */\n" if ($pos == -1);
     $code .= " mov	r11d , ecx		;/* (NEXT STEP) y' = %ecx */\n" if ($pos == -1);
     $code .= <<EOF;
-	lea	$dst,DWORD PTR $T_i [ $dst * 1 +r10d ]		;/* Const + dst + ... */    
+	lea	$dst,DWORD PTR $T_i [ $dst * 1 +r10d ]		;/* Const + dst + ... */
 	mov	r10d,DWORD PTR ($k_next*4)[rsi]		;/* (NEXT STEP) X[$k_next] */
 	xor	r11d,$z			;/* z ^ ... */
 	xor	r11d,$x				;/* x ^ ... */
@@ -114,7 +114,7 @@ sub round4_step
     $code .= " xor	r11d , edx		;/* (NEXT STEP) not z' = not %edx*/\n"
     if ($pos == -1);
     $code .= <<EOF;
-	lea	$dst,DWORD PTR $T_i [ $dst * 1 +r10d ]		;/* Const + dst + ... */    
+	lea	$dst,DWORD PTR $T_i [ $dst * 1 +r10d ]		;/* Const + dst + ... */
 	or	r11d , $x			;/* x | ... */
 	xor	r11d , $y			;/* y ^ ... */
 	add	$dst , r11d			;/* dst += ... */
@@ -149,23 +149,23 @@ md5_block_asm_host_order PROC
 	push	r14
 	push	r15
     push    rsi
-    push    rdi	
+    push    rdi
 ; parameter 1 in rcx, param 2 in rdx , param 3 in r8
 
 ; see http://weblogs.asp.net/oldnewthing/archive/2004/01/14/58579.aspx and
 ; http://msdn.microsoft.com/library/en-us/kmarch/hh/kmarch/64bitAMD_8e951dd2-ee77-4728-8702-55ce4b5dd24a.xml.asp
 ;
 ; All registers must be preserved across the call, except for
-;   rax, rcx, rdx, r8, r-9, r10, and r11, which are scratch.	
+;   rax, rcx, rdx, r8, r-9, r10, and r11, which are scratch.
 
 	;# rdi = arg #1 (ctx, MD5_CTX pointer)
 	;# rsi = arg #2 (ptr, data pointer)
 	;# rdx = arg #3 (nbr, number of 16-word blocks to process)
-	
+
 	;mov rdi,rcx
 	mov rsi,rdx
 	mov edx,r8d
-	
+
 	mov	r12,rcx	;# rbp = ctx
 	shl	rdx,6	;# rdx = nbr in bytes
 	lea	rdi,[rsi+rdx];	# rdi = end

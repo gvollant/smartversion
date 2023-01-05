@@ -5,7 +5,7 @@
 
 typedef uint64_t IA32CAP;
 
-extern "C" 
+extern "C"
 {
  extern unsigned int OPENSSL_ia32cap_P[4];
  unsigned int *OPENSSL_ia32cap_loc(void) ;
@@ -155,7 +155,7 @@ unsigned int *OPENSSL_ia32cap_loc(void)
 void OPENSSL_cpuid_setup(void)
 {
     static int trigger = 0;
-    
+
     IA32CAP vec;
     char *env;
 
