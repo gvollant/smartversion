@@ -1,6 +1,6 @@
 /*
   Smartversion
-  Copyright (c) Gilles Vollant, 2002-2022
+  Copyright (c) Gilles Vollant, 2002-2023
 
   https://github.com/gvollant/smartversion
   https://www.smartversion.com/
@@ -29,16 +29,16 @@
 */
 
 
-#define SVF_VERSION_MAJOR 3
-#define SVF_MINOR_DIGIT_1 8
-#define SVF_MINOR_DIGIT_2 4
+#define SVF_VERSION_MAJOR 4
+#define SVF_MINOR_DIGIT_1 0
+#define SVF_MINOR_DIGIT_2 0
 
-#define SVF_VERSION_YEAR 2022
+#define SVF_VERSION_YEAR 2023
 
 /* for windows resource */
-#define FULL_STRING_SMARTVERSION_VERSION "SmartVersion 3.84"
-#define FULL_STRING_SMARTVERSION_COPYRIGHT "Copyright © 2002-2022 Gilles Vollant."
-#define FULL_STRING_SMARTVERSION_COPYRIGHT_2 "Portion Copyright Gilles Vollant (collaborate with Amabis and Hubbi), Francois Liger (of Lemma Factory), Facebook and Yann Colet (Zstd, xxhash and lz4), OpenSSL (hash), Rich Geldreich (lzham)"
+#define FULL_STRING_SMARTVERSION_VERSION "SmartVersion 4.00"
+#define FULL_STRING_SMARTVERSION_COPYRIGHT "Copyright (c) 2002-2023 Gilles Vollant."
+#define FULL_STRING_SMARTVERSION_COPYRIGHT_2 "Portion Copyright Gilles Vollant, Francois Liger (of Lemma Factory), Facebook and Yann Colet (Zstd, xxhash and lz4), OpenSSL (hash), Rich Geldreich (lzham)"
 #define FULL_STRING_SMARTVERSION_COPYRIGHT_3 "Portion Copyright Igor Pavlov (Lzma sdk), Lasse Collin (xz utils), Xavier Roche (fastlzlib), Ariya Hidayat (FastLZ), Julian Seward (bzip), Apple (lzfse), Mark Adler and Jean-Loup Gailly (zlib)"
 
 

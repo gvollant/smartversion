@@ -1,6 +1,6 @@
 /*
   Smartversion
-  Copyright (c) Gilles Vollant, 2002-2022
+  Copyright (c) Gilles Vollant, 2002-2023
 
   https://github.com/gvollant/smartversion
   https://www.smartversion.com/
