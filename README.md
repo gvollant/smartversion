@@ -1,7 +1,7 @@
 # smartversion
 Smartversion create archive with several versions of file or delta compression between versions
 
-Written by Gilles Vollant 2002-2022
+Written by Gilles Vollant 2002-2023
 
 https://www.smartversion.com/
 
