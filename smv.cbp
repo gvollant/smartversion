@@ -566,6 +566,9 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="external/xz/src/liblzma/common/outqueue.h" />
+		<Unit filename="external/xz/src/liblzma/common/lzip_decoder.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="external/xz/src/liblzma/common/stream_buffer_decoder.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -645,6 +648,9 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="external/xz/src/liblzma/simple/arm.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/xz/src/liblzma/simple/arm64.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="external/xz/src/liblzma/simple/armthumb.c">

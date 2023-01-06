@@ -134,6 +134,7 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\common\index_decoder.c" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\common\index_encoder.c" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\common\index_hash.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\common\lzip_decoder.c" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\common\outqueue.c" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\common\stream_buffer_decoder.c" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\common\stream_buffer_encoder.c" />
@@ -162,6 +163,7 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\lz\lz_encoder_mf.c" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\rangecoder\price_table.c" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\simple\arm.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\simple\arm64.c" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\simple\armthumb.c" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\simple\ia64.c" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\simple\powerpc.c" />

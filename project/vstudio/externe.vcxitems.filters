@@ -660,6 +660,12 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\zlib\zlibcompress.c">
       <Filter>zlib</Filter>
     </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\simple\arm64.c">
+      <Filter>xz\src\liblzma\simple</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\xz\src\liblzma\common\lzip_decoder.c">
+      <Filter>xz\src\liblzma\common</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\bzip\bzlib.h">
