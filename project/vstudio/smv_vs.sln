@@ -16,16 +16,6 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "svfdll_demo_vs", "svfdll_demo_vs.vcxproj", "{57AA84E2-2019-2019-2019-B28989C25D08}"
 EndProject
 Global
-	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		externe.vcxitems*{59eb7049-3cd2-4c5c-9166-95fbe55908fd}*SharedItemsImports = 9
-		externe.vcxitems*{7014ddcd-2019-4a45-abd0-38f41bdfe2bb}*SharedItemsImports = 4
-		smv_engine.vcxitems*{7014ddcd-2019-4a45-abd0-38f41bdfe2bb}*SharedItemsImports = 4
-		externe.vcxitems*{83c862dc-2019-4b36-a219-486e9319c76a}*SharedItemsImports = 4
-		smv_engine.vcxitems*{83c862dc-2019-4b36-a219-486e9319c76a}*SharedItemsImports = 4
-		externe.vcxitems*{9a26bdb3-2019-46f5-966d-2f11925283e8}*SharedItemsImports = 4
-		smv_engine.vcxitems*{9a26bdb3-2019-46f5-966d-2f11925283e8}*SharedItemsImports = 4
-		smv_engine.vcxitems*{bcf2e37c-7454-4cce-8fd0-e2f13a90009b}*SharedItemsImports = 9
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|ARM = Debug|ARM
 		Debug|ARM64 = Debug|ARM64
@@ -207,8 +197,8 @@ Global
 		{57AA84E2-2019-2019-2019-B28989C25D08}.Debug|x86.Build.0 = Debug|Win32
 		{57AA84E2-2019-2019-2019-B28989C25D08}.Release|ARM.ActiveCfg = Release|x64
 		{57AA84E2-2019-2019-2019-B28989C25D08}.Release|ARM.Build.0 = Release|x64
-		{57AA84E2-2019-2019-2019-B28989C25D08}.Release|ARM64.ActiveCfg = Release|x64
-		{57AA84E2-2019-2019-2019-B28989C25D08}.Release|ARM64.Build.0 = Release|x64
+		{57AA84E2-2019-2019-2019-B28989C25D08}.Release|ARM64.ActiveCfg = Release|ARM64
+		{57AA84E2-2019-2019-2019-B28989C25D08}.Release|ARM64.Build.0 = Release|ARM64
 		{57AA84E2-2019-2019-2019-B28989C25D08}.Release|x64.ActiveCfg = Release|x64
 		{57AA84E2-2019-2019-2019-B28989C25D08}.Release|x64.Build.0 = Release|x64
 		{57AA84E2-2019-2019-2019-B28989C25D08}.Release|x86.ActiveCfg = Release|Win32
@@ -251,5 +241,15 @@ Global
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D2C60878-1233-4EA6-B151-9A7ADA0DA34C}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		externe.vcxitems*{59eb7049-3cd2-4c5c-9166-95fbe55908fd}*SharedItemsImports = 9
+		externe.vcxitems*{7014ddcd-2019-4a45-abd0-38f41bdfe2bb}*SharedItemsImports = 4
+		smv_engine.vcxitems*{7014ddcd-2019-4a45-abd0-38f41bdfe2bb}*SharedItemsImports = 4
+		externe.vcxitems*{83c862dc-2019-4b36-a219-486e9319c76a}*SharedItemsImports = 4
+		smv_engine.vcxitems*{83c862dc-2019-4b36-a219-486e9319c76a}*SharedItemsImports = 4
+		externe.vcxitems*{9a26bdb3-2019-46f5-966d-2f11925283e8}*SharedItemsImports = 4
+		smv_engine.vcxitems*{9a26bdb3-2019-46f5-966d-2f11925283e8}*SharedItemsImports = 4
+		smv_engine.vcxitems*{bcf2e37c-7454-4cce-8fd0-e2f13a90009b}*SharedItemsImports = 9
 	EndGlobalSection
 EndGlobal
