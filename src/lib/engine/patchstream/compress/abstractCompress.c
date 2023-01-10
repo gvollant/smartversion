@@ -328,7 +328,8 @@ static int lz4_abstract_compress(struct abstract_compress_stream_s* strm, int fl
 	lz4_z_stream->event_after_flush=0;
 
 	memset(&compressOptions, 0, sizeof(LZ4F_compressOptions_t));
-	while ((strm->avail_in>0) && (strm->avail_out>0))
+	while ((strm->avail_out>0) && ((strm->avail_in>0) ||
+		                           ((flush != ABSTR_COMPRESS_Z_NO_FLUSH) && (lz4_z_stream->pos_read_buf > 0))))
 	{
 		int write_directly_out=(strm->avail_out>=lz4_z_stream->max_flush_size_data);
 		size_t size_in_this;
@@ -364,10 +365,8 @@ static int lz4_abstract_compress(struct abstract_compress_stream_s* strm, int fl
 			                    dst_buffer, dst_buffer_size,
 			                    src_buffer, size_in_this, &compressOptions);
 
-		if (!read_directly_in) {
-			if (lz4_z_stream->pos_read_buf==lz4_z_stream->max_input_size)
-				lz4_z_stream->pos_read_buf=0;
-		} else {
+		lz4_z_stream->pos_read_buf=0;
+		if (read_directly_in) {
 			strm->avail_in-=(uInt)size_in_this;
 			strm->next_in+=size_in_this;
 			strm->total_in+=size_in_this;
