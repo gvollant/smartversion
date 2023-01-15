@@ -1768,3 +1768,86 @@ int abstract_init_compress_autoselect(abstract_compress_stream* strm, unsigned i
 		else
 			return abstract_init_compress_inflate_withoutNegMaxWBits(strm,ratio);
 }
+
+const char* abstract_init_compress_autoselect_info(unsigned int ratio,unsigned pos)
+{
+#ifdef COMPRESS_BZIP2
+		if ((ratio>=21) && (ratio<=29))
+		{
+			switch (pos) {
+			case ABSTR_CPR_POS_FORMAT_NAME: return "bzip2";
+			case ABSTR_CPR_POS_FORMAT_EXTENSION: return "bz2";
+			case ABSTR_CPR_POS_FORMAT_MIME: return "application/x-bzip2";
+			default: return "";
+			}
+		}
+#endif
+
+#ifdef COMPRESS_ZSTD
+		if (((ratio >= ABSTRACT_CPR_PARAM_ZSTANDARD_1) && (ratio <= ABSTRACT_CPR_PARAM_ZSTANDARD_22)) ||
+		    ((ratio >= ABSTRACT_CPR_PARAM_ZSTANDARD_PREFIXED_1) && (ratio <= ABSTRACT_CPR_PARAM_ZSTANDARD_PREFIXED_22))  ||
+		    ((ratio >= ABSTRACT_CPR_PARAM_ZSTANDARD_MT_1) && (ratio <= ABSTRACT_CPR_PARAM_ZSTANDARD_MT_22)) ||
+		    ((ratio >= ABSTRACT_CPR_PARAM_ZSTANDARD_VERYLONG_MT_1) && (ratio <= ABSTRACT_CPR_PARAM_ZSTANDARD_VERYLONG_MT_22)) ||
+		    ((ratio >= ABSTRACT_CPR_PARAM_ZSTANDARD_VERYLONG_1) && (ratio <= ABSTRACT_CPR_PARAM_ZSTANDARD_VERYLONG_22)) ||
+		    ((ratio >= ABSTRACT_CPR_PARAM_ZSTANDARD_BIS_1) && (ratio <= ABSTRACT_CPR_PARAM_ZSTANDARD_BIS_22)) ||
+		    ((ratio >= ABSTRACT_CPR_PARAM_ZSTANDARD_LONG_1) && (ratio <= ABSTRACT_CPR_PARAM_ZSTANDARD_LONG_22)) ||
+		    ((ratio >= ABSTRACT_CPR_PARAM_ZSTANDARD_LONG_MT_1) && (ratio <= ABSTRACT_CPR_PARAM_ZSTANDARD_LONG_MT_22)))
+		{
+			switch (pos) {
+			case ABSTR_CPR_POS_FORMAT_NAME: return "zstd";
+			case ABSTR_CPR_POS_FORMAT_EXTENSION: return "zst";
+			case ABSTR_CPR_POS_FORMAT_MIME: return "application/zstd";
+			default: return "";
+			}
+		}
+#endif
+#ifdef COMPRESS_XZUTILS
+		if (((ratio>=31) && (ratio<=39)) ||
+            ((ratio>=41) && (ratio<=49)) ||
+            ((ratio>=51) && (ratio<=59)) ||
+            ((ratio>=61) && (ratio<=69)) ||
+            ((ratio >= ABSTRACT_CPR_PARAM_UNPREFIXED_XZ_1) && (ratio <= ABSTRACT_CPR_PARAM_UNPREFIXED_XZ_9)) ||
+		    ((ratio >= ABSTRACT_CPR_PARAM_UNPREFIXED_XZ_EXTREME_1) && (ratio <= ABSTRACT_CPR_PARAM_UNPREFIXED_XZ_EXTREME_9)) ||
+		    ((ratio >= ABSTRACT_CPR_PARAM_UNPREFIXED_XZ_MT_0) && (ratio <= ABSTRACT_CPR_PARAM_UNPREFIXED_XZ_MT_9)) ||
+		    ((ratio >= ABSTRACT_CPR_PARAM_UNPREFIXED_XZ_EXTREME_MT_0) && (ratio <= ABSTRACT_CPR_PARAM_UNPREFIXED_XZ_EXTREME_MT_9)))
+		{
+			switch (pos) {
+			case ABSTR_CPR_POS_FORMAT_NAME: return "xz";
+			case ABSTR_CPR_POS_FORMAT_EXTENSION: return "xz";
+			case ABSTR_CPR_POS_FORMAT_MIME: return "application/x-xz";
+			default: return "";
+			}
+		}
+#endif
+
+
+
+#ifdef COMPRESS_LZ4
+		if (((ratio >= ABSTRACT_CPR_PARAM_LZ4_16_MIN12) && (ratio <= ABSTRACT_CPR_PARAM_LZ4_16_12)) ||
+		    ((ratio >= ABSTRACT_CPR_PARAM_LZ4_20_MIN12) && (ratio <= ABSTRACT_CPR_PARAM_LZ4_20_12)) ||
+		    ((ratio >= ABSTRACT_CPR_PARAM_LZ4_22_MIN12) && (ratio <= ABSTRACT_CPR_PARAM_LZ4_22_12)) ||
+		    ((ratio >= ABSTRACT_CPR_PARAM_LZ4FDEC_16_MIN12) && (ratio <= ABSTRACT_CPR_PARAM_LZ4FDEC_16_12)) ||
+		    ((ratio >= ABSTRACT_CPR_PARAM_LZ4FDEC_20_MIN12) && (ratio <= ABSTRACT_CPR_PARAM_LZ4FDEC_20_12)) ||
+		    ((ratio >= ABSTRACT_CPR_PARAM_LZ4FDEC_22_MIN12) && (ratio <= ABSTRACT_CPR_PARAM_LZ4FDEC_22_12)))
+		{
+			switch (pos) {
+			case ABSTR_CPR_POS_FORMAT_NAME: return "lz4";
+			case ABSTR_CPR_POS_FORMAT_EXTENSION: return "lz4";
+			case ABSTR_CPR_POS_FORMAT_MIME: return "application/octet-stream";
+			default: return "";
+			}
+		}
+#endif
+
+		if ((ratio>=ABSTRACT_CPR_PARAM_UNPREFIXED_GZIP_0) && (ratio<=ABSTRACT_CPR_PARAM_UNPREFIXED_GZIP_9))
+		{
+			switch (pos) {
+			case ABSTR_CPR_POS_FORMAT_NAME: return "gzip";
+			case ABSTR_CPR_POS_FORMAT_EXTENSION: return "gz";
+			case ABSTR_CPR_POS_FORMAT_MIME: return "application/gzip";
+			default: return "";
+			}
+		}
+
+		return NULL;
+}

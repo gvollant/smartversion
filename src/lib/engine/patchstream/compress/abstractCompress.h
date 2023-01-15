@@ -172,6 +172,11 @@ extern "C" {
 
 #define ABSTR_COMPRESS_Z_DEFAULT_COMPRESSION (-1)
 
+
+#define ABSTR_CPR_POS_FORMAT_NAME        0
+#define ABSTR_CPR_POS_FORMAT_EXTENSION   1
+#define ABSTR_CPR_POS_FORMAT_MIME        2
+
 	void clear_abstract_compress_stream(
 		abstract_compress_stream* strm);
 
@@ -212,6 +217,8 @@ extern "C" {
 	int XflateStore_compress(abstract_compress_stream* strm, int flush);
 
 	int abstract_init_compress_autoselect(abstract_compress_stream* strm, unsigned int ratio, int isStandardzLibWithNegMaxWBits);
+
+	const char* abstract_init_compress_autoselect_info(unsigned int ratio,unsigned pos);
 
 	/* to prevent abstractCompress from write prefix, call abstract_compress_consume_prefix after init */
 	unsigned char abstract_compress_consume_prefix(abstract_compress_stream* p_strm);
