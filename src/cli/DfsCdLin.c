@@ -870,6 +870,7 @@ BOOL SVFAPI MixDfs(dfwcharpc lpszDfsFileName, dfwcharpc pCommandLine)
     PDIRINFO *pDirInfo;
     BOOL *lpVersionMap = NULL;
     BOOL fReuseOldPatch = TRUE;
+    BOOL fDisplayInfo = FALSE;
     BOOL fRawAccepted = TRUE;
     BOOL fFirstVersionAsReferenceNewDfs = FALSE;
     BOOL fFirstVersionStatusUserSelected = FALSE;
@@ -973,6 +974,21 @@ BOOL SVFAPI MixDfs(dfwcharpc lpszDfsFileName, dfwcharpc pCommandLine)
                 CopyStrWord(pCommandLine, szDfsBaseDirectory,
                             (sizeof(szDfsBaseDirectory) / sizeof(dfwchar)) - 1);
             fBaseDirectorySelected = TRUE;
+        }
+        else
+        if (((dfCompareUnicodeArgumentWithAnsiString(szPortionLine, "/memoryMB") == 0)) ||
+            ((dfCompareUnicodeArgumentWithAnsiString(szPortionLine, "-memoryMB") == 0)))
+        {
+            dfwchar szBlockSize[MAX_PATH_LENGTH];
+            unsigned long lValue;
+
+            szBlockSize[0]=0;
+            pCommandLine =
+                CopyStrWord(pCommandLine, szBlockSize,
+                            (sizeof(szBlockSize) / sizeof(dfwchar)) - 2);
+
+            lValue=ConvertUnicodeStringToLong(szBlockSize);
+            cprParam.dfPhysicalMemoryKB=lValue*1024;
         }
         else
         if (((dfCompareUnicodeArgumentWithAnsiString(szPortionLine, "/blocksize") == 0)) ||
@@ -1083,6 +1099,12 @@ BOOL SVFAPI MixDfs(dfwcharpc lpszDfsFileName, dfwcharpc pCommandLine)
             printf("rebuild patch\n");
          }
          else
+         if (((dfCompareUnicodeArgumentWithAnsiString(szPortionLine, "/info") == 0)) ||
+             ((dfCompareUnicodeArgumentWithAnsiString(szPortionLine, "-info") == 0)))
+         {
+            fDisplayInfo = TRUE;
+         }
+         else
          if (((dfCompareUnicodeArgumentWithAnsiString(szPortionLine, "/bld") == 0)) ||
              ((dfCompareUnicodeArgumentWithAnsiString(szPortionLine, "-bld") == 0)) ||
              ((dfCompareUnicodeArgumentWithAnsiString(szPortionLine, "/rebuild") == 0)) ||
@@ -1177,6 +1199,9 @@ BOOL SVFAPI MixDfs(dfwcharpc lpszDfsFileName, dfwcharpc pCommandLine)
         }
     }
 
+    if (fDisplayInfo) {
+        printf("memory usable = %u MB\n",(unsigned)(cprParam.dfPhysicalMemoryKB / 1024));
+    }
 
     for (dfNumDir = 0; dfNumDir < dfNbDir; dfNumDir++)
         if (*(lpVersionMap + dfNumDir) == TRUE)
