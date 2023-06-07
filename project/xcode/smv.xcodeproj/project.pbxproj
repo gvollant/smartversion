@@ -110,7 +110,6 @@
 		225CC2E627A5827F00CD6927 /* simple_encoder.c in Sources */ = {isa = PBXBuildFile; fileRef = 225CB44F27A5826C00CD6927 /* simple_encoder.c */; };
 		225CC2E727A5827F00CD6927 /* ia64.c in Sources */ = {isa = PBXBuildFile; fileRef = 225CB45027A5826C00CD6927 /* ia64.c */; };
 		225CC2E827A5827F00CD6927 /* simple_coder.c in Sources */ = {isa = PBXBuildFile; fileRef = 225CB45127A5826C00CD6927 /* simple_coder.c */; };
-		225CC2E927A5827F00CD6927 /* Makefile.inc in Sources */ = {isa = PBXBuildFile; fileRef = 225CB45227A5826C00CD6927 /* Makefile.inc */; };
 		225CC2EA27A5827F00CD6927 /* arm.c in Sources */ = {isa = PBXBuildFile; fileRef = 225CB45427A5826C00CD6927 /* arm.c */; };
 		225CC2EB27A5827F00CD6927 /* x86.c in Sources */ = {isa = PBXBuildFile; fileRef = 225CB45527A5826C00CD6927 /* x86.c */; };
 		225CC2EC27A5827F00CD6927 /* armthumb.c in Sources */ = {isa = PBXBuildFile; fileRef = 225CB45727A5826C00CD6927 /* armthumb.c */; };
@@ -275,8 +274,6 @@
 		225CC84427A5859C00CD6927 /* Threads.c in Sources */ = {isa = PBXBuildFile; fileRef = 225CC7FC27A5859C00CD6927 /* Threads.c */; };
 		225CC84527A5859C00CD6927 /* 7zBuf.c in Sources */ = {isa = PBXBuildFile; fileRef = 225CC7FE27A5859C00CD6927 /* 7zBuf.c */; };
 		225CC84627A5859C00CD6927 /* LzmaLib.c in Sources */ = {isa = PBXBuildFile; fileRef = 225CC7FF27A5859C00CD6927 /* LzmaLib.c */; };
-		2295BB7729686EA700EA1BE6 /* arm64.c in Sources */ = {isa = PBXBuildFile; fileRef = 2295BB7629686EA700EA1BE6 /* arm64.c */; };
-		2295BB7B29686EFB00EA1BE6 /* lzip_decoder.c in Sources */ = {isa = PBXBuildFile; fileRef = 2295BB7A29686EFB00EA1BE6 /* lzip_decoder.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -510,7 +507,6 @@
 		225CB44F27A5826C00CD6927 /* simple_encoder.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = simple_encoder.c; sourceTree = "<group>"; };
 		225CB45027A5826C00CD6927 /* ia64.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ia64.c; sourceTree = "<group>"; };
 		225CB45127A5826C00CD6927 /* simple_coder.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = simple_coder.c; sourceTree = "<group>"; };
-		225CB45227A5826C00CD6927 /* Makefile.inc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.pascal; path = Makefile.inc; sourceTree = "<group>"; };
 		225CB45327A5826C00CD6927 /* simple_private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = simple_private.h; sourceTree = "<group>"; };
 		225CB45427A5826C00CD6927 /* arm.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = arm.c; sourceTree = "<group>"; };
 		225CB45527A5826C00CD6927 /* x86.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = x86.c; sourceTree = "<group>"; };
@@ -843,9 +839,6 @@
 		225CC7FF27A5859C00CD6927 /* LzmaLib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = LzmaLib.c; sourceTree = "<group>"; };
 		225CC80027A5859C00CD6927 /* XzEnc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XzEnc.h; sourceTree = "<group>"; };
 		225CC84E27A5877500CD6927 /* svf_md5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = svf_md5.h; sourceTree = "<group>"; };
-		2295BB7629686EA700EA1BE6 /* arm64.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = arm64.c; sourceTree = "<group>"; };
-		2295BB7929686EFB00EA1BE6 /* lzip_decoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lzip_decoder.h; sourceTree = "<group>"; };
-		2295BB7A29686EFB00EA1BE6 /* lzip_decoder.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lzip_decoder.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1381,7 +1374,6 @@
 		225CB44927A5826C00CD6927 /* simple */ = {
 			isa = PBXGroup;
 			children = (
-				2295BB7629686EA700EA1BE6 /* arm64.c */,
 				225CB44A27A5826C00CD6927 /* simple_encoder.h */,
 				225CB44B27A5826C00CD6927 /* simple_coder.h */,
 				225CB44C27A5826C00CD6927 /* simple_decoder.c */,
@@ -1390,7 +1382,6 @@
 				225CB44F27A5826C00CD6927 /* simple_encoder.c */,
 				225CB45027A5826C00CD6927 /* ia64.c */,
 				225CB45127A5826C00CD6927 /* simple_coder.c */,
-				225CB45227A5826C00CD6927 /* Makefile.inc */,
 				225CB45327A5826C00CD6927 /* simple_private.h */,
 				225CB45427A5826C00CD6927 /* arm.c */,
 				225CB45527A5826C00CD6927 /* x86.c */,
@@ -1403,8 +1394,6 @@
 		225CB45927A5826C00CD6927 /* common */ = {
 			isa = PBXGroup;
 			children = (
-				2295BB7A29686EFB00EA1BE6 /* lzip_decoder.c */,
-				2295BB7929686EFB00EA1BE6 /* lzip_decoder.h */,
 				225CB45A27A5826C00CD6927 /* filter_decoder.c */,
 				225CB45B27A5826C00CD6927 /* block_buffer_encoder.h */,
 				225CB45C27A5826C00CD6927 /* index.h */,
@@ -2114,7 +2103,6 @@
 				225CB04627A581B100CD6927 /* unzip.c in Sources */,
 				225CC71827A5828500CD6927 /* zstd_decompress.c in Sources */,
 				225CC34027A5828000CD6927 /* tuklib_mbstr_fw.c in Sources */,
-				2295BB7B29686EFB00EA1BE6 /* lzip_decoder.c in Sources */,
 				225CC32D27A5828000CD6927 /* lzma_encoder_presets.c in Sources */,
 				225CB0AC27A581B100CD6927 /* RamDifTl.c in Sources */,
 				225CC82827A5859C00CD6927 /* LzmaDec.c in Sources */,
@@ -2176,7 +2164,6 @@
 				225CC2FF27A5828000CD6927 /* stream_encoder_mt.c in Sources */,
 				225CC84427A5859C00CD6927 /* Threads.c in Sources */,
 				225CC71327A5828500CD6927 /* fastcover.c in Sources */,
-				225CC2E927A5827F00CD6927 /* Makefile.inc in Sources */,
 				225CC83927A5859C00CD6927 /* AesOpt.c in Sources */,
 				225CC75C27A5828500CD6927 /* lzham_match_accel.cpp in Sources */,
 				225CC83C27A5859C00CD6927 /* CpuArch.c in Sources */,
@@ -2184,7 +2171,6 @@
 				225CC71427A5828500CD6927 /* zdict.c in Sources */,
 				225CB0B027A581B100CD6927 /* ReMixHelper.c in Sources */,
 				225CC84227A5859C00CD6927 /* Xz.c in Sources */,
-				2295BB7729686EA700EA1BE6 /* arm64.c in Sources */,
 				225CC30727A5828000CD6927 /* index_decoder.c in Sources */,
 				225CC32627A5828000CD6927 /* sha256.c in Sources */,
 				225CC2E827A5827F00CD6927 /* simple_coder.c in Sources */,
