@@ -64,9 +64,22 @@
 #include "DfsCdLin.h"
 #include "../lib/helper/decompress/ExtractHelper.h"
 #include "RawCompress.h"
-#include "../lib/engine/patchstream/compress/abstractCompress.h"
-#include "../lib/engine/patchstream/common/abstractDecompress.h"
 
+#if ((!defined(RAWCOMPRESSDIRECT)) && (!defined(SVF_EXTRACT_ONLY)))
+#define RAWCOMPRESSDIRECT 1
+#endif
+
+#if (!defined(RAWUNCOMPRESSDIRECT))
+#define RAWUNCOMPRESSDIRECT 1
+#endif
+
+#ifdef RAWCOMPRESSDIRECT
+#include "../lib/engine/patchstream/compress/abstractCompress.h"
+#endif
+
+#ifdef RAWUNCOMPRESSDIRECT
+#include "../lib/engine/patchstream/common/abstractDecompress.h"
+#endif
 
 int PerformTestIdentical(int nbarg,char* argvid[])
 {
