@@ -26,14 +26,14 @@ do_download https://sourceware.org/pub/bzip2/bzip2-1.0.5.tar.gz oldbzip2.tar.gz
 do_download https://sourceware.org/pub/bzip2/bzip2-1.0.8.tar.gz bzip2.tar.gz
 
 
-do_download https://www.7-zip.org/a/lzma2201.7z lzma.7z
+do_download https://www.7-zip.org/a/lzma2301.7z lzma.7z
 
-do_download https://tukaani.org/xz/xz-5.4.3.tar.gz xz.tar.gz
+do_download https://tukaani.org/xz/xz-5.4.4.tar.gz xz.tar.gz
 
 do_download https://tukaani.org/xz/xz-embedded-20210201.tar.gz xz-embedded.tar.gz
 
-do_download http://zlib.net/zlib-1.2.13.tar.gz zlib.tar.gz
-do_download http://zlib.net/zlib1213.zip zlib.zip
+do_download http://zlib.net/zlib-1.3.tar.gz zlib.tar.gz
+do_download http://zlib.net/zlib13.zip zlib.zip
 
 
 do_download https://github.com/facebook/zstd/archive/refs/tags/v1.5.5.tar.gz zstd.tar.gz
