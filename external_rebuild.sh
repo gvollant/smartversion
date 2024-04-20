@@ -28,16 +28,16 @@ do_download https://sourceware.org/pub/bzip2/bzip2-1.0.8.tar.gz bzip2.tar.gz
 
 do_download https://www.7-zip.org/a/lzma2301.7z lzma.7z
 
-do_download https://tukaani.org/xz/xz-5.4.4.tar.gz xz.tar.gz
+do_download https://github.com/tukaani-project/xz/releases/download/v5.4.6/xz-5.4.6.tar.gz xz.tar.gz
 
-do_download https://tukaani.org/xz/xz-embedded-20210201.tar.gz xz-embedded.tar.gz
+do_download https://github.com/tukaani-project/xz-embedded/archive/refs/tags/v2024-04-05.tar.gz xz-embedded.tar.gz
 
-do_download http://zlib.net/zlib-1.3.tar.gz zlib.tar.gz
-do_download http://zlib.net/zlib13.zip zlib.zip
+do_download http://zlib.net/zlib-1.3.1.tar.gz zlib.tar.gz
+do_download http://zlib.net/zlib131.zip zlib.zip
 
 
-do_download https://github.com/facebook/zstd/archive/refs/tags/v1.5.5.tar.gz zstd.tar.gz
-do_download https://github.com/facebook/zstd/archive/refs/tags/v1.5.5.zip zstd.zip
+do_download https://github.com/facebook/zstd/archive/refs/tags/v1.5.6.tar.gz zstd.tar.gz
+do_download https://github.com/facebook/zstd/archive/refs/tags/v1.5.6.zip zstd.zip
 
 do_download https://github.com/lzfse/lzfse/archive/refs/tags/lzfse-1.0.zip lzfse.zip
 do_download https://github.com/lzfse/lzfse/archive/refs/tags/lzfse-1.0.tar.gz lzfse.tar.gz
