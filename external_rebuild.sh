@@ -26,9 +26,9 @@ do_download https://sourceware.org/pub/bzip2/bzip2-1.0.5.tar.gz oldbzip2.tar.gz
 do_download https://sourceware.org/pub/bzip2/bzip2-1.0.8.tar.gz bzip2.tar.gz
 
 
-do_download https://www.7-zip.org/a/lzma2301.7z lzma.7z
+do_download https://www.7-zip.org/a/lzma2406.7z lzma.7z
 
-do_download https://github.com/tukaani-project/xz/releases/download/v5.4.6/xz-5.4.6.tar.gz xz.tar.gz
+do_download https://github.com/tukaani-project/xz/releases/download/v5.6.2/xz-5.6.2.tar.gz xz.tar.gz
 
 do_download https://github.com/tukaani-project/xz-embedded/archive/refs/tags/v2024-04-05.tar.gz xz-embedded.tar.gz
 
