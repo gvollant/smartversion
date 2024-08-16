@@ -16,8 +16,8 @@ do_download https://github.com/gvollant/lzham_codec/archive/refs/tags/v1_0_stabl
 do_download https://github.com/gvollant/fastlzlib/archive/refs/tags/fastlzlib_with_lzfse.zip fastlzlib.zip
 do_download https://github.com/gvollant/fastlzlib/archive/refs/tags/fastlzlib_with_lzfse.tar.gz fastlzlib.tar.gz
 
-do_download https://github.com/lz4/lz4/archive/refs/tags/v1.9.4.zip lz4.zip
-do_download https://github.com/lz4/lz4/archive/refs/tags/v1.9.4.tar.gz lz4.tar.gz
+do_download https://github.com/lz4/lz4/archive/refs/tags/v1.10.0.zip lz4.zip
+do_download https://github.com/lz4/lz4/archive/refs/tags/v1.10.0.tar.gz lz4.tar.gz
 
 do_download https://github.com/ariya/FastLZ/archive/refs/tags/0.5.0.zip fastlz.zip
 do_download https://github.com/ariya/FastLZ/archive/refs/tags/0.5.0.tar.gz fastlz.tar.gz
@@ -26,7 +26,7 @@ do_download https://sourceware.org/pub/bzip2/bzip2-1.0.5.tar.gz oldbzip2.tar.gz
 do_download https://sourceware.org/pub/bzip2/bzip2-1.0.8.tar.gz bzip2.tar.gz
 
 
-do_download https://www.7-zip.org/a/lzma2406.7z lzma.7z
+do_download https://www.7-zip.org/a/lzma2408.7z lzma.7z
 
 do_download https://github.com/tukaani-project/xz/releases/download/v5.6.2/xz-5.6.2.tar.gz xz.tar.gz
 
