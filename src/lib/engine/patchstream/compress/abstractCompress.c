@@ -1739,22 +1739,22 @@ int abstract_init_compress_autoselect(abstract_compress_stream* strm, unsigned i
 
 #ifdef COMPRESS_LZ4
 		if ((ratio >= ABSTRACT_CPR_PARAM_LZ4_16_MIN12) && (ratio <= ABSTRACT_CPR_PARAM_LZ4_16_12))
-			return abstract_init_compress_lz4_complevel(strm, ((int)(ratio))-ABSTRACT_CPR_PARAM_LZ4_16_MIN12,16,0);
+			return abstract_init_compress_lz4_complevel(strm, (((int)(ratio))-ABSTRACT_CPR_PARAM_LZ4_16_MIN12) + 1,16,0);
 
 		if ((ratio >= ABSTRACT_CPR_PARAM_LZ4_20_MIN12) && (ratio <= ABSTRACT_CPR_PARAM_LZ4_20_12))
-			return abstract_init_compress_lz4_complevel(strm, ((int)(ratio))-ABSTRACT_CPR_PARAM_LZ4_20_MIN12,20,0);
+			return abstract_init_compress_lz4_complevel(strm, (((int)(ratio))-ABSTRACT_CPR_PARAM_LZ4_20_MIN12) + 1,20,0);
 
 		if ((ratio >= ABSTRACT_CPR_PARAM_LZ4_22_MIN12) && (ratio <= ABSTRACT_CPR_PARAM_LZ4_22_12))
-			return abstract_init_compress_lz4_complevel(strm, ((int)(ratio))-ABSTRACT_CPR_PARAM_LZ4_22_MIN12,22,0);
+			return abstract_init_compress_lz4_complevel(strm, (((int)(ratio))-ABSTRACT_CPR_PARAM_LZ4_22_MIN12) + 1,22,0);
 
 		if ((ratio >= ABSTRACT_CPR_PARAM_LZ4FDEC_16_MIN12) && (ratio <= ABSTRACT_CPR_PARAM_LZ4FDEC_16_12))
-			return abstract_init_compress_lz4_complevel(strm, ((int)(ratio))-ABSTRACT_CPR_PARAM_LZ4FDEC_16_MIN12,16,1);
+			return abstract_init_compress_lz4_complevel(strm, (((int)(ratio))-ABSTRACT_CPR_PARAM_LZ4FDEC_16_MIN12) + 1,16,1);
 
 		if ((ratio >= ABSTRACT_CPR_PARAM_LZ4FDEC_20_MIN12) && (ratio <= ABSTRACT_CPR_PARAM_LZ4FDEC_20_12))
-			return abstract_init_compress_lz4_complevel(strm, ((int)(ratio))-ABSTRACT_CPR_PARAM_LZ4FDEC_20_MIN12,20,1);
+			return abstract_init_compress_lz4_complevel(strm, (((int)(ratio))-ABSTRACT_CPR_PARAM_LZ4FDEC_20_MIN12) + 1,20,1);
 
 		if ((ratio >= ABSTRACT_CPR_PARAM_LZ4FDEC_22_MIN12) && (ratio <= ABSTRACT_CPR_PARAM_LZ4FDEC_22_12))
-			return abstract_init_compress_lz4_complevel(strm, ((int)(ratio))-ABSTRACT_CPR_PARAM_LZ4FDEC_22_MIN12,22,1);
+			return abstract_init_compress_lz4_complevel(strm, (((int)(ratio))-ABSTRACT_CPR_PARAM_LZ4FDEC_22_MIN12) + 1,22,1);
 #endif
 
 		if ((ratio>=ABSTRACT_CPR_PARAM_UNPREFIXED_GZIP_0) && (ratio<=ABSTRACT_CPR_PARAM_UNPREFIXED_GZIP_9))
