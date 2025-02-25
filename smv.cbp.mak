@@ -102,18 +102,18 @@ OBJ_DEBUG = $(OBJDIR_DEBUG)/src/lib/engine/patchstream/common/DfsIOHlpW.o \
 	$(OBJDIR_DEBUG)/src/cli/RawCompress.o \
 	$(OBJDIR_DEBUG)/src/cli/DifstrmMainPosix.o \
 	$(OBJDIR_DEBUG)/src/cli/DfsCdLin.o \
-	$(OBJDIR_DEBUG)/src/lib/engine/patchstream/common/DfsIoMemMutex.o \
 	$(OBJDIR_DEBUG)/external/zstd/lib/dictBuilder/zdict.o \
 	$(OBJDIR_DEBUG)/external/zstd/lib/dictBuilder/fastcover.o \
-	$(OBJDIR_DEBUG)/src/lib/engine/patchstream/common/ltoolsc.o \
+	$(OBJDIR_DEBUG)/src/lib/engine/patchstream/common/compress_store.o \
 	$(OBJDIR_DEBUG)/src/lib/engine/patchstream/common/difstool.o \
 	$(OBJDIR_DEBUG)/src/lib/engine/patchstream/common/dfsToolw.o \
 	$(OBJDIR_DEBUG)/src/lib/engine/patchstream/common/dfsToolWinRT.o \
 	$(OBJDIR_DEBUG)/src/lib/engine/patchstream/common/dfsToolPosix.o \
 	$(OBJDIR_DEBUG)/src/lib/engine/patchstream/common/dfsTool.o \
-	$(OBJDIR_DEBUG)/src/lib/engine/patchstream/common/compress_store.o \
+	$(OBJDIR_DEBUG)/external/zstd/lib/dictBuilder/divsufsort.o \
 	$(OBJDIR_DEBUG)/src/lib/engine/patchstream/common/abstractDecompress.o \
 	$(OBJDIR_DEBUG)/src/lib/engine/patchstream/common/DfsToolsPosixCPP.o \
+	$(OBJDIR_DEBUG)/src/lib/engine/patchstream/common/DfsIoMemMutex.o \
 	$(OBJDIR_DEBUG)/external/zstd/lib/compress/zstd_compress_superblock.o \
 	$(OBJDIR_DEBUG)/external/zstd/lib/compress/zstd_compress_sequences.o \
 	$(OBJDIR_DEBUG)/external/zstd/lib/compress/zstd_compress_literals.o \
@@ -125,15 +125,15 @@ OBJ_DEBUG = $(OBJDIR_DEBUG)/src/lib/engine/patchstream/common/DfsIOHlpW.o \
 	$(OBJDIR_DEBUG)/external/zstd/lib/common/xxhash.o \
 	$(OBJDIR_DEBUG)/external/zstd/lib/common/threading.o \
 	$(OBJDIR_DEBUG)/external/zstd/lib/common/pool.o \
-	$(OBJDIR_DEBUG)/external/zstd/lib/common/fse_decompress.o \
-	$(OBJDIR_DEBUG)/external/zstd/lib/compress/zstdmt_compress.o \
-	$(OBJDIR_DEBUG)/external/zstd/lib/dictBuilder/divsufsort.o \
 	$(OBJDIR_DEBUG)/external/zstd/lib/dictBuilder/cover.o \
 	$(OBJDIR_DEBUG)/external/zstd/lib/decompress/zstd_decompress_block.o \
 	$(OBJDIR_DEBUG)/external/zstd/lib/decompress/zstd_decompress.o \
 	$(OBJDIR_DEBUG)/external/zstd/lib/decompress/zstd_ddict.o \
 	$(OBJDIR_DEBUG)/external/zstd/lib/decompress/huf_decompress_amd64.o \
 	$(OBJDIR_DEBUG)/external/zstd/lib/decompress/huf_decompress.o \
+	$(OBJDIR_DEBUG)/external/zstd/lib/compress/zstdmt_compress.o \
+	$(OBJDIR_DEBUG)/src/lib/engine/patchstream/common/ltoolsc.o \
+	$(OBJDIR_DEBUG)/external/zstd/lib/compress/zstd_preSplit.o \
 	$(OBJDIR_DEBUG)/external/zstd/lib/compress/zstd_opt.o \
 	$(OBJDIR_DEBUG)/external/zstd/lib/compress/zstd_ldm.o \
 	$(OBJDIR_DEBUG)/external/zstd/lib/compress/zstd_lazy.o \
@@ -159,6 +159,7 @@ OBJ_DEBUG = $(OBJDIR_DEBUG)/src/lib/engine/patchstream/common/DfsIOHlpW.o \
 	$(OBJDIR_DEBUG)/src/lib/helper/compress/BuildHelper.o \
 	$(OBJDIR_DEBUG)/src/lib/hash/sha256_from_openssl.o \
 	$(OBJDIR_DEBUG)/src/lib/hash/sha1dgst.o \
+	$(OBJDIR_DEBUG)/src/lib/engine/patchstream/compress/makdifst.o \
 	$(OBJDIR_DEBUG)/src/lib/engine/svfile/common/ArrayTl.o \
 	$(OBJDIR_DEBUG)/src/lib/engine/patchstream/rebuild/RamDifWk.o \
 	$(OBJDIR_DEBUG)/src/lib/engine/patchstream/rebuild/RamDifWS.o \
@@ -166,7 +167,6 @@ OBJ_DEBUG = $(OBJDIR_DEBUG)/src/lib/engine/patchstream/common/DfsIOHlpW.o \
 	$(OBJDIR_DEBUG)/src/lib/engine/patchstream/decompress/apldifst.o \
 	$(OBJDIR_DEBUG)/src/lib/engine/patchstream/decompress/ApDifStm.o \
 	$(OBJDIR_DEBUG)/src/lib/engine/svfile/common/DfsIntf.o \
-	$(OBJDIR_DEBUG)/src/lib/engine/patchstream/compress/makdifst.o \
 	$(OBJDIR_DEBUG)/src/lib/engine/patchstream/compress/makdifId.o \
 	$(OBJDIR_DEBUG)/src/lib/engine/patchstream/compress/abstractCompress.o \
 	$(OBJDIR_DEBUG)/src/lib/engine/patchstream/compress/PreWkFnd.o \
@@ -178,25 +178,28 @@ OBJ_DEBUG = $(OBJDIR_DEBUG)/src/lib/engine/patchstream/common/DfsIOHlpW.o \
 	$(OBJDIR_DEBUG)/src/lib/engine/svfile/common/DirSet.o \
 	$(OBJDIR_DEBUG)/src/lib/engine/svfile/common/DfsTagMg.o \
 	$(OBJDIR_DEBUG)/src/lib/engine/svfile/common/DfsTagBlockFloatTool.o \
+	$(OBJDIR_DEBUG)/external/zstd/lib/common/fse_decompress.o \
 	$(OBJDIR_DEBUG)/src/lib/engine/svfile/common/DfsTagBlockFloatEnd.o \
 	$(OBJDIR_DEBUG)/src/lib/engine/svfile/common/DfsSet.o \
 	$(OBJDIR_DEBUG)/src/lib/engine/svfile/common/DfsMtStr.o \
 	$(OBJDIR_DEBUG)/src/lib/engine/svfile/common/DfsMTool.o \
 	$(OBJDIR_DEBUG)/src/lib/engine/svfile/common/DfsMFile.o \
 	$(OBJDIR_DEBUG)/src/lib/engine/svfile/common/DfsIntfWr.o \
-	$(OBJDIR_DEBUG)/external/lzham/lzhamdecomp/lzham_prefix_coding.o \
+	$(OBJDIR_DEBUG)/external/lzma_sdk/C/7zAlloc.o \
 	$(OBJDIR_DEBUG)/external/lzham/lzhamlib/lzham_lib.o \
 	$(OBJDIR_DEBUG)/external/lzham/lzhamlib/lzham_decomplib.o \
 	$(OBJDIR_DEBUG)/external/lzham/lzhamdecomp/lzham_vector.o \
 	$(OBJDIR_DEBUG)/external/lzham/lzhamdecomp/lzham_timer.o \
 	$(OBJDIR_DEBUG)/external/lzham/lzhamdecomp/lzham_symbol_codec.o \
-	$(OBJDIR_DEBUG)/external/lzma_sdk/C/7zAlloc.o \
+	$(OBJDIR_DEBUG)/external/lzma_sdk/C/7zArcIn.o \
+	$(OBJDIR_DEBUG)/external/lzham/lzhamdecomp/lzham_prefix_coding.o \
 	$(OBJDIR_DEBUG)/external/lzham/lzhamdecomp/lzham_platform.o \
 	$(OBJDIR_DEBUG)/external/lzham/lzhamdecomp/lzham_mem.o \
 	$(OBJDIR_DEBUG)/external/lzham/lzhamdecomp/lzham_lzdecompbase.o \
 	$(OBJDIR_DEBUG)/external/lzham/lzhamdecomp/lzham_lzdecomp.o \
 	$(OBJDIR_DEBUG)/external/lzham/lzhamdecomp/lzham_huffman_codes.o \
-	$(OBJDIR_DEBUG)/external/lzma_sdk/C/BraIA64.o \
+	$(OBJDIR_DEBUG)/external/lzma_sdk/C/CpuArch.o \
+	$(OBJDIR_DEBUG)/external/lzma_sdk/C/Ppmd7Enc.o \
 	$(OBJDIR_DEBUG)/external/lzma_sdk/C/Ppmd7Dec.o \
 	$(OBJDIR_DEBUG)/external/lzma_sdk/C/Ppmd7.o \
 	$(OBJDIR_DEBUG)/external/lzma_sdk/C/LzmaEnc.o \
@@ -207,7 +210,7 @@ OBJ_DEBUG = $(OBJDIR_DEBUG)/src/lib/engine/patchstream/common/DfsIOHlpW.o \
 	$(OBJDIR_DEBUG)/external/lzma_sdk/C/LzFind.o \
 	$(OBJDIR_DEBUG)/external/lzma_sdk/C/LZMASDK_Sha256.o \
 	$(OBJDIR_DEBUG)/external/lzma_sdk/C/Delta.o \
-	$(OBJDIR_DEBUG)/external/lzma_sdk/C/CpuArch.o \
+	$(OBJDIR_DEBUG)/external/lzma_sdk/C/BraIA64.o \
 	$(OBJDIR_DEBUG)/external/lzma_sdk/C/Bra86.o \
 	$(OBJDIR_DEBUG)/external/lzma_sdk/C/Bra.o \
 	$(OBJDIR_DEBUG)/external/lzma_sdk/C/Bcj2.o \
@@ -219,7 +222,6 @@ OBJ_DEBUG = $(OBJDIR_DEBUG)/src/lib/engine/patchstream/common/DfsIOHlpW.o \
 	$(OBJDIR_DEBUG)/external/lzma_sdk/C/7zCrc.o \
 	$(OBJDIR_DEBUG)/external/lzma_sdk/C/7zBuf2.o \
 	$(OBJDIR_DEBUG)/external/lzma_sdk/C/7zBuf.o \
-	$(OBJDIR_DEBUG)/external/lzma_sdk/C/7zArcIn.o \
 	$(OBJDIR_DEBUG)/external/fastlzlib/lz4/lz4hc.o \
 	$(OBJDIR_DEBUG)/external/fastlzlib/lzfse/src/lzvn_decode_base.o \
 	$(OBJDIR_DEBUG)/external/fastlzlib/lzfse/src/lzfse_fse.o \
@@ -228,6 +230,7 @@ OBJ_DEBUG = $(OBJDIR_DEBUG)/src/lib/engine/patchstream/common/DfsIOHlpW.o \
 	$(OBJDIR_DEBUG)/external/fastlzlib/lzfse/src/lzfse_decode_base.o \
 	$(OBJDIR_DEBUG)/external/fastlzlib/lzfse/src/lzfse_decode.o \
 	$(OBJDIR_DEBUG)/external/fastlzlib/lz4/xxhash.o \
+	$(OBJDIR_DEBUG)/external/fastlzlib/lzfse/src/lzvn_encode_base.o \
 	$(OBJDIR_DEBUG)/external/fastlzlib/lz4/lz4frame.o \
 	$(OBJDIR_DEBUG)/external/fastlzlib/lz4/lz4.o \
 	$(OBJDIR_DEBUG)/external/fastlzlib/fastlzlib.o \
@@ -238,17 +241,17 @@ OBJ_DEBUG = $(OBJDIR_DEBUG)/src/lib/engine/patchstream/common/DfsIOHlpW.o \
 	$(OBJDIR_DEBUG)/external/bzip/crctable.o \
 	$(OBJDIR_DEBUG)/external/bzip/compress.o \
 	$(OBJDIR_DEBUG)/external/bzip/bzlib.o \
-	$(OBJDIR_DEBUG)/external/lzham/lzhamcomp/lzham_match_accel.o \
 	$(OBJDIR_DEBUG)/external/lzham/lzhamdecomp/lzham_checksum.o \
 	$(OBJDIR_DEBUG)/external/lzham/lzhamdecomp/lzham_assert.o \
 	$(OBJDIR_DEBUG)/external/lzham/lzhamcomp/lzham_pthreads_threading.o \
-	$(OBJDIR_DEBUG)/external/lzma_sdk/C/Ppmd7Enc.o \
+	$(OBJDIR_DEBUG)/external/lzma_sdk/C/Sha256Opt.o \
+	$(OBJDIR_DEBUG)/external/lzham/lzhamcomp/lzham_match_accel.o \
 	$(OBJDIR_DEBUG)/external/lzham/lzhamcomp/lzham_lzcomp_state.o \
 	$(OBJDIR_DEBUG)/external/lzham/lzhamcomp/lzham_lzcomp_internal.o \
 	$(OBJDIR_DEBUG)/external/lzham/lzhamcomp/lzham_lzcomp.o \
 	$(OBJDIR_DEBUG)/external/lzham/lzhamcomp/lzham_lzbase.o \
-	$(OBJDIR_DEBUG)/external/fastlzlib/lzfse/src/lzvn_encode_base.o \
-	$(OBJDIR_DEBUG)/external/xz/src/liblzma/lz/lz_decoder.o \
+	$(OBJDIR_DEBUG)/external/xz/src/liblzma/lz/lz_encoder.o \
+	$(OBJDIR_DEBUG)/external/xz/src/liblzma/simple/armthumb.o \
 	$(OBJDIR_DEBUG)/external/xz/src/liblzma/simple/arm64.o \
 	$(OBJDIR_DEBUG)/external/xz/src/liblzma/simple/arm.o \
 	$(OBJDIR_DEBUG)/external/xz/src/liblzma/rangecoder/price_table.o \
@@ -261,8 +264,8 @@ OBJ_DEBUG = $(OBJDIR_DEBUG)/src/lib/engine/patchstream/common/DfsIOHlpW.o \
 	$(OBJDIR_DEBUG)/external/xz/src/liblzma/lzma/lzma2_decoder.o \
 	$(OBJDIR_DEBUG)/external/xz/src/liblzma/lzma/fastpos_table.o \
 	$(OBJDIR_DEBUG)/external/xz/src/liblzma/lz/lz_encoder_mf.o \
-	$(OBJDIR_DEBUG)/external/xz/src/liblzma/lz/lz_encoder.o \
-	$(OBJDIR_DEBUG)/external/xz/src/liblzma/simple/armthumb.o \
+	$(OBJDIR_DEBUG)/external/xz/src/liblzma/simple/ia64.o \
+	$(OBJDIR_DEBUG)/external/xz/src/liblzma/lz/lz_decoder.o \
 	$(OBJDIR_DEBUG)/external/xz/src/liblzma/delta/delta_encoder.o \
 	$(OBJDIR_DEBUG)/external/xz/src/liblzma/delta/delta_decoder.o \
 	$(OBJDIR_DEBUG)/external/xz/src/liblzma/delta/delta_common.o \
@@ -274,16 +277,15 @@ OBJ_DEBUG = $(OBJDIR_DEBUG)/src/lib/engine/patchstream/common/DfsIOHlpW.o \
 	$(OBJDIR_DEBUG)/external/xz/src/liblzma/common/stream_flags_common.o \
 	$(OBJDIR_DEBUG)/external/xz/src/liblzma/common/stream_encoder_mt.o \
 	$(OBJDIR_DEBUG)/external/xz/src/liblzma/common/stream_encoder.o \
-	$(OBJDIR_DEBUG)/external/xz/src/liblzma/common/stream_decoder.o \
-	$(OBJDIR_DEBUG)/external/zlib/inflate.o \
+	$(OBJDIR_DEBUG)/external/zlib/inftrees.o \
 	$(OBJDIR_DEBUG)/external/zstd/lib/common/error_private.o \
 	$(OBJDIR_DEBUG)/external/zstd/lib/common/entropy_common.o \
 	$(OBJDIR_DEBUG)/external/zstd/lib/common/debug.o \
 	$(OBJDIR_DEBUG)/external/zlib/zutil.o \
 	$(OBJDIR_DEBUG)/external/zlib/zlibcompress.o \
 	$(OBJDIR_DEBUG)/external/zlib/trees.o \
-	$(OBJDIR_DEBUG)/external/zlib/inftrees.o \
-	$(OBJDIR_DEBUG)/external/xz/src/liblzma/common/stream_buffer_encoder.o \
+	$(OBJDIR_DEBUG)/external/xz/src/liblzma/common/stream_decoder.o \
+	$(OBJDIR_DEBUG)/external/zlib/inflate.o \
 	$(OBJDIR_DEBUG)/external/zlib/inffast.o \
 	$(OBJDIR_DEBUG)/external/zlib/deflate.o \
 	$(OBJDIR_DEBUG)/external/zlib/crc32.o \
@@ -294,8 +296,8 @@ OBJ_DEBUG = $(OBJDIR_DEBUG)/src/lib/engine/patchstream/common/DfsIOHlpW.o \
 	$(OBJDIR_DEBUG)/external/xz/src/liblzma/simple/simple_decoder.o \
 	$(OBJDIR_DEBUG)/external/xz/src/liblzma/simple/simple_coder.o \
 	$(OBJDIR_DEBUG)/external/xz/src/liblzma/simple/powerpc.o \
-	$(OBJDIR_DEBUG)/external/xz/src/liblzma/simple/ia64.o \
-	$(OBJDIR_DEBUG)/external/xz/src/liblzma/check/check.o \
+	$(OBJDIR_DEBUG)/external/xz/src/liblzma/check/crc32_fast.o \
+	$(OBJDIR_DEBUG)/external/xz/src/liblzma/common/block_header_decoder.o \
 	$(OBJDIR_DEBUG)/external/xz/src/liblzma/common/block_encoder.o \
 	$(OBJDIR_DEBUG)/external/xz/src/liblzma/common/block_decoder.o \
 	$(OBJDIR_DEBUG)/external/xz/src/liblzma/common/block_buffer_encoder.o \
@@ -307,8 +309,8 @@ OBJ_DEBUG = $(OBJDIR_DEBUG)/src/lib/engine/patchstream/common/DfsIOHlpW.o \
 	$(OBJDIR_DEBUG)/external/xz/src/liblzma/check/crc64_table.o \
 	$(OBJDIR_DEBUG)/external/xz/src/liblzma/check/crc64_fast.o \
 	$(OBJDIR_DEBUG)/external/xz/src/liblzma/check/crc32_table.o \
-	$(OBJDIR_DEBUG)/external/xz/src/liblzma/check/crc32_fast.o \
-	$(OBJDIR_DEBUG)/external/xz/src/liblzma/common/block_header_decoder.o \
+	$(OBJDIR_DEBUG)/external/xz/src/liblzma/common/block_header_encoder.o \
+	$(OBJDIR_DEBUG)/external/xz/src/liblzma/check/check.o \
 	$(OBJDIR_DEBUG)/external/xz/src/common/tuklib_progname.o \
 	$(OBJDIR_DEBUG)/external/xz/src/common/tuklib_physmem.o \
 	$(OBJDIR_DEBUG)/external/xz/src/common/tuklib_open_stdxxx.o \
@@ -320,8 +322,8 @@ OBJ_DEBUG = $(OBJDIR_DEBUG)/src/lib/engine/patchstream/common/DfsIOHlpW.o \
 	$(OBJDIR_DEBUG)/external/lzma_sdk/C/XzCrc64Opt.o \
 	$(OBJDIR_DEBUG)/external/lzma_sdk/C/XzCrc64.o \
 	$(OBJDIR_DEBUG)/external/lzma_sdk/C/Xz.o \
-	$(OBJDIR_DEBUG)/external/lzma_sdk/C/Sha256Opt.o \
-	$(OBJDIR_DEBUG)/external/xz/src/liblzma/common/filter_encoder.o \
+	$(OBJDIR_DEBUG)/external/xz/src/liblzma/common/filter_flags_decoder.o \
+	$(OBJDIR_DEBUG)/external/xz/src/liblzma/common/stream_buffer_encoder.o \
 	$(OBJDIR_DEBUG)/external/xz/src/liblzma/common/stream_buffer_decoder.o \
 	$(OBJDIR_DEBUG)/external/xz/src/liblzma/common/lzip_decoder.o \
 	$(OBJDIR_DEBUG)/external/xz/src/liblzma/common/outqueue.o \
@@ -332,8 +334,8 @@ OBJ_DEBUG = $(OBJDIR_DEBUG)/src/lib/engine/patchstream/common/DfsIOHlpW.o \
 	$(OBJDIR_DEBUG)/external/xz/src/liblzma/common/hardware_physmem.o \
 	$(OBJDIR_DEBUG)/external/xz/src/liblzma/common/hardware_cputhreads.o \
 	$(OBJDIR_DEBUG)/external/xz/src/liblzma/common/filter_flags_encoder.o \
-	$(OBJDIR_DEBUG)/external/xz/src/liblzma/common/filter_flags_decoder.o \
 	$(OBJDIR_DEBUG)/external/bzip/blocksort.o \
+	$(OBJDIR_DEBUG)/external/xz/src/liblzma/common/filter_encoder.o \
 	$(OBJDIR_DEBUG)/external/xz/src/liblzma/common/filter_decoder.o \
 	$(OBJDIR_DEBUG)/external/xz/src/liblzma/common/filter_common.o \
 	$(OBJDIR_DEBUG)/external/xz/src/liblzma/common/filter_buffer_encoder.o \
@@ -344,8 +346,7 @@ OBJ_DEBUG = $(OBJDIR_DEBUG)/src/lib/engine/patchstream/common/DfsIOHlpW.o \
 	$(OBJDIR_DEBUG)/external/xz/src/liblzma/common/easy_decoder_memusage.o \
 	$(OBJDIR_DEBUG)/external/xz/src/liblzma/common/easy_buffer_encoder.o \
 	$(OBJDIR_DEBUG)/external/xz/src/liblzma/common/common.o \
-	$(OBJDIR_DEBUG)/external/xz/src/liblzma/common/block_util.o \
-	$(OBJDIR_DEBUG)/external/xz/src/liblzma/common/block_header_encoder.o
+	$(OBJDIR_DEBUG)/external/xz/src/liblzma/common/block_util.o
 
 OBJ_RELEASE = $(OBJDIR_RELEASE)/src/lib/engine/patchstream/common/DfsIOHlpW.o \
 	$(OBJDIR_RELEASE)/src/lib/engine/patchstream/common/DfsIOHlpPosix.o \
@@ -354,18 +355,18 @@ OBJ_RELEASE = $(OBJDIR_RELEASE)/src/lib/engine/patchstream/common/DfsIOHlpW.o \
 	$(OBJDIR_RELEASE)/src/cli/RawCompress.o \
 	$(OBJDIR_RELEASE)/src/cli/DifstrmMainPosix.o \
 	$(OBJDIR_RELEASE)/src/cli/DfsCdLin.o \
-	$(OBJDIR_RELEASE)/src/lib/engine/patchstream/common/DfsIoMemMutex.o \
 	$(OBJDIR_RELEASE)/external/zstd/lib/dictBuilder/zdict.o \
 	$(OBJDIR_RELEASE)/external/zstd/lib/dictBuilder/fastcover.o \
-	$(OBJDIR_RELEASE)/src/lib/engine/patchstream/common/ltoolsc.o \
+	$(OBJDIR_RELEASE)/src/lib/engine/patchstream/common/compress_store.o \
 	$(OBJDIR_RELEASE)/src/lib/engine/patchstream/common/difstool.o \
 	$(OBJDIR_RELEASE)/src/lib/engine/patchstream/common/dfsToolw.o \
 	$(OBJDIR_RELEASE)/src/lib/engine/patchstream/common/dfsToolWinRT.o \
 	$(OBJDIR_RELEASE)/src/lib/engine/patchstream/common/dfsToolPosix.o \
 	$(OBJDIR_RELEASE)/src/lib/engine/patchstream/common/dfsTool.o \
-	$(OBJDIR_RELEASE)/src/lib/engine/patchstream/common/compress_store.o \
+	$(OBJDIR_RELEASE)/external/zstd/lib/dictBuilder/divsufsort.o \
 	$(OBJDIR_RELEASE)/src/lib/engine/patchstream/common/abstractDecompress.o \
 	$(OBJDIR_RELEASE)/src/lib/engine/patchstream/common/DfsToolsPosixCPP.o \
+	$(OBJDIR_RELEASE)/src/lib/engine/patchstream/common/DfsIoMemMutex.o \
 	$(OBJDIR_RELEASE)/external/zstd/lib/compress/zstd_compress_superblock.o \
 	$(OBJDIR_RELEASE)/external/zstd/lib/compress/zstd_compress_sequences.o \
 	$(OBJDIR_RELEASE)/external/zstd/lib/compress/zstd_compress_literals.o \
@@ -377,15 +378,15 @@ OBJ_RELEASE = $(OBJDIR_RELEASE)/src/lib/engine/patchstream/common/DfsIOHlpW.o \
 	$(OBJDIR_RELEASE)/external/zstd/lib/common/xxhash.o \
 	$(OBJDIR_RELEASE)/external/zstd/lib/common/threading.o \
 	$(OBJDIR_RELEASE)/external/zstd/lib/common/pool.o \
-	$(OBJDIR_RELEASE)/external/zstd/lib/common/fse_decompress.o \
-	$(OBJDIR_RELEASE)/external/zstd/lib/compress/zstdmt_compress.o \
-	$(OBJDIR_RELEASE)/external/zstd/lib/dictBuilder/divsufsort.o \
 	$(OBJDIR_RELEASE)/external/zstd/lib/dictBuilder/cover.o \
 	$(OBJDIR_RELEASE)/external/zstd/lib/decompress/zstd_decompress_block.o \
 	$(OBJDIR_RELEASE)/external/zstd/lib/decompress/zstd_decompress.o \
 	$(OBJDIR_RELEASE)/external/zstd/lib/decompress/zstd_ddict.o \
 	$(OBJDIR_RELEASE)/external/zstd/lib/decompress/huf_decompress_amd64.o \
 	$(OBJDIR_RELEASE)/external/zstd/lib/decompress/huf_decompress.o \
+	$(OBJDIR_RELEASE)/external/zstd/lib/compress/zstdmt_compress.o \
+	$(OBJDIR_RELEASE)/src/lib/engine/patchstream/common/ltoolsc.o \
+	$(OBJDIR_RELEASE)/external/zstd/lib/compress/zstd_preSplit.o \
 	$(OBJDIR_RELEASE)/external/zstd/lib/compress/zstd_opt.o \
 	$(OBJDIR_RELEASE)/external/zstd/lib/compress/zstd_ldm.o \
 	$(OBJDIR_RELEASE)/external/zstd/lib/compress/zstd_lazy.o \
@@ -411,6 +412,7 @@ OBJ_RELEASE = $(OBJDIR_RELEASE)/src/lib/engine/patchstream/common/DfsIOHlpW.o \
 	$(OBJDIR_RELEASE)/src/lib/helper/compress/BuildHelper.o \
 	$(OBJDIR_RELEASE)/src/lib/hash/sha256_from_openssl.o \
 	$(OBJDIR_RELEASE)/src/lib/hash/sha1dgst.o \
+	$(OBJDIR_RELEASE)/src/lib/engine/patchstream/compress/makdifst.o \
 	$(OBJDIR_RELEASE)/src/lib/engine/svfile/common/ArrayTl.o \
 	$(OBJDIR_RELEASE)/src/lib/engine/patchstream/rebuild/RamDifWk.o \
 	$(OBJDIR_RELEASE)/src/lib/engine/patchstream/rebuild/RamDifWS.o \
@@ -418,7 +420,6 @@ OBJ_RELEASE = $(OBJDIR_RELEASE)/src/lib/engine/patchstream/common/DfsIOHlpW.o \
 	$(OBJDIR_RELEASE)/src/lib/engine/patchstream/decompress/apldifst.o \
 	$(OBJDIR_RELEASE)/src/lib/engine/patchstream/decompress/ApDifStm.o \
 	$(OBJDIR_RELEASE)/src/lib/engine/svfile/common/DfsIntf.o \
-	$(OBJDIR_RELEASE)/src/lib/engine/patchstream/compress/makdifst.o \
 	$(OBJDIR_RELEASE)/src/lib/engine/patchstream/compress/makdifId.o \
 	$(OBJDIR_RELEASE)/src/lib/engine/patchstream/compress/abstractCompress.o \
 	$(OBJDIR_RELEASE)/src/lib/engine/patchstream/compress/PreWkFnd.o \
@@ -430,25 +431,28 @@ OBJ_RELEASE = $(OBJDIR_RELEASE)/src/lib/engine/patchstream/common/DfsIOHlpW.o \
 	$(OBJDIR_RELEASE)/src/lib/engine/svfile/common/DirSet.o \
 	$(OBJDIR_RELEASE)/src/lib/engine/svfile/common/DfsTagMg.o \
 	$(OBJDIR_RELEASE)/src/lib/engine/svfile/common/DfsTagBlockFloatTool.o \
+	$(OBJDIR_RELEASE)/external/zstd/lib/common/fse_decompress.o \
 	$(OBJDIR_RELEASE)/src/lib/engine/svfile/common/DfsTagBlockFloatEnd.o \
 	$(OBJDIR_RELEASE)/src/lib/engine/svfile/common/DfsSet.o \
 	$(OBJDIR_RELEASE)/src/lib/engine/svfile/common/DfsMtStr.o \
 	$(OBJDIR_RELEASE)/src/lib/engine/svfile/common/DfsMTool.o \
 	$(OBJDIR_RELEASE)/src/lib/engine/svfile/common/DfsMFile.o \
 	$(OBJDIR_RELEASE)/src/lib/engine/svfile/common/DfsIntfWr.o \
-	$(OBJDIR_RELEASE)/external/lzham/lzhamdecomp/lzham_prefix_coding.o \
+	$(OBJDIR_RELEASE)/external/lzma_sdk/C/7zAlloc.o \
 	$(OBJDIR_RELEASE)/external/lzham/lzhamlib/lzham_lib.o \
 	$(OBJDIR_RELEASE)/external/lzham/lzhamlib/lzham_decomplib.o \
 	$(OBJDIR_RELEASE)/external/lzham/lzhamdecomp/lzham_vector.o \
 	$(OBJDIR_RELEASE)/external/lzham/lzhamdecomp/lzham_timer.o \
 	$(OBJDIR_RELEASE)/external/lzham/lzhamdecomp/lzham_symbol_codec.o \
-	$(OBJDIR_RELEASE)/external/lzma_sdk/C/7zAlloc.o \
+	$(OBJDIR_RELEASE)/external/lzma_sdk/C/7zArcIn.o \
+	$(OBJDIR_RELEASE)/external/lzham/lzhamdecomp/lzham_prefix_coding.o \
 	$(OBJDIR_RELEASE)/external/lzham/lzhamdecomp/lzham_platform.o \
 	$(OBJDIR_RELEASE)/external/lzham/lzhamdecomp/lzham_mem.o \
 	$(OBJDIR_RELEASE)/external/lzham/lzhamdecomp/lzham_lzdecompbase.o \
 	$(OBJDIR_RELEASE)/external/lzham/lzhamdecomp/lzham_lzdecomp.o \
 	$(OBJDIR_RELEASE)/external/lzham/lzhamdecomp/lzham_huffman_codes.o \
-	$(OBJDIR_RELEASE)/external/lzma_sdk/C/BraIA64.o \
+	$(OBJDIR_RELEASE)/external/lzma_sdk/C/CpuArch.o \
+	$(OBJDIR_RELEASE)/external/lzma_sdk/C/Ppmd7Enc.o \
 	$(OBJDIR_RELEASE)/external/lzma_sdk/C/Ppmd7Dec.o \
 	$(OBJDIR_RELEASE)/external/lzma_sdk/C/Ppmd7.o \
 	$(OBJDIR_RELEASE)/external/lzma_sdk/C/LzmaEnc.o \
@@ -459,7 +463,7 @@ OBJ_RELEASE = $(OBJDIR_RELEASE)/src/lib/engine/patchstream/common/DfsIOHlpW.o \
 	$(OBJDIR_RELEASE)/external/lzma_sdk/C/LzFind.o \
 	$(OBJDIR_RELEASE)/external/lzma_sdk/C/LZMASDK_Sha256.o \
 	$(OBJDIR_RELEASE)/external/lzma_sdk/C/Delta.o \
-	$(OBJDIR_RELEASE)/external/lzma_sdk/C/CpuArch.o \
+	$(OBJDIR_RELEASE)/external/lzma_sdk/C/BraIA64.o \
 	$(OBJDIR_RELEASE)/external/lzma_sdk/C/Bra86.o \
 	$(OBJDIR_RELEASE)/external/lzma_sdk/C/Bra.o \
 	$(OBJDIR_RELEASE)/external/lzma_sdk/C/Bcj2.o \
@@ -471,7 +475,6 @@ OBJ_RELEASE = $(OBJDIR_RELEASE)/src/lib/engine/patchstream/common/DfsIOHlpW.o \
 	$(OBJDIR_RELEASE)/external/lzma_sdk/C/7zCrc.o \
 	$(OBJDIR_RELEASE)/external/lzma_sdk/C/7zBuf2.o \
 	$(OBJDIR_RELEASE)/external/lzma_sdk/C/7zBuf.o \
-	$(OBJDIR_RELEASE)/external/lzma_sdk/C/7zArcIn.o \
 	$(OBJDIR_RELEASE)/external/fastlzlib/lz4/lz4hc.o \
 	$(OBJDIR_RELEASE)/external/fastlzlib/lzfse/src/lzvn_decode_base.o \
 	$(OBJDIR_RELEASE)/external/fastlzlib/lzfse/src/lzfse_fse.o \
@@ -480,6 +483,7 @@ OBJ_RELEASE = $(OBJDIR_RELEASE)/src/lib/engine/patchstream/common/DfsIOHlpW.o \
 	$(OBJDIR_RELEASE)/external/fastlzlib/lzfse/src/lzfse_decode_base.o \
 	$(OBJDIR_RELEASE)/external/fastlzlib/lzfse/src/lzfse_decode.o \
 	$(OBJDIR_RELEASE)/external/fastlzlib/lz4/xxhash.o \
+	$(OBJDIR_RELEASE)/external/fastlzlib/lzfse/src/lzvn_encode_base.o \
 	$(OBJDIR_RELEASE)/external/fastlzlib/lz4/lz4frame.o \
 	$(OBJDIR_RELEASE)/external/fastlzlib/lz4/lz4.o \
 	$(OBJDIR_RELEASE)/external/fastlzlib/fastlzlib.o \
@@ -490,17 +494,17 @@ OBJ_RELEASE = $(OBJDIR_RELEASE)/src/lib/engine/patchstream/common/DfsIOHlpW.o \
 	$(OBJDIR_RELEASE)/external/bzip/crctable.o \
 	$(OBJDIR_RELEASE)/external/bzip/compress.o \
 	$(OBJDIR_RELEASE)/external/bzip/bzlib.o \
-	$(OBJDIR_RELEASE)/external/lzham/lzhamcomp/lzham_match_accel.o \
 	$(OBJDIR_RELEASE)/external/lzham/lzhamdecomp/lzham_checksum.o \
 	$(OBJDIR_RELEASE)/external/lzham/lzhamdecomp/lzham_assert.o \
 	$(OBJDIR_RELEASE)/external/lzham/lzhamcomp/lzham_pthreads_threading.o \
-	$(OBJDIR_RELEASE)/external/lzma_sdk/C/Ppmd7Enc.o \
+	$(OBJDIR_RELEASE)/external/lzma_sdk/C/Sha256Opt.o \
+	$(OBJDIR_RELEASE)/external/lzham/lzhamcomp/lzham_match_accel.o \
 	$(OBJDIR_RELEASE)/external/lzham/lzhamcomp/lzham_lzcomp_state.o \
 	$(OBJDIR_RELEASE)/external/lzham/lzhamcomp/lzham_lzcomp_internal.o \
 	$(OBJDIR_RELEASE)/external/lzham/lzhamcomp/lzham_lzcomp.o \
 	$(OBJDIR_RELEASE)/external/lzham/lzhamcomp/lzham_lzbase.o \
-	$(OBJDIR_RELEASE)/external/fastlzlib/lzfse/src/lzvn_encode_base.o \
-	$(OBJDIR_RELEASE)/external/xz/src/liblzma/lz/lz_decoder.o \
+	$(OBJDIR_RELEASE)/external/xz/src/liblzma/lz/lz_encoder.o \
+	$(OBJDIR_RELEASE)/external/xz/src/liblzma/simple/armthumb.o \
 	$(OBJDIR_RELEASE)/external/xz/src/liblzma/simple/arm64.o \
 	$(OBJDIR_RELEASE)/external/xz/src/liblzma/simple/arm.o \
 	$(OBJDIR_RELEASE)/external/xz/src/liblzma/rangecoder/price_table.o \
@@ -513,8 +517,8 @@ OBJ_RELEASE = $(OBJDIR_RELEASE)/src/lib/engine/patchstream/common/DfsIOHlpW.o \
 	$(OBJDIR_RELEASE)/external/xz/src/liblzma/lzma/lzma2_decoder.o \
 	$(OBJDIR_RELEASE)/external/xz/src/liblzma/lzma/fastpos_table.o \
 	$(OBJDIR_RELEASE)/external/xz/src/liblzma/lz/lz_encoder_mf.o \
-	$(OBJDIR_RELEASE)/external/xz/src/liblzma/lz/lz_encoder.o \
-	$(OBJDIR_RELEASE)/external/xz/src/liblzma/simple/armthumb.o \
+	$(OBJDIR_RELEASE)/external/xz/src/liblzma/simple/ia64.o \
+	$(OBJDIR_RELEASE)/external/xz/src/liblzma/lz/lz_decoder.o \
 	$(OBJDIR_RELEASE)/external/xz/src/liblzma/delta/delta_encoder.o \
 	$(OBJDIR_RELEASE)/external/xz/src/liblzma/delta/delta_decoder.o \
 	$(OBJDIR_RELEASE)/external/xz/src/liblzma/delta/delta_common.o \
@@ -526,16 +530,15 @@ OBJ_RELEASE = $(OBJDIR_RELEASE)/src/lib/engine/patchstream/common/DfsIOHlpW.o \
 	$(OBJDIR_RELEASE)/external/xz/src/liblzma/common/stream_flags_common.o \
 	$(OBJDIR_RELEASE)/external/xz/src/liblzma/common/stream_encoder_mt.o \
 	$(OBJDIR_RELEASE)/external/xz/src/liblzma/common/stream_encoder.o \
-	$(OBJDIR_RELEASE)/external/xz/src/liblzma/common/stream_decoder.o \
-	$(OBJDIR_RELEASE)/external/zlib/inflate.o \
+	$(OBJDIR_RELEASE)/external/zlib/inftrees.o \
 	$(OBJDIR_RELEASE)/external/zstd/lib/common/error_private.o \
 	$(OBJDIR_RELEASE)/external/zstd/lib/common/entropy_common.o \
 	$(OBJDIR_RELEASE)/external/zstd/lib/common/debug.o \
 	$(OBJDIR_RELEASE)/external/zlib/zutil.o \
 	$(OBJDIR_RELEASE)/external/zlib/zlibcompress.o \
 	$(OBJDIR_RELEASE)/external/zlib/trees.o \
-	$(OBJDIR_RELEASE)/external/zlib/inftrees.o \
-	$(OBJDIR_RELEASE)/external/xz/src/liblzma/common/stream_buffer_encoder.o \
+	$(OBJDIR_RELEASE)/external/xz/src/liblzma/common/stream_decoder.o \
+	$(OBJDIR_RELEASE)/external/zlib/inflate.o \
 	$(OBJDIR_RELEASE)/external/zlib/inffast.o \
 	$(OBJDIR_RELEASE)/external/zlib/deflate.o \
 	$(OBJDIR_RELEASE)/external/zlib/crc32.o \
@@ -546,8 +549,8 @@ OBJ_RELEASE = $(OBJDIR_RELEASE)/src/lib/engine/patchstream/common/DfsIOHlpW.o \
 	$(OBJDIR_RELEASE)/external/xz/src/liblzma/simple/simple_decoder.o \
 	$(OBJDIR_RELEASE)/external/xz/src/liblzma/simple/simple_coder.o \
 	$(OBJDIR_RELEASE)/external/xz/src/liblzma/simple/powerpc.o \
-	$(OBJDIR_RELEASE)/external/xz/src/liblzma/simple/ia64.o \
-	$(OBJDIR_RELEASE)/external/xz/src/liblzma/check/check.o \
+	$(OBJDIR_RELEASE)/external/xz/src/liblzma/check/crc32_fast.o \
+	$(OBJDIR_RELEASE)/external/xz/src/liblzma/common/block_header_decoder.o \
 	$(OBJDIR_RELEASE)/external/xz/src/liblzma/common/block_encoder.o \
 	$(OBJDIR_RELEASE)/external/xz/src/liblzma/common/block_decoder.o \
 	$(OBJDIR_RELEASE)/external/xz/src/liblzma/common/block_buffer_encoder.o \
@@ -559,8 +562,8 @@ OBJ_RELEASE = $(OBJDIR_RELEASE)/src/lib/engine/patchstream/common/DfsIOHlpW.o \
 	$(OBJDIR_RELEASE)/external/xz/src/liblzma/check/crc64_table.o \
 	$(OBJDIR_RELEASE)/external/xz/src/liblzma/check/crc64_fast.o \
 	$(OBJDIR_RELEASE)/external/xz/src/liblzma/check/crc32_table.o \
-	$(OBJDIR_RELEASE)/external/xz/src/liblzma/check/crc32_fast.o \
-	$(OBJDIR_RELEASE)/external/xz/src/liblzma/common/block_header_decoder.o \
+	$(OBJDIR_RELEASE)/external/xz/src/liblzma/common/block_header_encoder.o \
+	$(OBJDIR_RELEASE)/external/xz/src/liblzma/check/check.o \
 	$(OBJDIR_RELEASE)/external/xz/src/common/tuklib_progname.o \
 	$(OBJDIR_RELEASE)/external/xz/src/common/tuklib_physmem.o \
 	$(OBJDIR_RELEASE)/external/xz/src/common/tuklib_open_stdxxx.o \
@@ -572,8 +575,8 @@ OBJ_RELEASE = $(OBJDIR_RELEASE)/src/lib/engine/patchstream/common/DfsIOHlpW.o \
 	$(OBJDIR_RELEASE)/external/lzma_sdk/C/XzCrc64Opt.o \
 	$(OBJDIR_RELEASE)/external/lzma_sdk/C/XzCrc64.o \
 	$(OBJDIR_RELEASE)/external/lzma_sdk/C/Xz.o \
-	$(OBJDIR_RELEASE)/external/lzma_sdk/C/Sha256Opt.o \
-	$(OBJDIR_RELEASE)/external/xz/src/liblzma/common/filter_encoder.o \
+	$(OBJDIR_RELEASE)/external/xz/src/liblzma/common/filter_flags_decoder.o \
+	$(OBJDIR_RELEASE)/external/xz/src/liblzma/common/stream_buffer_encoder.o \
 	$(OBJDIR_RELEASE)/external/xz/src/liblzma/common/stream_buffer_decoder.o \
 	$(OBJDIR_RELEASE)/external/xz/src/liblzma/common/lzip_decoder.o \
 	$(OBJDIR_RELEASE)/external/xz/src/liblzma/common/outqueue.o \
@@ -584,8 +587,8 @@ OBJ_RELEASE = $(OBJDIR_RELEASE)/src/lib/engine/patchstream/common/DfsIOHlpW.o \
 	$(OBJDIR_RELEASE)/external/xz/src/liblzma/common/hardware_physmem.o \
 	$(OBJDIR_RELEASE)/external/xz/src/liblzma/common/hardware_cputhreads.o \
 	$(OBJDIR_RELEASE)/external/xz/src/liblzma/common/filter_flags_encoder.o \
-	$(OBJDIR_RELEASE)/external/xz/src/liblzma/common/filter_flags_decoder.o \
 	$(OBJDIR_RELEASE)/external/bzip/blocksort.o \
+	$(OBJDIR_RELEASE)/external/xz/src/liblzma/common/filter_encoder.o \
 	$(OBJDIR_RELEASE)/external/xz/src/liblzma/common/filter_decoder.o \
 	$(OBJDIR_RELEASE)/external/xz/src/liblzma/common/filter_common.o \
 	$(OBJDIR_RELEASE)/external/xz/src/liblzma/common/filter_buffer_encoder.o \
@@ -596,8 +599,7 @@ OBJ_RELEASE = $(OBJDIR_RELEASE)/src/lib/engine/patchstream/common/DfsIOHlpW.o \
 	$(OBJDIR_RELEASE)/external/xz/src/liblzma/common/easy_decoder_memusage.o \
 	$(OBJDIR_RELEASE)/external/xz/src/liblzma/common/easy_buffer_encoder.o \
 	$(OBJDIR_RELEASE)/external/xz/src/liblzma/common/common.o \
-	$(OBJDIR_RELEASE)/external/xz/src/liblzma/common/block_util.o \
-	$(OBJDIR_RELEASE)/external/xz/src/liblzma/common/block_header_encoder.o
+	$(OBJDIR_RELEASE)/external/xz/src/liblzma/common/block_util.o
 
 OBJ_LINUX64RELEASE = $(OBJDIR_LINUX64RELEASE)/src/lib/engine/patchstream/common/DfsIOHlpW.o \
 	$(OBJDIR_LINUX64RELEASE)/src/lib/engine/patchstream/common/DfsIOHlpPosix.o \
@@ -606,18 +608,18 @@ OBJ_LINUX64RELEASE = $(OBJDIR_LINUX64RELEASE)/src/lib/engine/patchstream/common/
 	$(OBJDIR_LINUX64RELEASE)/src/cli/RawCompress.o \
 	$(OBJDIR_LINUX64RELEASE)/src/cli/DifstrmMainPosix.o \
 	$(OBJDIR_LINUX64RELEASE)/src/cli/DfsCdLin.o \
-	$(OBJDIR_LINUX64RELEASE)/src/lib/engine/patchstream/common/DfsIoMemMutex.o \
 	$(OBJDIR_LINUX64RELEASE)/external/zstd/lib/dictBuilder/zdict.o \
 	$(OBJDIR_LINUX64RELEASE)/external/zstd/lib/dictBuilder/fastcover.o \
-	$(OBJDIR_LINUX64RELEASE)/src/lib/engine/patchstream/common/ltoolsc.o \
+	$(OBJDIR_LINUX64RELEASE)/src/lib/engine/patchstream/common/compress_store.o \
 	$(OBJDIR_LINUX64RELEASE)/src/lib/engine/patchstream/common/difstool.o \
 	$(OBJDIR_LINUX64RELEASE)/src/lib/engine/patchstream/common/dfsToolw.o \
 	$(OBJDIR_LINUX64RELEASE)/src/lib/engine/patchstream/common/dfsToolWinRT.o \
 	$(OBJDIR_LINUX64RELEASE)/src/lib/engine/patchstream/common/dfsToolPosix.o \
 	$(OBJDIR_LINUX64RELEASE)/src/lib/engine/patchstream/common/dfsTool.o \
-	$(OBJDIR_LINUX64RELEASE)/src/lib/engine/patchstream/common/compress_store.o \
+	$(OBJDIR_LINUX64RELEASE)/external/zstd/lib/dictBuilder/divsufsort.o \
 	$(OBJDIR_LINUX64RELEASE)/src/lib/engine/patchstream/common/abstractDecompress.o \
 	$(OBJDIR_LINUX64RELEASE)/src/lib/engine/patchstream/common/DfsToolsPosixCPP.o \
+	$(OBJDIR_LINUX64RELEASE)/src/lib/engine/patchstream/common/DfsIoMemMutex.o \
 	$(OBJDIR_LINUX64RELEASE)/external/zstd/lib/compress/zstd_compress_superblock.o \
 	$(OBJDIR_LINUX64RELEASE)/external/zstd/lib/compress/zstd_compress_sequences.o \
 	$(OBJDIR_LINUX64RELEASE)/external/zstd/lib/compress/zstd_compress_literals.o \
@@ -629,15 +631,15 @@ OBJ_LINUX64RELEASE = $(OBJDIR_LINUX64RELEASE)/src/lib/engine/patchstream/common/
 	$(OBJDIR_LINUX64RELEASE)/external/zstd/lib/common/xxhash.o \
 	$(OBJDIR_LINUX64RELEASE)/external/zstd/lib/common/threading.o \
 	$(OBJDIR_LINUX64RELEASE)/external/zstd/lib/common/pool.o \
-	$(OBJDIR_LINUX64RELEASE)/external/zstd/lib/common/fse_decompress.o \
-	$(OBJDIR_LINUX64RELEASE)/external/zstd/lib/compress/zstdmt_compress.o \
-	$(OBJDIR_LINUX64RELEASE)/external/zstd/lib/dictBuilder/divsufsort.o \
 	$(OBJDIR_LINUX64RELEASE)/external/zstd/lib/dictBuilder/cover.o \
 	$(OBJDIR_LINUX64RELEASE)/external/zstd/lib/decompress/zstd_decompress_block.o \
 	$(OBJDIR_LINUX64RELEASE)/external/zstd/lib/decompress/zstd_decompress.o \
 	$(OBJDIR_LINUX64RELEASE)/external/zstd/lib/decompress/zstd_ddict.o \
 	$(OBJDIR_LINUX64RELEASE)/external/zstd/lib/decompress/huf_decompress_amd64.o \
 	$(OBJDIR_LINUX64RELEASE)/external/zstd/lib/decompress/huf_decompress.o \
+	$(OBJDIR_LINUX64RELEASE)/external/zstd/lib/compress/zstdmt_compress.o \
+	$(OBJDIR_LINUX64RELEASE)/src/lib/engine/patchstream/common/ltoolsc.o \
+	$(OBJDIR_LINUX64RELEASE)/external/zstd/lib/compress/zstd_preSplit.o \
 	$(OBJDIR_LINUX64RELEASE)/external/zstd/lib/compress/zstd_opt.o \
 	$(OBJDIR_LINUX64RELEASE)/external/zstd/lib/compress/zstd_ldm.o \
 	$(OBJDIR_LINUX64RELEASE)/external/zstd/lib/compress/zstd_lazy.o \
@@ -663,6 +665,7 @@ OBJ_LINUX64RELEASE = $(OBJDIR_LINUX64RELEASE)/src/lib/engine/patchstream/common/
 	$(OBJDIR_LINUX64RELEASE)/src/lib/helper/compress/BuildHelper.o \
 	$(OBJDIR_LINUX64RELEASE)/src/lib/hash/sha256_from_openssl.o \
 	$(OBJDIR_LINUX64RELEASE)/src/lib/hash/sha1dgst.o \
+	$(OBJDIR_LINUX64RELEASE)/src/lib/engine/patchstream/compress/makdifst.o \
 	$(OBJDIR_LINUX64RELEASE)/src/lib/engine/svfile/common/ArrayTl.o \
 	$(OBJDIR_LINUX64RELEASE)/src/lib/engine/patchstream/rebuild/RamDifWk.o \
 	$(OBJDIR_LINUX64RELEASE)/src/lib/engine/patchstream/rebuild/RamDifWS.o \
@@ -670,7 +673,6 @@ OBJ_LINUX64RELEASE = $(OBJDIR_LINUX64RELEASE)/src/lib/engine/patchstream/common/
 	$(OBJDIR_LINUX64RELEASE)/src/lib/engine/patchstream/decompress/apldifst.o \
 	$(OBJDIR_LINUX64RELEASE)/src/lib/engine/patchstream/decompress/ApDifStm.o \
 	$(OBJDIR_LINUX64RELEASE)/src/lib/engine/svfile/common/DfsIntf.o \
-	$(OBJDIR_LINUX64RELEASE)/src/lib/engine/patchstream/compress/makdifst.o \
 	$(OBJDIR_LINUX64RELEASE)/src/lib/engine/patchstream/compress/makdifId.o \
 	$(OBJDIR_LINUX64RELEASE)/src/lib/engine/patchstream/compress/abstractCompress.o \
 	$(OBJDIR_LINUX64RELEASE)/src/lib/engine/patchstream/compress/PreWkFnd.o \
@@ -682,25 +684,28 @@ OBJ_LINUX64RELEASE = $(OBJDIR_LINUX64RELEASE)/src/lib/engine/patchstream/common/
 	$(OBJDIR_LINUX64RELEASE)/src/lib/engine/svfile/common/DirSet.o \
 	$(OBJDIR_LINUX64RELEASE)/src/lib/engine/svfile/common/DfsTagMg.o \
 	$(OBJDIR_LINUX64RELEASE)/src/lib/engine/svfile/common/DfsTagBlockFloatTool.o \
+	$(OBJDIR_LINUX64RELEASE)/external/zstd/lib/common/fse_decompress.o \
 	$(OBJDIR_LINUX64RELEASE)/src/lib/engine/svfile/common/DfsTagBlockFloatEnd.o \
 	$(OBJDIR_LINUX64RELEASE)/src/lib/engine/svfile/common/DfsSet.o \
 	$(OBJDIR_LINUX64RELEASE)/src/lib/engine/svfile/common/DfsMtStr.o \
 	$(OBJDIR_LINUX64RELEASE)/src/lib/engine/svfile/common/DfsMTool.o \
 	$(OBJDIR_LINUX64RELEASE)/src/lib/engine/svfile/common/DfsMFile.o \
 	$(OBJDIR_LINUX64RELEASE)/src/lib/engine/svfile/common/DfsIntfWr.o \
-	$(OBJDIR_LINUX64RELEASE)/external/lzham/lzhamdecomp/lzham_prefix_coding.o \
+	$(OBJDIR_LINUX64RELEASE)/external/lzma_sdk/C/7zAlloc.o \
 	$(OBJDIR_LINUX64RELEASE)/external/lzham/lzhamlib/lzham_lib.o \
 	$(OBJDIR_LINUX64RELEASE)/external/lzham/lzhamlib/lzham_decomplib.o \
 	$(OBJDIR_LINUX64RELEASE)/external/lzham/lzhamdecomp/lzham_vector.o \
 	$(OBJDIR_LINUX64RELEASE)/external/lzham/lzhamdecomp/lzham_timer.o \
 	$(OBJDIR_LINUX64RELEASE)/external/lzham/lzhamdecomp/lzham_symbol_codec.o \
-	$(OBJDIR_LINUX64RELEASE)/external/lzma_sdk/C/7zAlloc.o \
+	$(OBJDIR_LINUX64RELEASE)/external/lzma_sdk/C/7zArcIn.o \
+	$(OBJDIR_LINUX64RELEASE)/external/lzham/lzhamdecomp/lzham_prefix_coding.o \
 	$(OBJDIR_LINUX64RELEASE)/external/lzham/lzhamdecomp/lzham_platform.o \
 	$(OBJDIR_LINUX64RELEASE)/external/lzham/lzhamdecomp/lzham_mem.o \
 	$(OBJDIR_LINUX64RELEASE)/external/lzham/lzhamdecomp/lzham_lzdecompbase.o \
 	$(OBJDIR_LINUX64RELEASE)/external/lzham/lzhamdecomp/lzham_lzdecomp.o \
 	$(OBJDIR_LINUX64RELEASE)/external/lzham/lzhamdecomp/lzham_huffman_codes.o \
-	$(OBJDIR_LINUX64RELEASE)/external/lzma_sdk/C/BraIA64.o \
+	$(OBJDIR_LINUX64RELEASE)/external/lzma_sdk/C/CpuArch.o \
+	$(OBJDIR_LINUX64RELEASE)/external/lzma_sdk/C/Ppmd7Enc.o \
 	$(OBJDIR_LINUX64RELEASE)/external/lzma_sdk/C/Ppmd7Dec.o \
 	$(OBJDIR_LINUX64RELEASE)/external/lzma_sdk/C/Ppmd7.o \
 	$(OBJDIR_LINUX64RELEASE)/external/lzma_sdk/C/LzmaEnc.o \
@@ -711,7 +716,7 @@ OBJ_LINUX64RELEASE = $(OBJDIR_LINUX64RELEASE)/src/lib/engine/patchstream/common/
 	$(OBJDIR_LINUX64RELEASE)/external/lzma_sdk/C/LzFind.o \
 	$(OBJDIR_LINUX64RELEASE)/external/lzma_sdk/C/LZMASDK_Sha256.o \
 	$(OBJDIR_LINUX64RELEASE)/external/lzma_sdk/C/Delta.o \
-	$(OBJDIR_LINUX64RELEASE)/external/lzma_sdk/C/CpuArch.o \
+	$(OBJDIR_LINUX64RELEASE)/external/lzma_sdk/C/BraIA64.o \
 	$(OBJDIR_LINUX64RELEASE)/external/lzma_sdk/C/Bra86.o \
 	$(OBJDIR_LINUX64RELEASE)/external/lzma_sdk/C/Bra.o \
 	$(OBJDIR_LINUX64RELEASE)/external/lzma_sdk/C/Bcj2.o \
@@ -723,7 +728,6 @@ OBJ_LINUX64RELEASE = $(OBJDIR_LINUX64RELEASE)/src/lib/engine/patchstream/common/
 	$(OBJDIR_LINUX64RELEASE)/external/lzma_sdk/C/7zCrc.o \
 	$(OBJDIR_LINUX64RELEASE)/external/lzma_sdk/C/7zBuf2.o \
 	$(OBJDIR_LINUX64RELEASE)/external/lzma_sdk/C/7zBuf.o \
-	$(OBJDIR_LINUX64RELEASE)/external/lzma_sdk/C/7zArcIn.o \
 	$(OBJDIR_LINUX64RELEASE)/external/fastlzlib/lz4/lz4hc.o \
 	$(OBJDIR_LINUX64RELEASE)/external/fastlzlib/lzfse/src/lzvn_decode_base.o \
 	$(OBJDIR_LINUX64RELEASE)/external/fastlzlib/lzfse/src/lzfse_fse.o \
@@ -732,6 +736,7 @@ OBJ_LINUX64RELEASE = $(OBJDIR_LINUX64RELEASE)/src/lib/engine/patchstream/common/
 	$(OBJDIR_LINUX64RELEASE)/external/fastlzlib/lzfse/src/lzfse_decode_base.o \
 	$(OBJDIR_LINUX64RELEASE)/external/fastlzlib/lzfse/src/lzfse_decode.o \
 	$(OBJDIR_LINUX64RELEASE)/external/fastlzlib/lz4/xxhash.o \
+	$(OBJDIR_LINUX64RELEASE)/external/fastlzlib/lzfse/src/lzvn_encode_base.o \
 	$(OBJDIR_LINUX64RELEASE)/external/fastlzlib/lz4/lz4frame.o \
 	$(OBJDIR_LINUX64RELEASE)/external/fastlzlib/lz4/lz4.o \
 	$(OBJDIR_LINUX64RELEASE)/external/fastlzlib/fastlzlib.o \
@@ -742,17 +747,17 @@ OBJ_LINUX64RELEASE = $(OBJDIR_LINUX64RELEASE)/src/lib/engine/patchstream/common/
 	$(OBJDIR_LINUX64RELEASE)/external/bzip/crctable.o \
 	$(OBJDIR_LINUX64RELEASE)/external/bzip/compress.o \
 	$(OBJDIR_LINUX64RELEASE)/external/bzip/bzlib.o \
-	$(OBJDIR_LINUX64RELEASE)/external/lzham/lzhamcomp/lzham_match_accel.o \
 	$(OBJDIR_LINUX64RELEASE)/external/lzham/lzhamdecomp/lzham_checksum.o \
 	$(OBJDIR_LINUX64RELEASE)/external/lzham/lzhamdecomp/lzham_assert.o \
 	$(OBJDIR_LINUX64RELEASE)/external/lzham/lzhamcomp/lzham_pthreads_threading.o \
-	$(OBJDIR_LINUX64RELEASE)/external/lzma_sdk/C/Ppmd7Enc.o \
+	$(OBJDIR_LINUX64RELEASE)/external/lzma_sdk/C/Sha256Opt.o \
+	$(OBJDIR_LINUX64RELEASE)/external/lzham/lzhamcomp/lzham_match_accel.o \
 	$(OBJDIR_LINUX64RELEASE)/external/lzham/lzhamcomp/lzham_lzcomp_state.o \
 	$(OBJDIR_LINUX64RELEASE)/external/lzham/lzhamcomp/lzham_lzcomp_internal.o \
 	$(OBJDIR_LINUX64RELEASE)/external/lzham/lzhamcomp/lzham_lzcomp.o \
 	$(OBJDIR_LINUX64RELEASE)/external/lzham/lzhamcomp/lzham_lzbase.o \
-	$(OBJDIR_LINUX64RELEASE)/external/fastlzlib/lzfse/src/lzvn_encode_base.o \
-	$(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/lz/lz_decoder.o \
+	$(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/lz/lz_encoder.o \
+	$(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/simple/armthumb.o \
 	$(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/simple/arm64.o \
 	$(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/simple/arm.o \
 	$(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/rangecoder/price_table.o \
@@ -765,8 +770,8 @@ OBJ_LINUX64RELEASE = $(OBJDIR_LINUX64RELEASE)/src/lib/engine/patchstream/common/
 	$(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/lzma/lzma2_decoder.o \
 	$(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/lzma/fastpos_table.o \
 	$(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/lz/lz_encoder_mf.o \
-	$(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/lz/lz_encoder.o \
-	$(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/simple/armthumb.o \
+	$(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/simple/ia64.o \
+	$(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/lz/lz_decoder.o \
 	$(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/delta/delta_encoder.o \
 	$(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/delta/delta_decoder.o \
 	$(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/delta/delta_common.o \
@@ -778,16 +783,15 @@ OBJ_LINUX64RELEASE = $(OBJDIR_LINUX64RELEASE)/src/lib/engine/patchstream/common/
 	$(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/common/stream_flags_common.o \
 	$(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/common/stream_encoder_mt.o \
 	$(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/common/stream_encoder.o \
-	$(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/common/stream_decoder.o \
-	$(OBJDIR_LINUX64RELEASE)/external/zlib/inflate.o \
+	$(OBJDIR_LINUX64RELEASE)/external/zlib/inftrees.o \
 	$(OBJDIR_LINUX64RELEASE)/external/zstd/lib/common/error_private.o \
 	$(OBJDIR_LINUX64RELEASE)/external/zstd/lib/common/entropy_common.o \
 	$(OBJDIR_LINUX64RELEASE)/external/zstd/lib/common/debug.o \
 	$(OBJDIR_LINUX64RELEASE)/external/zlib/zutil.o \
 	$(OBJDIR_LINUX64RELEASE)/external/zlib/zlibcompress.o \
 	$(OBJDIR_LINUX64RELEASE)/external/zlib/trees.o \
-	$(OBJDIR_LINUX64RELEASE)/external/zlib/inftrees.o \
-	$(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/common/stream_buffer_encoder.o \
+	$(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/common/stream_decoder.o \
+	$(OBJDIR_LINUX64RELEASE)/external/zlib/inflate.o \
 	$(OBJDIR_LINUX64RELEASE)/external/zlib/inffast.o \
 	$(OBJDIR_LINUX64RELEASE)/external/zlib/deflate.o \
 	$(OBJDIR_LINUX64RELEASE)/external/zlib/crc32.o \
@@ -798,8 +802,8 @@ OBJ_LINUX64RELEASE = $(OBJDIR_LINUX64RELEASE)/src/lib/engine/patchstream/common/
 	$(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/simple/simple_decoder.o \
 	$(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/simple/simple_coder.o \
 	$(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/simple/powerpc.o \
-	$(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/simple/ia64.o \
-	$(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/check/check.o \
+	$(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/check/crc32_fast.o \
+	$(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/common/block_header_decoder.o \
 	$(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/common/block_encoder.o \
 	$(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/common/block_decoder.o \
 	$(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/common/block_buffer_encoder.o \
@@ -811,8 +815,8 @@ OBJ_LINUX64RELEASE = $(OBJDIR_LINUX64RELEASE)/src/lib/engine/patchstream/common/
 	$(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/check/crc64_table.o \
 	$(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/check/crc64_fast.o \
 	$(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/check/crc32_table.o \
-	$(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/check/crc32_fast.o \
-	$(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/common/block_header_decoder.o \
+	$(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/common/block_header_encoder.o \
+	$(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/check/check.o \
 	$(OBJDIR_LINUX64RELEASE)/external/xz/src/common/tuklib_progname.o \
 	$(OBJDIR_LINUX64RELEASE)/external/xz/src/common/tuklib_physmem.o \
 	$(OBJDIR_LINUX64RELEASE)/external/xz/src/common/tuklib_open_stdxxx.o \
@@ -824,8 +828,8 @@ OBJ_LINUX64RELEASE = $(OBJDIR_LINUX64RELEASE)/src/lib/engine/patchstream/common/
 	$(OBJDIR_LINUX64RELEASE)/external/lzma_sdk/C/XzCrc64Opt.o \
 	$(OBJDIR_LINUX64RELEASE)/external/lzma_sdk/C/XzCrc64.o \
 	$(OBJDIR_LINUX64RELEASE)/external/lzma_sdk/C/Xz.o \
-	$(OBJDIR_LINUX64RELEASE)/external/lzma_sdk/C/Sha256Opt.o \
-	$(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/common/filter_encoder.o \
+	$(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/common/filter_flags_decoder.o \
+	$(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/common/stream_buffer_encoder.o \
 	$(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/common/stream_buffer_decoder.o \
 	$(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/common/lzip_decoder.o \
 	$(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/common/outqueue.o \
@@ -836,8 +840,8 @@ OBJ_LINUX64RELEASE = $(OBJDIR_LINUX64RELEASE)/src/lib/engine/patchstream/common/
 	$(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/common/hardware_physmem.o \
 	$(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/common/hardware_cputhreads.o \
 	$(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/common/filter_flags_encoder.o \
-	$(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/common/filter_flags_decoder.o \
 	$(OBJDIR_LINUX64RELEASE)/external/bzip/blocksort.o \
+	$(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/common/filter_encoder.o \
 	$(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/common/filter_decoder.o \
 	$(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/common/filter_common.o \
 	$(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/common/filter_buffer_encoder.o \
@@ -848,8 +852,7 @@ OBJ_LINUX64RELEASE = $(OBJDIR_LINUX64RELEASE)/src/lib/engine/patchstream/common/
 	$(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/common/easy_decoder_memusage.o \
 	$(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/common/easy_buffer_encoder.o \
 	$(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/common/common.o \
-	$(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/common/block_util.o \
-	$(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/common/block_header_encoder.o
+	$(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/common/block_util.o
 
 OBJ_LINUX32RELEASE = $(OBJDIR_LINUX32RELEASE)/src/lib/engine/patchstream/common/DfsIOHlpW.o \
 	$(OBJDIR_LINUX32RELEASE)/src/lib/engine/patchstream/common/DfsIOHlpPosix.o \
@@ -858,18 +861,18 @@ OBJ_LINUX32RELEASE = $(OBJDIR_LINUX32RELEASE)/src/lib/engine/patchstream/common/
 	$(OBJDIR_LINUX32RELEASE)/src/cli/RawCompress.o \
 	$(OBJDIR_LINUX32RELEASE)/src/cli/DifstrmMainPosix.o \
 	$(OBJDIR_LINUX32RELEASE)/src/cli/DfsCdLin.o \
-	$(OBJDIR_LINUX32RELEASE)/src/lib/engine/patchstream/common/DfsIoMemMutex.o \
 	$(OBJDIR_LINUX32RELEASE)/external/zstd/lib/dictBuilder/zdict.o \
 	$(OBJDIR_LINUX32RELEASE)/external/zstd/lib/dictBuilder/fastcover.o \
-	$(OBJDIR_LINUX32RELEASE)/src/lib/engine/patchstream/common/ltoolsc.o \
+	$(OBJDIR_LINUX32RELEASE)/src/lib/engine/patchstream/common/compress_store.o \
 	$(OBJDIR_LINUX32RELEASE)/src/lib/engine/patchstream/common/difstool.o \
 	$(OBJDIR_LINUX32RELEASE)/src/lib/engine/patchstream/common/dfsToolw.o \
 	$(OBJDIR_LINUX32RELEASE)/src/lib/engine/patchstream/common/dfsToolWinRT.o \
 	$(OBJDIR_LINUX32RELEASE)/src/lib/engine/patchstream/common/dfsToolPosix.o \
 	$(OBJDIR_LINUX32RELEASE)/src/lib/engine/patchstream/common/dfsTool.o \
-	$(OBJDIR_LINUX32RELEASE)/src/lib/engine/patchstream/common/compress_store.o \
+	$(OBJDIR_LINUX32RELEASE)/external/zstd/lib/dictBuilder/divsufsort.o \
 	$(OBJDIR_LINUX32RELEASE)/src/lib/engine/patchstream/common/abstractDecompress.o \
 	$(OBJDIR_LINUX32RELEASE)/src/lib/engine/patchstream/common/DfsToolsPosixCPP.o \
+	$(OBJDIR_LINUX32RELEASE)/src/lib/engine/patchstream/common/DfsIoMemMutex.o \
 	$(OBJDIR_LINUX32RELEASE)/external/zstd/lib/compress/zstd_compress_superblock.o \
 	$(OBJDIR_LINUX32RELEASE)/external/zstd/lib/compress/zstd_compress_sequences.o \
 	$(OBJDIR_LINUX32RELEASE)/external/zstd/lib/compress/zstd_compress_literals.o \
@@ -881,15 +884,15 @@ OBJ_LINUX32RELEASE = $(OBJDIR_LINUX32RELEASE)/src/lib/engine/patchstream/common/
 	$(OBJDIR_LINUX32RELEASE)/external/zstd/lib/common/xxhash.o \
 	$(OBJDIR_LINUX32RELEASE)/external/zstd/lib/common/threading.o \
 	$(OBJDIR_LINUX32RELEASE)/external/zstd/lib/common/pool.o \
-	$(OBJDIR_LINUX32RELEASE)/external/zstd/lib/common/fse_decompress.o \
-	$(OBJDIR_LINUX32RELEASE)/external/zstd/lib/compress/zstdmt_compress.o \
-	$(OBJDIR_LINUX32RELEASE)/external/zstd/lib/dictBuilder/divsufsort.o \
 	$(OBJDIR_LINUX32RELEASE)/external/zstd/lib/dictBuilder/cover.o \
 	$(OBJDIR_LINUX32RELEASE)/external/zstd/lib/decompress/zstd_decompress_block.o \
 	$(OBJDIR_LINUX32RELEASE)/external/zstd/lib/decompress/zstd_decompress.o \
 	$(OBJDIR_LINUX32RELEASE)/external/zstd/lib/decompress/zstd_ddict.o \
 	$(OBJDIR_LINUX32RELEASE)/external/zstd/lib/decompress/huf_decompress_amd64.o \
 	$(OBJDIR_LINUX32RELEASE)/external/zstd/lib/decompress/huf_decompress.o \
+	$(OBJDIR_LINUX32RELEASE)/external/zstd/lib/compress/zstdmt_compress.o \
+	$(OBJDIR_LINUX32RELEASE)/src/lib/engine/patchstream/common/ltoolsc.o \
+	$(OBJDIR_LINUX32RELEASE)/external/zstd/lib/compress/zstd_preSplit.o \
 	$(OBJDIR_LINUX32RELEASE)/external/zstd/lib/compress/zstd_opt.o \
 	$(OBJDIR_LINUX32RELEASE)/external/zstd/lib/compress/zstd_ldm.o \
 	$(OBJDIR_LINUX32RELEASE)/external/zstd/lib/compress/zstd_lazy.o \
@@ -915,6 +918,7 @@ OBJ_LINUX32RELEASE = $(OBJDIR_LINUX32RELEASE)/src/lib/engine/patchstream/common/
 	$(OBJDIR_LINUX32RELEASE)/src/lib/helper/compress/BuildHelper.o \
 	$(OBJDIR_LINUX32RELEASE)/src/lib/hash/sha256_from_openssl.o \
 	$(OBJDIR_LINUX32RELEASE)/src/lib/hash/sha1dgst.o \
+	$(OBJDIR_LINUX32RELEASE)/src/lib/engine/patchstream/compress/makdifst.o \
 	$(OBJDIR_LINUX32RELEASE)/src/lib/engine/svfile/common/ArrayTl.o \
 	$(OBJDIR_LINUX32RELEASE)/src/lib/engine/patchstream/rebuild/RamDifWk.o \
 	$(OBJDIR_LINUX32RELEASE)/src/lib/engine/patchstream/rebuild/RamDifWS.o \
@@ -922,7 +926,6 @@ OBJ_LINUX32RELEASE = $(OBJDIR_LINUX32RELEASE)/src/lib/engine/patchstream/common/
 	$(OBJDIR_LINUX32RELEASE)/src/lib/engine/patchstream/decompress/apldifst.o \
 	$(OBJDIR_LINUX32RELEASE)/src/lib/engine/patchstream/decompress/ApDifStm.o \
 	$(OBJDIR_LINUX32RELEASE)/src/lib/engine/svfile/common/DfsIntf.o \
-	$(OBJDIR_LINUX32RELEASE)/src/lib/engine/patchstream/compress/makdifst.o \
 	$(OBJDIR_LINUX32RELEASE)/src/lib/engine/patchstream/compress/makdifId.o \
 	$(OBJDIR_LINUX32RELEASE)/src/lib/engine/patchstream/compress/abstractCompress.o \
 	$(OBJDIR_LINUX32RELEASE)/src/lib/engine/patchstream/compress/PreWkFnd.o \
@@ -934,25 +937,28 @@ OBJ_LINUX32RELEASE = $(OBJDIR_LINUX32RELEASE)/src/lib/engine/patchstream/common/
 	$(OBJDIR_LINUX32RELEASE)/src/lib/engine/svfile/common/DirSet.o \
 	$(OBJDIR_LINUX32RELEASE)/src/lib/engine/svfile/common/DfsTagMg.o \
 	$(OBJDIR_LINUX32RELEASE)/src/lib/engine/svfile/common/DfsTagBlockFloatTool.o \
+	$(OBJDIR_LINUX32RELEASE)/external/zstd/lib/common/fse_decompress.o \
 	$(OBJDIR_LINUX32RELEASE)/src/lib/engine/svfile/common/DfsTagBlockFloatEnd.o \
 	$(OBJDIR_LINUX32RELEASE)/src/lib/engine/svfile/common/DfsSet.o \
 	$(OBJDIR_LINUX32RELEASE)/src/lib/engine/svfile/common/DfsMtStr.o \
 	$(OBJDIR_LINUX32RELEASE)/src/lib/engine/svfile/common/DfsMTool.o \
 	$(OBJDIR_LINUX32RELEASE)/src/lib/engine/svfile/common/DfsMFile.o \
 	$(OBJDIR_LINUX32RELEASE)/src/lib/engine/svfile/common/DfsIntfWr.o \
-	$(OBJDIR_LINUX32RELEASE)/external/lzham/lzhamdecomp/lzham_prefix_coding.o \
+	$(OBJDIR_LINUX32RELEASE)/external/lzma_sdk/C/7zAlloc.o \
 	$(OBJDIR_LINUX32RELEASE)/external/lzham/lzhamlib/lzham_lib.o \
 	$(OBJDIR_LINUX32RELEASE)/external/lzham/lzhamlib/lzham_decomplib.o \
 	$(OBJDIR_LINUX32RELEASE)/external/lzham/lzhamdecomp/lzham_vector.o \
 	$(OBJDIR_LINUX32RELEASE)/external/lzham/lzhamdecomp/lzham_timer.o \
 	$(OBJDIR_LINUX32RELEASE)/external/lzham/lzhamdecomp/lzham_symbol_codec.o \
-	$(OBJDIR_LINUX32RELEASE)/external/lzma_sdk/C/7zAlloc.o \
+	$(OBJDIR_LINUX32RELEASE)/external/lzma_sdk/C/7zArcIn.o \
+	$(OBJDIR_LINUX32RELEASE)/external/lzham/lzhamdecomp/lzham_prefix_coding.o \
 	$(OBJDIR_LINUX32RELEASE)/external/lzham/lzhamdecomp/lzham_platform.o \
 	$(OBJDIR_LINUX32RELEASE)/external/lzham/lzhamdecomp/lzham_mem.o \
 	$(OBJDIR_LINUX32RELEASE)/external/lzham/lzhamdecomp/lzham_lzdecompbase.o \
 	$(OBJDIR_LINUX32RELEASE)/external/lzham/lzhamdecomp/lzham_lzdecomp.o \
 	$(OBJDIR_LINUX32RELEASE)/external/lzham/lzhamdecomp/lzham_huffman_codes.o \
-	$(OBJDIR_LINUX32RELEASE)/external/lzma_sdk/C/BraIA64.o \
+	$(OBJDIR_LINUX32RELEASE)/external/lzma_sdk/C/CpuArch.o \
+	$(OBJDIR_LINUX32RELEASE)/external/lzma_sdk/C/Ppmd7Enc.o \
 	$(OBJDIR_LINUX32RELEASE)/external/lzma_sdk/C/Ppmd7Dec.o \
 	$(OBJDIR_LINUX32RELEASE)/external/lzma_sdk/C/Ppmd7.o \
 	$(OBJDIR_LINUX32RELEASE)/external/lzma_sdk/C/LzmaEnc.o \
@@ -963,7 +969,7 @@ OBJ_LINUX32RELEASE = $(OBJDIR_LINUX32RELEASE)/src/lib/engine/patchstream/common/
 	$(OBJDIR_LINUX32RELEASE)/external/lzma_sdk/C/LzFind.o \
 	$(OBJDIR_LINUX32RELEASE)/external/lzma_sdk/C/LZMASDK_Sha256.o \
 	$(OBJDIR_LINUX32RELEASE)/external/lzma_sdk/C/Delta.o \
-	$(OBJDIR_LINUX32RELEASE)/external/lzma_sdk/C/CpuArch.o \
+	$(OBJDIR_LINUX32RELEASE)/external/lzma_sdk/C/BraIA64.o \
 	$(OBJDIR_LINUX32RELEASE)/external/lzma_sdk/C/Bra86.o \
 	$(OBJDIR_LINUX32RELEASE)/external/lzma_sdk/C/Bra.o \
 	$(OBJDIR_LINUX32RELEASE)/external/lzma_sdk/C/Bcj2.o \
@@ -975,7 +981,6 @@ OBJ_LINUX32RELEASE = $(OBJDIR_LINUX32RELEASE)/src/lib/engine/patchstream/common/
 	$(OBJDIR_LINUX32RELEASE)/external/lzma_sdk/C/7zCrc.o \
 	$(OBJDIR_LINUX32RELEASE)/external/lzma_sdk/C/7zBuf2.o \
 	$(OBJDIR_LINUX32RELEASE)/external/lzma_sdk/C/7zBuf.o \
-	$(OBJDIR_LINUX32RELEASE)/external/lzma_sdk/C/7zArcIn.o \
 	$(OBJDIR_LINUX32RELEASE)/external/fastlzlib/lz4/lz4hc.o \
 	$(OBJDIR_LINUX32RELEASE)/external/fastlzlib/lzfse/src/lzvn_decode_base.o \
 	$(OBJDIR_LINUX32RELEASE)/external/fastlzlib/lzfse/src/lzfse_fse.o \
@@ -984,6 +989,7 @@ OBJ_LINUX32RELEASE = $(OBJDIR_LINUX32RELEASE)/src/lib/engine/patchstream/common/
 	$(OBJDIR_LINUX32RELEASE)/external/fastlzlib/lzfse/src/lzfse_decode_base.o \
 	$(OBJDIR_LINUX32RELEASE)/external/fastlzlib/lzfse/src/lzfse_decode.o \
 	$(OBJDIR_LINUX32RELEASE)/external/fastlzlib/lz4/xxhash.o \
+	$(OBJDIR_LINUX32RELEASE)/external/fastlzlib/lzfse/src/lzvn_encode_base.o \
 	$(OBJDIR_LINUX32RELEASE)/external/fastlzlib/lz4/lz4frame.o \
 	$(OBJDIR_LINUX32RELEASE)/external/fastlzlib/lz4/lz4.o \
 	$(OBJDIR_LINUX32RELEASE)/external/fastlzlib/fastlzlib.o \
@@ -994,17 +1000,17 @@ OBJ_LINUX32RELEASE = $(OBJDIR_LINUX32RELEASE)/src/lib/engine/patchstream/common/
 	$(OBJDIR_LINUX32RELEASE)/external/bzip/crctable.o \
 	$(OBJDIR_LINUX32RELEASE)/external/bzip/compress.o \
 	$(OBJDIR_LINUX32RELEASE)/external/bzip/bzlib.o \
-	$(OBJDIR_LINUX32RELEASE)/external/lzham/lzhamcomp/lzham_match_accel.o \
 	$(OBJDIR_LINUX32RELEASE)/external/lzham/lzhamdecomp/lzham_checksum.o \
 	$(OBJDIR_LINUX32RELEASE)/external/lzham/lzhamdecomp/lzham_assert.o \
 	$(OBJDIR_LINUX32RELEASE)/external/lzham/lzhamcomp/lzham_pthreads_threading.o \
-	$(OBJDIR_LINUX32RELEASE)/external/lzma_sdk/C/Ppmd7Enc.o \
+	$(OBJDIR_LINUX32RELEASE)/external/lzma_sdk/C/Sha256Opt.o \
+	$(OBJDIR_LINUX32RELEASE)/external/lzham/lzhamcomp/lzham_match_accel.o \
 	$(OBJDIR_LINUX32RELEASE)/external/lzham/lzhamcomp/lzham_lzcomp_state.o \
 	$(OBJDIR_LINUX32RELEASE)/external/lzham/lzhamcomp/lzham_lzcomp_internal.o \
 	$(OBJDIR_LINUX32RELEASE)/external/lzham/lzhamcomp/lzham_lzcomp.o \
 	$(OBJDIR_LINUX32RELEASE)/external/lzham/lzhamcomp/lzham_lzbase.o \
-	$(OBJDIR_LINUX32RELEASE)/external/fastlzlib/lzfse/src/lzvn_encode_base.o \
-	$(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/lz/lz_decoder.o \
+	$(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/lz/lz_encoder.o \
+	$(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/simple/armthumb.o \
 	$(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/simple/arm64.o \
 	$(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/simple/arm.o \
 	$(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/rangecoder/price_table.o \
@@ -1017,8 +1023,8 @@ OBJ_LINUX32RELEASE = $(OBJDIR_LINUX32RELEASE)/src/lib/engine/patchstream/common/
 	$(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/lzma/lzma2_decoder.o \
 	$(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/lzma/fastpos_table.o \
 	$(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/lz/lz_encoder_mf.o \
-	$(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/lz/lz_encoder.o \
-	$(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/simple/armthumb.o \
+	$(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/simple/ia64.o \
+	$(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/lz/lz_decoder.o \
 	$(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/delta/delta_encoder.o \
 	$(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/delta/delta_decoder.o \
 	$(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/delta/delta_common.o \
@@ -1030,16 +1036,15 @@ OBJ_LINUX32RELEASE = $(OBJDIR_LINUX32RELEASE)/src/lib/engine/patchstream/common/
 	$(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/common/stream_flags_common.o \
 	$(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/common/stream_encoder_mt.o \
 	$(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/common/stream_encoder.o \
-	$(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/common/stream_decoder.o \
-	$(OBJDIR_LINUX32RELEASE)/external/zlib/inflate.o \
+	$(OBJDIR_LINUX32RELEASE)/external/zlib/inftrees.o \
 	$(OBJDIR_LINUX32RELEASE)/external/zstd/lib/common/error_private.o \
 	$(OBJDIR_LINUX32RELEASE)/external/zstd/lib/common/entropy_common.o \
 	$(OBJDIR_LINUX32RELEASE)/external/zstd/lib/common/debug.o \
 	$(OBJDIR_LINUX32RELEASE)/external/zlib/zutil.o \
 	$(OBJDIR_LINUX32RELEASE)/external/zlib/zlibcompress.o \
 	$(OBJDIR_LINUX32RELEASE)/external/zlib/trees.o \
-	$(OBJDIR_LINUX32RELEASE)/external/zlib/inftrees.o \
-	$(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/common/stream_buffer_encoder.o \
+	$(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/common/stream_decoder.o \
+	$(OBJDIR_LINUX32RELEASE)/external/zlib/inflate.o \
 	$(OBJDIR_LINUX32RELEASE)/external/zlib/inffast.o \
 	$(OBJDIR_LINUX32RELEASE)/external/zlib/deflate.o \
 	$(OBJDIR_LINUX32RELEASE)/external/zlib/crc32.o \
@@ -1050,8 +1055,8 @@ OBJ_LINUX32RELEASE = $(OBJDIR_LINUX32RELEASE)/src/lib/engine/patchstream/common/
 	$(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/simple/simple_decoder.o \
 	$(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/simple/simple_coder.o \
 	$(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/simple/powerpc.o \
-	$(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/simple/ia64.o \
-	$(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/check/check.o \
+	$(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/check/crc32_fast.o \
+	$(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/common/block_header_decoder.o \
 	$(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/common/block_encoder.o \
 	$(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/common/block_decoder.o \
 	$(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/common/block_buffer_encoder.o \
@@ -1063,8 +1068,8 @@ OBJ_LINUX32RELEASE = $(OBJDIR_LINUX32RELEASE)/src/lib/engine/patchstream/common/
 	$(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/check/crc64_table.o \
 	$(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/check/crc64_fast.o \
 	$(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/check/crc32_table.o \
-	$(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/check/crc32_fast.o \
-	$(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/common/block_header_decoder.o \
+	$(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/common/block_header_encoder.o \
+	$(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/check/check.o \
 	$(OBJDIR_LINUX32RELEASE)/external/xz/src/common/tuklib_progname.o \
 	$(OBJDIR_LINUX32RELEASE)/external/xz/src/common/tuklib_physmem.o \
 	$(OBJDIR_LINUX32RELEASE)/external/xz/src/common/tuklib_open_stdxxx.o \
@@ -1076,8 +1081,8 @@ OBJ_LINUX32RELEASE = $(OBJDIR_LINUX32RELEASE)/src/lib/engine/patchstream/common/
 	$(OBJDIR_LINUX32RELEASE)/external/lzma_sdk/C/XzCrc64Opt.o \
 	$(OBJDIR_LINUX32RELEASE)/external/lzma_sdk/C/XzCrc64.o \
 	$(OBJDIR_LINUX32RELEASE)/external/lzma_sdk/C/Xz.o \
-	$(OBJDIR_LINUX32RELEASE)/external/lzma_sdk/C/Sha256Opt.o \
-	$(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/common/filter_encoder.o \
+	$(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/common/filter_flags_decoder.o \
+	$(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/common/stream_buffer_encoder.o \
 	$(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/common/stream_buffer_decoder.o \
 	$(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/common/lzip_decoder.o \
 	$(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/common/outqueue.o \
@@ -1088,8 +1093,8 @@ OBJ_LINUX32RELEASE = $(OBJDIR_LINUX32RELEASE)/src/lib/engine/patchstream/common/
 	$(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/common/hardware_physmem.o \
 	$(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/common/hardware_cputhreads.o \
 	$(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/common/filter_flags_encoder.o \
-	$(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/common/filter_flags_decoder.o \
 	$(OBJDIR_LINUX32RELEASE)/external/bzip/blocksort.o \
+	$(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/common/filter_encoder.o \
 	$(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/common/filter_decoder.o \
 	$(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/common/filter_common.o \
 	$(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/common/filter_buffer_encoder.o \
@@ -1100,8 +1105,7 @@ OBJ_LINUX32RELEASE = $(OBJDIR_LINUX32RELEASE)/src/lib/engine/patchstream/common/
 	$(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/common/easy_decoder_memusage.o \
 	$(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/common/easy_buffer_encoder.o \
 	$(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/common/common.o \
-	$(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/common/block_util.o \
-	$(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/common/block_header_encoder.o
+	$(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/common/block_util.o
 
 OBJ_LINUX64STATICRELEASE = $(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/patchstream/common/DfsIOHlpW.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/patchstream/common/DfsIOHlpPosix.o \
@@ -1110,18 +1114,18 @@ OBJ_LINUX64STATICRELEASE = $(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/patchst
 	$(OBJDIR_LINUX64STATICRELEASE)/src/cli/RawCompress.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/src/cli/DifstrmMainPosix.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/src/cli/DfsCdLin.o \
-	$(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/patchstream/common/DfsIoMemMutex.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/external/zstd/lib/dictBuilder/zdict.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/external/zstd/lib/dictBuilder/fastcover.o \
-	$(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/patchstream/common/ltoolsc.o \
+	$(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/patchstream/common/compress_store.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/patchstream/common/difstool.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/patchstream/common/dfsToolw.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/patchstream/common/dfsToolWinRT.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/patchstream/common/dfsToolPosix.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/patchstream/common/dfsTool.o \
-	$(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/patchstream/common/compress_store.o \
+	$(OBJDIR_LINUX64STATICRELEASE)/external/zstd/lib/dictBuilder/divsufsort.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/patchstream/common/abstractDecompress.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/patchstream/common/DfsToolsPosixCPP.o \
+	$(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/patchstream/common/DfsIoMemMutex.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/external/zstd/lib/compress/zstd_compress_superblock.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/external/zstd/lib/compress/zstd_compress_sequences.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/external/zstd/lib/compress/zstd_compress_literals.o \
@@ -1133,15 +1137,15 @@ OBJ_LINUX64STATICRELEASE = $(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/patchst
 	$(OBJDIR_LINUX64STATICRELEASE)/external/zstd/lib/common/xxhash.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/external/zstd/lib/common/threading.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/external/zstd/lib/common/pool.o \
-	$(OBJDIR_LINUX64STATICRELEASE)/external/zstd/lib/common/fse_decompress.o \
-	$(OBJDIR_LINUX64STATICRELEASE)/external/zstd/lib/compress/zstdmt_compress.o \
-	$(OBJDIR_LINUX64STATICRELEASE)/external/zstd/lib/dictBuilder/divsufsort.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/external/zstd/lib/dictBuilder/cover.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/external/zstd/lib/decompress/zstd_decompress_block.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/external/zstd/lib/decompress/zstd_decompress.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/external/zstd/lib/decompress/zstd_ddict.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/external/zstd/lib/decompress/huf_decompress_amd64.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/external/zstd/lib/decompress/huf_decompress.o \
+	$(OBJDIR_LINUX64STATICRELEASE)/external/zstd/lib/compress/zstdmt_compress.o \
+	$(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/patchstream/common/ltoolsc.o \
+	$(OBJDIR_LINUX64STATICRELEASE)/external/zstd/lib/compress/zstd_preSplit.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/external/zstd/lib/compress/zstd_opt.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/external/zstd/lib/compress/zstd_ldm.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/external/zstd/lib/compress/zstd_lazy.o \
@@ -1167,6 +1171,7 @@ OBJ_LINUX64STATICRELEASE = $(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/patchst
 	$(OBJDIR_LINUX64STATICRELEASE)/src/lib/helper/compress/BuildHelper.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/src/lib/hash/sha256_from_openssl.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/src/lib/hash/sha1dgst.o \
+	$(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/patchstream/compress/makdifst.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/svfile/common/ArrayTl.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/patchstream/rebuild/RamDifWk.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/patchstream/rebuild/RamDifWS.o \
@@ -1174,7 +1179,6 @@ OBJ_LINUX64STATICRELEASE = $(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/patchst
 	$(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/patchstream/decompress/apldifst.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/patchstream/decompress/ApDifStm.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/svfile/common/DfsIntf.o \
-	$(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/patchstream/compress/makdifst.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/patchstream/compress/makdifId.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/patchstream/compress/abstractCompress.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/patchstream/compress/PreWkFnd.o \
@@ -1186,25 +1190,28 @@ OBJ_LINUX64STATICRELEASE = $(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/patchst
 	$(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/svfile/common/DirSet.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/svfile/common/DfsTagMg.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/svfile/common/DfsTagBlockFloatTool.o \
+	$(OBJDIR_LINUX64STATICRELEASE)/external/zstd/lib/common/fse_decompress.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/svfile/common/DfsTagBlockFloatEnd.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/svfile/common/DfsSet.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/svfile/common/DfsMtStr.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/svfile/common/DfsMTool.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/svfile/common/DfsMFile.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/svfile/common/DfsIntfWr.o \
-	$(OBJDIR_LINUX64STATICRELEASE)/external/lzham/lzhamdecomp/lzham_prefix_coding.o \
+	$(OBJDIR_LINUX64STATICRELEASE)/external/lzma_sdk/C/7zAlloc.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/external/lzham/lzhamlib/lzham_lib.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/external/lzham/lzhamlib/lzham_decomplib.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/external/lzham/lzhamdecomp/lzham_vector.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/external/lzham/lzhamdecomp/lzham_timer.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/external/lzham/lzhamdecomp/lzham_symbol_codec.o \
-	$(OBJDIR_LINUX64STATICRELEASE)/external/lzma_sdk/C/7zAlloc.o \
+	$(OBJDIR_LINUX64STATICRELEASE)/external/lzma_sdk/C/7zArcIn.o \
+	$(OBJDIR_LINUX64STATICRELEASE)/external/lzham/lzhamdecomp/lzham_prefix_coding.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/external/lzham/lzhamdecomp/lzham_platform.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/external/lzham/lzhamdecomp/lzham_mem.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/external/lzham/lzhamdecomp/lzham_lzdecompbase.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/external/lzham/lzhamdecomp/lzham_lzdecomp.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/external/lzham/lzhamdecomp/lzham_huffman_codes.o \
-	$(OBJDIR_LINUX64STATICRELEASE)/external/lzma_sdk/C/BraIA64.o \
+	$(OBJDIR_LINUX64STATICRELEASE)/external/lzma_sdk/C/CpuArch.o \
+	$(OBJDIR_LINUX64STATICRELEASE)/external/lzma_sdk/C/Ppmd7Enc.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/external/lzma_sdk/C/Ppmd7Dec.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/external/lzma_sdk/C/Ppmd7.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/external/lzma_sdk/C/LzmaEnc.o \
@@ -1215,7 +1222,7 @@ OBJ_LINUX64STATICRELEASE = $(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/patchst
 	$(OBJDIR_LINUX64STATICRELEASE)/external/lzma_sdk/C/LzFind.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/external/lzma_sdk/C/LZMASDK_Sha256.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/external/lzma_sdk/C/Delta.o \
-	$(OBJDIR_LINUX64STATICRELEASE)/external/lzma_sdk/C/CpuArch.o \
+	$(OBJDIR_LINUX64STATICRELEASE)/external/lzma_sdk/C/BraIA64.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/external/lzma_sdk/C/Bra86.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/external/lzma_sdk/C/Bra.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/external/lzma_sdk/C/Bcj2.o \
@@ -1227,7 +1234,6 @@ OBJ_LINUX64STATICRELEASE = $(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/patchst
 	$(OBJDIR_LINUX64STATICRELEASE)/external/lzma_sdk/C/7zCrc.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/external/lzma_sdk/C/7zBuf2.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/external/lzma_sdk/C/7zBuf.o \
-	$(OBJDIR_LINUX64STATICRELEASE)/external/lzma_sdk/C/7zArcIn.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/external/fastlzlib/lz4/lz4hc.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/external/fastlzlib/lzfse/src/lzvn_decode_base.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/external/fastlzlib/lzfse/src/lzfse_fse.o \
@@ -1236,6 +1242,7 @@ OBJ_LINUX64STATICRELEASE = $(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/patchst
 	$(OBJDIR_LINUX64STATICRELEASE)/external/fastlzlib/lzfse/src/lzfse_decode_base.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/external/fastlzlib/lzfse/src/lzfse_decode.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/external/fastlzlib/lz4/xxhash.o \
+	$(OBJDIR_LINUX64STATICRELEASE)/external/fastlzlib/lzfse/src/lzvn_encode_base.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/external/fastlzlib/lz4/lz4frame.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/external/fastlzlib/lz4/lz4.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/external/fastlzlib/fastlzlib.o \
@@ -1246,17 +1253,17 @@ OBJ_LINUX64STATICRELEASE = $(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/patchst
 	$(OBJDIR_LINUX64STATICRELEASE)/external/bzip/crctable.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/external/bzip/compress.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/external/bzip/bzlib.o \
-	$(OBJDIR_LINUX64STATICRELEASE)/external/lzham/lzhamcomp/lzham_match_accel.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/external/lzham/lzhamdecomp/lzham_checksum.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/external/lzham/lzhamdecomp/lzham_assert.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/external/lzham/lzhamcomp/lzham_pthreads_threading.o \
-	$(OBJDIR_LINUX64STATICRELEASE)/external/lzma_sdk/C/Ppmd7Enc.o \
+	$(OBJDIR_LINUX64STATICRELEASE)/external/lzma_sdk/C/Sha256Opt.o \
+	$(OBJDIR_LINUX64STATICRELEASE)/external/lzham/lzhamcomp/lzham_match_accel.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/external/lzham/lzhamcomp/lzham_lzcomp_state.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/external/lzham/lzhamcomp/lzham_lzcomp_internal.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/external/lzham/lzhamcomp/lzham_lzcomp.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/external/lzham/lzhamcomp/lzham_lzbase.o \
-	$(OBJDIR_LINUX64STATICRELEASE)/external/fastlzlib/lzfse/src/lzvn_encode_base.o \
-	$(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/lz/lz_decoder.o \
+	$(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/lz/lz_encoder.o \
+	$(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/simple/armthumb.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/simple/arm64.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/simple/arm.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/rangecoder/price_table.o \
@@ -1269,8 +1276,8 @@ OBJ_LINUX64STATICRELEASE = $(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/patchst
 	$(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/lzma/lzma2_decoder.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/lzma/fastpos_table.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/lz/lz_encoder_mf.o \
-	$(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/lz/lz_encoder.o \
-	$(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/simple/armthumb.o \
+	$(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/simple/ia64.o \
+	$(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/lz/lz_decoder.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/delta/delta_encoder.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/delta/delta_decoder.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/delta/delta_common.o \
@@ -1282,16 +1289,15 @@ OBJ_LINUX64STATICRELEASE = $(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/patchst
 	$(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/common/stream_flags_common.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/common/stream_encoder_mt.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/common/stream_encoder.o \
-	$(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/common/stream_decoder.o \
-	$(OBJDIR_LINUX64STATICRELEASE)/external/zlib/inflate.o \
+	$(OBJDIR_LINUX64STATICRELEASE)/external/zlib/inftrees.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/external/zstd/lib/common/error_private.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/external/zstd/lib/common/entropy_common.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/external/zstd/lib/common/debug.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/external/zlib/zutil.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/external/zlib/zlibcompress.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/external/zlib/trees.o \
-	$(OBJDIR_LINUX64STATICRELEASE)/external/zlib/inftrees.o \
-	$(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/common/stream_buffer_encoder.o \
+	$(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/common/stream_decoder.o \
+	$(OBJDIR_LINUX64STATICRELEASE)/external/zlib/inflate.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/external/zlib/inffast.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/external/zlib/deflate.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/external/zlib/crc32.o \
@@ -1302,8 +1308,8 @@ OBJ_LINUX64STATICRELEASE = $(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/patchst
 	$(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/simple/simple_decoder.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/simple/simple_coder.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/simple/powerpc.o \
-	$(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/simple/ia64.o \
-	$(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/check/check.o \
+	$(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/check/crc32_fast.o \
+	$(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/common/block_header_decoder.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/common/block_encoder.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/common/block_decoder.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/common/block_buffer_encoder.o \
@@ -1315,8 +1321,8 @@ OBJ_LINUX64STATICRELEASE = $(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/patchst
 	$(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/check/crc64_table.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/check/crc64_fast.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/check/crc32_table.o \
-	$(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/check/crc32_fast.o \
-	$(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/common/block_header_decoder.o \
+	$(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/common/block_header_encoder.o \
+	$(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/check/check.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/common/tuklib_progname.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/common/tuklib_physmem.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/common/tuklib_open_stdxxx.o \
@@ -1328,8 +1334,8 @@ OBJ_LINUX64STATICRELEASE = $(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/patchst
 	$(OBJDIR_LINUX64STATICRELEASE)/external/lzma_sdk/C/XzCrc64Opt.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/external/lzma_sdk/C/XzCrc64.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/external/lzma_sdk/C/Xz.o \
-	$(OBJDIR_LINUX64STATICRELEASE)/external/lzma_sdk/C/Sha256Opt.o \
-	$(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/common/filter_encoder.o \
+	$(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/common/filter_flags_decoder.o \
+	$(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/common/stream_buffer_encoder.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/common/stream_buffer_decoder.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/common/lzip_decoder.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/common/outqueue.o \
@@ -1340,8 +1346,8 @@ OBJ_LINUX64STATICRELEASE = $(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/patchst
 	$(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/common/hardware_physmem.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/common/hardware_cputhreads.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/common/filter_flags_encoder.o \
-	$(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/common/filter_flags_decoder.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/external/bzip/blocksort.o \
+	$(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/common/filter_encoder.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/common/filter_decoder.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/common/filter_common.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/common/filter_buffer_encoder.o \
@@ -1352,8 +1358,7 @@ OBJ_LINUX64STATICRELEASE = $(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/patchst
 	$(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/common/easy_decoder_memusage.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/common/easy_buffer_encoder.o \
 	$(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/common/common.o \
-	$(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/common/block_util.o \
-	$(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/common/block_header_encoder.o
+	$(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/common/block_util.o
 
 OBJ_LINUX32STATICRELEASE = $(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/patchstream/common/DfsIOHlpW.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/patchstream/common/DfsIOHlpPosix.o \
@@ -1362,18 +1367,18 @@ OBJ_LINUX32STATICRELEASE = $(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/patchst
 	$(OBJDIR_LINUX32STATICRELEASE)/src/cli/RawCompress.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/src/cli/DifstrmMainPosix.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/src/cli/DfsCdLin.o \
-	$(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/patchstream/common/DfsIoMemMutex.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/external/zstd/lib/dictBuilder/zdict.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/external/zstd/lib/dictBuilder/fastcover.o \
-	$(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/patchstream/common/ltoolsc.o \
+	$(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/patchstream/common/compress_store.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/patchstream/common/difstool.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/patchstream/common/dfsToolw.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/patchstream/common/dfsToolWinRT.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/patchstream/common/dfsToolPosix.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/patchstream/common/dfsTool.o \
-	$(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/patchstream/common/compress_store.o \
+	$(OBJDIR_LINUX32STATICRELEASE)/external/zstd/lib/dictBuilder/divsufsort.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/patchstream/common/abstractDecompress.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/patchstream/common/DfsToolsPosixCPP.o \
+	$(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/patchstream/common/DfsIoMemMutex.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/external/zstd/lib/compress/zstd_compress_superblock.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/external/zstd/lib/compress/zstd_compress_sequences.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/external/zstd/lib/compress/zstd_compress_literals.o \
@@ -1385,15 +1390,15 @@ OBJ_LINUX32STATICRELEASE = $(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/patchst
 	$(OBJDIR_LINUX32STATICRELEASE)/external/zstd/lib/common/xxhash.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/external/zstd/lib/common/threading.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/external/zstd/lib/common/pool.o \
-	$(OBJDIR_LINUX32STATICRELEASE)/external/zstd/lib/common/fse_decompress.o \
-	$(OBJDIR_LINUX32STATICRELEASE)/external/zstd/lib/compress/zstdmt_compress.o \
-	$(OBJDIR_LINUX32STATICRELEASE)/external/zstd/lib/dictBuilder/divsufsort.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/external/zstd/lib/dictBuilder/cover.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/external/zstd/lib/decompress/zstd_decompress_block.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/external/zstd/lib/decompress/zstd_decompress.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/external/zstd/lib/decompress/zstd_ddict.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/external/zstd/lib/decompress/huf_decompress_amd64.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/external/zstd/lib/decompress/huf_decompress.o \
+	$(OBJDIR_LINUX32STATICRELEASE)/external/zstd/lib/compress/zstdmt_compress.o \
+	$(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/patchstream/common/ltoolsc.o \
+	$(OBJDIR_LINUX32STATICRELEASE)/external/zstd/lib/compress/zstd_preSplit.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/external/zstd/lib/compress/zstd_opt.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/external/zstd/lib/compress/zstd_ldm.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/external/zstd/lib/compress/zstd_lazy.o \
@@ -1419,6 +1424,7 @@ OBJ_LINUX32STATICRELEASE = $(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/patchst
 	$(OBJDIR_LINUX32STATICRELEASE)/src/lib/helper/compress/BuildHelper.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/src/lib/hash/sha256_from_openssl.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/src/lib/hash/sha1dgst.o \
+	$(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/patchstream/compress/makdifst.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/svfile/common/ArrayTl.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/patchstream/rebuild/RamDifWk.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/patchstream/rebuild/RamDifWS.o \
@@ -1426,7 +1432,6 @@ OBJ_LINUX32STATICRELEASE = $(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/patchst
 	$(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/patchstream/decompress/apldifst.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/patchstream/decompress/ApDifStm.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/svfile/common/DfsIntf.o \
-	$(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/patchstream/compress/makdifst.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/patchstream/compress/makdifId.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/patchstream/compress/abstractCompress.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/patchstream/compress/PreWkFnd.o \
@@ -1438,25 +1443,28 @@ OBJ_LINUX32STATICRELEASE = $(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/patchst
 	$(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/svfile/common/DirSet.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/svfile/common/DfsTagMg.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/svfile/common/DfsTagBlockFloatTool.o \
+	$(OBJDIR_LINUX32STATICRELEASE)/external/zstd/lib/common/fse_decompress.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/svfile/common/DfsTagBlockFloatEnd.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/svfile/common/DfsSet.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/svfile/common/DfsMtStr.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/svfile/common/DfsMTool.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/svfile/common/DfsMFile.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/svfile/common/DfsIntfWr.o \
-	$(OBJDIR_LINUX32STATICRELEASE)/external/lzham/lzhamdecomp/lzham_prefix_coding.o \
+	$(OBJDIR_LINUX32STATICRELEASE)/external/lzma_sdk/C/7zAlloc.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/external/lzham/lzhamlib/lzham_lib.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/external/lzham/lzhamlib/lzham_decomplib.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/external/lzham/lzhamdecomp/lzham_vector.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/external/lzham/lzhamdecomp/lzham_timer.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/external/lzham/lzhamdecomp/lzham_symbol_codec.o \
-	$(OBJDIR_LINUX32STATICRELEASE)/external/lzma_sdk/C/7zAlloc.o \
+	$(OBJDIR_LINUX32STATICRELEASE)/external/lzma_sdk/C/7zArcIn.o \
+	$(OBJDIR_LINUX32STATICRELEASE)/external/lzham/lzhamdecomp/lzham_prefix_coding.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/external/lzham/lzhamdecomp/lzham_platform.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/external/lzham/lzhamdecomp/lzham_mem.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/external/lzham/lzhamdecomp/lzham_lzdecompbase.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/external/lzham/lzhamdecomp/lzham_lzdecomp.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/external/lzham/lzhamdecomp/lzham_huffman_codes.o \
-	$(OBJDIR_LINUX32STATICRELEASE)/external/lzma_sdk/C/BraIA64.o \
+	$(OBJDIR_LINUX32STATICRELEASE)/external/lzma_sdk/C/CpuArch.o \
+	$(OBJDIR_LINUX32STATICRELEASE)/external/lzma_sdk/C/Ppmd7Enc.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/external/lzma_sdk/C/Ppmd7Dec.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/external/lzma_sdk/C/Ppmd7.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/external/lzma_sdk/C/LzmaEnc.o \
@@ -1467,7 +1475,7 @@ OBJ_LINUX32STATICRELEASE = $(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/patchst
 	$(OBJDIR_LINUX32STATICRELEASE)/external/lzma_sdk/C/LzFind.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/external/lzma_sdk/C/LZMASDK_Sha256.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/external/lzma_sdk/C/Delta.o \
-	$(OBJDIR_LINUX32STATICRELEASE)/external/lzma_sdk/C/CpuArch.o \
+	$(OBJDIR_LINUX32STATICRELEASE)/external/lzma_sdk/C/BraIA64.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/external/lzma_sdk/C/Bra86.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/external/lzma_sdk/C/Bra.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/external/lzma_sdk/C/Bcj2.o \
@@ -1479,7 +1487,6 @@ OBJ_LINUX32STATICRELEASE = $(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/patchst
 	$(OBJDIR_LINUX32STATICRELEASE)/external/lzma_sdk/C/7zCrc.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/external/lzma_sdk/C/7zBuf2.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/external/lzma_sdk/C/7zBuf.o \
-	$(OBJDIR_LINUX32STATICRELEASE)/external/lzma_sdk/C/7zArcIn.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/external/fastlzlib/lz4/lz4hc.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/external/fastlzlib/lzfse/src/lzvn_decode_base.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/external/fastlzlib/lzfse/src/lzfse_fse.o \
@@ -1488,6 +1495,7 @@ OBJ_LINUX32STATICRELEASE = $(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/patchst
 	$(OBJDIR_LINUX32STATICRELEASE)/external/fastlzlib/lzfse/src/lzfse_decode_base.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/external/fastlzlib/lzfse/src/lzfse_decode.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/external/fastlzlib/lz4/xxhash.o \
+	$(OBJDIR_LINUX32STATICRELEASE)/external/fastlzlib/lzfse/src/lzvn_encode_base.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/external/fastlzlib/lz4/lz4frame.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/external/fastlzlib/lz4/lz4.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/external/fastlzlib/fastlzlib.o \
@@ -1498,17 +1506,17 @@ OBJ_LINUX32STATICRELEASE = $(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/patchst
 	$(OBJDIR_LINUX32STATICRELEASE)/external/bzip/crctable.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/external/bzip/compress.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/external/bzip/bzlib.o \
-	$(OBJDIR_LINUX32STATICRELEASE)/external/lzham/lzhamcomp/lzham_match_accel.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/external/lzham/lzhamdecomp/lzham_checksum.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/external/lzham/lzhamdecomp/lzham_assert.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/external/lzham/lzhamcomp/lzham_pthreads_threading.o \
-	$(OBJDIR_LINUX32STATICRELEASE)/external/lzma_sdk/C/Ppmd7Enc.o \
+	$(OBJDIR_LINUX32STATICRELEASE)/external/lzma_sdk/C/Sha256Opt.o \
+	$(OBJDIR_LINUX32STATICRELEASE)/external/lzham/lzhamcomp/lzham_match_accel.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/external/lzham/lzhamcomp/lzham_lzcomp_state.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/external/lzham/lzhamcomp/lzham_lzcomp_internal.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/external/lzham/lzhamcomp/lzham_lzcomp.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/external/lzham/lzhamcomp/lzham_lzbase.o \
-	$(OBJDIR_LINUX32STATICRELEASE)/external/fastlzlib/lzfse/src/lzvn_encode_base.o \
-	$(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/lz/lz_decoder.o \
+	$(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/lz/lz_encoder.o \
+	$(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/simple/armthumb.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/simple/arm64.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/simple/arm.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/rangecoder/price_table.o \
@@ -1521,8 +1529,8 @@ OBJ_LINUX32STATICRELEASE = $(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/patchst
 	$(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/lzma/lzma2_decoder.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/lzma/fastpos_table.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/lz/lz_encoder_mf.o \
-	$(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/lz/lz_encoder.o \
-	$(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/simple/armthumb.o \
+	$(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/simple/ia64.o \
+	$(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/lz/lz_decoder.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/delta/delta_encoder.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/delta/delta_decoder.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/delta/delta_common.o \
@@ -1534,16 +1542,15 @@ OBJ_LINUX32STATICRELEASE = $(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/patchst
 	$(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/common/stream_flags_common.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/common/stream_encoder_mt.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/common/stream_encoder.o \
-	$(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/common/stream_decoder.o \
-	$(OBJDIR_LINUX32STATICRELEASE)/external/zlib/inflate.o \
+	$(OBJDIR_LINUX32STATICRELEASE)/external/zlib/inftrees.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/external/zstd/lib/common/error_private.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/external/zstd/lib/common/entropy_common.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/external/zstd/lib/common/debug.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/external/zlib/zutil.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/external/zlib/zlibcompress.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/external/zlib/trees.o \
-	$(OBJDIR_LINUX32STATICRELEASE)/external/zlib/inftrees.o \
-	$(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/common/stream_buffer_encoder.o \
+	$(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/common/stream_decoder.o \
+	$(OBJDIR_LINUX32STATICRELEASE)/external/zlib/inflate.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/external/zlib/inffast.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/external/zlib/deflate.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/external/zlib/crc32.o \
@@ -1554,8 +1561,8 @@ OBJ_LINUX32STATICRELEASE = $(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/patchst
 	$(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/simple/simple_decoder.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/simple/simple_coder.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/simple/powerpc.o \
-	$(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/simple/ia64.o \
-	$(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/check/check.o \
+	$(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/check/crc32_fast.o \
+	$(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/common/block_header_decoder.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/common/block_encoder.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/common/block_decoder.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/common/block_buffer_encoder.o \
@@ -1567,8 +1574,8 @@ OBJ_LINUX32STATICRELEASE = $(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/patchst
 	$(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/check/crc64_table.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/check/crc64_fast.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/check/crc32_table.o \
-	$(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/check/crc32_fast.o \
-	$(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/common/block_header_decoder.o \
+	$(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/common/block_header_encoder.o \
+	$(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/check/check.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/common/tuklib_progname.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/common/tuklib_physmem.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/common/tuklib_open_stdxxx.o \
@@ -1580,8 +1587,8 @@ OBJ_LINUX32STATICRELEASE = $(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/patchst
 	$(OBJDIR_LINUX32STATICRELEASE)/external/lzma_sdk/C/XzCrc64Opt.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/external/lzma_sdk/C/XzCrc64.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/external/lzma_sdk/C/Xz.o \
-	$(OBJDIR_LINUX32STATICRELEASE)/external/lzma_sdk/C/Sha256Opt.o \
-	$(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/common/filter_encoder.o \
+	$(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/common/filter_flags_decoder.o \
+	$(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/common/stream_buffer_encoder.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/common/stream_buffer_decoder.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/common/lzip_decoder.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/common/outqueue.o \
@@ -1592,8 +1599,8 @@ OBJ_LINUX32STATICRELEASE = $(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/patchst
 	$(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/common/hardware_physmem.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/common/hardware_cputhreads.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/common/filter_flags_encoder.o \
-	$(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/common/filter_flags_decoder.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/external/bzip/blocksort.o \
+	$(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/common/filter_encoder.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/common/filter_decoder.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/common/filter_common.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/common/filter_buffer_encoder.o \
@@ -1604,8 +1611,7 @@ OBJ_LINUX32STATICRELEASE = $(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/patchst
 	$(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/common/easy_decoder_memusage.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/common/easy_buffer_encoder.o \
 	$(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/common/common.o \
-	$(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/common/block_util.o \
-	$(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/common/block_header_encoder.o
+	$(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/common/block_util.o
 
 OBJ_DEBUG32 = $(OBJDIR_DEBUG32)/src/lib/engine/patchstream/common/DfsIOHlpW.o \
 	$(OBJDIR_DEBUG32)/src/lib/engine/patchstream/common/DfsIOHlpPosix.o \
@@ -1614,18 +1620,18 @@ OBJ_DEBUG32 = $(OBJDIR_DEBUG32)/src/lib/engine/patchstream/common/DfsIOHlpW.o \
 	$(OBJDIR_DEBUG32)/src/cli/RawCompress.o \
 	$(OBJDIR_DEBUG32)/src/cli/DifstrmMainPosix.o \
 	$(OBJDIR_DEBUG32)/src/cli/DfsCdLin.o \
-	$(OBJDIR_DEBUG32)/src/lib/engine/patchstream/common/DfsIoMemMutex.o \
 	$(OBJDIR_DEBUG32)/external/zstd/lib/dictBuilder/zdict.o \
 	$(OBJDIR_DEBUG32)/external/zstd/lib/dictBuilder/fastcover.o \
-	$(OBJDIR_DEBUG32)/src/lib/engine/patchstream/common/ltoolsc.o \
+	$(OBJDIR_DEBUG32)/src/lib/engine/patchstream/common/compress_store.o \
 	$(OBJDIR_DEBUG32)/src/lib/engine/patchstream/common/difstool.o \
 	$(OBJDIR_DEBUG32)/src/lib/engine/patchstream/common/dfsToolw.o \
 	$(OBJDIR_DEBUG32)/src/lib/engine/patchstream/common/dfsToolWinRT.o \
 	$(OBJDIR_DEBUG32)/src/lib/engine/patchstream/common/dfsToolPosix.o \
 	$(OBJDIR_DEBUG32)/src/lib/engine/patchstream/common/dfsTool.o \
-	$(OBJDIR_DEBUG32)/src/lib/engine/patchstream/common/compress_store.o \
+	$(OBJDIR_DEBUG32)/external/zstd/lib/dictBuilder/divsufsort.o \
 	$(OBJDIR_DEBUG32)/src/lib/engine/patchstream/common/abstractDecompress.o \
 	$(OBJDIR_DEBUG32)/src/lib/engine/patchstream/common/DfsToolsPosixCPP.o \
+	$(OBJDIR_DEBUG32)/src/lib/engine/patchstream/common/DfsIoMemMutex.o \
 	$(OBJDIR_DEBUG32)/external/zstd/lib/compress/zstd_compress_superblock.o \
 	$(OBJDIR_DEBUG32)/external/zstd/lib/compress/zstd_compress_sequences.o \
 	$(OBJDIR_DEBUG32)/external/zstd/lib/compress/zstd_compress_literals.o \
@@ -1637,15 +1643,15 @@ OBJ_DEBUG32 = $(OBJDIR_DEBUG32)/src/lib/engine/patchstream/common/DfsIOHlpW.o \
 	$(OBJDIR_DEBUG32)/external/zstd/lib/common/xxhash.o \
 	$(OBJDIR_DEBUG32)/external/zstd/lib/common/threading.o \
 	$(OBJDIR_DEBUG32)/external/zstd/lib/common/pool.o \
-	$(OBJDIR_DEBUG32)/external/zstd/lib/common/fse_decompress.o \
-	$(OBJDIR_DEBUG32)/external/zstd/lib/compress/zstdmt_compress.o \
-	$(OBJDIR_DEBUG32)/external/zstd/lib/dictBuilder/divsufsort.o \
 	$(OBJDIR_DEBUG32)/external/zstd/lib/dictBuilder/cover.o \
 	$(OBJDIR_DEBUG32)/external/zstd/lib/decompress/zstd_decompress_block.o \
 	$(OBJDIR_DEBUG32)/external/zstd/lib/decompress/zstd_decompress.o \
 	$(OBJDIR_DEBUG32)/external/zstd/lib/decompress/zstd_ddict.o \
 	$(OBJDIR_DEBUG32)/external/zstd/lib/decompress/huf_decompress_amd64.o \
 	$(OBJDIR_DEBUG32)/external/zstd/lib/decompress/huf_decompress.o \
+	$(OBJDIR_DEBUG32)/external/zstd/lib/compress/zstdmt_compress.o \
+	$(OBJDIR_DEBUG32)/src/lib/engine/patchstream/common/ltoolsc.o \
+	$(OBJDIR_DEBUG32)/external/zstd/lib/compress/zstd_preSplit.o \
 	$(OBJDIR_DEBUG32)/external/zstd/lib/compress/zstd_opt.o \
 	$(OBJDIR_DEBUG32)/external/zstd/lib/compress/zstd_ldm.o \
 	$(OBJDIR_DEBUG32)/external/zstd/lib/compress/zstd_lazy.o \
@@ -1671,6 +1677,7 @@ OBJ_DEBUG32 = $(OBJDIR_DEBUG32)/src/lib/engine/patchstream/common/DfsIOHlpW.o \
 	$(OBJDIR_DEBUG32)/src/lib/helper/compress/BuildHelper.o \
 	$(OBJDIR_DEBUG32)/src/lib/hash/sha256_from_openssl.o \
 	$(OBJDIR_DEBUG32)/src/lib/hash/sha1dgst.o \
+	$(OBJDIR_DEBUG32)/src/lib/engine/patchstream/compress/makdifst.o \
 	$(OBJDIR_DEBUG32)/src/lib/engine/svfile/common/ArrayTl.o \
 	$(OBJDIR_DEBUG32)/src/lib/engine/patchstream/rebuild/RamDifWk.o \
 	$(OBJDIR_DEBUG32)/src/lib/engine/patchstream/rebuild/RamDifWS.o \
@@ -1678,7 +1685,6 @@ OBJ_DEBUG32 = $(OBJDIR_DEBUG32)/src/lib/engine/patchstream/common/DfsIOHlpW.o \
 	$(OBJDIR_DEBUG32)/src/lib/engine/patchstream/decompress/apldifst.o \
 	$(OBJDIR_DEBUG32)/src/lib/engine/patchstream/decompress/ApDifStm.o \
 	$(OBJDIR_DEBUG32)/src/lib/engine/svfile/common/DfsIntf.o \
-	$(OBJDIR_DEBUG32)/src/lib/engine/patchstream/compress/makdifst.o \
 	$(OBJDIR_DEBUG32)/src/lib/engine/patchstream/compress/makdifId.o \
 	$(OBJDIR_DEBUG32)/src/lib/engine/patchstream/compress/abstractCompress.o \
 	$(OBJDIR_DEBUG32)/src/lib/engine/patchstream/compress/PreWkFnd.o \
@@ -1690,25 +1696,28 @@ OBJ_DEBUG32 = $(OBJDIR_DEBUG32)/src/lib/engine/patchstream/common/DfsIOHlpW.o \
 	$(OBJDIR_DEBUG32)/src/lib/engine/svfile/common/DirSet.o \
 	$(OBJDIR_DEBUG32)/src/lib/engine/svfile/common/DfsTagMg.o \
 	$(OBJDIR_DEBUG32)/src/lib/engine/svfile/common/DfsTagBlockFloatTool.o \
+	$(OBJDIR_DEBUG32)/external/zstd/lib/common/fse_decompress.o \
 	$(OBJDIR_DEBUG32)/src/lib/engine/svfile/common/DfsTagBlockFloatEnd.o \
 	$(OBJDIR_DEBUG32)/src/lib/engine/svfile/common/DfsSet.o \
 	$(OBJDIR_DEBUG32)/src/lib/engine/svfile/common/DfsMtStr.o \
 	$(OBJDIR_DEBUG32)/src/lib/engine/svfile/common/DfsMTool.o \
 	$(OBJDIR_DEBUG32)/src/lib/engine/svfile/common/DfsMFile.o \
 	$(OBJDIR_DEBUG32)/src/lib/engine/svfile/common/DfsIntfWr.o \
-	$(OBJDIR_DEBUG32)/external/lzham/lzhamdecomp/lzham_prefix_coding.o \
+	$(OBJDIR_DEBUG32)/external/lzma_sdk/C/7zAlloc.o \
 	$(OBJDIR_DEBUG32)/external/lzham/lzhamlib/lzham_lib.o \
 	$(OBJDIR_DEBUG32)/external/lzham/lzhamlib/lzham_decomplib.o \
 	$(OBJDIR_DEBUG32)/external/lzham/lzhamdecomp/lzham_vector.o \
 	$(OBJDIR_DEBUG32)/external/lzham/lzhamdecomp/lzham_timer.o \
 	$(OBJDIR_DEBUG32)/external/lzham/lzhamdecomp/lzham_symbol_codec.o \
-	$(OBJDIR_DEBUG32)/external/lzma_sdk/C/7zAlloc.o \
+	$(OBJDIR_DEBUG32)/external/lzma_sdk/C/7zArcIn.o \
+	$(OBJDIR_DEBUG32)/external/lzham/lzhamdecomp/lzham_prefix_coding.o \
 	$(OBJDIR_DEBUG32)/external/lzham/lzhamdecomp/lzham_platform.o \
 	$(OBJDIR_DEBUG32)/external/lzham/lzhamdecomp/lzham_mem.o \
 	$(OBJDIR_DEBUG32)/external/lzham/lzhamdecomp/lzham_lzdecompbase.o \
 	$(OBJDIR_DEBUG32)/external/lzham/lzhamdecomp/lzham_lzdecomp.o \
 	$(OBJDIR_DEBUG32)/external/lzham/lzhamdecomp/lzham_huffman_codes.o \
-	$(OBJDIR_DEBUG32)/external/lzma_sdk/C/BraIA64.o \
+	$(OBJDIR_DEBUG32)/external/lzma_sdk/C/CpuArch.o \
+	$(OBJDIR_DEBUG32)/external/lzma_sdk/C/Ppmd7Enc.o \
 	$(OBJDIR_DEBUG32)/external/lzma_sdk/C/Ppmd7Dec.o \
 	$(OBJDIR_DEBUG32)/external/lzma_sdk/C/Ppmd7.o \
 	$(OBJDIR_DEBUG32)/external/lzma_sdk/C/LzmaEnc.o \
@@ -1719,7 +1728,7 @@ OBJ_DEBUG32 = $(OBJDIR_DEBUG32)/src/lib/engine/patchstream/common/DfsIOHlpW.o \
 	$(OBJDIR_DEBUG32)/external/lzma_sdk/C/LzFind.o \
 	$(OBJDIR_DEBUG32)/external/lzma_sdk/C/LZMASDK_Sha256.o \
 	$(OBJDIR_DEBUG32)/external/lzma_sdk/C/Delta.o \
-	$(OBJDIR_DEBUG32)/external/lzma_sdk/C/CpuArch.o \
+	$(OBJDIR_DEBUG32)/external/lzma_sdk/C/BraIA64.o \
 	$(OBJDIR_DEBUG32)/external/lzma_sdk/C/Bra86.o \
 	$(OBJDIR_DEBUG32)/external/lzma_sdk/C/Bra.o \
 	$(OBJDIR_DEBUG32)/external/lzma_sdk/C/Bcj2.o \
@@ -1731,7 +1740,6 @@ OBJ_DEBUG32 = $(OBJDIR_DEBUG32)/src/lib/engine/patchstream/common/DfsIOHlpW.o \
 	$(OBJDIR_DEBUG32)/external/lzma_sdk/C/7zCrc.o \
 	$(OBJDIR_DEBUG32)/external/lzma_sdk/C/7zBuf2.o \
 	$(OBJDIR_DEBUG32)/external/lzma_sdk/C/7zBuf.o \
-	$(OBJDIR_DEBUG32)/external/lzma_sdk/C/7zArcIn.o \
 	$(OBJDIR_DEBUG32)/external/fastlzlib/lz4/lz4hc.o \
 	$(OBJDIR_DEBUG32)/external/fastlzlib/lzfse/src/lzvn_decode_base.o \
 	$(OBJDIR_DEBUG32)/external/fastlzlib/lzfse/src/lzfse_fse.o \
@@ -1740,6 +1748,7 @@ OBJ_DEBUG32 = $(OBJDIR_DEBUG32)/src/lib/engine/patchstream/common/DfsIOHlpW.o \
 	$(OBJDIR_DEBUG32)/external/fastlzlib/lzfse/src/lzfse_decode_base.o \
 	$(OBJDIR_DEBUG32)/external/fastlzlib/lzfse/src/lzfse_decode.o \
 	$(OBJDIR_DEBUG32)/external/fastlzlib/lz4/xxhash.o \
+	$(OBJDIR_DEBUG32)/external/fastlzlib/lzfse/src/lzvn_encode_base.o \
 	$(OBJDIR_DEBUG32)/external/fastlzlib/lz4/lz4frame.o \
 	$(OBJDIR_DEBUG32)/external/fastlzlib/lz4/lz4.o \
 	$(OBJDIR_DEBUG32)/external/fastlzlib/fastlzlib.o \
@@ -1750,17 +1759,17 @@ OBJ_DEBUG32 = $(OBJDIR_DEBUG32)/src/lib/engine/patchstream/common/DfsIOHlpW.o \
 	$(OBJDIR_DEBUG32)/external/bzip/crctable.o \
 	$(OBJDIR_DEBUG32)/external/bzip/compress.o \
 	$(OBJDIR_DEBUG32)/external/bzip/bzlib.o \
-	$(OBJDIR_DEBUG32)/external/lzham/lzhamcomp/lzham_match_accel.o \
 	$(OBJDIR_DEBUG32)/external/lzham/lzhamdecomp/lzham_checksum.o \
 	$(OBJDIR_DEBUG32)/external/lzham/lzhamdecomp/lzham_assert.o \
 	$(OBJDIR_DEBUG32)/external/lzham/lzhamcomp/lzham_pthreads_threading.o \
-	$(OBJDIR_DEBUG32)/external/lzma_sdk/C/Ppmd7Enc.o \
+	$(OBJDIR_DEBUG32)/external/lzma_sdk/C/Sha256Opt.o \
+	$(OBJDIR_DEBUG32)/external/lzham/lzhamcomp/lzham_match_accel.o \
 	$(OBJDIR_DEBUG32)/external/lzham/lzhamcomp/lzham_lzcomp_state.o \
 	$(OBJDIR_DEBUG32)/external/lzham/lzhamcomp/lzham_lzcomp_internal.o \
 	$(OBJDIR_DEBUG32)/external/lzham/lzhamcomp/lzham_lzcomp.o \
 	$(OBJDIR_DEBUG32)/external/lzham/lzhamcomp/lzham_lzbase.o \
-	$(OBJDIR_DEBUG32)/external/fastlzlib/lzfse/src/lzvn_encode_base.o \
-	$(OBJDIR_DEBUG32)/external/xz/src/liblzma/lz/lz_decoder.o \
+	$(OBJDIR_DEBUG32)/external/xz/src/liblzma/lz/lz_encoder.o \
+	$(OBJDIR_DEBUG32)/external/xz/src/liblzma/simple/armthumb.o \
 	$(OBJDIR_DEBUG32)/external/xz/src/liblzma/simple/arm64.o \
 	$(OBJDIR_DEBUG32)/external/xz/src/liblzma/simple/arm.o \
 	$(OBJDIR_DEBUG32)/external/xz/src/liblzma/rangecoder/price_table.o \
@@ -1773,8 +1782,8 @@ OBJ_DEBUG32 = $(OBJDIR_DEBUG32)/src/lib/engine/patchstream/common/DfsIOHlpW.o \
 	$(OBJDIR_DEBUG32)/external/xz/src/liblzma/lzma/lzma2_decoder.o \
 	$(OBJDIR_DEBUG32)/external/xz/src/liblzma/lzma/fastpos_table.o \
 	$(OBJDIR_DEBUG32)/external/xz/src/liblzma/lz/lz_encoder_mf.o \
-	$(OBJDIR_DEBUG32)/external/xz/src/liblzma/lz/lz_encoder.o \
-	$(OBJDIR_DEBUG32)/external/xz/src/liblzma/simple/armthumb.o \
+	$(OBJDIR_DEBUG32)/external/xz/src/liblzma/simple/ia64.o \
+	$(OBJDIR_DEBUG32)/external/xz/src/liblzma/lz/lz_decoder.o \
 	$(OBJDIR_DEBUG32)/external/xz/src/liblzma/delta/delta_encoder.o \
 	$(OBJDIR_DEBUG32)/external/xz/src/liblzma/delta/delta_decoder.o \
 	$(OBJDIR_DEBUG32)/external/xz/src/liblzma/delta/delta_common.o \
@@ -1786,16 +1795,15 @@ OBJ_DEBUG32 = $(OBJDIR_DEBUG32)/src/lib/engine/patchstream/common/DfsIOHlpW.o \
 	$(OBJDIR_DEBUG32)/external/xz/src/liblzma/common/stream_flags_common.o \
 	$(OBJDIR_DEBUG32)/external/xz/src/liblzma/common/stream_encoder_mt.o \
 	$(OBJDIR_DEBUG32)/external/xz/src/liblzma/common/stream_encoder.o \
-	$(OBJDIR_DEBUG32)/external/xz/src/liblzma/common/stream_decoder.o \
-	$(OBJDIR_DEBUG32)/external/zlib/inflate.o \
+	$(OBJDIR_DEBUG32)/external/zlib/inftrees.o \
 	$(OBJDIR_DEBUG32)/external/zstd/lib/common/error_private.o \
 	$(OBJDIR_DEBUG32)/external/zstd/lib/common/entropy_common.o \
 	$(OBJDIR_DEBUG32)/external/zstd/lib/common/debug.o \
 	$(OBJDIR_DEBUG32)/external/zlib/zutil.o \
 	$(OBJDIR_DEBUG32)/external/zlib/zlibcompress.o \
 	$(OBJDIR_DEBUG32)/external/zlib/trees.o \
-	$(OBJDIR_DEBUG32)/external/zlib/inftrees.o \
-	$(OBJDIR_DEBUG32)/external/xz/src/liblzma/common/stream_buffer_encoder.o \
+	$(OBJDIR_DEBUG32)/external/xz/src/liblzma/common/stream_decoder.o \
+	$(OBJDIR_DEBUG32)/external/zlib/inflate.o \
 	$(OBJDIR_DEBUG32)/external/zlib/inffast.o \
 	$(OBJDIR_DEBUG32)/external/zlib/deflate.o \
 	$(OBJDIR_DEBUG32)/external/zlib/crc32.o \
@@ -1806,8 +1814,8 @@ OBJ_DEBUG32 = $(OBJDIR_DEBUG32)/src/lib/engine/patchstream/common/DfsIOHlpW.o \
 	$(OBJDIR_DEBUG32)/external/xz/src/liblzma/simple/simple_decoder.o \
 	$(OBJDIR_DEBUG32)/external/xz/src/liblzma/simple/simple_coder.o \
 	$(OBJDIR_DEBUG32)/external/xz/src/liblzma/simple/powerpc.o \
-	$(OBJDIR_DEBUG32)/external/xz/src/liblzma/simple/ia64.o \
-	$(OBJDIR_DEBUG32)/external/xz/src/liblzma/check/check.o \
+	$(OBJDIR_DEBUG32)/external/xz/src/liblzma/check/crc32_fast.o \
+	$(OBJDIR_DEBUG32)/external/xz/src/liblzma/common/block_header_decoder.o \
 	$(OBJDIR_DEBUG32)/external/xz/src/liblzma/common/block_encoder.o \
 	$(OBJDIR_DEBUG32)/external/xz/src/liblzma/common/block_decoder.o \
 	$(OBJDIR_DEBUG32)/external/xz/src/liblzma/common/block_buffer_encoder.o \
@@ -1819,8 +1827,8 @@ OBJ_DEBUG32 = $(OBJDIR_DEBUG32)/src/lib/engine/patchstream/common/DfsIOHlpW.o \
 	$(OBJDIR_DEBUG32)/external/xz/src/liblzma/check/crc64_table.o \
 	$(OBJDIR_DEBUG32)/external/xz/src/liblzma/check/crc64_fast.o \
 	$(OBJDIR_DEBUG32)/external/xz/src/liblzma/check/crc32_table.o \
-	$(OBJDIR_DEBUG32)/external/xz/src/liblzma/check/crc32_fast.o \
-	$(OBJDIR_DEBUG32)/external/xz/src/liblzma/common/block_header_decoder.o \
+	$(OBJDIR_DEBUG32)/external/xz/src/liblzma/common/block_header_encoder.o \
+	$(OBJDIR_DEBUG32)/external/xz/src/liblzma/check/check.o \
 	$(OBJDIR_DEBUG32)/external/xz/src/common/tuklib_progname.o \
 	$(OBJDIR_DEBUG32)/external/xz/src/common/tuklib_physmem.o \
 	$(OBJDIR_DEBUG32)/external/xz/src/common/tuklib_open_stdxxx.o \
@@ -1832,8 +1840,8 @@ OBJ_DEBUG32 = $(OBJDIR_DEBUG32)/src/lib/engine/patchstream/common/DfsIOHlpW.o \
 	$(OBJDIR_DEBUG32)/external/lzma_sdk/C/XzCrc64Opt.o \
 	$(OBJDIR_DEBUG32)/external/lzma_sdk/C/XzCrc64.o \
 	$(OBJDIR_DEBUG32)/external/lzma_sdk/C/Xz.o \
-	$(OBJDIR_DEBUG32)/external/lzma_sdk/C/Sha256Opt.o \
-	$(OBJDIR_DEBUG32)/external/xz/src/liblzma/common/filter_encoder.o \
+	$(OBJDIR_DEBUG32)/external/xz/src/liblzma/common/filter_flags_decoder.o \
+	$(OBJDIR_DEBUG32)/external/xz/src/liblzma/common/stream_buffer_encoder.o \
 	$(OBJDIR_DEBUG32)/external/xz/src/liblzma/common/stream_buffer_decoder.o \
 	$(OBJDIR_DEBUG32)/external/xz/src/liblzma/common/lzip_decoder.o \
 	$(OBJDIR_DEBUG32)/external/xz/src/liblzma/common/outqueue.o \
@@ -1844,8 +1852,8 @@ OBJ_DEBUG32 = $(OBJDIR_DEBUG32)/src/lib/engine/patchstream/common/DfsIOHlpW.o \
 	$(OBJDIR_DEBUG32)/external/xz/src/liblzma/common/hardware_physmem.o \
 	$(OBJDIR_DEBUG32)/external/xz/src/liblzma/common/hardware_cputhreads.o \
 	$(OBJDIR_DEBUG32)/external/xz/src/liblzma/common/filter_flags_encoder.o \
-	$(OBJDIR_DEBUG32)/external/xz/src/liblzma/common/filter_flags_decoder.o \
 	$(OBJDIR_DEBUG32)/external/bzip/blocksort.o \
+	$(OBJDIR_DEBUG32)/external/xz/src/liblzma/common/filter_encoder.o \
 	$(OBJDIR_DEBUG32)/external/xz/src/liblzma/common/filter_decoder.o \
 	$(OBJDIR_DEBUG32)/external/xz/src/liblzma/common/filter_common.o \
 	$(OBJDIR_DEBUG32)/external/xz/src/liblzma/common/filter_buffer_encoder.o \
@@ -1856,8 +1864,7 @@ OBJ_DEBUG32 = $(OBJDIR_DEBUG32)/src/lib/engine/patchstream/common/DfsIOHlpW.o \
 	$(OBJDIR_DEBUG32)/external/xz/src/liblzma/common/easy_decoder_memusage.o \
 	$(OBJDIR_DEBUG32)/external/xz/src/liblzma/common/easy_buffer_encoder.o \
 	$(OBJDIR_DEBUG32)/external/xz/src/liblzma/common/common.o \
-	$(OBJDIR_DEBUG32)/external/xz/src/liblzma/common/block_util.o \
-	$(OBJDIR_DEBUG32)/external/xz/src/liblzma/common/block_header_encoder.o
+	$(OBJDIR_DEBUG32)/external/xz/src/liblzma/common/block_util.o
 
 all: debug release linux64release linux32release linux64staticrelease linux32staticrelease linux64releaseclang linux64releasestaticclang debug32
 
@@ -1880,13 +1887,13 @@ before_debug:
 	test -d $(OBJDIR_DEBUG)/src/misc || mkdir -p $(OBJDIR_DEBUG)/src/misc
 	test -d $(OBJDIR_DEBUG)/src/lib/helper/decompress || mkdir -p $(OBJDIR_DEBUG)/src/lib/helper/decompress
 	test -d $(OBJDIR_DEBUG)/src/lib/helper/compress || mkdir -p $(OBJDIR_DEBUG)/src/lib/helper/compress
+	test -d $(OBJDIR_DEBUG)/src/lib/engine/patchstream/compress || mkdir -p $(OBJDIR_DEBUG)/src/lib/engine/patchstream/compress
 	test -d $(OBJDIR_DEBUG)/src/lib/engine/svfile/common || mkdir -p $(OBJDIR_DEBUG)/src/lib/engine/svfile/common
 	test -d $(OBJDIR_DEBUG)/src/lib/engine/patchstream/rebuild || mkdir -p $(OBJDIR_DEBUG)/src/lib/engine/patchstream/rebuild
 	test -d $(OBJDIR_DEBUG)/src/lib/engine/patchstream/decompress || mkdir -p $(OBJDIR_DEBUG)/src/lib/engine/patchstream/decompress
-	test -d $(OBJDIR_DEBUG)/src/lib/engine/patchstream/compress || mkdir -p $(OBJDIR_DEBUG)/src/lib/engine/patchstream/compress
-	test -d $(OBJDIR_DEBUG)/external/lzham/lzhamdecomp || mkdir -p $(OBJDIR_DEBUG)/external/lzham/lzhamdecomp
-	test -d $(OBJDIR_DEBUG)/external/lzham/lzhamlib || mkdir -p $(OBJDIR_DEBUG)/external/lzham/lzhamlib
 	test -d $(OBJDIR_DEBUG)/external/lzma_sdk/C || mkdir -p $(OBJDIR_DEBUG)/external/lzma_sdk/C
+	test -d $(OBJDIR_DEBUG)/external/lzham/lzhamlib || mkdir -p $(OBJDIR_DEBUG)/external/lzham/lzhamlib
+	test -d $(OBJDIR_DEBUG)/external/lzham/lzhamdecomp || mkdir -p $(OBJDIR_DEBUG)/external/lzham/lzhamdecomp
 	test -d $(OBJDIR_DEBUG)/external/fastlzlib/lz4 || mkdir -p $(OBJDIR_DEBUG)/external/fastlzlib/lz4
 	test -d $(OBJDIR_DEBUG)/external/fastlzlib/lzfse/src || mkdir -p $(OBJDIR_DEBUG)/external/fastlzlib/lzfse/src
 	test -d $(OBJDIR_DEBUG)/external/fastlzlib || mkdir -p $(OBJDIR_DEBUG)/external/fastlzlib
@@ -1931,17 +1938,14 @@ $(OBJDIR_DEBUG)/src/cli/DifstrmMainPosix.o: src/cli/DifstrmMainPosix.c
 $(OBJDIR_DEBUG)/src/cli/DfsCdLin.o: src/cli/DfsCdLin.c
 	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c src/cli/DfsCdLin.c -o $(OBJDIR_DEBUG)/src/cli/DfsCdLin.o
 
-$(OBJDIR_DEBUG)/src/lib/engine/patchstream/common/DfsIoMemMutex.o: src/lib/engine/patchstream/common/DfsIoMemMutex.cpp
-	$(CXX) $(CFLAGS_DEBUG) $(INC_DEBUG) -c src/lib/engine/patchstream/common/DfsIoMemMutex.cpp -o $(OBJDIR_DEBUG)/src/lib/engine/patchstream/common/DfsIoMemMutex.o
-
 $(OBJDIR_DEBUG)/external/zstd/lib/dictBuilder/zdict.o: external/zstd/lib/dictBuilder/zdict.c
 	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c external/zstd/lib/dictBuilder/zdict.c -o $(OBJDIR_DEBUG)/external/zstd/lib/dictBuilder/zdict.o
 
 $(OBJDIR_DEBUG)/external/zstd/lib/dictBuilder/fastcover.o: external/zstd/lib/dictBuilder/fastcover.c
 	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c external/zstd/lib/dictBuilder/fastcover.c -o $(OBJDIR_DEBUG)/external/zstd/lib/dictBuilder/fastcover.o
 
-$(OBJDIR_DEBUG)/src/lib/engine/patchstream/common/ltoolsc.o: src/lib/engine/patchstream/common/ltoolsc.c
-	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c src/lib/engine/patchstream/common/ltoolsc.c -o $(OBJDIR_DEBUG)/src/lib/engine/patchstream/common/ltoolsc.o
+$(OBJDIR_DEBUG)/src/lib/engine/patchstream/common/compress_store.o: src/lib/engine/patchstream/common/compress_store.c
+	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c src/lib/engine/patchstream/common/compress_store.c -o $(OBJDIR_DEBUG)/src/lib/engine/patchstream/common/compress_store.o
 
 $(OBJDIR_DEBUG)/src/lib/engine/patchstream/common/difstool.o: src/lib/engine/patchstream/common/difstool.c
 	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c src/lib/engine/patchstream/common/difstool.c -o $(OBJDIR_DEBUG)/src/lib/engine/patchstream/common/difstool.o
@@ -1958,14 +1962,17 @@ $(OBJDIR_DEBUG)/src/lib/engine/patchstream/common/dfsToolPosix.o: src/lib/engine
 $(OBJDIR_DEBUG)/src/lib/engine/patchstream/common/dfsTool.o: src/lib/engine/patchstream/common/dfsTool.c
 	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c src/lib/engine/patchstream/common/dfsTool.c -o $(OBJDIR_DEBUG)/src/lib/engine/patchstream/common/dfsTool.o
 
-$(OBJDIR_DEBUG)/src/lib/engine/patchstream/common/compress_store.o: src/lib/engine/patchstream/common/compress_store.c
-	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c src/lib/engine/patchstream/common/compress_store.c -o $(OBJDIR_DEBUG)/src/lib/engine/patchstream/common/compress_store.o
+$(OBJDIR_DEBUG)/external/zstd/lib/dictBuilder/divsufsort.o: external/zstd/lib/dictBuilder/divsufsort.c
+	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c external/zstd/lib/dictBuilder/divsufsort.c -o $(OBJDIR_DEBUG)/external/zstd/lib/dictBuilder/divsufsort.o
 
 $(OBJDIR_DEBUG)/src/lib/engine/patchstream/common/abstractDecompress.o: src/lib/engine/patchstream/common/abstractDecompress.c
 	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c src/lib/engine/patchstream/common/abstractDecompress.c -o $(OBJDIR_DEBUG)/src/lib/engine/patchstream/common/abstractDecompress.o
 
 $(OBJDIR_DEBUG)/src/lib/engine/patchstream/common/DfsToolsPosixCPP.o: src/lib/engine/patchstream/common/DfsToolsPosixCPP.cpp
 	$(CXX) $(CFLAGS_DEBUG) $(INC_DEBUG) -c src/lib/engine/patchstream/common/DfsToolsPosixCPP.cpp -o $(OBJDIR_DEBUG)/src/lib/engine/patchstream/common/DfsToolsPosixCPP.o
+
+$(OBJDIR_DEBUG)/src/lib/engine/patchstream/common/DfsIoMemMutex.o: src/lib/engine/patchstream/common/DfsIoMemMutex.cpp
+	$(CXX) $(CFLAGS_DEBUG) $(INC_DEBUG) -c src/lib/engine/patchstream/common/DfsIoMemMutex.cpp -o $(OBJDIR_DEBUG)/src/lib/engine/patchstream/common/DfsIoMemMutex.o
 
 $(OBJDIR_DEBUG)/external/zstd/lib/compress/zstd_compress_superblock.o: external/zstd/lib/compress/zstd_compress_superblock.c
 	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c external/zstd/lib/compress/zstd_compress_superblock.c -o $(OBJDIR_DEBUG)/external/zstd/lib/compress/zstd_compress_superblock.o
@@ -2000,15 +2007,6 @@ $(OBJDIR_DEBUG)/external/zstd/lib/common/threading.o: external/zstd/lib/common/t
 $(OBJDIR_DEBUG)/external/zstd/lib/common/pool.o: external/zstd/lib/common/pool.c
 	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c external/zstd/lib/common/pool.c -o $(OBJDIR_DEBUG)/external/zstd/lib/common/pool.o
 
-$(OBJDIR_DEBUG)/external/zstd/lib/common/fse_decompress.o: external/zstd/lib/common/fse_decompress.c
-	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c external/zstd/lib/common/fse_decompress.c -o $(OBJDIR_DEBUG)/external/zstd/lib/common/fse_decompress.o
-
-$(OBJDIR_DEBUG)/external/zstd/lib/compress/zstdmt_compress.o: external/zstd/lib/compress/zstdmt_compress.c
-	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c external/zstd/lib/compress/zstdmt_compress.c -o $(OBJDIR_DEBUG)/external/zstd/lib/compress/zstdmt_compress.o
-
-$(OBJDIR_DEBUG)/external/zstd/lib/dictBuilder/divsufsort.o: external/zstd/lib/dictBuilder/divsufsort.c
-	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c external/zstd/lib/dictBuilder/divsufsort.c -o $(OBJDIR_DEBUG)/external/zstd/lib/dictBuilder/divsufsort.o
-
 $(OBJDIR_DEBUG)/external/zstd/lib/dictBuilder/cover.o: external/zstd/lib/dictBuilder/cover.c
 	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c external/zstd/lib/dictBuilder/cover.c -o $(OBJDIR_DEBUG)/external/zstd/lib/dictBuilder/cover.o
 
@@ -2026,6 +2024,15 @@ $(OBJDIR_DEBUG)/external/zstd/lib/decompress/huf_decompress_amd64.o: external/zs
 
 $(OBJDIR_DEBUG)/external/zstd/lib/decompress/huf_decompress.o: external/zstd/lib/decompress/huf_decompress.c
 	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c external/zstd/lib/decompress/huf_decompress.c -o $(OBJDIR_DEBUG)/external/zstd/lib/decompress/huf_decompress.o
+
+$(OBJDIR_DEBUG)/external/zstd/lib/compress/zstdmt_compress.o: external/zstd/lib/compress/zstdmt_compress.c
+	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c external/zstd/lib/compress/zstdmt_compress.c -o $(OBJDIR_DEBUG)/external/zstd/lib/compress/zstdmt_compress.o
+
+$(OBJDIR_DEBUG)/src/lib/engine/patchstream/common/ltoolsc.o: src/lib/engine/patchstream/common/ltoolsc.c
+	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c src/lib/engine/patchstream/common/ltoolsc.c -o $(OBJDIR_DEBUG)/src/lib/engine/patchstream/common/ltoolsc.o
+
+$(OBJDIR_DEBUG)/external/zstd/lib/compress/zstd_preSplit.o: external/zstd/lib/compress/zstd_preSplit.c
+	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c external/zstd/lib/compress/zstd_preSplit.c -o $(OBJDIR_DEBUG)/external/zstd/lib/compress/zstd_preSplit.o
 
 $(OBJDIR_DEBUG)/external/zstd/lib/compress/zstd_opt.o: external/zstd/lib/compress/zstd_opt.c
 	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c external/zstd/lib/compress/zstd_opt.c -o $(OBJDIR_DEBUG)/external/zstd/lib/compress/zstd_opt.o
@@ -2102,6 +2109,9 @@ $(OBJDIR_DEBUG)/src/lib/hash/sha256_from_openssl.o: src/lib/hash/sha256_from_ope
 $(OBJDIR_DEBUG)/src/lib/hash/sha1dgst.o: src/lib/hash/sha1dgst.c
 	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c src/lib/hash/sha1dgst.c -o $(OBJDIR_DEBUG)/src/lib/hash/sha1dgst.o
 
+$(OBJDIR_DEBUG)/src/lib/engine/patchstream/compress/makdifst.o: src/lib/engine/patchstream/compress/makdifst.c
+	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c src/lib/engine/patchstream/compress/makdifst.c -o $(OBJDIR_DEBUG)/src/lib/engine/patchstream/compress/makdifst.o
+
 $(OBJDIR_DEBUG)/src/lib/engine/svfile/common/ArrayTl.o: src/lib/engine/svfile/common/ArrayTl.c
 	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c src/lib/engine/svfile/common/ArrayTl.c -o $(OBJDIR_DEBUG)/src/lib/engine/svfile/common/ArrayTl.o
 
@@ -2122,9 +2132,6 @@ $(OBJDIR_DEBUG)/src/lib/engine/patchstream/decompress/ApDifStm.o: src/lib/engine
 
 $(OBJDIR_DEBUG)/src/lib/engine/svfile/common/DfsIntf.o: src/lib/engine/svfile/common/DfsIntf.c
 	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c src/lib/engine/svfile/common/DfsIntf.c -o $(OBJDIR_DEBUG)/src/lib/engine/svfile/common/DfsIntf.o
-
-$(OBJDIR_DEBUG)/src/lib/engine/patchstream/compress/makdifst.o: src/lib/engine/patchstream/compress/makdifst.c
-	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c src/lib/engine/patchstream/compress/makdifst.c -o $(OBJDIR_DEBUG)/src/lib/engine/patchstream/compress/makdifst.o
 
 $(OBJDIR_DEBUG)/src/lib/engine/patchstream/compress/makdifId.o: src/lib/engine/patchstream/compress/makdifId.c
 	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c src/lib/engine/patchstream/compress/makdifId.c -o $(OBJDIR_DEBUG)/src/lib/engine/patchstream/compress/makdifId.o
@@ -2159,6 +2166,9 @@ $(OBJDIR_DEBUG)/src/lib/engine/svfile/common/DfsTagMg.o: src/lib/engine/svfile/c
 $(OBJDIR_DEBUG)/src/lib/engine/svfile/common/DfsTagBlockFloatTool.o: src/lib/engine/svfile/common/DfsTagBlockFloatTool.c
 	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c src/lib/engine/svfile/common/DfsTagBlockFloatTool.c -o $(OBJDIR_DEBUG)/src/lib/engine/svfile/common/DfsTagBlockFloatTool.o
 
+$(OBJDIR_DEBUG)/external/zstd/lib/common/fse_decompress.o: external/zstd/lib/common/fse_decompress.c
+	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c external/zstd/lib/common/fse_decompress.c -o $(OBJDIR_DEBUG)/external/zstd/lib/common/fse_decompress.o
+
 $(OBJDIR_DEBUG)/src/lib/engine/svfile/common/DfsTagBlockFloatEnd.o: src/lib/engine/svfile/common/DfsTagBlockFloatEnd.c
 	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c src/lib/engine/svfile/common/DfsTagBlockFloatEnd.c -o $(OBJDIR_DEBUG)/src/lib/engine/svfile/common/DfsTagBlockFloatEnd.o
 
@@ -2177,8 +2187,8 @@ $(OBJDIR_DEBUG)/src/lib/engine/svfile/common/DfsMFile.o: src/lib/engine/svfile/c
 $(OBJDIR_DEBUG)/src/lib/engine/svfile/common/DfsIntfWr.o: src/lib/engine/svfile/common/DfsIntfWr.c
 	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c src/lib/engine/svfile/common/DfsIntfWr.c -o $(OBJDIR_DEBUG)/src/lib/engine/svfile/common/DfsIntfWr.o
 
-$(OBJDIR_DEBUG)/external/lzham/lzhamdecomp/lzham_prefix_coding.o: external/lzham/lzhamdecomp/lzham_prefix_coding.cpp
-	$(CXX) $(CFLAGS_DEBUG) $(INC_DEBUG) -c external/lzham/lzhamdecomp/lzham_prefix_coding.cpp -o $(OBJDIR_DEBUG)/external/lzham/lzhamdecomp/lzham_prefix_coding.o
+$(OBJDIR_DEBUG)/external/lzma_sdk/C/7zAlloc.o: external/lzma_sdk/C/7zAlloc.c
+	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c external/lzma_sdk/C/7zAlloc.c -o $(OBJDIR_DEBUG)/external/lzma_sdk/C/7zAlloc.o
 
 $(OBJDIR_DEBUG)/external/lzham/lzhamlib/lzham_lib.o: external/lzham/lzhamlib/lzham_lib.cpp
 	$(CXX) $(CFLAGS_DEBUG) $(INC_DEBUG) -c external/lzham/lzhamlib/lzham_lib.cpp -o $(OBJDIR_DEBUG)/external/lzham/lzhamlib/lzham_lib.o
@@ -2195,8 +2205,11 @@ $(OBJDIR_DEBUG)/external/lzham/lzhamdecomp/lzham_timer.o: external/lzham/lzhamde
 $(OBJDIR_DEBUG)/external/lzham/lzhamdecomp/lzham_symbol_codec.o: external/lzham/lzhamdecomp/lzham_symbol_codec.cpp
 	$(CXX) $(CFLAGS_DEBUG) $(INC_DEBUG) -c external/lzham/lzhamdecomp/lzham_symbol_codec.cpp -o $(OBJDIR_DEBUG)/external/lzham/lzhamdecomp/lzham_symbol_codec.o
 
-$(OBJDIR_DEBUG)/external/lzma_sdk/C/7zAlloc.o: external/lzma_sdk/C/7zAlloc.c
-	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c external/lzma_sdk/C/7zAlloc.c -o $(OBJDIR_DEBUG)/external/lzma_sdk/C/7zAlloc.o
+$(OBJDIR_DEBUG)/external/lzma_sdk/C/7zArcIn.o: external/lzma_sdk/C/7zArcIn.c
+	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c external/lzma_sdk/C/7zArcIn.c -o $(OBJDIR_DEBUG)/external/lzma_sdk/C/7zArcIn.o
+
+$(OBJDIR_DEBUG)/external/lzham/lzhamdecomp/lzham_prefix_coding.o: external/lzham/lzhamdecomp/lzham_prefix_coding.cpp
+	$(CXX) $(CFLAGS_DEBUG) $(INC_DEBUG) -c external/lzham/lzhamdecomp/lzham_prefix_coding.cpp -o $(OBJDIR_DEBUG)/external/lzham/lzhamdecomp/lzham_prefix_coding.o
 
 $(OBJDIR_DEBUG)/external/lzham/lzhamdecomp/lzham_platform.o: external/lzham/lzhamdecomp/lzham_platform.cpp
 	$(CXX) $(CFLAGS_DEBUG) $(INC_DEBUG) -c external/lzham/lzhamdecomp/lzham_platform.cpp -o $(OBJDIR_DEBUG)/external/lzham/lzhamdecomp/lzham_platform.o
@@ -2213,8 +2226,11 @@ $(OBJDIR_DEBUG)/external/lzham/lzhamdecomp/lzham_lzdecomp.o: external/lzham/lzha
 $(OBJDIR_DEBUG)/external/lzham/lzhamdecomp/lzham_huffman_codes.o: external/lzham/lzhamdecomp/lzham_huffman_codes.cpp
 	$(CXX) $(CFLAGS_DEBUG) $(INC_DEBUG) -c external/lzham/lzhamdecomp/lzham_huffman_codes.cpp -o $(OBJDIR_DEBUG)/external/lzham/lzhamdecomp/lzham_huffman_codes.o
 
-$(OBJDIR_DEBUG)/external/lzma_sdk/C/BraIA64.o: external/lzma_sdk/C/BraIA64.c
-	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c external/lzma_sdk/C/BraIA64.c -o $(OBJDIR_DEBUG)/external/lzma_sdk/C/BraIA64.o
+$(OBJDIR_DEBUG)/external/lzma_sdk/C/CpuArch.o: external/lzma_sdk/C/CpuArch.c
+	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c external/lzma_sdk/C/CpuArch.c -o $(OBJDIR_DEBUG)/external/lzma_sdk/C/CpuArch.o
+
+$(OBJDIR_DEBUG)/external/lzma_sdk/C/Ppmd7Enc.o: external/lzma_sdk/C/Ppmd7Enc.c
+	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c external/lzma_sdk/C/Ppmd7Enc.c -o $(OBJDIR_DEBUG)/external/lzma_sdk/C/Ppmd7Enc.o
 
 $(OBJDIR_DEBUG)/external/lzma_sdk/C/Ppmd7Dec.o: external/lzma_sdk/C/Ppmd7Dec.c
 	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c external/lzma_sdk/C/Ppmd7Dec.c -o $(OBJDIR_DEBUG)/external/lzma_sdk/C/Ppmd7Dec.o
@@ -2246,8 +2262,8 @@ $(OBJDIR_DEBUG)/external/lzma_sdk/C/LZMASDK_Sha256.o: external/lzma_sdk/C/LZMASD
 $(OBJDIR_DEBUG)/external/lzma_sdk/C/Delta.o: external/lzma_sdk/C/Delta.c
 	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c external/lzma_sdk/C/Delta.c -o $(OBJDIR_DEBUG)/external/lzma_sdk/C/Delta.o
 
-$(OBJDIR_DEBUG)/external/lzma_sdk/C/CpuArch.o: external/lzma_sdk/C/CpuArch.c
-	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c external/lzma_sdk/C/CpuArch.c -o $(OBJDIR_DEBUG)/external/lzma_sdk/C/CpuArch.o
+$(OBJDIR_DEBUG)/external/lzma_sdk/C/BraIA64.o: external/lzma_sdk/C/BraIA64.c
+	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c external/lzma_sdk/C/BraIA64.c -o $(OBJDIR_DEBUG)/external/lzma_sdk/C/BraIA64.o
 
 $(OBJDIR_DEBUG)/external/lzma_sdk/C/Bra86.o: external/lzma_sdk/C/Bra86.c
 	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c external/lzma_sdk/C/Bra86.c -o $(OBJDIR_DEBUG)/external/lzma_sdk/C/Bra86.o
@@ -2282,9 +2298,6 @@ $(OBJDIR_DEBUG)/external/lzma_sdk/C/7zBuf2.o: external/lzma_sdk/C/7zBuf2.c
 $(OBJDIR_DEBUG)/external/lzma_sdk/C/7zBuf.o: external/lzma_sdk/C/7zBuf.c
 	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c external/lzma_sdk/C/7zBuf.c -o $(OBJDIR_DEBUG)/external/lzma_sdk/C/7zBuf.o
 
-$(OBJDIR_DEBUG)/external/lzma_sdk/C/7zArcIn.o: external/lzma_sdk/C/7zArcIn.c
-	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c external/lzma_sdk/C/7zArcIn.c -o $(OBJDIR_DEBUG)/external/lzma_sdk/C/7zArcIn.o
-
 $(OBJDIR_DEBUG)/external/fastlzlib/lz4/lz4hc.o: external/fastlzlib/lz4/lz4hc.c
 	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c external/fastlzlib/lz4/lz4hc.c -o $(OBJDIR_DEBUG)/external/fastlzlib/lz4/lz4hc.o
 
@@ -2308,6 +2321,9 @@ $(OBJDIR_DEBUG)/external/fastlzlib/lzfse/src/lzfse_decode.o: external/fastlzlib/
 
 $(OBJDIR_DEBUG)/external/fastlzlib/lz4/xxhash.o: external/fastlzlib/lz4/xxhash.c
 	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c external/fastlzlib/lz4/xxhash.c -o $(OBJDIR_DEBUG)/external/fastlzlib/lz4/xxhash.o
+
+$(OBJDIR_DEBUG)/external/fastlzlib/lzfse/src/lzvn_encode_base.o: external/fastlzlib/lzfse/src/lzvn_encode_base.c
+	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c external/fastlzlib/lzfse/src/lzvn_encode_base.c -o $(OBJDIR_DEBUG)/external/fastlzlib/lzfse/src/lzvn_encode_base.o
 
 $(OBJDIR_DEBUG)/external/fastlzlib/lz4/lz4frame.o: external/fastlzlib/lz4/lz4frame.c
 	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c external/fastlzlib/lz4/lz4frame.c -o $(OBJDIR_DEBUG)/external/fastlzlib/lz4/lz4frame.o
@@ -2339,9 +2355,6 @@ $(OBJDIR_DEBUG)/external/bzip/compress.o: external/bzip/compress.c
 $(OBJDIR_DEBUG)/external/bzip/bzlib.o: external/bzip/bzlib.c
 	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c external/bzip/bzlib.c -o $(OBJDIR_DEBUG)/external/bzip/bzlib.o
 
-$(OBJDIR_DEBUG)/external/lzham/lzhamcomp/lzham_match_accel.o: external/lzham/lzhamcomp/lzham_match_accel.cpp
-	$(CXX) $(CFLAGS_DEBUG) $(INC_DEBUG) -c external/lzham/lzhamcomp/lzham_match_accel.cpp -o $(OBJDIR_DEBUG)/external/lzham/lzhamcomp/lzham_match_accel.o
-
 $(OBJDIR_DEBUG)/external/lzham/lzhamdecomp/lzham_checksum.o: external/lzham/lzhamdecomp/lzham_checksum.cpp
 	$(CXX) $(CFLAGS_DEBUG) $(INC_DEBUG) -c external/lzham/lzhamdecomp/lzham_checksum.cpp -o $(OBJDIR_DEBUG)/external/lzham/lzhamdecomp/lzham_checksum.o
 
@@ -2351,8 +2364,11 @@ $(OBJDIR_DEBUG)/external/lzham/lzhamdecomp/lzham_assert.o: external/lzham/lzhamd
 $(OBJDIR_DEBUG)/external/lzham/lzhamcomp/lzham_pthreads_threading.o: external/lzham/lzhamcomp/lzham_pthreads_threading.cpp
 	$(CXX) $(CFLAGS_DEBUG) $(INC_DEBUG) -c external/lzham/lzhamcomp/lzham_pthreads_threading.cpp -o $(OBJDIR_DEBUG)/external/lzham/lzhamcomp/lzham_pthreads_threading.o
 
-$(OBJDIR_DEBUG)/external/lzma_sdk/C/Ppmd7Enc.o: external/lzma_sdk/C/Ppmd7Enc.c
-	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c external/lzma_sdk/C/Ppmd7Enc.c -o $(OBJDIR_DEBUG)/external/lzma_sdk/C/Ppmd7Enc.o
+$(OBJDIR_DEBUG)/external/lzma_sdk/C/Sha256Opt.o: external/lzma_sdk/C/Sha256Opt.c
+	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c external/lzma_sdk/C/Sha256Opt.c -o $(OBJDIR_DEBUG)/external/lzma_sdk/C/Sha256Opt.o
+
+$(OBJDIR_DEBUG)/external/lzham/lzhamcomp/lzham_match_accel.o: external/lzham/lzhamcomp/lzham_match_accel.cpp
+	$(CXX) $(CFLAGS_DEBUG) $(INC_DEBUG) -c external/lzham/lzhamcomp/lzham_match_accel.cpp -o $(OBJDIR_DEBUG)/external/lzham/lzhamcomp/lzham_match_accel.o
 
 $(OBJDIR_DEBUG)/external/lzham/lzhamcomp/lzham_lzcomp_state.o: external/lzham/lzhamcomp/lzham_lzcomp_state.cpp
 	$(CXX) $(CFLAGS_DEBUG) $(INC_DEBUG) -c external/lzham/lzhamcomp/lzham_lzcomp_state.cpp -o $(OBJDIR_DEBUG)/external/lzham/lzhamcomp/lzham_lzcomp_state.o
@@ -2366,11 +2382,11 @@ $(OBJDIR_DEBUG)/external/lzham/lzhamcomp/lzham_lzcomp.o: external/lzham/lzhamcom
 $(OBJDIR_DEBUG)/external/lzham/lzhamcomp/lzham_lzbase.o: external/lzham/lzhamcomp/lzham_lzbase.cpp
 	$(CXX) $(CFLAGS_DEBUG) $(INC_DEBUG) -c external/lzham/lzhamcomp/lzham_lzbase.cpp -o $(OBJDIR_DEBUG)/external/lzham/lzhamcomp/lzham_lzbase.o
 
-$(OBJDIR_DEBUG)/external/fastlzlib/lzfse/src/lzvn_encode_base.o: external/fastlzlib/lzfse/src/lzvn_encode_base.c
-	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c external/fastlzlib/lzfse/src/lzvn_encode_base.c -o $(OBJDIR_DEBUG)/external/fastlzlib/lzfse/src/lzvn_encode_base.o
+$(OBJDIR_DEBUG)/external/xz/src/liblzma/lz/lz_encoder.o: external/xz/src/liblzma/lz/lz_encoder.c
+	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c external/xz/src/liblzma/lz/lz_encoder.c -o $(OBJDIR_DEBUG)/external/xz/src/liblzma/lz/lz_encoder.o
 
-$(OBJDIR_DEBUG)/external/xz/src/liblzma/lz/lz_decoder.o: external/xz/src/liblzma/lz/lz_decoder.c
-	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c external/xz/src/liblzma/lz/lz_decoder.c -o $(OBJDIR_DEBUG)/external/xz/src/liblzma/lz/lz_decoder.o
+$(OBJDIR_DEBUG)/external/xz/src/liblzma/simple/armthumb.o: external/xz/src/liblzma/simple/armthumb.c
+	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c external/xz/src/liblzma/simple/armthumb.c -o $(OBJDIR_DEBUG)/external/xz/src/liblzma/simple/armthumb.o
 
 $(OBJDIR_DEBUG)/external/xz/src/liblzma/simple/arm64.o: external/xz/src/liblzma/simple/arm64.c
 	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c external/xz/src/liblzma/simple/arm64.c -o $(OBJDIR_DEBUG)/external/xz/src/liblzma/simple/arm64.o
@@ -2408,11 +2424,11 @@ $(OBJDIR_DEBUG)/external/xz/src/liblzma/lzma/fastpos_table.o: external/xz/src/li
 $(OBJDIR_DEBUG)/external/xz/src/liblzma/lz/lz_encoder_mf.o: external/xz/src/liblzma/lz/lz_encoder_mf.c
 	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c external/xz/src/liblzma/lz/lz_encoder_mf.c -o $(OBJDIR_DEBUG)/external/xz/src/liblzma/lz/lz_encoder_mf.o
 
-$(OBJDIR_DEBUG)/external/xz/src/liblzma/lz/lz_encoder.o: external/xz/src/liblzma/lz/lz_encoder.c
-	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c external/xz/src/liblzma/lz/lz_encoder.c -o $(OBJDIR_DEBUG)/external/xz/src/liblzma/lz/lz_encoder.o
+$(OBJDIR_DEBUG)/external/xz/src/liblzma/simple/ia64.o: external/xz/src/liblzma/simple/ia64.c
+	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c external/xz/src/liblzma/simple/ia64.c -o $(OBJDIR_DEBUG)/external/xz/src/liblzma/simple/ia64.o
 
-$(OBJDIR_DEBUG)/external/xz/src/liblzma/simple/armthumb.o: external/xz/src/liblzma/simple/armthumb.c
-	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c external/xz/src/liblzma/simple/armthumb.c -o $(OBJDIR_DEBUG)/external/xz/src/liblzma/simple/armthumb.o
+$(OBJDIR_DEBUG)/external/xz/src/liblzma/lz/lz_decoder.o: external/xz/src/liblzma/lz/lz_decoder.c
+	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c external/xz/src/liblzma/lz/lz_decoder.c -o $(OBJDIR_DEBUG)/external/xz/src/liblzma/lz/lz_decoder.o
 
 $(OBJDIR_DEBUG)/external/xz/src/liblzma/delta/delta_encoder.o: external/xz/src/liblzma/delta/delta_encoder.c
 	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c external/xz/src/liblzma/delta/delta_encoder.c -o $(OBJDIR_DEBUG)/external/xz/src/liblzma/delta/delta_encoder.o
@@ -2447,11 +2463,8 @@ $(OBJDIR_DEBUG)/external/xz/src/liblzma/common/stream_encoder_mt.o: external/xz/
 $(OBJDIR_DEBUG)/external/xz/src/liblzma/common/stream_encoder.o: external/xz/src/liblzma/common/stream_encoder.c
 	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c external/xz/src/liblzma/common/stream_encoder.c -o $(OBJDIR_DEBUG)/external/xz/src/liblzma/common/stream_encoder.o
 
-$(OBJDIR_DEBUG)/external/xz/src/liblzma/common/stream_decoder.o: external/xz/src/liblzma/common/stream_decoder.c
-	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c external/xz/src/liblzma/common/stream_decoder.c -o $(OBJDIR_DEBUG)/external/xz/src/liblzma/common/stream_decoder.o
-
-$(OBJDIR_DEBUG)/external/zlib/inflate.o: external/zlib/inflate.c
-	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c external/zlib/inflate.c -o $(OBJDIR_DEBUG)/external/zlib/inflate.o
+$(OBJDIR_DEBUG)/external/zlib/inftrees.o: external/zlib/inftrees.c
+	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c external/zlib/inftrees.c -o $(OBJDIR_DEBUG)/external/zlib/inftrees.o
 
 $(OBJDIR_DEBUG)/external/zstd/lib/common/error_private.o: external/zstd/lib/common/error_private.c
 	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c external/zstd/lib/common/error_private.c -o $(OBJDIR_DEBUG)/external/zstd/lib/common/error_private.o
@@ -2471,11 +2484,11 @@ $(OBJDIR_DEBUG)/external/zlib/zlibcompress.o: external/zlib/zlibcompress.c
 $(OBJDIR_DEBUG)/external/zlib/trees.o: external/zlib/trees.c
 	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c external/zlib/trees.c -o $(OBJDIR_DEBUG)/external/zlib/trees.o
 
-$(OBJDIR_DEBUG)/external/zlib/inftrees.o: external/zlib/inftrees.c
-	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c external/zlib/inftrees.c -o $(OBJDIR_DEBUG)/external/zlib/inftrees.o
+$(OBJDIR_DEBUG)/external/xz/src/liblzma/common/stream_decoder.o: external/xz/src/liblzma/common/stream_decoder.c
+	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c external/xz/src/liblzma/common/stream_decoder.c -o $(OBJDIR_DEBUG)/external/xz/src/liblzma/common/stream_decoder.o
 
-$(OBJDIR_DEBUG)/external/xz/src/liblzma/common/stream_buffer_encoder.o: external/xz/src/liblzma/common/stream_buffer_encoder.c
-	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c external/xz/src/liblzma/common/stream_buffer_encoder.c -o $(OBJDIR_DEBUG)/external/xz/src/liblzma/common/stream_buffer_encoder.o
+$(OBJDIR_DEBUG)/external/zlib/inflate.o: external/zlib/inflate.c
+	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c external/zlib/inflate.c -o $(OBJDIR_DEBUG)/external/zlib/inflate.o
 
 $(OBJDIR_DEBUG)/external/zlib/inffast.o: external/zlib/inffast.c
 	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c external/zlib/inffast.c -o $(OBJDIR_DEBUG)/external/zlib/inffast.o
@@ -2507,11 +2520,11 @@ $(OBJDIR_DEBUG)/external/xz/src/liblzma/simple/simple_coder.o: external/xz/src/l
 $(OBJDIR_DEBUG)/external/xz/src/liblzma/simple/powerpc.o: external/xz/src/liblzma/simple/powerpc.c
 	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c external/xz/src/liblzma/simple/powerpc.c -o $(OBJDIR_DEBUG)/external/xz/src/liblzma/simple/powerpc.o
 
-$(OBJDIR_DEBUG)/external/xz/src/liblzma/simple/ia64.o: external/xz/src/liblzma/simple/ia64.c
-	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c external/xz/src/liblzma/simple/ia64.c -o $(OBJDIR_DEBUG)/external/xz/src/liblzma/simple/ia64.o
+$(OBJDIR_DEBUG)/external/xz/src/liblzma/check/crc32_fast.o: external/xz/src/liblzma/check/crc32_fast.c
+	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c external/xz/src/liblzma/check/crc32_fast.c -o $(OBJDIR_DEBUG)/external/xz/src/liblzma/check/crc32_fast.o
 
-$(OBJDIR_DEBUG)/external/xz/src/liblzma/check/check.o: external/xz/src/liblzma/check/check.c
-	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c external/xz/src/liblzma/check/check.c -o $(OBJDIR_DEBUG)/external/xz/src/liblzma/check/check.o
+$(OBJDIR_DEBUG)/external/xz/src/liblzma/common/block_header_decoder.o: external/xz/src/liblzma/common/block_header_decoder.c
+	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c external/xz/src/liblzma/common/block_header_decoder.c -o $(OBJDIR_DEBUG)/external/xz/src/liblzma/common/block_header_decoder.o
 
 $(OBJDIR_DEBUG)/external/xz/src/liblzma/common/block_encoder.o: external/xz/src/liblzma/common/block_encoder.c
 	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c external/xz/src/liblzma/common/block_encoder.c -o $(OBJDIR_DEBUG)/external/xz/src/liblzma/common/block_encoder.o
@@ -2546,11 +2559,11 @@ $(OBJDIR_DEBUG)/external/xz/src/liblzma/check/crc64_fast.o: external/xz/src/libl
 $(OBJDIR_DEBUG)/external/xz/src/liblzma/check/crc32_table.o: external/xz/src/liblzma/check/crc32_table.c
 	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c external/xz/src/liblzma/check/crc32_table.c -o $(OBJDIR_DEBUG)/external/xz/src/liblzma/check/crc32_table.o
 
-$(OBJDIR_DEBUG)/external/xz/src/liblzma/check/crc32_fast.o: external/xz/src/liblzma/check/crc32_fast.c
-	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c external/xz/src/liblzma/check/crc32_fast.c -o $(OBJDIR_DEBUG)/external/xz/src/liblzma/check/crc32_fast.o
+$(OBJDIR_DEBUG)/external/xz/src/liblzma/common/block_header_encoder.o: external/xz/src/liblzma/common/block_header_encoder.c
+	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c external/xz/src/liblzma/common/block_header_encoder.c -o $(OBJDIR_DEBUG)/external/xz/src/liblzma/common/block_header_encoder.o
 
-$(OBJDIR_DEBUG)/external/xz/src/liblzma/common/block_header_decoder.o: external/xz/src/liblzma/common/block_header_decoder.c
-	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c external/xz/src/liblzma/common/block_header_decoder.c -o $(OBJDIR_DEBUG)/external/xz/src/liblzma/common/block_header_decoder.o
+$(OBJDIR_DEBUG)/external/xz/src/liblzma/check/check.o: external/xz/src/liblzma/check/check.c
+	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c external/xz/src/liblzma/check/check.c -o $(OBJDIR_DEBUG)/external/xz/src/liblzma/check/check.o
 
 $(OBJDIR_DEBUG)/external/xz/src/common/tuklib_progname.o: external/xz/src/common/tuklib_progname.c
 	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c external/xz/src/common/tuklib_progname.c -o $(OBJDIR_DEBUG)/external/xz/src/common/tuklib_progname.o
@@ -2585,11 +2598,11 @@ $(OBJDIR_DEBUG)/external/lzma_sdk/C/XzCrc64.o: external/lzma_sdk/C/XzCrc64.c
 $(OBJDIR_DEBUG)/external/lzma_sdk/C/Xz.o: external/lzma_sdk/C/Xz.c
 	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c external/lzma_sdk/C/Xz.c -o $(OBJDIR_DEBUG)/external/lzma_sdk/C/Xz.o
 
-$(OBJDIR_DEBUG)/external/lzma_sdk/C/Sha256Opt.o: external/lzma_sdk/C/Sha256Opt.c
-	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c external/lzma_sdk/C/Sha256Opt.c -o $(OBJDIR_DEBUG)/external/lzma_sdk/C/Sha256Opt.o
+$(OBJDIR_DEBUG)/external/xz/src/liblzma/common/filter_flags_decoder.o: external/xz/src/liblzma/common/filter_flags_decoder.c
+	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c external/xz/src/liblzma/common/filter_flags_decoder.c -o $(OBJDIR_DEBUG)/external/xz/src/liblzma/common/filter_flags_decoder.o
 
-$(OBJDIR_DEBUG)/external/xz/src/liblzma/common/filter_encoder.o: external/xz/src/liblzma/common/filter_encoder.c
-	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c external/xz/src/liblzma/common/filter_encoder.c -o $(OBJDIR_DEBUG)/external/xz/src/liblzma/common/filter_encoder.o
+$(OBJDIR_DEBUG)/external/xz/src/liblzma/common/stream_buffer_encoder.o: external/xz/src/liblzma/common/stream_buffer_encoder.c
+	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c external/xz/src/liblzma/common/stream_buffer_encoder.c -o $(OBJDIR_DEBUG)/external/xz/src/liblzma/common/stream_buffer_encoder.o
 
 $(OBJDIR_DEBUG)/external/xz/src/liblzma/common/stream_buffer_decoder.o: external/xz/src/liblzma/common/stream_buffer_decoder.c
 	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c external/xz/src/liblzma/common/stream_buffer_decoder.c -o $(OBJDIR_DEBUG)/external/xz/src/liblzma/common/stream_buffer_decoder.o
@@ -2621,11 +2634,11 @@ $(OBJDIR_DEBUG)/external/xz/src/liblzma/common/hardware_cputhreads.o: external/x
 $(OBJDIR_DEBUG)/external/xz/src/liblzma/common/filter_flags_encoder.o: external/xz/src/liblzma/common/filter_flags_encoder.c
 	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c external/xz/src/liblzma/common/filter_flags_encoder.c -o $(OBJDIR_DEBUG)/external/xz/src/liblzma/common/filter_flags_encoder.o
 
-$(OBJDIR_DEBUG)/external/xz/src/liblzma/common/filter_flags_decoder.o: external/xz/src/liblzma/common/filter_flags_decoder.c
-	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c external/xz/src/liblzma/common/filter_flags_decoder.c -o $(OBJDIR_DEBUG)/external/xz/src/liblzma/common/filter_flags_decoder.o
-
 $(OBJDIR_DEBUG)/external/bzip/blocksort.o: external/bzip/blocksort.c
 	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c external/bzip/blocksort.c -o $(OBJDIR_DEBUG)/external/bzip/blocksort.o
+
+$(OBJDIR_DEBUG)/external/xz/src/liblzma/common/filter_encoder.o: external/xz/src/liblzma/common/filter_encoder.c
+	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c external/xz/src/liblzma/common/filter_encoder.c -o $(OBJDIR_DEBUG)/external/xz/src/liblzma/common/filter_encoder.o
 
 $(OBJDIR_DEBUG)/external/xz/src/liblzma/common/filter_decoder.o: external/xz/src/liblzma/common/filter_decoder.c
 	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c external/xz/src/liblzma/common/filter_decoder.c -o $(OBJDIR_DEBUG)/external/xz/src/liblzma/common/filter_decoder.o
@@ -2660,9 +2673,6 @@ $(OBJDIR_DEBUG)/external/xz/src/liblzma/common/common.o: external/xz/src/liblzma
 $(OBJDIR_DEBUG)/external/xz/src/liblzma/common/block_util.o: external/xz/src/liblzma/common/block_util.c
 	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c external/xz/src/liblzma/common/block_util.c -o $(OBJDIR_DEBUG)/external/xz/src/liblzma/common/block_util.o
 
-$(OBJDIR_DEBUG)/external/xz/src/liblzma/common/block_header_encoder.o: external/xz/src/liblzma/common/block_header_encoder.c
-	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c external/xz/src/liblzma/common/block_header_encoder.c -o $(OBJDIR_DEBUG)/external/xz/src/liblzma/common/block_header_encoder.o
-
 clean_debug: 
 	rm -f $(OBJ_DEBUG) $(OUT_DEBUG)
 	rm -rf bin/Debug
@@ -2681,13 +2691,13 @@ clean_debug:
 	rm -rf $(OBJDIR_DEBUG)/src/misc
 	rm -rf $(OBJDIR_DEBUG)/src/lib/helper/decompress
 	rm -rf $(OBJDIR_DEBUG)/src/lib/helper/compress
+	rm -rf $(OBJDIR_DEBUG)/src/lib/engine/patchstream/compress
 	rm -rf $(OBJDIR_DEBUG)/src/lib/engine/svfile/common
 	rm -rf $(OBJDIR_DEBUG)/src/lib/engine/patchstream/rebuild
 	rm -rf $(OBJDIR_DEBUG)/src/lib/engine/patchstream/decompress
-	rm -rf $(OBJDIR_DEBUG)/src/lib/engine/patchstream/compress
-	rm -rf $(OBJDIR_DEBUG)/external/lzham/lzhamdecomp
-	rm -rf $(OBJDIR_DEBUG)/external/lzham/lzhamlib
 	rm -rf $(OBJDIR_DEBUG)/external/lzma_sdk/C
+	rm -rf $(OBJDIR_DEBUG)/external/lzham/lzhamlib
+	rm -rf $(OBJDIR_DEBUG)/external/lzham/lzhamdecomp
 	rm -rf $(OBJDIR_DEBUG)/external/fastlzlib/lz4
 	rm -rf $(OBJDIR_DEBUG)/external/fastlzlib/lzfse/src
 	rm -rf $(OBJDIR_DEBUG)/external/fastlzlib
@@ -2721,13 +2731,13 @@ before_release:
 	test -d $(OBJDIR_RELEASE)/src/misc || mkdir -p $(OBJDIR_RELEASE)/src/misc
 	test -d $(OBJDIR_RELEASE)/src/lib/helper/decompress || mkdir -p $(OBJDIR_RELEASE)/src/lib/helper/decompress
 	test -d $(OBJDIR_RELEASE)/src/lib/helper/compress || mkdir -p $(OBJDIR_RELEASE)/src/lib/helper/compress
+	test -d $(OBJDIR_RELEASE)/src/lib/engine/patchstream/compress || mkdir -p $(OBJDIR_RELEASE)/src/lib/engine/patchstream/compress
 	test -d $(OBJDIR_RELEASE)/src/lib/engine/svfile/common || mkdir -p $(OBJDIR_RELEASE)/src/lib/engine/svfile/common
 	test -d $(OBJDIR_RELEASE)/src/lib/engine/patchstream/rebuild || mkdir -p $(OBJDIR_RELEASE)/src/lib/engine/patchstream/rebuild
 	test -d $(OBJDIR_RELEASE)/src/lib/engine/patchstream/decompress || mkdir -p $(OBJDIR_RELEASE)/src/lib/engine/patchstream/decompress
-	test -d $(OBJDIR_RELEASE)/src/lib/engine/patchstream/compress || mkdir -p $(OBJDIR_RELEASE)/src/lib/engine/patchstream/compress
-	test -d $(OBJDIR_RELEASE)/external/lzham/lzhamdecomp || mkdir -p $(OBJDIR_RELEASE)/external/lzham/lzhamdecomp
-	test -d $(OBJDIR_RELEASE)/external/lzham/lzhamlib || mkdir -p $(OBJDIR_RELEASE)/external/lzham/lzhamlib
 	test -d $(OBJDIR_RELEASE)/external/lzma_sdk/C || mkdir -p $(OBJDIR_RELEASE)/external/lzma_sdk/C
+	test -d $(OBJDIR_RELEASE)/external/lzham/lzhamlib || mkdir -p $(OBJDIR_RELEASE)/external/lzham/lzhamlib
+	test -d $(OBJDIR_RELEASE)/external/lzham/lzhamdecomp || mkdir -p $(OBJDIR_RELEASE)/external/lzham/lzhamdecomp
 	test -d $(OBJDIR_RELEASE)/external/fastlzlib/lz4 || mkdir -p $(OBJDIR_RELEASE)/external/fastlzlib/lz4
 	test -d $(OBJDIR_RELEASE)/external/fastlzlib/lzfse/src || mkdir -p $(OBJDIR_RELEASE)/external/fastlzlib/lzfse/src
 	test -d $(OBJDIR_RELEASE)/external/fastlzlib || mkdir -p $(OBJDIR_RELEASE)/external/fastlzlib
@@ -2772,17 +2782,14 @@ $(OBJDIR_RELEASE)/src/cli/DifstrmMainPosix.o: src/cli/DifstrmMainPosix.c
 $(OBJDIR_RELEASE)/src/cli/DfsCdLin.o: src/cli/DfsCdLin.c
 	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c src/cli/DfsCdLin.c -o $(OBJDIR_RELEASE)/src/cli/DfsCdLin.o
 
-$(OBJDIR_RELEASE)/src/lib/engine/patchstream/common/DfsIoMemMutex.o: src/lib/engine/patchstream/common/DfsIoMemMutex.cpp
-	$(CXX) $(CFLAGS_RELEASE) $(INC_RELEASE) -c src/lib/engine/patchstream/common/DfsIoMemMutex.cpp -o $(OBJDIR_RELEASE)/src/lib/engine/patchstream/common/DfsIoMemMutex.o
-
 $(OBJDIR_RELEASE)/external/zstd/lib/dictBuilder/zdict.o: external/zstd/lib/dictBuilder/zdict.c
 	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c external/zstd/lib/dictBuilder/zdict.c -o $(OBJDIR_RELEASE)/external/zstd/lib/dictBuilder/zdict.o
 
 $(OBJDIR_RELEASE)/external/zstd/lib/dictBuilder/fastcover.o: external/zstd/lib/dictBuilder/fastcover.c
 	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c external/zstd/lib/dictBuilder/fastcover.c -o $(OBJDIR_RELEASE)/external/zstd/lib/dictBuilder/fastcover.o
 
-$(OBJDIR_RELEASE)/src/lib/engine/patchstream/common/ltoolsc.o: src/lib/engine/patchstream/common/ltoolsc.c
-	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c src/lib/engine/patchstream/common/ltoolsc.c -o $(OBJDIR_RELEASE)/src/lib/engine/patchstream/common/ltoolsc.o
+$(OBJDIR_RELEASE)/src/lib/engine/patchstream/common/compress_store.o: src/lib/engine/patchstream/common/compress_store.c
+	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c src/lib/engine/patchstream/common/compress_store.c -o $(OBJDIR_RELEASE)/src/lib/engine/patchstream/common/compress_store.o
 
 $(OBJDIR_RELEASE)/src/lib/engine/patchstream/common/difstool.o: src/lib/engine/patchstream/common/difstool.c
 	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c src/lib/engine/patchstream/common/difstool.c -o $(OBJDIR_RELEASE)/src/lib/engine/patchstream/common/difstool.o
@@ -2799,14 +2806,17 @@ $(OBJDIR_RELEASE)/src/lib/engine/patchstream/common/dfsToolPosix.o: src/lib/engi
 $(OBJDIR_RELEASE)/src/lib/engine/patchstream/common/dfsTool.o: src/lib/engine/patchstream/common/dfsTool.c
 	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c src/lib/engine/patchstream/common/dfsTool.c -o $(OBJDIR_RELEASE)/src/lib/engine/patchstream/common/dfsTool.o
 
-$(OBJDIR_RELEASE)/src/lib/engine/patchstream/common/compress_store.o: src/lib/engine/patchstream/common/compress_store.c
-	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c src/lib/engine/patchstream/common/compress_store.c -o $(OBJDIR_RELEASE)/src/lib/engine/patchstream/common/compress_store.o
+$(OBJDIR_RELEASE)/external/zstd/lib/dictBuilder/divsufsort.o: external/zstd/lib/dictBuilder/divsufsort.c
+	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c external/zstd/lib/dictBuilder/divsufsort.c -o $(OBJDIR_RELEASE)/external/zstd/lib/dictBuilder/divsufsort.o
 
 $(OBJDIR_RELEASE)/src/lib/engine/patchstream/common/abstractDecompress.o: src/lib/engine/patchstream/common/abstractDecompress.c
 	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c src/lib/engine/patchstream/common/abstractDecompress.c -o $(OBJDIR_RELEASE)/src/lib/engine/patchstream/common/abstractDecompress.o
 
 $(OBJDIR_RELEASE)/src/lib/engine/patchstream/common/DfsToolsPosixCPP.o: src/lib/engine/patchstream/common/DfsToolsPosixCPP.cpp
 	$(CXX) $(CFLAGS_RELEASE) $(INC_RELEASE) -c src/lib/engine/patchstream/common/DfsToolsPosixCPP.cpp -o $(OBJDIR_RELEASE)/src/lib/engine/patchstream/common/DfsToolsPosixCPP.o
+
+$(OBJDIR_RELEASE)/src/lib/engine/patchstream/common/DfsIoMemMutex.o: src/lib/engine/patchstream/common/DfsIoMemMutex.cpp
+	$(CXX) $(CFLAGS_RELEASE) $(INC_RELEASE) -c src/lib/engine/patchstream/common/DfsIoMemMutex.cpp -o $(OBJDIR_RELEASE)/src/lib/engine/patchstream/common/DfsIoMemMutex.o
 
 $(OBJDIR_RELEASE)/external/zstd/lib/compress/zstd_compress_superblock.o: external/zstd/lib/compress/zstd_compress_superblock.c
 	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c external/zstd/lib/compress/zstd_compress_superblock.c -o $(OBJDIR_RELEASE)/external/zstd/lib/compress/zstd_compress_superblock.o
@@ -2841,15 +2851,6 @@ $(OBJDIR_RELEASE)/external/zstd/lib/common/threading.o: external/zstd/lib/common
 $(OBJDIR_RELEASE)/external/zstd/lib/common/pool.o: external/zstd/lib/common/pool.c
 	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c external/zstd/lib/common/pool.c -o $(OBJDIR_RELEASE)/external/zstd/lib/common/pool.o
 
-$(OBJDIR_RELEASE)/external/zstd/lib/common/fse_decompress.o: external/zstd/lib/common/fse_decompress.c
-	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c external/zstd/lib/common/fse_decompress.c -o $(OBJDIR_RELEASE)/external/zstd/lib/common/fse_decompress.o
-
-$(OBJDIR_RELEASE)/external/zstd/lib/compress/zstdmt_compress.o: external/zstd/lib/compress/zstdmt_compress.c
-	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c external/zstd/lib/compress/zstdmt_compress.c -o $(OBJDIR_RELEASE)/external/zstd/lib/compress/zstdmt_compress.o
-
-$(OBJDIR_RELEASE)/external/zstd/lib/dictBuilder/divsufsort.o: external/zstd/lib/dictBuilder/divsufsort.c
-	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c external/zstd/lib/dictBuilder/divsufsort.c -o $(OBJDIR_RELEASE)/external/zstd/lib/dictBuilder/divsufsort.o
-
 $(OBJDIR_RELEASE)/external/zstd/lib/dictBuilder/cover.o: external/zstd/lib/dictBuilder/cover.c
 	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c external/zstd/lib/dictBuilder/cover.c -o $(OBJDIR_RELEASE)/external/zstd/lib/dictBuilder/cover.o
 
@@ -2867,6 +2868,15 @@ $(OBJDIR_RELEASE)/external/zstd/lib/decompress/huf_decompress_amd64.o: external/
 
 $(OBJDIR_RELEASE)/external/zstd/lib/decompress/huf_decompress.o: external/zstd/lib/decompress/huf_decompress.c
 	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c external/zstd/lib/decompress/huf_decompress.c -o $(OBJDIR_RELEASE)/external/zstd/lib/decompress/huf_decompress.o
+
+$(OBJDIR_RELEASE)/external/zstd/lib/compress/zstdmt_compress.o: external/zstd/lib/compress/zstdmt_compress.c
+	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c external/zstd/lib/compress/zstdmt_compress.c -o $(OBJDIR_RELEASE)/external/zstd/lib/compress/zstdmt_compress.o
+
+$(OBJDIR_RELEASE)/src/lib/engine/patchstream/common/ltoolsc.o: src/lib/engine/patchstream/common/ltoolsc.c
+	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c src/lib/engine/patchstream/common/ltoolsc.c -o $(OBJDIR_RELEASE)/src/lib/engine/patchstream/common/ltoolsc.o
+
+$(OBJDIR_RELEASE)/external/zstd/lib/compress/zstd_preSplit.o: external/zstd/lib/compress/zstd_preSplit.c
+	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c external/zstd/lib/compress/zstd_preSplit.c -o $(OBJDIR_RELEASE)/external/zstd/lib/compress/zstd_preSplit.o
 
 $(OBJDIR_RELEASE)/external/zstd/lib/compress/zstd_opt.o: external/zstd/lib/compress/zstd_opt.c
 	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c external/zstd/lib/compress/zstd_opt.c -o $(OBJDIR_RELEASE)/external/zstd/lib/compress/zstd_opt.o
@@ -2943,6 +2953,9 @@ $(OBJDIR_RELEASE)/src/lib/hash/sha256_from_openssl.o: src/lib/hash/sha256_from_o
 $(OBJDIR_RELEASE)/src/lib/hash/sha1dgst.o: src/lib/hash/sha1dgst.c
 	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c src/lib/hash/sha1dgst.c -o $(OBJDIR_RELEASE)/src/lib/hash/sha1dgst.o
 
+$(OBJDIR_RELEASE)/src/lib/engine/patchstream/compress/makdifst.o: src/lib/engine/patchstream/compress/makdifst.c
+	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c src/lib/engine/patchstream/compress/makdifst.c -o $(OBJDIR_RELEASE)/src/lib/engine/patchstream/compress/makdifst.o
+
 $(OBJDIR_RELEASE)/src/lib/engine/svfile/common/ArrayTl.o: src/lib/engine/svfile/common/ArrayTl.c
 	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c src/lib/engine/svfile/common/ArrayTl.c -o $(OBJDIR_RELEASE)/src/lib/engine/svfile/common/ArrayTl.o
 
@@ -2963,9 +2976,6 @@ $(OBJDIR_RELEASE)/src/lib/engine/patchstream/decompress/ApDifStm.o: src/lib/engi
 
 $(OBJDIR_RELEASE)/src/lib/engine/svfile/common/DfsIntf.o: src/lib/engine/svfile/common/DfsIntf.c
 	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c src/lib/engine/svfile/common/DfsIntf.c -o $(OBJDIR_RELEASE)/src/lib/engine/svfile/common/DfsIntf.o
-
-$(OBJDIR_RELEASE)/src/lib/engine/patchstream/compress/makdifst.o: src/lib/engine/patchstream/compress/makdifst.c
-	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c src/lib/engine/patchstream/compress/makdifst.c -o $(OBJDIR_RELEASE)/src/lib/engine/patchstream/compress/makdifst.o
 
 $(OBJDIR_RELEASE)/src/lib/engine/patchstream/compress/makdifId.o: src/lib/engine/patchstream/compress/makdifId.c
 	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c src/lib/engine/patchstream/compress/makdifId.c -o $(OBJDIR_RELEASE)/src/lib/engine/patchstream/compress/makdifId.o
@@ -3000,6 +3010,9 @@ $(OBJDIR_RELEASE)/src/lib/engine/svfile/common/DfsTagMg.o: src/lib/engine/svfile
 $(OBJDIR_RELEASE)/src/lib/engine/svfile/common/DfsTagBlockFloatTool.o: src/lib/engine/svfile/common/DfsTagBlockFloatTool.c
 	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c src/lib/engine/svfile/common/DfsTagBlockFloatTool.c -o $(OBJDIR_RELEASE)/src/lib/engine/svfile/common/DfsTagBlockFloatTool.o
 
+$(OBJDIR_RELEASE)/external/zstd/lib/common/fse_decompress.o: external/zstd/lib/common/fse_decompress.c
+	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c external/zstd/lib/common/fse_decompress.c -o $(OBJDIR_RELEASE)/external/zstd/lib/common/fse_decompress.o
+
 $(OBJDIR_RELEASE)/src/lib/engine/svfile/common/DfsTagBlockFloatEnd.o: src/lib/engine/svfile/common/DfsTagBlockFloatEnd.c
 	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c src/lib/engine/svfile/common/DfsTagBlockFloatEnd.c -o $(OBJDIR_RELEASE)/src/lib/engine/svfile/common/DfsTagBlockFloatEnd.o
 
@@ -3018,8 +3031,8 @@ $(OBJDIR_RELEASE)/src/lib/engine/svfile/common/DfsMFile.o: src/lib/engine/svfile
 $(OBJDIR_RELEASE)/src/lib/engine/svfile/common/DfsIntfWr.o: src/lib/engine/svfile/common/DfsIntfWr.c
 	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c src/lib/engine/svfile/common/DfsIntfWr.c -o $(OBJDIR_RELEASE)/src/lib/engine/svfile/common/DfsIntfWr.o
 
-$(OBJDIR_RELEASE)/external/lzham/lzhamdecomp/lzham_prefix_coding.o: external/lzham/lzhamdecomp/lzham_prefix_coding.cpp
-	$(CXX) $(CFLAGS_RELEASE) $(INC_RELEASE) -c external/lzham/lzhamdecomp/lzham_prefix_coding.cpp -o $(OBJDIR_RELEASE)/external/lzham/lzhamdecomp/lzham_prefix_coding.o
+$(OBJDIR_RELEASE)/external/lzma_sdk/C/7zAlloc.o: external/lzma_sdk/C/7zAlloc.c
+	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c external/lzma_sdk/C/7zAlloc.c -o $(OBJDIR_RELEASE)/external/lzma_sdk/C/7zAlloc.o
 
 $(OBJDIR_RELEASE)/external/lzham/lzhamlib/lzham_lib.o: external/lzham/lzhamlib/lzham_lib.cpp
 	$(CXX) $(CFLAGS_RELEASE) $(INC_RELEASE) -c external/lzham/lzhamlib/lzham_lib.cpp -o $(OBJDIR_RELEASE)/external/lzham/lzhamlib/lzham_lib.o
@@ -3036,8 +3049,11 @@ $(OBJDIR_RELEASE)/external/lzham/lzhamdecomp/lzham_timer.o: external/lzham/lzham
 $(OBJDIR_RELEASE)/external/lzham/lzhamdecomp/lzham_symbol_codec.o: external/lzham/lzhamdecomp/lzham_symbol_codec.cpp
 	$(CXX) $(CFLAGS_RELEASE) $(INC_RELEASE) -c external/lzham/lzhamdecomp/lzham_symbol_codec.cpp -o $(OBJDIR_RELEASE)/external/lzham/lzhamdecomp/lzham_symbol_codec.o
 
-$(OBJDIR_RELEASE)/external/lzma_sdk/C/7zAlloc.o: external/lzma_sdk/C/7zAlloc.c
-	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c external/lzma_sdk/C/7zAlloc.c -o $(OBJDIR_RELEASE)/external/lzma_sdk/C/7zAlloc.o
+$(OBJDIR_RELEASE)/external/lzma_sdk/C/7zArcIn.o: external/lzma_sdk/C/7zArcIn.c
+	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c external/lzma_sdk/C/7zArcIn.c -o $(OBJDIR_RELEASE)/external/lzma_sdk/C/7zArcIn.o
+
+$(OBJDIR_RELEASE)/external/lzham/lzhamdecomp/lzham_prefix_coding.o: external/lzham/lzhamdecomp/lzham_prefix_coding.cpp
+	$(CXX) $(CFLAGS_RELEASE) $(INC_RELEASE) -c external/lzham/lzhamdecomp/lzham_prefix_coding.cpp -o $(OBJDIR_RELEASE)/external/lzham/lzhamdecomp/lzham_prefix_coding.o
 
 $(OBJDIR_RELEASE)/external/lzham/lzhamdecomp/lzham_platform.o: external/lzham/lzhamdecomp/lzham_platform.cpp
 	$(CXX) $(CFLAGS_RELEASE) $(INC_RELEASE) -c external/lzham/lzhamdecomp/lzham_platform.cpp -o $(OBJDIR_RELEASE)/external/lzham/lzhamdecomp/lzham_platform.o
@@ -3054,8 +3070,11 @@ $(OBJDIR_RELEASE)/external/lzham/lzhamdecomp/lzham_lzdecomp.o: external/lzham/lz
 $(OBJDIR_RELEASE)/external/lzham/lzhamdecomp/lzham_huffman_codes.o: external/lzham/lzhamdecomp/lzham_huffman_codes.cpp
 	$(CXX) $(CFLAGS_RELEASE) $(INC_RELEASE) -c external/lzham/lzhamdecomp/lzham_huffman_codes.cpp -o $(OBJDIR_RELEASE)/external/lzham/lzhamdecomp/lzham_huffman_codes.o
 
-$(OBJDIR_RELEASE)/external/lzma_sdk/C/BraIA64.o: external/lzma_sdk/C/BraIA64.c
-	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c external/lzma_sdk/C/BraIA64.c -o $(OBJDIR_RELEASE)/external/lzma_sdk/C/BraIA64.o
+$(OBJDIR_RELEASE)/external/lzma_sdk/C/CpuArch.o: external/lzma_sdk/C/CpuArch.c
+	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c external/lzma_sdk/C/CpuArch.c -o $(OBJDIR_RELEASE)/external/lzma_sdk/C/CpuArch.o
+
+$(OBJDIR_RELEASE)/external/lzma_sdk/C/Ppmd7Enc.o: external/lzma_sdk/C/Ppmd7Enc.c
+	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c external/lzma_sdk/C/Ppmd7Enc.c -o $(OBJDIR_RELEASE)/external/lzma_sdk/C/Ppmd7Enc.o
 
 $(OBJDIR_RELEASE)/external/lzma_sdk/C/Ppmd7Dec.o: external/lzma_sdk/C/Ppmd7Dec.c
 	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c external/lzma_sdk/C/Ppmd7Dec.c -o $(OBJDIR_RELEASE)/external/lzma_sdk/C/Ppmd7Dec.o
@@ -3087,8 +3106,8 @@ $(OBJDIR_RELEASE)/external/lzma_sdk/C/LZMASDK_Sha256.o: external/lzma_sdk/C/LZMA
 $(OBJDIR_RELEASE)/external/lzma_sdk/C/Delta.o: external/lzma_sdk/C/Delta.c
 	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c external/lzma_sdk/C/Delta.c -o $(OBJDIR_RELEASE)/external/lzma_sdk/C/Delta.o
 
-$(OBJDIR_RELEASE)/external/lzma_sdk/C/CpuArch.o: external/lzma_sdk/C/CpuArch.c
-	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c external/lzma_sdk/C/CpuArch.c -o $(OBJDIR_RELEASE)/external/lzma_sdk/C/CpuArch.o
+$(OBJDIR_RELEASE)/external/lzma_sdk/C/BraIA64.o: external/lzma_sdk/C/BraIA64.c
+	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c external/lzma_sdk/C/BraIA64.c -o $(OBJDIR_RELEASE)/external/lzma_sdk/C/BraIA64.o
 
 $(OBJDIR_RELEASE)/external/lzma_sdk/C/Bra86.o: external/lzma_sdk/C/Bra86.c
 	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c external/lzma_sdk/C/Bra86.c -o $(OBJDIR_RELEASE)/external/lzma_sdk/C/Bra86.o
@@ -3123,9 +3142,6 @@ $(OBJDIR_RELEASE)/external/lzma_sdk/C/7zBuf2.o: external/lzma_sdk/C/7zBuf2.c
 $(OBJDIR_RELEASE)/external/lzma_sdk/C/7zBuf.o: external/lzma_sdk/C/7zBuf.c
 	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c external/lzma_sdk/C/7zBuf.c -o $(OBJDIR_RELEASE)/external/lzma_sdk/C/7zBuf.o
 
-$(OBJDIR_RELEASE)/external/lzma_sdk/C/7zArcIn.o: external/lzma_sdk/C/7zArcIn.c
-	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c external/lzma_sdk/C/7zArcIn.c -o $(OBJDIR_RELEASE)/external/lzma_sdk/C/7zArcIn.o
-
 $(OBJDIR_RELEASE)/external/fastlzlib/lz4/lz4hc.o: external/fastlzlib/lz4/lz4hc.c
 	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c external/fastlzlib/lz4/lz4hc.c -o $(OBJDIR_RELEASE)/external/fastlzlib/lz4/lz4hc.o
 
@@ -3149,6 +3165,9 @@ $(OBJDIR_RELEASE)/external/fastlzlib/lzfse/src/lzfse_decode.o: external/fastlzli
 
 $(OBJDIR_RELEASE)/external/fastlzlib/lz4/xxhash.o: external/fastlzlib/lz4/xxhash.c
 	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c external/fastlzlib/lz4/xxhash.c -o $(OBJDIR_RELEASE)/external/fastlzlib/lz4/xxhash.o
+
+$(OBJDIR_RELEASE)/external/fastlzlib/lzfse/src/lzvn_encode_base.o: external/fastlzlib/lzfse/src/lzvn_encode_base.c
+	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c external/fastlzlib/lzfse/src/lzvn_encode_base.c -o $(OBJDIR_RELEASE)/external/fastlzlib/lzfse/src/lzvn_encode_base.o
 
 $(OBJDIR_RELEASE)/external/fastlzlib/lz4/lz4frame.o: external/fastlzlib/lz4/lz4frame.c
 	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c external/fastlzlib/lz4/lz4frame.c -o $(OBJDIR_RELEASE)/external/fastlzlib/lz4/lz4frame.o
@@ -3180,9 +3199,6 @@ $(OBJDIR_RELEASE)/external/bzip/compress.o: external/bzip/compress.c
 $(OBJDIR_RELEASE)/external/bzip/bzlib.o: external/bzip/bzlib.c
 	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c external/bzip/bzlib.c -o $(OBJDIR_RELEASE)/external/bzip/bzlib.o
 
-$(OBJDIR_RELEASE)/external/lzham/lzhamcomp/lzham_match_accel.o: external/lzham/lzhamcomp/lzham_match_accel.cpp
-	$(CXX) $(CFLAGS_RELEASE) $(INC_RELEASE) -c external/lzham/lzhamcomp/lzham_match_accel.cpp -o $(OBJDIR_RELEASE)/external/lzham/lzhamcomp/lzham_match_accel.o
-
 $(OBJDIR_RELEASE)/external/lzham/lzhamdecomp/lzham_checksum.o: external/lzham/lzhamdecomp/lzham_checksum.cpp
 	$(CXX) $(CFLAGS_RELEASE) $(INC_RELEASE) -c external/lzham/lzhamdecomp/lzham_checksum.cpp -o $(OBJDIR_RELEASE)/external/lzham/lzhamdecomp/lzham_checksum.o
 
@@ -3192,8 +3208,11 @@ $(OBJDIR_RELEASE)/external/lzham/lzhamdecomp/lzham_assert.o: external/lzham/lzha
 $(OBJDIR_RELEASE)/external/lzham/lzhamcomp/lzham_pthreads_threading.o: external/lzham/lzhamcomp/lzham_pthreads_threading.cpp
 	$(CXX) $(CFLAGS_RELEASE) $(INC_RELEASE) -c external/lzham/lzhamcomp/lzham_pthreads_threading.cpp -o $(OBJDIR_RELEASE)/external/lzham/lzhamcomp/lzham_pthreads_threading.o
 
-$(OBJDIR_RELEASE)/external/lzma_sdk/C/Ppmd7Enc.o: external/lzma_sdk/C/Ppmd7Enc.c
-	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c external/lzma_sdk/C/Ppmd7Enc.c -o $(OBJDIR_RELEASE)/external/lzma_sdk/C/Ppmd7Enc.o
+$(OBJDIR_RELEASE)/external/lzma_sdk/C/Sha256Opt.o: external/lzma_sdk/C/Sha256Opt.c
+	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c external/lzma_sdk/C/Sha256Opt.c -o $(OBJDIR_RELEASE)/external/lzma_sdk/C/Sha256Opt.o
+
+$(OBJDIR_RELEASE)/external/lzham/lzhamcomp/lzham_match_accel.o: external/lzham/lzhamcomp/lzham_match_accel.cpp
+	$(CXX) $(CFLAGS_RELEASE) $(INC_RELEASE) -c external/lzham/lzhamcomp/lzham_match_accel.cpp -o $(OBJDIR_RELEASE)/external/lzham/lzhamcomp/lzham_match_accel.o
 
 $(OBJDIR_RELEASE)/external/lzham/lzhamcomp/lzham_lzcomp_state.o: external/lzham/lzhamcomp/lzham_lzcomp_state.cpp
 	$(CXX) $(CFLAGS_RELEASE) $(INC_RELEASE) -c external/lzham/lzhamcomp/lzham_lzcomp_state.cpp -o $(OBJDIR_RELEASE)/external/lzham/lzhamcomp/lzham_lzcomp_state.o
@@ -3207,11 +3226,11 @@ $(OBJDIR_RELEASE)/external/lzham/lzhamcomp/lzham_lzcomp.o: external/lzham/lzhamc
 $(OBJDIR_RELEASE)/external/lzham/lzhamcomp/lzham_lzbase.o: external/lzham/lzhamcomp/lzham_lzbase.cpp
 	$(CXX) $(CFLAGS_RELEASE) $(INC_RELEASE) -c external/lzham/lzhamcomp/lzham_lzbase.cpp -o $(OBJDIR_RELEASE)/external/lzham/lzhamcomp/lzham_lzbase.o
 
-$(OBJDIR_RELEASE)/external/fastlzlib/lzfse/src/lzvn_encode_base.o: external/fastlzlib/lzfse/src/lzvn_encode_base.c
-	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c external/fastlzlib/lzfse/src/lzvn_encode_base.c -o $(OBJDIR_RELEASE)/external/fastlzlib/lzfse/src/lzvn_encode_base.o
+$(OBJDIR_RELEASE)/external/xz/src/liblzma/lz/lz_encoder.o: external/xz/src/liblzma/lz/lz_encoder.c
+	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c external/xz/src/liblzma/lz/lz_encoder.c -o $(OBJDIR_RELEASE)/external/xz/src/liblzma/lz/lz_encoder.o
 
-$(OBJDIR_RELEASE)/external/xz/src/liblzma/lz/lz_decoder.o: external/xz/src/liblzma/lz/lz_decoder.c
-	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c external/xz/src/liblzma/lz/lz_decoder.c -o $(OBJDIR_RELEASE)/external/xz/src/liblzma/lz/lz_decoder.o
+$(OBJDIR_RELEASE)/external/xz/src/liblzma/simple/armthumb.o: external/xz/src/liblzma/simple/armthumb.c
+	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c external/xz/src/liblzma/simple/armthumb.c -o $(OBJDIR_RELEASE)/external/xz/src/liblzma/simple/armthumb.o
 
 $(OBJDIR_RELEASE)/external/xz/src/liblzma/simple/arm64.o: external/xz/src/liblzma/simple/arm64.c
 	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c external/xz/src/liblzma/simple/arm64.c -o $(OBJDIR_RELEASE)/external/xz/src/liblzma/simple/arm64.o
@@ -3249,11 +3268,11 @@ $(OBJDIR_RELEASE)/external/xz/src/liblzma/lzma/fastpos_table.o: external/xz/src/
 $(OBJDIR_RELEASE)/external/xz/src/liblzma/lz/lz_encoder_mf.o: external/xz/src/liblzma/lz/lz_encoder_mf.c
 	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c external/xz/src/liblzma/lz/lz_encoder_mf.c -o $(OBJDIR_RELEASE)/external/xz/src/liblzma/lz/lz_encoder_mf.o
 
-$(OBJDIR_RELEASE)/external/xz/src/liblzma/lz/lz_encoder.o: external/xz/src/liblzma/lz/lz_encoder.c
-	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c external/xz/src/liblzma/lz/lz_encoder.c -o $(OBJDIR_RELEASE)/external/xz/src/liblzma/lz/lz_encoder.o
+$(OBJDIR_RELEASE)/external/xz/src/liblzma/simple/ia64.o: external/xz/src/liblzma/simple/ia64.c
+	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c external/xz/src/liblzma/simple/ia64.c -o $(OBJDIR_RELEASE)/external/xz/src/liblzma/simple/ia64.o
 
-$(OBJDIR_RELEASE)/external/xz/src/liblzma/simple/armthumb.o: external/xz/src/liblzma/simple/armthumb.c
-	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c external/xz/src/liblzma/simple/armthumb.c -o $(OBJDIR_RELEASE)/external/xz/src/liblzma/simple/armthumb.o
+$(OBJDIR_RELEASE)/external/xz/src/liblzma/lz/lz_decoder.o: external/xz/src/liblzma/lz/lz_decoder.c
+	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c external/xz/src/liblzma/lz/lz_decoder.c -o $(OBJDIR_RELEASE)/external/xz/src/liblzma/lz/lz_decoder.o
 
 $(OBJDIR_RELEASE)/external/xz/src/liblzma/delta/delta_encoder.o: external/xz/src/liblzma/delta/delta_encoder.c
 	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c external/xz/src/liblzma/delta/delta_encoder.c -o $(OBJDIR_RELEASE)/external/xz/src/liblzma/delta/delta_encoder.o
@@ -3288,11 +3307,8 @@ $(OBJDIR_RELEASE)/external/xz/src/liblzma/common/stream_encoder_mt.o: external/x
 $(OBJDIR_RELEASE)/external/xz/src/liblzma/common/stream_encoder.o: external/xz/src/liblzma/common/stream_encoder.c
 	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c external/xz/src/liblzma/common/stream_encoder.c -o $(OBJDIR_RELEASE)/external/xz/src/liblzma/common/stream_encoder.o
 
-$(OBJDIR_RELEASE)/external/xz/src/liblzma/common/stream_decoder.o: external/xz/src/liblzma/common/stream_decoder.c
-	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c external/xz/src/liblzma/common/stream_decoder.c -o $(OBJDIR_RELEASE)/external/xz/src/liblzma/common/stream_decoder.o
-
-$(OBJDIR_RELEASE)/external/zlib/inflate.o: external/zlib/inflate.c
-	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c external/zlib/inflate.c -o $(OBJDIR_RELEASE)/external/zlib/inflate.o
+$(OBJDIR_RELEASE)/external/zlib/inftrees.o: external/zlib/inftrees.c
+	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c external/zlib/inftrees.c -o $(OBJDIR_RELEASE)/external/zlib/inftrees.o
 
 $(OBJDIR_RELEASE)/external/zstd/lib/common/error_private.o: external/zstd/lib/common/error_private.c
 	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c external/zstd/lib/common/error_private.c -o $(OBJDIR_RELEASE)/external/zstd/lib/common/error_private.o
@@ -3312,11 +3328,11 @@ $(OBJDIR_RELEASE)/external/zlib/zlibcompress.o: external/zlib/zlibcompress.c
 $(OBJDIR_RELEASE)/external/zlib/trees.o: external/zlib/trees.c
 	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c external/zlib/trees.c -o $(OBJDIR_RELEASE)/external/zlib/trees.o
 
-$(OBJDIR_RELEASE)/external/zlib/inftrees.o: external/zlib/inftrees.c
-	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c external/zlib/inftrees.c -o $(OBJDIR_RELEASE)/external/zlib/inftrees.o
+$(OBJDIR_RELEASE)/external/xz/src/liblzma/common/stream_decoder.o: external/xz/src/liblzma/common/stream_decoder.c
+	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c external/xz/src/liblzma/common/stream_decoder.c -o $(OBJDIR_RELEASE)/external/xz/src/liblzma/common/stream_decoder.o
 
-$(OBJDIR_RELEASE)/external/xz/src/liblzma/common/stream_buffer_encoder.o: external/xz/src/liblzma/common/stream_buffer_encoder.c
-	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c external/xz/src/liblzma/common/stream_buffer_encoder.c -o $(OBJDIR_RELEASE)/external/xz/src/liblzma/common/stream_buffer_encoder.o
+$(OBJDIR_RELEASE)/external/zlib/inflate.o: external/zlib/inflate.c
+	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c external/zlib/inflate.c -o $(OBJDIR_RELEASE)/external/zlib/inflate.o
 
 $(OBJDIR_RELEASE)/external/zlib/inffast.o: external/zlib/inffast.c
 	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c external/zlib/inffast.c -o $(OBJDIR_RELEASE)/external/zlib/inffast.o
@@ -3348,11 +3364,11 @@ $(OBJDIR_RELEASE)/external/xz/src/liblzma/simple/simple_coder.o: external/xz/src
 $(OBJDIR_RELEASE)/external/xz/src/liblzma/simple/powerpc.o: external/xz/src/liblzma/simple/powerpc.c
 	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c external/xz/src/liblzma/simple/powerpc.c -o $(OBJDIR_RELEASE)/external/xz/src/liblzma/simple/powerpc.o
 
-$(OBJDIR_RELEASE)/external/xz/src/liblzma/simple/ia64.o: external/xz/src/liblzma/simple/ia64.c
-	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c external/xz/src/liblzma/simple/ia64.c -o $(OBJDIR_RELEASE)/external/xz/src/liblzma/simple/ia64.o
+$(OBJDIR_RELEASE)/external/xz/src/liblzma/check/crc32_fast.o: external/xz/src/liblzma/check/crc32_fast.c
+	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c external/xz/src/liblzma/check/crc32_fast.c -o $(OBJDIR_RELEASE)/external/xz/src/liblzma/check/crc32_fast.o
 
-$(OBJDIR_RELEASE)/external/xz/src/liblzma/check/check.o: external/xz/src/liblzma/check/check.c
-	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c external/xz/src/liblzma/check/check.c -o $(OBJDIR_RELEASE)/external/xz/src/liblzma/check/check.o
+$(OBJDIR_RELEASE)/external/xz/src/liblzma/common/block_header_decoder.o: external/xz/src/liblzma/common/block_header_decoder.c
+	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c external/xz/src/liblzma/common/block_header_decoder.c -o $(OBJDIR_RELEASE)/external/xz/src/liblzma/common/block_header_decoder.o
 
 $(OBJDIR_RELEASE)/external/xz/src/liblzma/common/block_encoder.o: external/xz/src/liblzma/common/block_encoder.c
 	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c external/xz/src/liblzma/common/block_encoder.c -o $(OBJDIR_RELEASE)/external/xz/src/liblzma/common/block_encoder.o
@@ -3387,11 +3403,11 @@ $(OBJDIR_RELEASE)/external/xz/src/liblzma/check/crc64_fast.o: external/xz/src/li
 $(OBJDIR_RELEASE)/external/xz/src/liblzma/check/crc32_table.o: external/xz/src/liblzma/check/crc32_table.c
 	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c external/xz/src/liblzma/check/crc32_table.c -o $(OBJDIR_RELEASE)/external/xz/src/liblzma/check/crc32_table.o
 
-$(OBJDIR_RELEASE)/external/xz/src/liblzma/check/crc32_fast.o: external/xz/src/liblzma/check/crc32_fast.c
-	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c external/xz/src/liblzma/check/crc32_fast.c -o $(OBJDIR_RELEASE)/external/xz/src/liblzma/check/crc32_fast.o
+$(OBJDIR_RELEASE)/external/xz/src/liblzma/common/block_header_encoder.o: external/xz/src/liblzma/common/block_header_encoder.c
+	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c external/xz/src/liblzma/common/block_header_encoder.c -o $(OBJDIR_RELEASE)/external/xz/src/liblzma/common/block_header_encoder.o
 
-$(OBJDIR_RELEASE)/external/xz/src/liblzma/common/block_header_decoder.o: external/xz/src/liblzma/common/block_header_decoder.c
-	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c external/xz/src/liblzma/common/block_header_decoder.c -o $(OBJDIR_RELEASE)/external/xz/src/liblzma/common/block_header_decoder.o
+$(OBJDIR_RELEASE)/external/xz/src/liblzma/check/check.o: external/xz/src/liblzma/check/check.c
+	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c external/xz/src/liblzma/check/check.c -o $(OBJDIR_RELEASE)/external/xz/src/liblzma/check/check.o
 
 $(OBJDIR_RELEASE)/external/xz/src/common/tuklib_progname.o: external/xz/src/common/tuklib_progname.c
 	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c external/xz/src/common/tuklib_progname.c -o $(OBJDIR_RELEASE)/external/xz/src/common/tuklib_progname.o
@@ -3426,11 +3442,11 @@ $(OBJDIR_RELEASE)/external/lzma_sdk/C/XzCrc64.o: external/lzma_sdk/C/XzCrc64.c
 $(OBJDIR_RELEASE)/external/lzma_sdk/C/Xz.o: external/lzma_sdk/C/Xz.c
 	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c external/lzma_sdk/C/Xz.c -o $(OBJDIR_RELEASE)/external/lzma_sdk/C/Xz.o
 
-$(OBJDIR_RELEASE)/external/lzma_sdk/C/Sha256Opt.o: external/lzma_sdk/C/Sha256Opt.c
-	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c external/lzma_sdk/C/Sha256Opt.c -o $(OBJDIR_RELEASE)/external/lzma_sdk/C/Sha256Opt.o
+$(OBJDIR_RELEASE)/external/xz/src/liblzma/common/filter_flags_decoder.o: external/xz/src/liblzma/common/filter_flags_decoder.c
+	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c external/xz/src/liblzma/common/filter_flags_decoder.c -o $(OBJDIR_RELEASE)/external/xz/src/liblzma/common/filter_flags_decoder.o
 
-$(OBJDIR_RELEASE)/external/xz/src/liblzma/common/filter_encoder.o: external/xz/src/liblzma/common/filter_encoder.c
-	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c external/xz/src/liblzma/common/filter_encoder.c -o $(OBJDIR_RELEASE)/external/xz/src/liblzma/common/filter_encoder.o
+$(OBJDIR_RELEASE)/external/xz/src/liblzma/common/stream_buffer_encoder.o: external/xz/src/liblzma/common/stream_buffer_encoder.c
+	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c external/xz/src/liblzma/common/stream_buffer_encoder.c -o $(OBJDIR_RELEASE)/external/xz/src/liblzma/common/stream_buffer_encoder.o
 
 $(OBJDIR_RELEASE)/external/xz/src/liblzma/common/stream_buffer_decoder.o: external/xz/src/liblzma/common/stream_buffer_decoder.c
 	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c external/xz/src/liblzma/common/stream_buffer_decoder.c -o $(OBJDIR_RELEASE)/external/xz/src/liblzma/common/stream_buffer_decoder.o
@@ -3462,11 +3478,11 @@ $(OBJDIR_RELEASE)/external/xz/src/liblzma/common/hardware_cputhreads.o: external
 $(OBJDIR_RELEASE)/external/xz/src/liblzma/common/filter_flags_encoder.o: external/xz/src/liblzma/common/filter_flags_encoder.c
 	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c external/xz/src/liblzma/common/filter_flags_encoder.c -o $(OBJDIR_RELEASE)/external/xz/src/liblzma/common/filter_flags_encoder.o
 
-$(OBJDIR_RELEASE)/external/xz/src/liblzma/common/filter_flags_decoder.o: external/xz/src/liblzma/common/filter_flags_decoder.c
-	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c external/xz/src/liblzma/common/filter_flags_decoder.c -o $(OBJDIR_RELEASE)/external/xz/src/liblzma/common/filter_flags_decoder.o
-
 $(OBJDIR_RELEASE)/external/bzip/blocksort.o: external/bzip/blocksort.c
 	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c external/bzip/blocksort.c -o $(OBJDIR_RELEASE)/external/bzip/blocksort.o
+
+$(OBJDIR_RELEASE)/external/xz/src/liblzma/common/filter_encoder.o: external/xz/src/liblzma/common/filter_encoder.c
+	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c external/xz/src/liblzma/common/filter_encoder.c -o $(OBJDIR_RELEASE)/external/xz/src/liblzma/common/filter_encoder.o
 
 $(OBJDIR_RELEASE)/external/xz/src/liblzma/common/filter_decoder.o: external/xz/src/liblzma/common/filter_decoder.c
 	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c external/xz/src/liblzma/common/filter_decoder.c -o $(OBJDIR_RELEASE)/external/xz/src/liblzma/common/filter_decoder.o
@@ -3501,9 +3517,6 @@ $(OBJDIR_RELEASE)/external/xz/src/liblzma/common/common.o: external/xz/src/liblz
 $(OBJDIR_RELEASE)/external/xz/src/liblzma/common/block_util.o: external/xz/src/liblzma/common/block_util.c
 	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c external/xz/src/liblzma/common/block_util.c -o $(OBJDIR_RELEASE)/external/xz/src/liblzma/common/block_util.o
 
-$(OBJDIR_RELEASE)/external/xz/src/liblzma/common/block_header_encoder.o: external/xz/src/liblzma/common/block_header_encoder.c
-	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c external/xz/src/liblzma/common/block_header_encoder.c -o $(OBJDIR_RELEASE)/external/xz/src/liblzma/common/block_header_encoder.o
-
 clean_release: 
 	rm -f $(OBJ_RELEASE) $(OUT_RELEASE)
 	rm -rf bin/Release
@@ -3522,13 +3535,13 @@ clean_release:
 	rm -rf $(OBJDIR_RELEASE)/src/misc
 	rm -rf $(OBJDIR_RELEASE)/src/lib/helper/decompress
 	rm -rf $(OBJDIR_RELEASE)/src/lib/helper/compress
+	rm -rf $(OBJDIR_RELEASE)/src/lib/engine/patchstream/compress
 	rm -rf $(OBJDIR_RELEASE)/src/lib/engine/svfile/common
 	rm -rf $(OBJDIR_RELEASE)/src/lib/engine/patchstream/rebuild
 	rm -rf $(OBJDIR_RELEASE)/src/lib/engine/patchstream/decompress
-	rm -rf $(OBJDIR_RELEASE)/src/lib/engine/patchstream/compress
-	rm -rf $(OBJDIR_RELEASE)/external/lzham/lzhamdecomp
-	rm -rf $(OBJDIR_RELEASE)/external/lzham/lzhamlib
 	rm -rf $(OBJDIR_RELEASE)/external/lzma_sdk/C
+	rm -rf $(OBJDIR_RELEASE)/external/lzham/lzhamlib
+	rm -rf $(OBJDIR_RELEASE)/external/lzham/lzhamdecomp
 	rm -rf $(OBJDIR_RELEASE)/external/fastlzlib/lz4
 	rm -rf $(OBJDIR_RELEASE)/external/fastlzlib/lzfse/src
 	rm -rf $(OBJDIR_RELEASE)/external/fastlzlib
@@ -3562,13 +3575,13 @@ before_linux64release:
 	test -d $(OBJDIR_LINUX64RELEASE)/src/misc || mkdir -p $(OBJDIR_LINUX64RELEASE)/src/misc
 	test -d $(OBJDIR_LINUX64RELEASE)/src/lib/helper/decompress || mkdir -p $(OBJDIR_LINUX64RELEASE)/src/lib/helper/decompress
 	test -d $(OBJDIR_LINUX64RELEASE)/src/lib/helper/compress || mkdir -p $(OBJDIR_LINUX64RELEASE)/src/lib/helper/compress
+	test -d $(OBJDIR_LINUX64RELEASE)/src/lib/engine/patchstream/compress || mkdir -p $(OBJDIR_LINUX64RELEASE)/src/lib/engine/patchstream/compress
 	test -d $(OBJDIR_LINUX64RELEASE)/src/lib/engine/svfile/common || mkdir -p $(OBJDIR_LINUX64RELEASE)/src/lib/engine/svfile/common
 	test -d $(OBJDIR_LINUX64RELEASE)/src/lib/engine/patchstream/rebuild || mkdir -p $(OBJDIR_LINUX64RELEASE)/src/lib/engine/patchstream/rebuild
 	test -d $(OBJDIR_LINUX64RELEASE)/src/lib/engine/patchstream/decompress || mkdir -p $(OBJDIR_LINUX64RELEASE)/src/lib/engine/patchstream/decompress
-	test -d $(OBJDIR_LINUX64RELEASE)/src/lib/engine/patchstream/compress || mkdir -p $(OBJDIR_LINUX64RELEASE)/src/lib/engine/patchstream/compress
-	test -d $(OBJDIR_LINUX64RELEASE)/external/lzham/lzhamdecomp || mkdir -p $(OBJDIR_LINUX64RELEASE)/external/lzham/lzhamdecomp
-	test -d $(OBJDIR_LINUX64RELEASE)/external/lzham/lzhamlib || mkdir -p $(OBJDIR_LINUX64RELEASE)/external/lzham/lzhamlib
 	test -d $(OBJDIR_LINUX64RELEASE)/external/lzma_sdk/C || mkdir -p $(OBJDIR_LINUX64RELEASE)/external/lzma_sdk/C
+	test -d $(OBJDIR_LINUX64RELEASE)/external/lzham/lzhamlib || mkdir -p $(OBJDIR_LINUX64RELEASE)/external/lzham/lzhamlib
+	test -d $(OBJDIR_LINUX64RELEASE)/external/lzham/lzhamdecomp || mkdir -p $(OBJDIR_LINUX64RELEASE)/external/lzham/lzhamdecomp
 	test -d $(OBJDIR_LINUX64RELEASE)/external/fastlzlib/lz4 || mkdir -p $(OBJDIR_LINUX64RELEASE)/external/fastlzlib/lz4
 	test -d $(OBJDIR_LINUX64RELEASE)/external/fastlzlib/lzfse/src || mkdir -p $(OBJDIR_LINUX64RELEASE)/external/fastlzlib/lzfse/src
 	test -d $(OBJDIR_LINUX64RELEASE)/external/fastlzlib || mkdir -p $(OBJDIR_LINUX64RELEASE)/external/fastlzlib
@@ -3613,17 +3626,14 @@ $(OBJDIR_LINUX64RELEASE)/src/cli/DifstrmMainPosix.o: src/cli/DifstrmMainPosix.c
 $(OBJDIR_LINUX64RELEASE)/src/cli/DfsCdLin.o: src/cli/DfsCdLin.c
 	$(CC) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c src/cli/DfsCdLin.c -o $(OBJDIR_LINUX64RELEASE)/src/cli/DfsCdLin.o
 
-$(OBJDIR_LINUX64RELEASE)/src/lib/engine/patchstream/common/DfsIoMemMutex.o: src/lib/engine/patchstream/common/DfsIoMemMutex.cpp
-	$(CXX) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c src/lib/engine/patchstream/common/DfsIoMemMutex.cpp -o $(OBJDIR_LINUX64RELEASE)/src/lib/engine/patchstream/common/DfsIoMemMutex.o
-
 $(OBJDIR_LINUX64RELEASE)/external/zstd/lib/dictBuilder/zdict.o: external/zstd/lib/dictBuilder/zdict.c
 	$(CC) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c external/zstd/lib/dictBuilder/zdict.c -o $(OBJDIR_LINUX64RELEASE)/external/zstd/lib/dictBuilder/zdict.o
 
 $(OBJDIR_LINUX64RELEASE)/external/zstd/lib/dictBuilder/fastcover.o: external/zstd/lib/dictBuilder/fastcover.c
 	$(CC) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c external/zstd/lib/dictBuilder/fastcover.c -o $(OBJDIR_LINUX64RELEASE)/external/zstd/lib/dictBuilder/fastcover.o
 
-$(OBJDIR_LINUX64RELEASE)/src/lib/engine/patchstream/common/ltoolsc.o: src/lib/engine/patchstream/common/ltoolsc.c
-	$(CC) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c src/lib/engine/patchstream/common/ltoolsc.c -o $(OBJDIR_LINUX64RELEASE)/src/lib/engine/patchstream/common/ltoolsc.o
+$(OBJDIR_LINUX64RELEASE)/src/lib/engine/patchstream/common/compress_store.o: src/lib/engine/patchstream/common/compress_store.c
+	$(CC) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c src/lib/engine/patchstream/common/compress_store.c -o $(OBJDIR_LINUX64RELEASE)/src/lib/engine/patchstream/common/compress_store.o
 
 $(OBJDIR_LINUX64RELEASE)/src/lib/engine/patchstream/common/difstool.o: src/lib/engine/patchstream/common/difstool.c
 	$(CC) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c src/lib/engine/patchstream/common/difstool.c -o $(OBJDIR_LINUX64RELEASE)/src/lib/engine/patchstream/common/difstool.o
@@ -3640,14 +3650,17 @@ $(OBJDIR_LINUX64RELEASE)/src/lib/engine/patchstream/common/dfsToolPosix.o: src/l
 $(OBJDIR_LINUX64RELEASE)/src/lib/engine/patchstream/common/dfsTool.o: src/lib/engine/patchstream/common/dfsTool.c
 	$(CC) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c src/lib/engine/patchstream/common/dfsTool.c -o $(OBJDIR_LINUX64RELEASE)/src/lib/engine/patchstream/common/dfsTool.o
 
-$(OBJDIR_LINUX64RELEASE)/src/lib/engine/patchstream/common/compress_store.o: src/lib/engine/patchstream/common/compress_store.c
-	$(CC) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c src/lib/engine/patchstream/common/compress_store.c -o $(OBJDIR_LINUX64RELEASE)/src/lib/engine/patchstream/common/compress_store.o
+$(OBJDIR_LINUX64RELEASE)/external/zstd/lib/dictBuilder/divsufsort.o: external/zstd/lib/dictBuilder/divsufsort.c
+	$(CC) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c external/zstd/lib/dictBuilder/divsufsort.c -o $(OBJDIR_LINUX64RELEASE)/external/zstd/lib/dictBuilder/divsufsort.o
 
 $(OBJDIR_LINUX64RELEASE)/src/lib/engine/patchstream/common/abstractDecompress.o: src/lib/engine/patchstream/common/abstractDecompress.c
 	$(CC) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c src/lib/engine/patchstream/common/abstractDecompress.c -o $(OBJDIR_LINUX64RELEASE)/src/lib/engine/patchstream/common/abstractDecompress.o
 
 $(OBJDIR_LINUX64RELEASE)/src/lib/engine/patchstream/common/DfsToolsPosixCPP.o: src/lib/engine/patchstream/common/DfsToolsPosixCPP.cpp
 	$(CXX) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c src/lib/engine/patchstream/common/DfsToolsPosixCPP.cpp -o $(OBJDIR_LINUX64RELEASE)/src/lib/engine/patchstream/common/DfsToolsPosixCPP.o
+
+$(OBJDIR_LINUX64RELEASE)/src/lib/engine/patchstream/common/DfsIoMemMutex.o: src/lib/engine/patchstream/common/DfsIoMemMutex.cpp
+	$(CXX) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c src/lib/engine/patchstream/common/DfsIoMemMutex.cpp -o $(OBJDIR_LINUX64RELEASE)/src/lib/engine/patchstream/common/DfsIoMemMutex.o
 
 $(OBJDIR_LINUX64RELEASE)/external/zstd/lib/compress/zstd_compress_superblock.o: external/zstd/lib/compress/zstd_compress_superblock.c
 	$(CC) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c external/zstd/lib/compress/zstd_compress_superblock.c -o $(OBJDIR_LINUX64RELEASE)/external/zstd/lib/compress/zstd_compress_superblock.o
@@ -3682,15 +3695,6 @@ $(OBJDIR_LINUX64RELEASE)/external/zstd/lib/common/threading.o: external/zstd/lib
 $(OBJDIR_LINUX64RELEASE)/external/zstd/lib/common/pool.o: external/zstd/lib/common/pool.c
 	$(CC) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c external/zstd/lib/common/pool.c -o $(OBJDIR_LINUX64RELEASE)/external/zstd/lib/common/pool.o
 
-$(OBJDIR_LINUX64RELEASE)/external/zstd/lib/common/fse_decompress.o: external/zstd/lib/common/fse_decompress.c
-	$(CC) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c external/zstd/lib/common/fse_decompress.c -o $(OBJDIR_LINUX64RELEASE)/external/zstd/lib/common/fse_decompress.o
-
-$(OBJDIR_LINUX64RELEASE)/external/zstd/lib/compress/zstdmt_compress.o: external/zstd/lib/compress/zstdmt_compress.c
-	$(CC) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c external/zstd/lib/compress/zstdmt_compress.c -o $(OBJDIR_LINUX64RELEASE)/external/zstd/lib/compress/zstdmt_compress.o
-
-$(OBJDIR_LINUX64RELEASE)/external/zstd/lib/dictBuilder/divsufsort.o: external/zstd/lib/dictBuilder/divsufsort.c
-	$(CC) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c external/zstd/lib/dictBuilder/divsufsort.c -o $(OBJDIR_LINUX64RELEASE)/external/zstd/lib/dictBuilder/divsufsort.o
-
 $(OBJDIR_LINUX64RELEASE)/external/zstd/lib/dictBuilder/cover.o: external/zstd/lib/dictBuilder/cover.c
 	$(CC) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c external/zstd/lib/dictBuilder/cover.c -o $(OBJDIR_LINUX64RELEASE)/external/zstd/lib/dictBuilder/cover.o
 
@@ -3708,6 +3712,15 @@ $(OBJDIR_LINUX64RELEASE)/external/zstd/lib/decompress/huf_decompress_amd64.o: ex
 
 $(OBJDIR_LINUX64RELEASE)/external/zstd/lib/decompress/huf_decompress.o: external/zstd/lib/decompress/huf_decompress.c
 	$(CC) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c external/zstd/lib/decompress/huf_decompress.c -o $(OBJDIR_LINUX64RELEASE)/external/zstd/lib/decompress/huf_decompress.o
+
+$(OBJDIR_LINUX64RELEASE)/external/zstd/lib/compress/zstdmt_compress.o: external/zstd/lib/compress/zstdmt_compress.c
+	$(CC) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c external/zstd/lib/compress/zstdmt_compress.c -o $(OBJDIR_LINUX64RELEASE)/external/zstd/lib/compress/zstdmt_compress.o
+
+$(OBJDIR_LINUX64RELEASE)/src/lib/engine/patchstream/common/ltoolsc.o: src/lib/engine/patchstream/common/ltoolsc.c
+	$(CC) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c src/lib/engine/patchstream/common/ltoolsc.c -o $(OBJDIR_LINUX64RELEASE)/src/lib/engine/patchstream/common/ltoolsc.o
+
+$(OBJDIR_LINUX64RELEASE)/external/zstd/lib/compress/zstd_preSplit.o: external/zstd/lib/compress/zstd_preSplit.c
+	$(CC) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c external/zstd/lib/compress/zstd_preSplit.c -o $(OBJDIR_LINUX64RELEASE)/external/zstd/lib/compress/zstd_preSplit.o
 
 $(OBJDIR_LINUX64RELEASE)/external/zstd/lib/compress/zstd_opt.o: external/zstd/lib/compress/zstd_opt.c
 	$(CC) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c external/zstd/lib/compress/zstd_opt.c -o $(OBJDIR_LINUX64RELEASE)/external/zstd/lib/compress/zstd_opt.o
@@ -3784,6 +3797,9 @@ $(OBJDIR_LINUX64RELEASE)/src/lib/hash/sha256_from_openssl.o: src/lib/hash/sha256
 $(OBJDIR_LINUX64RELEASE)/src/lib/hash/sha1dgst.o: src/lib/hash/sha1dgst.c
 	$(CC) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c src/lib/hash/sha1dgst.c -o $(OBJDIR_LINUX64RELEASE)/src/lib/hash/sha1dgst.o
 
+$(OBJDIR_LINUX64RELEASE)/src/lib/engine/patchstream/compress/makdifst.o: src/lib/engine/patchstream/compress/makdifst.c
+	$(CC) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c src/lib/engine/patchstream/compress/makdifst.c -o $(OBJDIR_LINUX64RELEASE)/src/lib/engine/patchstream/compress/makdifst.o
+
 $(OBJDIR_LINUX64RELEASE)/src/lib/engine/svfile/common/ArrayTl.o: src/lib/engine/svfile/common/ArrayTl.c
 	$(CC) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c src/lib/engine/svfile/common/ArrayTl.c -o $(OBJDIR_LINUX64RELEASE)/src/lib/engine/svfile/common/ArrayTl.o
 
@@ -3804,9 +3820,6 @@ $(OBJDIR_LINUX64RELEASE)/src/lib/engine/patchstream/decompress/ApDifStm.o: src/l
 
 $(OBJDIR_LINUX64RELEASE)/src/lib/engine/svfile/common/DfsIntf.o: src/lib/engine/svfile/common/DfsIntf.c
 	$(CC) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c src/lib/engine/svfile/common/DfsIntf.c -o $(OBJDIR_LINUX64RELEASE)/src/lib/engine/svfile/common/DfsIntf.o
-
-$(OBJDIR_LINUX64RELEASE)/src/lib/engine/patchstream/compress/makdifst.o: src/lib/engine/patchstream/compress/makdifst.c
-	$(CC) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c src/lib/engine/patchstream/compress/makdifst.c -o $(OBJDIR_LINUX64RELEASE)/src/lib/engine/patchstream/compress/makdifst.o
 
 $(OBJDIR_LINUX64RELEASE)/src/lib/engine/patchstream/compress/makdifId.o: src/lib/engine/patchstream/compress/makdifId.c
 	$(CC) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c src/lib/engine/patchstream/compress/makdifId.c -o $(OBJDIR_LINUX64RELEASE)/src/lib/engine/patchstream/compress/makdifId.o
@@ -3841,6 +3854,9 @@ $(OBJDIR_LINUX64RELEASE)/src/lib/engine/svfile/common/DfsTagMg.o: src/lib/engine
 $(OBJDIR_LINUX64RELEASE)/src/lib/engine/svfile/common/DfsTagBlockFloatTool.o: src/lib/engine/svfile/common/DfsTagBlockFloatTool.c
 	$(CC) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c src/lib/engine/svfile/common/DfsTagBlockFloatTool.c -o $(OBJDIR_LINUX64RELEASE)/src/lib/engine/svfile/common/DfsTagBlockFloatTool.o
 
+$(OBJDIR_LINUX64RELEASE)/external/zstd/lib/common/fse_decompress.o: external/zstd/lib/common/fse_decompress.c
+	$(CC) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c external/zstd/lib/common/fse_decompress.c -o $(OBJDIR_LINUX64RELEASE)/external/zstd/lib/common/fse_decompress.o
+
 $(OBJDIR_LINUX64RELEASE)/src/lib/engine/svfile/common/DfsTagBlockFloatEnd.o: src/lib/engine/svfile/common/DfsTagBlockFloatEnd.c
 	$(CC) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c src/lib/engine/svfile/common/DfsTagBlockFloatEnd.c -o $(OBJDIR_LINUX64RELEASE)/src/lib/engine/svfile/common/DfsTagBlockFloatEnd.o
 
@@ -3859,8 +3875,8 @@ $(OBJDIR_LINUX64RELEASE)/src/lib/engine/svfile/common/DfsMFile.o: src/lib/engine
 $(OBJDIR_LINUX64RELEASE)/src/lib/engine/svfile/common/DfsIntfWr.o: src/lib/engine/svfile/common/DfsIntfWr.c
 	$(CC) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c src/lib/engine/svfile/common/DfsIntfWr.c -o $(OBJDIR_LINUX64RELEASE)/src/lib/engine/svfile/common/DfsIntfWr.o
 
-$(OBJDIR_LINUX64RELEASE)/external/lzham/lzhamdecomp/lzham_prefix_coding.o: external/lzham/lzhamdecomp/lzham_prefix_coding.cpp
-	$(CXX) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c external/lzham/lzhamdecomp/lzham_prefix_coding.cpp -o $(OBJDIR_LINUX64RELEASE)/external/lzham/lzhamdecomp/lzham_prefix_coding.o
+$(OBJDIR_LINUX64RELEASE)/external/lzma_sdk/C/7zAlloc.o: external/lzma_sdk/C/7zAlloc.c
+	$(CC) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c external/lzma_sdk/C/7zAlloc.c -o $(OBJDIR_LINUX64RELEASE)/external/lzma_sdk/C/7zAlloc.o
 
 $(OBJDIR_LINUX64RELEASE)/external/lzham/lzhamlib/lzham_lib.o: external/lzham/lzhamlib/lzham_lib.cpp
 	$(CXX) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c external/lzham/lzhamlib/lzham_lib.cpp -o $(OBJDIR_LINUX64RELEASE)/external/lzham/lzhamlib/lzham_lib.o
@@ -3877,8 +3893,11 @@ $(OBJDIR_LINUX64RELEASE)/external/lzham/lzhamdecomp/lzham_timer.o: external/lzha
 $(OBJDIR_LINUX64RELEASE)/external/lzham/lzhamdecomp/lzham_symbol_codec.o: external/lzham/lzhamdecomp/lzham_symbol_codec.cpp
 	$(CXX) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c external/lzham/lzhamdecomp/lzham_symbol_codec.cpp -o $(OBJDIR_LINUX64RELEASE)/external/lzham/lzhamdecomp/lzham_symbol_codec.o
 
-$(OBJDIR_LINUX64RELEASE)/external/lzma_sdk/C/7zAlloc.o: external/lzma_sdk/C/7zAlloc.c
-	$(CC) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c external/lzma_sdk/C/7zAlloc.c -o $(OBJDIR_LINUX64RELEASE)/external/lzma_sdk/C/7zAlloc.o
+$(OBJDIR_LINUX64RELEASE)/external/lzma_sdk/C/7zArcIn.o: external/lzma_sdk/C/7zArcIn.c
+	$(CC) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c external/lzma_sdk/C/7zArcIn.c -o $(OBJDIR_LINUX64RELEASE)/external/lzma_sdk/C/7zArcIn.o
+
+$(OBJDIR_LINUX64RELEASE)/external/lzham/lzhamdecomp/lzham_prefix_coding.o: external/lzham/lzhamdecomp/lzham_prefix_coding.cpp
+	$(CXX) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c external/lzham/lzhamdecomp/lzham_prefix_coding.cpp -o $(OBJDIR_LINUX64RELEASE)/external/lzham/lzhamdecomp/lzham_prefix_coding.o
 
 $(OBJDIR_LINUX64RELEASE)/external/lzham/lzhamdecomp/lzham_platform.o: external/lzham/lzhamdecomp/lzham_platform.cpp
 	$(CXX) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c external/lzham/lzhamdecomp/lzham_platform.cpp -o $(OBJDIR_LINUX64RELEASE)/external/lzham/lzhamdecomp/lzham_platform.o
@@ -3895,8 +3914,11 @@ $(OBJDIR_LINUX64RELEASE)/external/lzham/lzhamdecomp/lzham_lzdecomp.o: external/l
 $(OBJDIR_LINUX64RELEASE)/external/lzham/lzhamdecomp/lzham_huffman_codes.o: external/lzham/lzhamdecomp/lzham_huffman_codes.cpp
 	$(CXX) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c external/lzham/lzhamdecomp/lzham_huffman_codes.cpp -o $(OBJDIR_LINUX64RELEASE)/external/lzham/lzhamdecomp/lzham_huffman_codes.o
 
-$(OBJDIR_LINUX64RELEASE)/external/lzma_sdk/C/BraIA64.o: external/lzma_sdk/C/BraIA64.c
-	$(CC) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c external/lzma_sdk/C/BraIA64.c -o $(OBJDIR_LINUX64RELEASE)/external/lzma_sdk/C/BraIA64.o
+$(OBJDIR_LINUX64RELEASE)/external/lzma_sdk/C/CpuArch.o: external/lzma_sdk/C/CpuArch.c
+	$(CC) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c external/lzma_sdk/C/CpuArch.c -o $(OBJDIR_LINUX64RELEASE)/external/lzma_sdk/C/CpuArch.o
+
+$(OBJDIR_LINUX64RELEASE)/external/lzma_sdk/C/Ppmd7Enc.o: external/lzma_sdk/C/Ppmd7Enc.c
+	$(CC) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c external/lzma_sdk/C/Ppmd7Enc.c -o $(OBJDIR_LINUX64RELEASE)/external/lzma_sdk/C/Ppmd7Enc.o
 
 $(OBJDIR_LINUX64RELEASE)/external/lzma_sdk/C/Ppmd7Dec.o: external/lzma_sdk/C/Ppmd7Dec.c
 	$(CC) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c external/lzma_sdk/C/Ppmd7Dec.c -o $(OBJDIR_LINUX64RELEASE)/external/lzma_sdk/C/Ppmd7Dec.o
@@ -3928,8 +3950,8 @@ $(OBJDIR_LINUX64RELEASE)/external/lzma_sdk/C/LZMASDK_Sha256.o: external/lzma_sdk
 $(OBJDIR_LINUX64RELEASE)/external/lzma_sdk/C/Delta.o: external/lzma_sdk/C/Delta.c
 	$(CC) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c external/lzma_sdk/C/Delta.c -o $(OBJDIR_LINUX64RELEASE)/external/lzma_sdk/C/Delta.o
 
-$(OBJDIR_LINUX64RELEASE)/external/lzma_sdk/C/CpuArch.o: external/lzma_sdk/C/CpuArch.c
-	$(CC) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c external/lzma_sdk/C/CpuArch.c -o $(OBJDIR_LINUX64RELEASE)/external/lzma_sdk/C/CpuArch.o
+$(OBJDIR_LINUX64RELEASE)/external/lzma_sdk/C/BraIA64.o: external/lzma_sdk/C/BraIA64.c
+	$(CC) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c external/lzma_sdk/C/BraIA64.c -o $(OBJDIR_LINUX64RELEASE)/external/lzma_sdk/C/BraIA64.o
 
 $(OBJDIR_LINUX64RELEASE)/external/lzma_sdk/C/Bra86.o: external/lzma_sdk/C/Bra86.c
 	$(CC) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c external/lzma_sdk/C/Bra86.c -o $(OBJDIR_LINUX64RELEASE)/external/lzma_sdk/C/Bra86.o
@@ -3964,9 +3986,6 @@ $(OBJDIR_LINUX64RELEASE)/external/lzma_sdk/C/7zBuf2.o: external/lzma_sdk/C/7zBuf
 $(OBJDIR_LINUX64RELEASE)/external/lzma_sdk/C/7zBuf.o: external/lzma_sdk/C/7zBuf.c
 	$(CC) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c external/lzma_sdk/C/7zBuf.c -o $(OBJDIR_LINUX64RELEASE)/external/lzma_sdk/C/7zBuf.o
 
-$(OBJDIR_LINUX64RELEASE)/external/lzma_sdk/C/7zArcIn.o: external/lzma_sdk/C/7zArcIn.c
-	$(CC) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c external/lzma_sdk/C/7zArcIn.c -o $(OBJDIR_LINUX64RELEASE)/external/lzma_sdk/C/7zArcIn.o
-
 $(OBJDIR_LINUX64RELEASE)/external/fastlzlib/lz4/lz4hc.o: external/fastlzlib/lz4/lz4hc.c
 	$(CC) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c external/fastlzlib/lz4/lz4hc.c -o $(OBJDIR_LINUX64RELEASE)/external/fastlzlib/lz4/lz4hc.o
 
@@ -3990,6 +4009,9 @@ $(OBJDIR_LINUX64RELEASE)/external/fastlzlib/lzfse/src/lzfse_decode.o: external/f
 
 $(OBJDIR_LINUX64RELEASE)/external/fastlzlib/lz4/xxhash.o: external/fastlzlib/lz4/xxhash.c
 	$(CC) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c external/fastlzlib/lz4/xxhash.c -o $(OBJDIR_LINUX64RELEASE)/external/fastlzlib/lz4/xxhash.o
+
+$(OBJDIR_LINUX64RELEASE)/external/fastlzlib/lzfse/src/lzvn_encode_base.o: external/fastlzlib/lzfse/src/lzvn_encode_base.c
+	$(CC) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c external/fastlzlib/lzfse/src/lzvn_encode_base.c -o $(OBJDIR_LINUX64RELEASE)/external/fastlzlib/lzfse/src/lzvn_encode_base.o
 
 $(OBJDIR_LINUX64RELEASE)/external/fastlzlib/lz4/lz4frame.o: external/fastlzlib/lz4/lz4frame.c
 	$(CC) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c external/fastlzlib/lz4/lz4frame.c -o $(OBJDIR_LINUX64RELEASE)/external/fastlzlib/lz4/lz4frame.o
@@ -4021,9 +4043,6 @@ $(OBJDIR_LINUX64RELEASE)/external/bzip/compress.o: external/bzip/compress.c
 $(OBJDIR_LINUX64RELEASE)/external/bzip/bzlib.o: external/bzip/bzlib.c
 	$(CC) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c external/bzip/bzlib.c -o $(OBJDIR_LINUX64RELEASE)/external/bzip/bzlib.o
 
-$(OBJDIR_LINUX64RELEASE)/external/lzham/lzhamcomp/lzham_match_accel.o: external/lzham/lzhamcomp/lzham_match_accel.cpp
-	$(CXX) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c external/lzham/lzhamcomp/lzham_match_accel.cpp -o $(OBJDIR_LINUX64RELEASE)/external/lzham/lzhamcomp/lzham_match_accel.o
-
 $(OBJDIR_LINUX64RELEASE)/external/lzham/lzhamdecomp/lzham_checksum.o: external/lzham/lzhamdecomp/lzham_checksum.cpp
 	$(CXX) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c external/lzham/lzhamdecomp/lzham_checksum.cpp -o $(OBJDIR_LINUX64RELEASE)/external/lzham/lzhamdecomp/lzham_checksum.o
 
@@ -4033,8 +4052,11 @@ $(OBJDIR_LINUX64RELEASE)/external/lzham/lzhamdecomp/lzham_assert.o: external/lzh
 $(OBJDIR_LINUX64RELEASE)/external/lzham/lzhamcomp/lzham_pthreads_threading.o: external/lzham/lzhamcomp/lzham_pthreads_threading.cpp
 	$(CXX) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c external/lzham/lzhamcomp/lzham_pthreads_threading.cpp -o $(OBJDIR_LINUX64RELEASE)/external/lzham/lzhamcomp/lzham_pthreads_threading.o
 
-$(OBJDIR_LINUX64RELEASE)/external/lzma_sdk/C/Ppmd7Enc.o: external/lzma_sdk/C/Ppmd7Enc.c
-	$(CC) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c external/lzma_sdk/C/Ppmd7Enc.c -o $(OBJDIR_LINUX64RELEASE)/external/lzma_sdk/C/Ppmd7Enc.o
+$(OBJDIR_LINUX64RELEASE)/external/lzma_sdk/C/Sha256Opt.o: external/lzma_sdk/C/Sha256Opt.c
+	$(CC) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c external/lzma_sdk/C/Sha256Opt.c -o $(OBJDIR_LINUX64RELEASE)/external/lzma_sdk/C/Sha256Opt.o
+
+$(OBJDIR_LINUX64RELEASE)/external/lzham/lzhamcomp/lzham_match_accel.o: external/lzham/lzhamcomp/lzham_match_accel.cpp
+	$(CXX) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c external/lzham/lzhamcomp/lzham_match_accel.cpp -o $(OBJDIR_LINUX64RELEASE)/external/lzham/lzhamcomp/lzham_match_accel.o
 
 $(OBJDIR_LINUX64RELEASE)/external/lzham/lzhamcomp/lzham_lzcomp_state.o: external/lzham/lzhamcomp/lzham_lzcomp_state.cpp
 	$(CXX) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c external/lzham/lzhamcomp/lzham_lzcomp_state.cpp -o $(OBJDIR_LINUX64RELEASE)/external/lzham/lzhamcomp/lzham_lzcomp_state.o
@@ -4048,11 +4070,11 @@ $(OBJDIR_LINUX64RELEASE)/external/lzham/lzhamcomp/lzham_lzcomp.o: external/lzham
 $(OBJDIR_LINUX64RELEASE)/external/lzham/lzhamcomp/lzham_lzbase.o: external/lzham/lzhamcomp/lzham_lzbase.cpp
 	$(CXX) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c external/lzham/lzhamcomp/lzham_lzbase.cpp -o $(OBJDIR_LINUX64RELEASE)/external/lzham/lzhamcomp/lzham_lzbase.o
 
-$(OBJDIR_LINUX64RELEASE)/external/fastlzlib/lzfse/src/lzvn_encode_base.o: external/fastlzlib/lzfse/src/lzvn_encode_base.c
-	$(CC) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c external/fastlzlib/lzfse/src/lzvn_encode_base.c -o $(OBJDIR_LINUX64RELEASE)/external/fastlzlib/lzfse/src/lzvn_encode_base.o
+$(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/lz/lz_encoder.o: external/xz/src/liblzma/lz/lz_encoder.c
+	$(CC) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c external/xz/src/liblzma/lz/lz_encoder.c -o $(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/lz/lz_encoder.o
 
-$(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/lz/lz_decoder.o: external/xz/src/liblzma/lz/lz_decoder.c
-	$(CC) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c external/xz/src/liblzma/lz/lz_decoder.c -o $(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/lz/lz_decoder.o
+$(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/simple/armthumb.o: external/xz/src/liblzma/simple/armthumb.c
+	$(CC) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c external/xz/src/liblzma/simple/armthumb.c -o $(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/simple/armthumb.o
 
 $(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/simple/arm64.o: external/xz/src/liblzma/simple/arm64.c
 	$(CC) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c external/xz/src/liblzma/simple/arm64.c -o $(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/simple/arm64.o
@@ -4090,11 +4112,11 @@ $(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/lzma/fastpos_table.o: external/
 $(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/lz/lz_encoder_mf.o: external/xz/src/liblzma/lz/lz_encoder_mf.c
 	$(CC) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c external/xz/src/liblzma/lz/lz_encoder_mf.c -o $(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/lz/lz_encoder_mf.o
 
-$(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/lz/lz_encoder.o: external/xz/src/liblzma/lz/lz_encoder.c
-	$(CC) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c external/xz/src/liblzma/lz/lz_encoder.c -o $(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/lz/lz_encoder.o
+$(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/simple/ia64.o: external/xz/src/liblzma/simple/ia64.c
+	$(CC) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c external/xz/src/liblzma/simple/ia64.c -o $(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/simple/ia64.o
 
-$(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/simple/armthumb.o: external/xz/src/liblzma/simple/armthumb.c
-	$(CC) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c external/xz/src/liblzma/simple/armthumb.c -o $(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/simple/armthumb.o
+$(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/lz/lz_decoder.o: external/xz/src/liblzma/lz/lz_decoder.c
+	$(CC) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c external/xz/src/liblzma/lz/lz_decoder.c -o $(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/lz/lz_decoder.o
 
 $(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/delta/delta_encoder.o: external/xz/src/liblzma/delta/delta_encoder.c
 	$(CC) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c external/xz/src/liblzma/delta/delta_encoder.c -o $(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/delta/delta_encoder.o
@@ -4129,11 +4151,8 @@ $(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/common/stream_encoder_mt.o: ext
 $(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/common/stream_encoder.o: external/xz/src/liblzma/common/stream_encoder.c
 	$(CC) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c external/xz/src/liblzma/common/stream_encoder.c -o $(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/common/stream_encoder.o
 
-$(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/common/stream_decoder.o: external/xz/src/liblzma/common/stream_decoder.c
-	$(CC) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c external/xz/src/liblzma/common/stream_decoder.c -o $(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/common/stream_decoder.o
-
-$(OBJDIR_LINUX64RELEASE)/external/zlib/inflate.o: external/zlib/inflate.c
-	$(CC) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c external/zlib/inflate.c -o $(OBJDIR_LINUX64RELEASE)/external/zlib/inflate.o
+$(OBJDIR_LINUX64RELEASE)/external/zlib/inftrees.o: external/zlib/inftrees.c
+	$(CC) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c external/zlib/inftrees.c -o $(OBJDIR_LINUX64RELEASE)/external/zlib/inftrees.o
 
 $(OBJDIR_LINUX64RELEASE)/external/zstd/lib/common/error_private.o: external/zstd/lib/common/error_private.c
 	$(CC) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c external/zstd/lib/common/error_private.c -o $(OBJDIR_LINUX64RELEASE)/external/zstd/lib/common/error_private.o
@@ -4153,11 +4172,11 @@ $(OBJDIR_LINUX64RELEASE)/external/zlib/zlibcompress.o: external/zlib/zlibcompres
 $(OBJDIR_LINUX64RELEASE)/external/zlib/trees.o: external/zlib/trees.c
 	$(CC) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c external/zlib/trees.c -o $(OBJDIR_LINUX64RELEASE)/external/zlib/trees.o
 
-$(OBJDIR_LINUX64RELEASE)/external/zlib/inftrees.o: external/zlib/inftrees.c
-	$(CC) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c external/zlib/inftrees.c -o $(OBJDIR_LINUX64RELEASE)/external/zlib/inftrees.o
+$(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/common/stream_decoder.o: external/xz/src/liblzma/common/stream_decoder.c
+	$(CC) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c external/xz/src/liblzma/common/stream_decoder.c -o $(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/common/stream_decoder.o
 
-$(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/common/stream_buffer_encoder.o: external/xz/src/liblzma/common/stream_buffer_encoder.c
-	$(CC) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c external/xz/src/liblzma/common/stream_buffer_encoder.c -o $(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/common/stream_buffer_encoder.o
+$(OBJDIR_LINUX64RELEASE)/external/zlib/inflate.o: external/zlib/inflate.c
+	$(CC) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c external/zlib/inflate.c -o $(OBJDIR_LINUX64RELEASE)/external/zlib/inflate.o
 
 $(OBJDIR_LINUX64RELEASE)/external/zlib/inffast.o: external/zlib/inffast.c
 	$(CC) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c external/zlib/inffast.c -o $(OBJDIR_LINUX64RELEASE)/external/zlib/inffast.o
@@ -4189,11 +4208,11 @@ $(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/simple/simple_coder.o: external
 $(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/simple/powerpc.o: external/xz/src/liblzma/simple/powerpc.c
 	$(CC) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c external/xz/src/liblzma/simple/powerpc.c -o $(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/simple/powerpc.o
 
-$(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/simple/ia64.o: external/xz/src/liblzma/simple/ia64.c
-	$(CC) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c external/xz/src/liblzma/simple/ia64.c -o $(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/simple/ia64.o
+$(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/check/crc32_fast.o: external/xz/src/liblzma/check/crc32_fast.c
+	$(CC) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c external/xz/src/liblzma/check/crc32_fast.c -o $(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/check/crc32_fast.o
 
-$(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/check/check.o: external/xz/src/liblzma/check/check.c
-	$(CC) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c external/xz/src/liblzma/check/check.c -o $(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/check/check.o
+$(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/common/block_header_decoder.o: external/xz/src/liblzma/common/block_header_decoder.c
+	$(CC) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c external/xz/src/liblzma/common/block_header_decoder.c -o $(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/common/block_header_decoder.o
 
 $(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/common/block_encoder.o: external/xz/src/liblzma/common/block_encoder.c
 	$(CC) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c external/xz/src/liblzma/common/block_encoder.c -o $(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/common/block_encoder.o
@@ -4228,11 +4247,11 @@ $(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/check/crc64_fast.o: external/xz
 $(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/check/crc32_table.o: external/xz/src/liblzma/check/crc32_table.c
 	$(CC) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c external/xz/src/liblzma/check/crc32_table.c -o $(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/check/crc32_table.o
 
-$(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/check/crc32_fast.o: external/xz/src/liblzma/check/crc32_fast.c
-	$(CC) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c external/xz/src/liblzma/check/crc32_fast.c -o $(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/check/crc32_fast.o
+$(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/common/block_header_encoder.o: external/xz/src/liblzma/common/block_header_encoder.c
+	$(CC) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c external/xz/src/liblzma/common/block_header_encoder.c -o $(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/common/block_header_encoder.o
 
-$(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/common/block_header_decoder.o: external/xz/src/liblzma/common/block_header_decoder.c
-	$(CC) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c external/xz/src/liblzma/common/block_header_decoder.c -o $(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/common/block_header_decoder.o
+$(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/check/check.o: external/xz/src/liblzma/check/check.c
+	$(CC) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c external/xz/src/liblzma/check/check.c -o $(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/check/check.o
 
 $(OBJDIR_LINUX64RELEASE)/external/xz/src/common/tuklib_progname.o: external/xz/src/common/tuklib_progname.c
 	$(CC) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c external/xz/src/common/tuklib_progname.c -o $(OBJDIR_LINUX64RELEASE)/external/xz/src/common/tuklib_progname.o
@@ -4267,11 +4286,11 @@ $(OBJDIR_LINUX64RELEASE)/external/lzma_sdk/C/XzCrc64.o: external/lzma_sdk/C/XzCr
 $(OBJDIR_LINUX64RELEASE)/external/lzma_sdk/C/Xz.o: external/lzma_sdk/C/Xz.c
 	$(CC) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c external/lzma_sdk/C/Xz.c -o $(OBJDIR_LINUX64RELEASE)/external/lzma_sdk/C/Xz.o
 
-$(OBJDIR_LINUX64RELEASE)/external/lzma_sdk/C/Sha256Opt.o: external/lzma_sdk/C/Sha256Opt.c
-	$(CC) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c external/lzma_sdk/C/Sha256Opt.c -o $(OBJDIR_LINUX64RELEASE)/external/lzma_sdk/C/Sha256Opt.o
+$(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/common/filter_flags_decoder.o: external/xz/src/liblzma/common/filter_flags_decoder.c
+	$(CC) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c external/xz/src/liblzma/common/filter_flags_decoder.c -o $(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/common/filter_flags_decoder.o
 
-$(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/common/filter_encoder.o: external/xz/src/liblzma/common/filter_encoder.c
-	$(CC) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c external/xz/src/liblzma/common/filter_encoder.c -o $(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/common/filter_encoder.o
+$(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/common/stream_buffer_encoder.o: external/xz/src/liblzma/common/stream_buffer_encoder.c
+	$(CC) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c external/xz/src/liblzma/common/stream_buffer_encoder.c -o $(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/common/stream_buffer_encoder.o
 
 $(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/common/stream_buffer_decoder.o: external/xz/src/liblzma/common/stream_buffer_decoder.c
 	$(CC) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c external/xz/src/liblzma/common/stream_buffer_decoder.c -o $(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/common/stream_buffer_decoder.o
@@ -4303,11 +4322,11 @@ $(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/common/hardware_cputhreads.o: e
 $(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/common/filter_flags_encoder.o: external/xz/src/liblzma/common/filter_flags_encoder.c
 	$(CC) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c external/xz/src/liblzma/common/filter_flags_encoder.c -o $(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/common/filter_flags_encoder.o
 
-$(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/common/filter_flags_decoder.o: external/xz/src/liblzma/common/filter_flags_decoder.c
-	$(CC) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c external/xz/src/liblzma/common/filter_flags_decoder.c -o $(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/common/filter_flags_decoder.o
-
 $(OBJDIR_LINUX64RELEASE)/external/bzip/blocksort.o: external/bzip/blocksort.c
 	$(CC) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c external/bzip/blocksort.c -o $(OBJDIR_LINUX64RELEASE)/external/bzip/blocksort.o
+
+$(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/common/filter_encoder.o: external/xz/src/liblzma/common/filter_encoder.c
+	$(CC) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c external/xz/src/liblzma/common/filter_encoder.c -o $(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/common/filter_encoder.o
 
 $(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/common/filter_decoder.o: external/xz/src/liblzma/common/filter_decoder.c
 	$(CC) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c external/xz/src/liblzma/common/filter_decoder.c -o $(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/common/filter_decoder.o
@@ -4342,9 +4361,6 @@ $(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/common/common.o: external/xz/sr
 $(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/common/block_util.o: external/xz/src/liblzma/common/block_util.c
 	$(CC) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c external/xz/src/liblzma/common/block_util.c -o $(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/common/block_util.o
 
-$(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/common/block_header_encoder.o: external/xz/src/liblzma/common/block_header_encoder.c
-	$(CC) $(CFLAGS_LINUX64RELEASE) $(INC_LINUX64RELEASE) -c external/xz/src/liblzma/common/block_header_encoder.c -o $(OBJDIR_LINUX64RELEASE)/external/xz/src/liblzma/common/block_header_encoder.o
-
 clean_linux64release: 
 	rm -f $(OBJ_LINUX64RELEASE) $(OUT_LINUX64RELEASE)
 	rm -rf bin/Release64
@@ -4363,13 +4379,13 @@ clean_linux64release:
 	rm -rf $(OBJDIR_LINUX64RELEASE)/src/misc
 	rm -rf $(OBJDIR_LINUX64RELEASE)/src/lib/helper/decompress
 	rm -rf $(OBJDIR_LINUX64RELEASE)/src/lib/helper/compress
+	rm -rf $(OBJDIR_LINUX64RELEASE)/src/lib/engine/patchstream/compress
 	rm -rf $(OBJDIR_LINUX64RELEASE)/src/lib/engine/svfile/common
 	rm -rf $(OBJDIR_LINUX64RELEASE)/src/lib/engine/patchstream/rebuild
 	rm -rf $(OBJDIR_LINUX64RELEASE)/src/lib/engine/patchstream/decompress
-	rm -rf $(OBJDIR_LINUX64RELEASE)/src/lib/engine/patchstream/compress
-	rm -rf $(OBJDIR_LINUX64RELEASE)/external/lzham/lzhamdecomp
-	rm -rf $(OBJDIR_LINUX64RELEASE)/external/lzham/lzhamlib
 	rm -rf $(OBJDIR_LINUX64RELEASE)/external/lzma_sdk/C
+	rm -rf $(OBJDIR_LINUX64RELEASE)/external/lzham/lzhamlib
+	rm -rf $(OBJDIR_LINUX64RELEASE)/external/lzham/lzhamdecomp
 	rm -rf $(OBJDIR_LINUX64RELEASE)/external/fastlzlib/lz4
 	rm -rf $(OBJDIR_LINUX64RELEASE)/external/fastlzlib/lzfse/src
 	rm -rf $(OBJDIR_LINUX64RELEASE)/external/fastlzlib
@@ -4403,13 +4419,13 @@ before_linux32release:
 	test -d $(OBJDIR_LINUX32RELEASE)/src/misc || mkdir -p $(OBJDIR_LINUX32RELEASE)/src/misc
 	test -d $(OBJDIR_LINUX32RELEASE)/src/lib/helper/decompress || mkdir -p $(OBJDIR_LINUX32RELEASE)/src/lib/helper/decompress
 	test -d $(OBJDIR_LINUX32RELEASE)/src/lib/helper/compress || mkdir -p $(OBJDIR_LINUX32RELEASE)/src/lib/helper/compress
+	test -d $(OBJDIR_LINUX32RELEASE)/src/lib/engine/patchstream/compress || mkdir -p $(OBJDIR_LINUX32RELEASE)/src/lib/engine/patchstream/compress
 	test -d $(OBJDIR_LINUX32RELEASE)/src/lib/engine/svfile/common || mkdir -p $(OBJDIR_LINUX32RELEASE)/src/lib/engine/svfile/common
 	test -d $(OBJDIR_LINUX32RELEASE)/src/lib/engine/patchstream/rebuild || mkdir -p $(OBJDIR_LINUX32RELEASE)/src/lib/engine/patchstream/rebuild
 	test -d $(OBJDIR_LINUX32RELEASE)/src/lib/engine/patchstream/decompress || mkdir -p $(OBJDIR_LINUX32RELEASE)/src/lib/engine/patchstream/decompress
-	test -d $(OBJDIR_LINUX32RELEASE)/src/lib/engine/patchstream/compress || mkdir -p $(OBJDIR_LINUX32RELEASE)/src/lib/engine/patchstream/compress
-	test -d $(OBJDIR_LINUX32RELEASE)/external/lzham/lzhamdecomp || mkdir -p $(OBJDIR_LINUX32RELEASE)/external/lzham/lzhamdecomp
-	test -d $(OBJDIR_LINUX32RELEASE)/external/lzham/lzhamlib || mkdir -p $(OBJDIR_LINUX32RELEASE)/external/lzham/lzhamlib
 	test -d $(OBJDIR_LINUX32RELEASE)/external/lzma_sdk/C || mkdir -p $(OBJDIR_LINUX32RELEASE)/external/lzma_sdk/C
+	test -d $(OBJDIR_LINUX32RELEASE)/external/lzham/lzhamlib || mkdir -p $(OBJDIR_LINUX32RELEASE)/external/lzham/lzhamlib
+	test -d $(OBJDIR_LINUX32RELEASE)/external/lzham/lzhamdecomp || mkdir -p $(OBJDIR_LINUX32RELEASE)/external/lzham/lzhamdecomp
 	test -d $(OBJDIR_LINUX32RELEASE)/external/fastlzlib/lz4 || mkdir -p $(OBJDIR_LINUX32RELEASE)/external/fastlzlib/lz4
 	test -d $(OBJDIR_LINUX32RELEASE)/external/fastlzlib/lzfse/src || mkdir -p $(OBJDIR_LINUX32RELEASE)/external/fastlzlib/lzfse/src
 	test -d $(OBJDIR_LINUX32RELEASE)/external/fastlzlib || mkdir -p $(OBJDIR_LINUX32RELEASE)/external/fastlzlib
@@ -4454,17 +4470,14 @@ $(OBJDIR_LINUX32RELEASE)/src/cli/DifstrmMainPosix.o: src/cli/DifstrmMainPosix.c
 $(OBJDIR_LINUX32RELEASE)/src/cli/DfsCdLin.o: src/cli/DfsCdLin.c
 	$(CC) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c src/cli/DfsCdLin.c -o $(OBJDIR_LINUX32RELEASE)/src/cli/DfsCdLin.o
 
-$(OBJDIR_LINUX32RELEASE)/src/lib/engine/patchstream/common/DfsIoMemMutex.o: src/lib/engine/patchstream/common/DfsIoMemMutex.cpp
-	$(CXX) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c src/lib/engine/patchstream/common/DfsIoMemMutex.cpp -o $(OBJDIR_LINUX32RELEASE)/src/lib/engine/patchstream/common/DfsIoMemMutex.o
-
 $(OBJDIR_LINUX32RELEASE)/external/zstd/lib/dictBuilder/zdict.o: external/zstd/lib/dictBuilder/zdict.c
 	$(CC) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c external/zstd/lib/dictBuilder/zdict.c -o $(OBJDIR_LINUX32RELEASE)/external/zstd/lib/dictBuilder/zdict.o
 
 $(OBJDIR_LINUX32RELEASE)/external/zstd/lib/dictBuilder/fastcover.o: external/zstd/lib/dictBuilder/fastcover.c
 	$(CC) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c external/zstd/lib/dictBuilder/fastcover.c -o $(OBJDIR_LINUX32RELEASE)/external/zstd/lib/dictBuilder/fastcover.o
 
-$(OBJDIR_LINUX32RELEASE)/src/lib/engine/patchstream/common/ltoolsc.o: src/lib/engine/patchstream/common/ltoolsc.c
-	$(CC) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c src/lib/engine/patchstream/common/ltoolsc.c -o $(OBJDIR_LINUX32RELEASE)/src/lib/engine/patchstream/common/ltoolsc.o
+$(OBJDIR_LINUX32RELEASE)/src/lib/engine/patchstream/common/compress_store.o: src/lib/engine/patchstream/common/compress_store.c
+	$(CC) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c src/lib/engine/patchstream/common/compress_store.c -o $(OBJDIR_LINUX32RELEASE)/src/lib/engine/patchstream/common/compress_store.o
 
 $(OBJDIR_LINUX32RELEASE)/src/lib/engine/patchstream/common/difstool.o: src/lib/engine/patchstream/common/difstool.c
 	$(CC) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c src/lib/engine/patchstream/common/difstool.c -o $(OBJDIR_LINUX32RELEASE)/src/lib/engine/patchstream/common/difstool.o
@@ -4481,14 +4494,17 @@ $(OBJDIR_LINUX32RELEASE)/src/lib/engine/patchstream/common/dfsToolPosix.o: src/l
 $(OBJDIR_LINUX32RELEASE)/src/lib/engine/patchstream/common/dfsTool.o: src/lib/engine/patchstream/common/dfsTool.c
 	$(CC) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c src/lib/engine/patchstream/common/dfsTool.c -o $(OBJDIR_LINUX32RELEASE)/src/lib/engine/patchstream/common/dfsTool.o
 
-$(OBJDIR_LINUX32RELEASE)/src/lib/engine/patchstream/common/compress_store.o: src/lib/engine/patchstream/common/compress_store.c
-	$(CC) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c src/lib/engine/patchstream/common/compress_store.c -o $(OBJDIR_LINUX32RELEASE)/src/lib/engine/patchstream/common/compress_store.o
+$(OBJDIR_LINUX32RELEASE)/external/zstd/lib/dictBuilder/divsufsort.o: external/zstd/lib/dictBuilder/divsufsort.c
+	$(CC) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c external/zstd/lib/dictBuilder/divsufsort.c -o $(OBJDIR_LINUX32RELEASE)/external/zstd/lib/dictBuilder/divsufsort.o
 
 $(OBJDIR_LINUX32RELEASE)/src/lib/engine/patchstream/common/abstractDecompress.o: src/lib/engine/patchstream/common/abstractDecompress.c
 	$(CC) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c src/lib/engine/patchstream/common/abstractDecompress.c -o $(OBJDIR_LINUX32RELEASE)/src/lib/engine/patchstream/common/abstractDecompress.o
 
 $(OBJDIR_LINUX32RELEASE)/src/lib/engine/patchstream/common/DfsToolsPosixCPP.o: src/lib/engine/patchstream/common/DfsToolsPosixCPP.cpp
 	$(CXX) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c src/lib/engine/patchstream/common/DfsToolsPosixCPP.cpp -o $(OBJDIR_LINUX32RELEASE)/src/lib/engine/patchstream/common/DfsToolsPosixCPP.o
+
+$(OBJDIR_LINUX32RELEASE)/src/lib/engine/patchstream/common/DfsIoMemMutex.o: src/lib/engine/patchstream/common/DfsIoMemMutex.cpp
+	$(CXX) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c src/lib/engine/patchstream/common/DfsIoMemMutex.cpp -o $(OBJDIR_LINUX32RELEASE)/src/lib/engine/patchstream/common/DfsIoMemMutex.o
 
 $(OBJDIR_LINUX32RELEASE)/external/zstd/lib/compress/zstd_compress_superblock.o: external/zstd/lib/compress/zstd_compress_superblock.c
 	$(CC) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c external/zstd/lib/compress/zstd_compress_superblock.c -o $(OBJDIR_LINUX32RELEASE)/external/zstd/lib/compress/zstd_compress_superblock.o
@@ -4523,15 +4539,6 @@ $(OBJDIR_LINUX32RELEASE)/external/zstd/lib/common/threading.o: external/zstd/lib
 $(OBJDIR_LINUX32RELEASE)/external/zstd/lib/common/pool.o: external/zstd/lib/common/pool.c
 	$(CC) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c external/zstd/lib/common/pool.c -o $(OBJDIR_LINUX32RELEASE)/external/zstd/lib/common/pool.o
 
-$(OBJDIR_LINUX32RELEASE)/external/zstd/lib/common/fse_decompress.o: external/zstd/lib/common/fse_decompress.c
-	$(CC) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c external/zstd/lib/common/fse_decompress.c -o $(OBJDIR_LINUX32RELEASE)/external/zstd/lib/common/fse_decompress.o
-
-$(OBJDIR_LINUX32RELEASE)/external/zstd/lib/compress/zstdmt_compress.o: external/zstd/lib/compress/zstdmt_compress.c
-	$(CC) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c external/zstd/lib/compress/zstdmt_compress.c -o $(OBJDIR_LINUX32RELEASE)/external/zstd/lib/compress/zstdmt_compress.o
-
-$(OBJDIR_LINUX32RELEASE)/external/zstd/lib/dictBuilder/divsufsort.o: external/zstd/lib/dictBuilder/divsufsort.c
-	$(CC) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c external/zstd/lib/dictBuilder/divsufsort.c -o $(OBJDIR_LINUX32RELEASE)/external/zstd/lib/dictBuilder/divsufsort.o
-
 $(OBJDIR_LINUX32RELEASE)/external/zstd/lib/dictBuilder/cover.o: external/zstd/lib/dictBuilder/cover.c
 	$(CC) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c external/zstd/lib/dictBuilder/cover.c -o $(OBJDIR_LINUX32RELEASE)/external/zstd/lib/dictBuilder/cover.o
 
@@ -4549,6 +4556,15 @@ $(OBJDIR_LINUX32RELEASE)/external/zstd/lib/decompress/huf_decompress_amd64.o: ex
 
 $(OBJDIR_LINUX32RELEASE)/external/zstd/lib/decompress/huf_decompress.o: external/zstd/lib/decompress/huf_decompress.c
 	$(CC) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c external/zstd/lib/decompress/huf_decompress.c -o $(OBJDIR_LINUX32RELEASE)/external/zstd/lib/decompress/huf_decompress.o
+
+$(OBJDIR_LINUX32RELEASE)/external/zstd/lib/compress/zstdmt_compress.o: external/zstd/lib/compress/zstdmt_compress.c
+	$(CC) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c external/zstd/lib/compress/zstdmt_compress.c -o $(OBJDIR_LINUX32RELEASE)/external/zstd/lib/compress/zstdmt_compress.o
+
+$(OBJDIR_LINUX32RELEASE)/src/lib/engine/patchstream/common/ltoolsc.o: src/lib/engine/patchstream/common/ltoolsc.c
+	$(CC) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c src/lib/engine/patchstream/common/ltoolsc.c -o $(OBJDIR_LINUX32RELEASE)/src/lib/engine/patchstream/common/ltoolsc.o
+
+$(OBJDIR_LINUX32RELEASE)/external/zstd/lib/compress/zstd_preSplit.o: external/zstd/lib/compress/zstd_preSplit.c
+	$(CC) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c external/zstd/lib/compress/zstd_preSplit.c -o $(OBJDIR_LINUX32RELEASE)/external/zstd/lib/compress/zstd_preSplit.o
 
 $(OBJDIR_LINUX32RELEASE)/external/zstd/lib/compress/zstd_opt.o: external/zstd/lib/compress/zstd_opt.c
 	$(CC) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c external/zstd/lib/compress/zstd_opt.c -o $(OBJDIR_LINUX32RELEASE)/external/zstd/lib/compress/zstd_opt.o
@@ -4625,6 +4641,9 @@ $(OBJDIR_LINUX32RELEASE)/src/lib/hash/sha256_from_openssl.o: src/lib/hash/sha256
 $(OBJDIR_LINUX32RELEASE)/src/lib/hash/sha1dgst.o: src/lib/hash/sha1dgst.c
 	$(CC) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c src/lib/hash/sha1dgst.c -o $(OBJDIR_LINUX32RELEASE)/src/lib/hash/sha1dgst.o
 
+$(OBJDIR_LINUX32RELEASE)/src/lib/engine/patchstream/compress/makdifst.o: src/lib/engine/patchstream/compress/makdifst.c
+	$(CC) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c src/lib/engine/patchstream/compress/makdifst.c -o $(OBJDIR_LINUX32RELEASE)/src/lib/engine/patchstream/compress/makdifst.o
+
 $(OBJDIR_LINUX32RELEASE)/src/lib/engine/svfile/common/ArrayTl.o: src/lib/engine/svfile/common/ArrayTl.c
 	$(CC) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c src/lib/engine/svfile/common/ArrayTl.c -o $(OBJDIR_LINUX32RELEASE)/src/lib/engine/svfile/common/ArrayTl.o
 
@@ -4645,9 +4664,6 @@ $(OBJDIR_LINUX32RELEASE)/src/lib/engine/patchstream/decompress/ApDifStm.o: src/l
 
 $(OBJDIR_LINUX32RELEASE)/src/lib/engine/svfile/common/DfsIntf.o: src/lib/engine/svfile/common/DfsIntf.c
 	$(CC) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c src/lib/engine/svfile/common/DfsIntf.c -o $(OBJDIR_LINUX32RELEASE)/src/lib/engine/svfile/common/DfsIntf.o
-
-$(OBJDIR_LINUX32RELEASE)/src/lib/engine/patchstream/compress/makdifst.o: src/lib/engine/patchstream/compress/makdifst.c
-	$(CC) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c src/lib/engine/patchstream/compress/makdifst.c -o $(OBJDIR_LINUX32RELEASE)/src/lib/engine/patchstream/compress/makdifst.o
 
 $(OBJDIR_LINUX32RELEASE)/src/lib/engine/patchstream/compress/makdifId.o: src/lib/engine/patchstream/compress/makdifId.c
 	$(CC) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c src/lib/engine/patchstream/compress/makdifId.c -o $(OBJDIR_LINUX32RELEASE)/src/lib/engine/patchstream/compress/makdifId.o
@@ -4682,6 +4698,9 @@ $(OBJDIR_LINUX32RELEASE)/src/lib/engine/svfile/common/DfsTagMg.o: src/lib/engine
 $(OBJDIR_LINUX32RELEASE)/src/lib/engine/svfile/common/DfsTagBlockFloatTool.o: src/lib/engine/svfile/common/DfsTagBlockFloatTool.c
 	$(CC) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c src/lib/engine/svfile/common/DfsTagBlockFloatTool.c -o $(OBJDIR_LINUX32RELEASE)/src/lib/engine/svfile/common/DfsTagBlockFloatTool.o
 
+$(OBJDIR_LINUX32RELEASE)/external/zstd/lib/common/fse_decompress.o: external/zstd/lib/common/fse_decompress.c
+	$(CC) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c external/zstd/lib/common/fse_decompress.c -o $(OBJDIR_LINUX32RELEASE)/external/zstd/lib/common/fse_decompress.o
+
 $(OBJDIR_LINUX32RELEASE)/src/lib/engine/svfile/common/DfsTagBlockFloatEnd.o: src/lib/engine/svfile/common/DfsTagBlockFloatEnd.c
 	$(CC) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c src/lib/engine/svfile/common/DfsTagBlockFloatEnd.c -o $(OBJDIR_LINUX32RELEASE)/src/lib/engine/svfile/common/DfsTagBlockFloatEnd.o
 
@@ -4700,8 +4719,8 @@ $(OBJDIR_LINUX32RELEASE)/src/lib/engine/svfile/common/DfsMFile.o: src/lib/engine
 $(OBJDIR_LINUX32RELEASE)/src/lib/engine/svfile/common/DfsIntfWr.o: src/lib/engine/svfile/common/DfsIntfWr.c
 	$(CC) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c src/lib/engine/svfile/common/DfsIntfWr.c -o $(OBJDIR_LINUX32RELEASE)/src/lib/engine/svfile/common/DfsIntfWr.o
 
-$(OBJDIR_LINUX32RELEASE)/external/lzham/lzhamdecomp/lzham_prefix_coding.o: external/lzham/lzhamdecomp/lzham_prefix_coding.cpp
-	$(CXX) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c external/lzham/lzhamdecomp/lzham_prefix_coding.cpp -o $(OBJDIR_LINUX32RELEASE)/external/lzham/lzhamdecomp/lzham_prefix_coding.o
+$(OBJDIR_LINUX32RELEASE)/external/lzma_sdk/C/7zAlloc.o: external/lzma_sdk/C/7zAlloc.c
+	$(CC) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c external/lzma_sdk/C/7zAlloc.c -o $(OBJDIR_LINUX32RELEASE)/external/lzma_sdk/C/7zAlloc.o
 
 $(OBJDIR_LINUX32RELEASE)/external/lzham/lzhamlib/lzham_lib.o: external/lzham/lzhamlib/lzham_lib.cpp
 	$(CXX) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c external/lzham/lzhamlib/lzham_lib.cpp -o $(OBJDIR_LINUX32RELEASE)/external/lzham/lzhamlib/lzham_lib.o
@@ -4718,8 +4737,11 @@ $(OBJDIR_LINUX32RELEASE)/external/lzham/lzhamdecomp/lzham_timer.o: external/lzha
 $(OBJDIR_LINUX32RELEASE)/external/lzham/lzhamdecomp/lzham_symbol_codec.o: external/lzham/lzhamdecomp/lzham_symbol_codec.cpp
 	$(CXX) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c external/lzham/lzhamdecomp/lzham_symbol_codec.cpp -o $(OBJDIR_LINUX32RELEASE)/external/lzham/lzhamdecomp/lzham_symbol_codec.o
 
-$(OBJDIR_LINUX32RELEASE)/external/lzma_sdk/C/7zAlloc.o: external/lzma_sdk/C/7zAlloc.c
-	$(CC) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c external/lzma_sdk/C/7zAlloc.c -o $(OBJDIR_LINUX32RELEASE)/external/lzma_sdk/C/7zAlloc.o
+$(OBJDIR_LINUX32RELEASE)/external/lzma_sdk/C/7zArcIn.o: external/lzma_sdk/C/7zArcIn.c
+	$(CC) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c external/lzma_sdk/C/7zArcIn.c -o $(OBJDIR_LINUX32RELEASE)/external/lzma_sdk/C/7zArcIn.o
+
+$(OBJDIR_LINUX32RELEASE)/external/lzham/lzhamdecomp/lzham_prefix_coding.o: external/lzham/lzhamdecomp/lzham_prefix_coding.cpp
+	$(CXX) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c external/lzham/lzhamdecomp/lzham_prefix_coding.cpp -o $(OBJDIR_LINUX32RELEASE)/external/lzham/lzhamdecomp/lzham_prefix_coding.o
 
 $(OBJDIR_LINUX32RELEASE)/external/lzham/lzhamdecomp/lzham_platform.o: external/lzham/lzhamdecomp/lzham_platform.cpp
 	$(CXX) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c external/lzham/lzhamdecomp/lzham_platform.cpp -o $(OBJDIR_LINUX32RELEASE)/external/lzham/lzhamdecomp/lzham_platform.o
@@ -4736,8 +4758,11 @@ $(OBJDIR_LINUX32RELEASE)/external/lzham/lzhamdecomp/lzham_lzdecomp.o: external/l
 $(OBJDIR_LINUX32RELEASE)/external/lzham/lzhamdecomp/lzham_huffman_codes.o: external/lzham/lzhamdecomp/lzham_huffman_codes.cpp
 	$(CXX) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c external/lzham/lzhamdecomp/lzham_huffman_codes.cpp -o $(OBJDIR_LINUX32RELEASE)/external/lzham/lzhamdecomp/lzham_huffman_codes.o
 
-$(OBJDIR_LINUX32RELEASE)/external/lzma_sdk/C/BraIA64.o: external/lzma_sdk/C/BraIA64.c
-	$(CC) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c external/lzma_sdk/C/BraIA64.c -o $(OBJDIR_LINUX32RELEASE)/external/lzma_sdk/C/BraIA64.o
+$(OBJDIR_LINUX32RELEASE)/external/lzma_sdk/C/CpuArch.o: external/lzma_sdk/C/CpuArch.c
+	$(CC) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c external/lzma_sdk/C/CpuArch.c -o $(OBJDIR_LINUX32RELEASE)/external/lzma_sdk/C/CpuArch.o
+
+$(OBJDIR_LINUX32RELEASE)/external/lzma_sdk/C/Ppmd7Enc.o: external/lzma_sdk/C/Ppmd7Enc.c
+	$(CC) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c external/lzma_sdk/C/Ppmd7Enc.c -o $(OBJDIR_LINUX32RELEASE)/external/lzma_sdk/C/Ppmd7Enc.o
 
 $(OBJDIR_LINUX32RELEASE)/external/lzma_sdk/C/Ppmd7Dec.o: external/lzma_sdk/C/Ppmd7Dec.c
 	$(CC) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c external/lzma_sdk/C/Ppmd7Dec.c -o $(OBJDIR_LINUX32RELEASE)/external/lzma_sdk/C/Ppmd7Dec.o
@@ -4769,8 +4794,8 @@ $(OBJDIR_LINUX32RELEASE)/external/lzma_sdk/C/LZMASDK_Sha256.o: external/lzma_sdk
 $(OBJDIR_LINUX32RELEASE)/external/lzma_sdk/C/Delta.o: external/lzma_sdk/C/Delta.c
 	$(CC) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c external/lzma_sdk/C/Delta.c -o $(OBJDIR_LINUX32RELEASE)/external/lzma_sdk/C/Delta.o
 
-$(OBJDIR_LINUX32RELEASE)/external/lzma_sdk/C/CpuArch.o: external/lzma_sdk/C/CpuArch.c
-	$(CC) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c external/lzma_sdk/C/CpuArch.c -o $(OBJDIR_LINUX32RELEASE)/external/lzma_sdk/C/CpuArch.o
+$(OBJDIR_LINUX32RELEASE)/external/lzma_sdk/C/BraIA64.o: external/lzma_sdk/C/BraIA64.c
+	$(CC) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c external/lzma_sdk/C/BraIA64.c -o $(OBJDIR_LINUX32RELEASE)/external/lzma_sdk/C/BraIA64.o
 
 $(OBJDIR_LINUX32RELEASE)/external/lzma_sdk/C/Bra86.o: external/lzma_sdk/C/Bra86.c
 	$(CC) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c external/lzma_sdk/C/Bra86.c -o $(OBJDIR_LINUX32RELEASE)/external/lzma_sdk/C/Bra86.o
@@ -4805,9 +4830,6 @@ $(OBJDIR_LINUX32RELEASE)/external/lzma_sdk/C/7zBuf2.o: external/lzma_sdk/C/7zBuf
 $(OBJDIR_LINUX32RELEASE)/external/lzma_sdk/C/7zBuf.o: external/lzma_sdk/C/7zBuf.c
 	$(CC) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c external/lzma_sdk/C/7zBuf.c -o $(OBJDIR_LINUX32RELEASE)/external/lzma_sdk/C/7zBuf.o
 
-$(OBJDIR_LINUX32RELEASE)/external/lzma_sdk/C/7zArcIn.o: external/lzma_sdk/C/7zArcIn.c
-	$(CC) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c external/lzma_sdk/C/7zArcIn.c -o $(OBJDIR_LINUX32RELEASE)/external/lzma_sdk/C/7zArcIn.o
-
 $(OBJDIR_LINUX32RELEASE)/external/fastlzlib/lz4/lz4hc.o: external/fastlzlib/lz4/lz4hc.c
 	$(CC) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c external/fastlzlib/lz4/lz4hc.c -o $(OBJDIR_LINUX32RELEASE)/external/fastlzlib/lz4/lz4hc.o
 
@@ -4831,6 +4853,9 @@ $(OBJDIR_LINUX32RELEASE)/external/fastlzlib/lzfse/src/lzfse_decode.o: external/f
 
 $(OBJDIR_LINUX32RELEASE)/external/fastlzlib/lz4/xxhash.o: external/fastlzlib/lz4/xxhash.c
 	$(CC) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c external/fastlzlib/lz4/xxhash.c -o $(OBJDIR_LINUX32RELEASE)/external/fastlzlib/lz4/xxhash.o
+
+$(OBJDIR_LINUX32RELEASE)/external/fastlzlib/lzfse/src/lzvn_encode_base.o: external/fastlzlib/lzfse/src/lzvn_encode_base.c
+	$(CC) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c external/fastlzlib/lzfse/src/lzvn_encode_base.c -o $(OBJDIR_LINUX32RELEASE)/external/fastlzlib/lzfse/src/lzvn_encode_base.o
 
 $(OBJDIR_LINUX32RELEASE)/external/fastlzlib/lz4/lz4frame.o: external/fastlzlib/lz4/lz4frame.c
 	$(CC) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c external/fastlzlib/lz4/lz4frame.c -o $(OBJDIR_LINUX32RELEASE)/external/fastlzlib/lz4/lz4frame.o
@@ -4862,9 +4887,6 @@ $(OBJDIR_LINUX32RELEASE)/external/bzip/compress.o: external/bzip/compress.c
 $(OBJDIR_LINUX32RELEASE)/external/bzip/bzlib.o: external/bzip/bzlib.c
 	$(CC) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c external/bzip/bzlib.c -o $(OBJDIR_LINUX32RELEASE)/external/bzip/bzlib.o
 
-$(OBJDIR_LINUX32RELEASE)/external/lzham/lzhamcomp/lzham_match_accel.o: external/lzham/lzhamcomp/lzham_match_accel.cpp
-	$(CXX) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c external/lzham/lzhamcomp/lzham_match_accel.cpp -o $(OBJDIR_LINUX32RELEASE)/external/lzham/lzhamcomp/lzham_match_accel.o
-
 $(OBJDIR_LINUX32RELEASE)/external/lzham/lzhamdecomp/lzham_checksum.o: external/lzham/lzhamdecomp/lzham_checksum.cpp
 	$(CXX) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c external/lzham/lzhamdecomp/lzham_checksum.cpp -o $(OBJDIR_LINUX32RELEASE)/external/lzham/lzhamdecomp/lzham_checksum.o
 
@@ -4874,8 +4896,11 @@ $(OBJDIR_LINUX32RELEASE)/external/lzham/lzhamdecomp/lzham_assert.o: external/lzh
 $(OBJDIR_LINUX32RELEASE)/external/lzham/lzhamcomp/lzham_pthreads_threading.o: external/lzham/lzhamcomp/lzham_pthreads_threading.cpp
 	$(CXX) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c external/lzham/lzhamcomp/lzham_pthreads_threading.cpp -o $(OBJDIR_LINUX32RELEASE)/external/lzham/lzhamcomp/lzham_pthreads_threading.o
 
-$(OBJDIR_LINUX32RELEASE)/external/lzma_sdk/C/Ppmd7Enc.o: external/lzma_sdk/C/Ppmd7Enc.c
-	$(CC) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c external/lzma_sdk/C/Ppmd7Enc.c -o $(OBJDIR_LINUX32RELEASE)/external/lzma_sdk/C/Ppmd7Enc.o
+$(OBJDIR_LINUX32RELEASE)/external/lzma_sdk/C/Sha256Opt.o: external/lzma_sdk/C/Sha256Opt.c
+	$(CC) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c external/lzma_sdk/C/Sha256Opt.c -o $(OBJDIR_LINUX32RELEASE)/external/lzma_sdk/C/Sha256Opt.o
+
+$(OBJDIR_LINUX32RELEASE)/external/lzham/lzhamcomp/lzham_match_accel.o: external/lzham/lzhamcomp/lzham_match_accel.cpp
+	$(CXX) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c external/lzham/lzhamcomp/lzham_match_accel.cpp -o $(OBJDIR_LINUX32RELEASE)/external/lzham/lzhamcomp/lzham_match_accel.o
 
 $(OBJDIR_LINUX32RELEASE)/external/lzham/lzhamcomp/lzham_lzcomp_state.o: external/lzham/lzhamcomp/lzham_lzcomp_state.cpp
 	$(CXX) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c external/lzham/lzhamcomp/lzham_lzcomp_state.cpp -o $(OBJDIR_LINUX32RELEASE)/external/lzham/lzhamcomp/lzham_lzcomp_state.o
@@ -4889,11 +4914,11 @@ $(OBJDIR_LINUX32RELEASE)/external/lzham/lzhamcomp/lzham_lzcomp.o: external/lzham
 $(OBJDIR_LINUX32RELEASE)/external/lzham/lzhamcomp/lzham_lzbase.o: external/lzham/lzhamcomp/lzham_lzbase.cpp
 	$(CXX) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c external/lzham/lzhamcomp/lzham_lzbase.cpp -o $(OBJDIR_LINUX32RELEASE)/external/lzham/lzhamcomp/lzham_lzbase.o
 
-$(OBJDIR_LINUX32RELEASE)/external/fastlzlib/lzfse/src/lzvn_encode_base.o: external/fastlzlib/lzfse/src/lzvn_encode_base.c
-	$(CC) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c external/fastlzlib/lzfse/src/lzvn_encode_base.c -o $(OBJDIR_LINUX32RELEASE)/external/fastlzlib/lzfse/src/lzvn_encode_base.o
+$(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/lz/lz_encoder.o: external/xz/src/liblzma/lz/lz_encoder.c
+	$(CC) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c external/xz/src/liblzma/lz/lz_encoder.c -o $(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/lz/lz_encoder.o
 
-$(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/lz/lz_decoder.o: external/xz/src/liblzma/lz/lz_decoder.c
-	$(CC) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c external/xz/src/liblzma/lz/lz_decoder.c -o $(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/lz/lz_decoder.o
+$(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/simple/armthumb.o: external/xz/src/liblzma/simple/armthumb.c
+	$(CC) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c external/xz/src/liblzma/simple/armthumb.c -o $(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/simple/armthumb.o
 
 $(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/simple/arm64.o: external/xz/src/liblzma/simple/arm64.c
 	$(CC) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c external/xz/src/liblzma/simple/arm64.c -o $(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/simple/arm64.o
@@ -4931,11 +4956,11 @@ $(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/lzma/fastpos_table.o: external/
 $(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/lz/lz_encoder_mf.o: external/xz/src/liblzma/lz/lz_encoder_mf.c
 	$(CC) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c external/xz/src/liblzma/lz/lz_encoder_mf.c -o $(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/lz/lz_encoder_mf.o
 
-$(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/lz/lz_encoder.o: external/xz/src/liblzma/lz/lz_encoder.c
-	$(CC) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c external/xz/src/liblzma/lz/lz_encoder.c -o $(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/lz/lz_encoder.o
+$(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/simple/ia64.o: external/xz/src/liblzma/simple/ia64.c
+	$(CC) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c external/xz/src/liblzma/simple/ia64.c -o $(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/simple/ia64.o
 
-$(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/simple/armthumb.o: external/xz/src/liblzma/simple/armthumb.c
-	$(CC) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c external/xz/src/liblzma/simple/armthumb.c -o $(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/simple/armthumb.o
+$(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/lz/lz_decoder.o: external/xz/src/liblzma/lz/lz_decoder.c
+	$(CC) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c external/xz/src/liblzma/lz/lz_decoder.c -o $(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/lz/lz_decoder.o
 
 $(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/delta/delta_encoder.o: external/xz/src/liblzma/delta/delta_encoder.c
 	$(CC) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c external/xz/src/liblzma/delta/delta_encoder.c -o $(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/delta/delta_encoder.o
@@ -4970,11 +4995,8 @@ $(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/common/stream_encoder_mt.o: ext
 $(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/common/stream_encoder.o: external/xz/src/liblzma/common/stream_encoder.c
 	$(CC) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c external/xz/src/liblzma/common/stream_encoder.c -o $(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/common/stream_encoder.o
 
-$(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/common/stream_decoder.o: external/xz/src/liblzma/common/stream_decoder.c
-	$(CC) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c external/xz/src/liblzma/common/stream_decoder.c -o $(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/common/stream_decoder.o
-
-$(OBJDIR_LINUX32RELEASE)/external/zlib/inflate.o: external/zlib/inflate.c
-	$(CC) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c external/zlib/inflate.c -o $(OBJDIR_LINUX32RELEASE)/external/zlib/inflate.o
+$(OBJDIR_LINUX32RELEASE)/external/zlib/inftrees.o: external/zlib/inftrees.c
+	$(CC) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c external/zlib/inftrees.c -o $(OBJDIR_LINUX32RELEASE)/external/zlib/inftrees.o
 
 $(OBJDIR_LINUX32RELEASE)/external/zstd/lib/common/error_private.o: external/zstd/lib/common/error_private.c
 	$(CC) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c external/zstd/lib/common/error_private.c -o $(OBJDIR_LINUX32RELEASE)/external/zstd/lib/common/error_private.o
@@ -4994,11 +5016,11 @@ $(OBJDIR_LINUX32RELEASE)/external/zlib/zlibcompress.o: external/zlib/zlibcompres
 $(OBJDIR_LINUX32RELEASE)/external/zlib/trees.o: external/zlib/trees.c
 	$(CC) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c external/zlib/trees.c -o $(OBJDIR_LINUX32RELEASE)/external/zlib/trees.o
 
-$(OBJDIR_LINUX32RELEASE)/external/zlib/inftrees.o: external/zlib/inftrees.c
-	$(CC) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c external/zlib/inftrees.c -o $(OBJDIR_LINUX32RELEASE)/external/zlib/inftrees.o
+$(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/common/stream_decoder.o: external/xz/src/liblzma/common/stream_decoder.c
+	$(CC) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c external/xz/src/liblzma/common/stream_decoder.c -o $(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/common/stream_decoder.o
 
-$(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/common/stream_buffer_encoder.o: external/xz/src/liblzma/common/stream_buffer_encoder.c
-	$(CC) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c external/xz/src/liblzma/common/stream_buffer_encoder.c -o $(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/common/stream_buffer_encoder.o
+$(OBJDIR_LINUX32RELEASE)/external/zlib/inflate.o: external/zlib/inflate.c
+	$(CC) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c external/zlib/inflate.c -o $(OBJDIR_LINUX32RELEASE)/external/zlib/inflate.o
 
 $(OBJDIR_LINUX32RELEASE)/external/zlib/inffast.o: external/zlib/inffast.c
 	$(CC) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c external/zlib/inffast.c -o $(OBJDIR_LINUX32RELEASE)/external/zlib/inffast.o
@@ -5030,11 +5052,11 @@ $(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/simple/simple_coder.o: external
 $(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/simple/powerpc.o: external/xz/src/liblzma/simple/powerpc.c
 	$(CC) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c external/xz/src/liblzma/simple/powerpc.c -o $(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/simple/powerpc.o
 
-$(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/simple/ia64.o: external/xz/src/liblzma/simple/ia64.c
-	$(CC) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c external/xz/src/liblzma/simple/ia64.c -o $(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/simple/ia64.o
+$(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/check/crc32_fast.o: external/xz/src/liblzma/check/crc32_fast.c
+	$(CC) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c external/xz/src/liblzma/check/crc32_fast.c -o $(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/check/crc32_fast.o
 
-$(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/check/check.o: external/xz/src/liblzma/check/check.c
-	$(CC) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c external/xz/src/liblzma/check/check.c -o $(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/check/check.o
+$(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/common/block_header_decoder.o: external/xz/src/liblzma/common/block_header_decoder.c
+	$(CC) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c external/xz/src/liblzma/common/block_header_decoder.c -o $(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/common/block_header_decoder.o
 
 $(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/common/block_encoder.o: external/xz/src/liblzma/common/block_encoder.c
 	$(CC) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c external/xz/src/liblzma/common/block_encoder.c -o $(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/common/block_encoder.o
@@ -5069,11 +5091,11 @@ $(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/check/crc64_fast.o: external/xz
 $(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/check/crc32_table.o: external/xz/src/liblzma/check/crc32_table.c
 	$(CC) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c external/xz/src/liblzma/check/crc32_table.c -o $(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/check/crc32_table.o
 
-$(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/check/crc32_fast.o: external/xz/src/liblzma/check/crc32_fast.c
-	$(CC) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c external/xz/src/liblzma/check/crc32_fast.c -o $(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/check/crc32_fast.o
+$(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/common/block_header_encoder.o: external/xz/src/liblzma/common/block_header_encoder.c
+	$(CC) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c external/xz/src/liblzma/common/block_header_encoder.c -o $(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/common/block_header_encoder.o
 
-$(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/common/block_header_decoder.o: external/xz/src/liblzma/common/block_header_decoder.c
-	$(CC) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c external/xz/src/liblzma/common/block_header_decoder.c -o $(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/common/block_header_decoder.o
+$(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/check/check.o: external/xz/src/liblzma/check/check.c
+	$(CC) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c external/xz/src/liblzma/check/check.c -o $(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/check/check.o
 
 $(OBJDIR_LINUX32RELEASE)/external/xz/src/common/tuklib_progname.o: external/xz/src/common/tuklib_progname.c
 	$(CC) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c external/xz/src/common/tuklib_progname.c -o $(OBJDIR_LINUX32RELEASE)/external/xz/src/common/tuklib_progname.o
@@ -5108,11 +5130,11 @@ $(OBJDIR_LINUX32RELEASE)/external/lzma_sdk/C/XzCrc64.o: external/lzma_sdk/C/XzCr
 $(OBJDIR_LINUX32RELEASE)/external/lzma_sdk/C/Xz.o: external/lzma_sdk/C/Xz.c
 	$(CC) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c external/lzma_sdk/C/Xz.c -o $(OBJDIR_LINUX32RELEASE)/external/lzma_sdk/C/Xz.o
 
-$(OBJDIR_LINUX32RELEASE)/external/lzma_sdk/C/Sha256Opt.o: external/lzma_sdk/C/Sha256Opt.c
-	$(CC) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c external/lzma_sdk/C/Sha256Opt.c -o $(OBJDIR_LINUX32RELEASE)/external/lzma_sdk/C/Sha256Opt.o
+$(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/common/filter_flags_decoder.o: external/xz/src/liblzma/common/filter_flags_decoder.c
+	$(CC) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c external/xz/src/liblzma/common/filter_flags_decoder.c -o $(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/common/filter_flags_decoder.o
 
-$(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/common/filter_encoder.o: external/xz/src/liblzma/common/filter_encoder.c
-	$(CC) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c external/xz/src/liblzma/common/filter_encoder.c -o $(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/common/filter_encoder.o
+$(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/common/stream_buffer_encoder.o: external/xz/src/liblzma/common/stream_buffer_encoder.c
+	$(CC) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c external/xz/src/liblzma/common/stream_buffer_encoder.c -o $(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/common/stream_buffer_encoder.o
 
 $(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/common/stream_buffer_decoder.o: external/xz/src/liblzma/common/stream_buffer_decoder.c
 	$(CC) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c external/xz/src/liblzma/common/stream_buffer_decoder.c -o $(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/common/stream_buffer_decoder.o
@@ -5144,11 +5166,11 @@ $(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/common/hardware_cputhreads.o: e
 $(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/common/filter_flags_encoder.o: external/xz/src/liblzma/common/filter_flags_encoder.c
 	$(CC) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c external/xz/src/liblzma/common/filter_flags_encoder.c -o $(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/common/filter_flags_encoder.o
 
-$(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/common/filter_flags_decoder.o: external/xz/src/liblzma/common/filter_flags_decoder.c
-	$(CC) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c external/xz/src/liblzma/common/filter_flags_decoder.c -o $(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/common/filter_flags_decoder.o
-
 $(OBJDIR_LINUX32RELEASE)/external/bzip/blocksort.o: external/bzip/blocksort.c
 	$(CC) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c external/bzip/blocksort.c -o $(OBJDIR_LINUX32RELEASE)/external/bzip/blocksort.o
+
+$(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/common/filter_encoder.o: external/xz/src/liblzma/common/filter_encoder.c
+	$(CC) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c external/xz/src/liblzma/common/filter_encoder.c -o $(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/common/filter_encoder.o
 
 $(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/common/filter_decoder.o: external/xz/src/liblzma/common/filter_decoder.c
 	$(CC) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c external/xz/src/liblzma/common/filter_decoder.c -o $(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/common/filter_decoder.o
@@ -5183,9 +5205,6 @@ $(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/common/common.o: external/xz/sr
 $(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/common/block_util.o: external/xz/src/liblzma/common/block_util.c
 	$(CC) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c external/xz/src/liblzma/common/block_util.c -o $(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/common/block_util.o
 
-$(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/common/block_header_encoder.o: external/xz/src/liblzma/common/block_header_encoder.c
-	$(CC) $(CFLAGS_LINUX32RELEASE) $(INC_LINUX32RELEASE) -c external/xz/src/liblzma/common/block_header_encoder.c -o $(OBJDIR_LINUX32RELEASE)/external/xz/src/liblzma/common/block_header_encoder.o
-
 clean_linux32release: 
 	rm -f $(OBJ_LINUX32RELEASE) $(OUT_LINUX32RELEASE)
 	rm -rf bin/Release32
@@ -5204,13 +5223,13 @@ clean_linux32release:
 	rm -rf $(OBJDIR_LINUX32RELEASE)/src/misc
 	rm -rf $(OBJDIR_LINUX32RELEASE)/src/lib/helper/decompress
 	rm -rf $(OBJDIR_LINUX32RELEASE)/src/lib/helper/compress
+	rm -rf $(OBJDIR_LINUX32RELEASE)/src/lib/engine/patchstream/compress
 	rm -rf $(OBJDIR_LINUX32RELEASE)/src/lib/engine/svfile/common
 	rm -rf $(OBJDIR_LINUX32RELEASE)/src/lib/engine/patchstream/rebuild
 	rm -rf $(OBJDIR_LINUX32RELEASE)/src/lib/engine/patchstream/decompress
-	rm -rf $(OBJDIR_LINUX32RELEASE)/src/lib/engine/patchstream/compress
-	rm -rf $(OBJDIR_LINUX32RELEASE)/external/lzham/lzhamdecomp
-	rm -rf $(OBJDIR_LINUX32RELEASE)/external/lzham/lzhamlib
 	rm -rf $(OBJDIR_LINUX32RELEASE)/external/lzma_sdk/C
+	rm -rf $(OBJDIR_LINUX32RELEASE)/external/lzham/lzhamlib
+	rm -rf $(OBJDIR_LINUX32RELEASE)/external/lzham/lzhamdecomp
 	rm -rf $(OBJDIR_LINUX32RELEASE)/external/fastlzlib/lz4
 	rm -rf $(OBJDIR_LINUX32RELEASE)/external/fastlzlib/lzfse/src
 	rm -rf $(OBJDIR_LINUX32RELEASE)/external/fastlzlib
@@ -5244,13 +5263,13 @@ before_linux64staticrelease:
 	test -d $(OBJDIR_LINUX64STATICRELEASE)/src/misc || mkdir -p $(OBJDIR_LINUX64STATICRELEASE)/src/misc
 	test -d $(OBJDIR_LINUX64STATICRELEASE)/src/lib/helper/decompress || mkdir -p $(OBJDIR_LINUX64STATICRELEASE)/src/lib/helper/decompress
 	test -d $(OBJDIR_LINUX64STATICRELEASE)/src/lib/helper/compress || mkdir -p $(OBJDIR_LINUX64STATICRELEASE)/src/lib/helper/compress
+	test -d $(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/patchstream/compress || mkdir -p $(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/patchstream/compress
 	test -d $(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/svfile/common || mkdir -p $(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/svfile/common
 	test -d $(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/patchstream/rebuild || mkdir -p $(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/patchstream/rebuild
 	test -d $(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/patchstream/decompress || mkdir -p $(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/patchstream/decompress
-	test -d $(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/patchstream/compress || mkdir -p $(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/patchstream/compress
-	test -d $(OBJDIR_LINUX64STATICRELEASE)/external/lzham/lzhamdecomp || mkdir -p $(OBJDIR_LINUX64STATICRELEASE)/external/lzham/lzhamdecomp
-	test -d $(OBJDIR_LINUX64STATICRELEASE)/external/lzham/lzhamlib || mkdir -p $(OBJDIR_LINUX64STATICRELEASE)/external/lzham/lzhamlib
 	test -d $(OBJDIR_LINUX64STATICRELEASE)/external/lzma_sdk/C || mkdir -p $(OBJDIR_LINUX64STATICRELEASE)/external/lzma_sdk/C
+	test -d $(OBJDIR_LINUX64STATICRELEASE)/external/lzham/lzhamlib || mkdir -p $(OBJDIR_LINUX64STATICRELEASE)/external/lzham/lzhamlib
+	test -d $(OBJDIR_LINUX64STATICRELEASE)/external/lzham/lzhamdecomp || mkdir -p $(OBJDIR_LINUX64STATICRELEASE)/external/lzham/lzhamdecomp
 	test -d $(OBJDIR_LINUX64STATICRELEASE)/external/fastlzlib/lz4 || mkdir -p $(OBJDIR_LINUX64STATICRELEASE)/external/fastlzlib/lz4
 	test -d $(OBJDIR_LINUX64STATICRELEASE)/external/fastlzlib/lzfse/src || mkdir -p $(OBJDIR_LINUX64STATICRELEASE)/external/fastlzlib/lzfse/src
 	test -d $(OBJDIR_LINUX64STATICRELEASE)/external/fastlzlib || mkdir -p $(OBJDIR_LINUX64STATICRELEASE)/external/fastlzlib
@@ -5295,17 +5314,14 @@ $(OBJDIR_LINUX64STATICRELEASE)/src/cli/DifstrmMainPosix.o: src/cli/DifstrmMainPo
 $(OBJDIR_LINUX64STATICRELEASE)/src/cli/DfsCdLin.o: src/cli/DfsCdLin.c
 	$(CC) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c src/cli/DfsCdLin.c -o $(OBJDIR_LINUX64STATICRELEASE)/src/cli/DfsCdLin.o
 
-$(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/patchstream/common/DfsIoMemMutex.o: src/lib/engine/patchstream/common/DfsIoMemMutex.cpp
-	$(CXX) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c src/lib/engine/patchstream/common/DfsIoMemMutex.cpp -o $(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/patchstream/common/DfsIoMemMutex.o
-
 $(OBJDIR_LINUX64STATICRELEASE)/external/zstd/lib/dictBuilder/zdict.o: external/zstd/lib/dictBuilder/zdict.c
 	$(CC) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c external/zstd/lib/dictBuilder/zdict.c -o $(OBJDIR_LINUX64STATICRELEASE)/external/zstd/lib/dictBuilder/zdict.o
 
 $(OBJDIR_LINUX64STATICRELEASE)/external/zstd/lib/dictBuilder/fastcover.o: external/zstd/lib/dictBuilder/fastcover.c
 	$(CC) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c external/zstd/lib/dictBuilder/fastcover.c -o $(OBJDIR_LINUX64STATICRELEASE)/external/zstd/lib/dictBuilder/fastcover.o
 
-$(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/patchstream/common/ltoolsc.o: src/lib/engine/patchstream/common/ltoolsc.c
-	$(CC) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c src/lib/engine/patchstream/common/ltoolsc.c -o $(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/patchstream/common/ltoolsc.o
+$(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/patchstream/common/compress_store.o: src/lib/engine/patchstream/common/compress_store.c
+	$(CC) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c src/lib/engine/patchstream/common/compress_store.c -o $(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/patchstream/common/compress_store.o
 
 $(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/patchstream/common/difstool.o: src/lib/engine/patchstream/common/difstool.c
 	$(CC) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c src/lib/engine/patchstream/common/difstool.c -o $(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/patchstream/common/difstool.o
@@ -5322,14 +5338,17 @@ $(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/patchstream/common/dfsToolPosix.o:
 $(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/patchstream/common/dfsTool.o: src/lib/engine/patchstream/common/dfsTool.c
 	$(CC) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c src/lib/engine/patchstream/common/dfsTool.c -o $(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/patchstream/common/dfsTool.o
 
-$(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/patchstream/common/compress_store.o: src/lib/engine/patchstream/common/compress_store.c
-	$(CC) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c src/lib/engine/patchstream/common/compress_store.c -o $(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/patchstream/common/compress_store.o
+$(OBJDIR_LINUX64STATICRELEASE)/external/zstd/lib/dictBuilder/divsufsort.o: external/zstd/lib/dictBuilder/divsufsort.c
+	$(CC) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c external/zstd/lib/dictBuilder/divsufsort.c -o $(OBJDIR_LINUX64STATICRELEASE)/external/zstd/lib/dictBuilder/divsufsort.o
 
 $(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/patchstream/common/abstractDecompress.o: src/lib/engine/patchstream/common/abstractDecompress.c
 	$(CC) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c src/lib/engine/patchstream/common/abstractDecompress.c -o $(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/patchstream/common/abstractDecompress.o
 
 $(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/patchstream/common/DfsToolsPosixCPP.o: src/lib/engine/patchstream/common/DfsToolsPosixCPP.cpp
 	$(CXX) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c src/lib/engine/patchstream/common/DfsToolsPosixCPP.cpp -o $(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/patchstream/common/DfsToolsPosixCPP.o
+
+$(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/patchstream/common/DfsIoMemMutex.o: src/lib/engine/patchstream/common/DfsIoMemMutex.cpp
+	$(CXX) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c src/lib/engine/patchstream/common/DfsIoMemMutex.cpp -o $(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/patchstream/common/DfsIoMemMutex.o
 
 $(OBJDIR_LINUX64STATICRELEASE)/external/zstd/lib/compress/zstd_compress_superblock.o: external/zstd/lib/compress/zstd_compress_superblock.c
 	$(CC) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c external/zstd/lib/compress/zstd_compress_superblock.c -o $(OBJDIR_LINUX64STATICRELEASE)/external/zstd/lib/compress/zstd_compress_superblock.o
@@ -5364,15 +5383,6 @@ $(OBJDIR_LINUX64STATICRELEASE)/external/zstd/lib/common/threading.o: external/zs
 $(OBJDIR_LINUX64STATICRELEASE)/external/zstd/lib/common/pool.o: external/zstd/lib/common/pool.c
 	$(CC) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c external/zstd/lib/common/pool.c -o $(OBJDIR_LINUX64STATICRELEASE)/external/zstd/lib/common/pool.o
 
-$(OBJDIR_LINUX64STATICRELEASE)/external/zstd/lib/common/fse_decompress.o: external/zstd/lib/common/fse_decompress.c
-	$(CC) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c external/zstd/lib/common/fse_decompress.c -o $(OBJDIR_LINUX64STATICRELEASE)/external/zstd/lib/common/fse_decompress.o
-
-$(OBJDIR_LINUX64STATICRELEASE)/external/zstd/lib/compress/zstdmt_compress.o: external/zstd/lib/compress/zstdmt_compress.c
-	$(CC) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c external/zstd/lib/compress/zstdmt_compress.c -o $(OBJDIR_LINUX64STATICRELEASE)/external/zstd/lib/compress/zstdmt_compress.o
-
-$(OBJDIR_LINUX64STATICRELEASE)/external/zstd/lib/dictBuilder/divsufsort.o: external/zstd/lib/dictBuilder/divsufsort.c
-	$(CC) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c external/zstd/lib/dictBuilder/divsufsort.c -o $(OBJDIR_LINUX64STATICRELEASE)/external/zstd/lib/dictBuilder/divsufsort.o
-
 $(OBJDIR_LINUX64STATICRELEASE)/external/zstd/lib/dictBuilder/cover.o: external/zstd/lib/dictBuilder/cover.c
 	$(CC) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c external/zstd/lib/dictBuilder/cover.c -o $(OBJDIR_LINUX64STATICRELEASE)/external/zstd/lib/dictBuilder/cover.o
 
@@ -5390,6 +5400,15 @@ $(OBJDIR_LINUX64STATICRELEASE)/external/zstd/lib/decompress/huf_decompress_amd64
 
 $(OBJDIR_LINUX64STATICRELEASE)/external/zstd/lib/decompress/huf_decompress.o: external/zstd/lib/decompress/huf_decompress.c
 	$(CC) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c external/zstd/lib/decompress/huf_decompress.c -o $(OBJDIR_LINUX64STATICRELEASE)/external/zstd/lib/decompress/huf_decompress.o
+
+$(OBJDIR_LINUX64STATICRELEASE)/external/zstd/lib/compress/zstdmt_compress.o: external/zstd/lib/compress/zstdmt_compress.c
+	$(CC) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c external/zstd/lib/compress/zstdmt_compress.c -o $(OBJDIR_LINUX64STATICRELEASE)/external/zstd/lib/compress/zstdmt_compress.o
+
+$(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/patchstream/common/ltoolsc.o: src/lib/engine/patchstream/common/ltoolsc.c
+	$(CC) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c src/lib/engine/patchstream/common/ltoolsc.c -o $(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/patchstream/common/ltoolsc.o
+
+$(OBJDIR_LINUX64STATICRELEASE)/external/zstd/lib/compress/zstd_preSplit.o: external/zstd/lib/compress/zstd_preSplit.c
+	$(CC) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c external/zstd/lib/compress/zstd_preSplit.c -o $(OBJDIR_LINUX64STATICRELEASE)/external/zstd/lib/compress/zstd_preSplit.o
 
 $(OBJDIR_LINUX64STATICRELEASE)/external/zstd/lib/compress/zstd_opt.o: external/zstd/lib/compress/zstd_opt.c
 	$(CC) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c external/zstd/lib/compress/zstd_opt.c -o $(OBJDIR_LINUX64STATICRELEASE)/external/zstd/lib/compress/zstd_opt.o
@@ -5466,6 +5485,9 @@ $(OBJDIR_LINUX64STATICRELEASE)/src/lib/hash/sha256_from_openssl.o: src/lib/hash/
 $(OBJDIR_LINUX64STATICRELEASE)/src/lib/hash/sha1dgst.o: src/lib/hash/sha1dgst.c
 	$(CC) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c src/lib/hash/sha1dgst.c -o $(OBJDIR_LINUX64STATICRELEASE)/src/lib/hash/sha1dgst.o
 
+$(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/patchstream/compress/makdifst.o: src/lib/engine/patchstream/compress/makdifst.c
+	$(CC) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c src/lib/engine/patchstream/compress/makdifst.c -o $(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/patchstream/compress/makdifst.o
+
 $(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/svfile/common/ArrayTl.o: src/lib/engine/svfile/common/ArrayTl.c
 	$(CC) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c src/lib/engine/svfile/common/ArrayTl.c -o $(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/svfile/common/ArrayTl.o
 
@@ -5486,9 +5508,6 @@ $(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/patchstream/decompress/ApDifStm.o:
 
 $(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/svfile/common/DfsIntf.o: src/lib/engine/svfile/common/DfsIntf.c
 	$(CC) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c src/lib/engine/svfile/common/DfsIntf.c -o $(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/svfile/common/DfsIntf.o
-
-$(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/patchstream/compress/makdifst.o: src/lib/engine/patchstream/compress/makdifst.c
-	$(CC) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c src/lib/engine/patchstream/compress/makdifst.c -o $(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/patchstream/compress/makdifst.o
 
 $(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/patchstream/compress/makdifId.o: src/lib/engine/patchstream/compress/makdifId.c
 	$(CC) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c src/lib/engine/patchstream/compress/makdifId.c -o $(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/patchstream/compress/makdifId.o
@@ -5523,6 +5542,9 @@ $(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/svfile/common/DfsTagMg.o: src/lib/
 $(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/svfile/common/DfsTagBlockFloatTool.o: src/lib/engine/svfile/common/DfsTagBlockFloatTool.c
 	$(CC) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c src/lib/engine/svfile/common/DfsTagBlockFloatTool.c -o $(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/svfile/common/DfsTagBlockFloatTool.o
 
+$(OBJDIR_LINUX64STATICRELEASE)/external/zstd/lib/common/fse_decompress.o: external/zstd/lib/common/fse_decompress.c
+	$(CC) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c external/zstd/lib/common/fse_decompress.c -o $(OBJDIR_LINUX64STATICRELEASE)/external/zstd/lib/common/fse_decompress.o
+
 $(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/svfile/common/DfsTagBlockFloatEnd.o: src/lib/engine/svfile/common/DfsTagBlockFloatEnd.c
 	$(CC) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c src/lib/engine/svfile/common/DfsTagBlockFloatEnd.c -o $(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/svfile/common/DfsTagBlockFloatEnd.o
 
@@ -5541,8 +5563,8 @@ $(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/svfile/common/DfsMFile.o: src/lib/
 $(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/svfile/common/DfsIntfWr.o: src/lib/engine/svfile/common/DfsIntfWr.c
 	$(CC) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c src/lib/engine/svfile/common/DfsIntfWr.c -o $(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/svfile/common/DfsIntfWr.o
 
-$(OBJDIR_LINUX64STATICRELEASE)/external/lzham/lzhamdecomp/lzham_prefix_coding.o: external/lzham/lzhamdecomp/lzham_prefix_coding.cpp
-	$(CXX) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c external/lzham/lzhamdecomp/lzham_prefix_coding.cpp -o $(OBJDIR_LINUX64STATICRELEASE)/external/lzham/lzhamdecomp/lzham_prefix_coding.o
+$(OBJDIR_LINUX64STATICRELEASE)/external/lzma_sdk/C/7zAlloc.o: external/lzma_sdk/C/7zAlloc.c
+	$(CC) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c external/lzma_sdk/C/7zAlloc.c -o $(OBJDIR_LINUX64STATICRELEASE)/external/lzma_sdk/C/7zAlloc.o
 
 $(OBJDIR_LINUX64STATICRELEASE)/external/lzham/lzhamlib/lzham_lib.o: external/lzham/lzhamlib/lzham_lib.cpp
 	$(CXX) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c external/lzham/lzhamlib/lzham_lib.cpp -o $(OBJDIR_LINUX64STATICRELEASE)/external/lzham/lzhamlib/lzham_lib.o
@@ -5559,8 +5581,11 @@ $(OBJDIR_LINUX64STATICRELEASE)/external/lzham/lzhamdecomp/lzham_timer.o: externa
 $(OBJDIR_LINUX64STATICRELEASE)/external/lzham/lzhamdecomp/lzham_symbol_codec.o: external/lzham/lzhamdecomp/lzham_symbol_codec.cpp
 	$(CXX) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c external/lzham/lzhamdecomp/lzham_symbol_codec.cpp -o $(OBJDIR_LINUX64STATICRELEASE)/external/lzham/lzhamdecomp/lzham_symbol_codec.o
 
-$(OBJDIR_LINUX64STATICRELEASE)/external/lzma_sdk/C/7zAlloc.o: external/lzma_sdk/C/7zAlloc.c
-	$(CC) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c external/lzma_sdk/C/7zAlloc.c -o $(OBJDIR_LINUX64STATICRELEASE)/external/lzma_sdk/C/7zAlloc.o
+$(OBJDIR_LINUX64STATICRELEASE)/external/lzma_sdk/C/7zArcIn.o: external/lzma_sdk/C/7zArcIn.c
+	$(CC) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c external/lzma_sdk/C/7zArcIn.c -o $(OBJDIR_LINUX64STATICRELEASE)/external/lzma_sdk/C/7zArcIn.o
+
+$(OBJDIR_LINUX64STATICRELEASE)/external/lzham/lzhamdecomp/lzham_prefix_coding.o: external/lzham/lzhamdecomp/lzham_prefix_coding.cpp
+	$(CXX) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c external/lzham/lzhamdecomp/lzham_prefix_coding.cpp -o $(OBJDIR_LINUX64STATICRELEASE)/external/lzham/lzhamdecomp/lzham_prefix_coding.o
 
 $(OBJDIR_LINUX64STATICRELEASE)/external/lzham/lzhamdecomp/lzham_platform.o: external/lzham/lzhamdecomp/lzham_platform.cpp
 	$(CXX) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c external/lzham/lzhamdecomp/lzham_platform.cpp -o $(OBJDIR_LINUX64STATICRELEASE)/external/lzham/lzhamdecomp/lzham_platform.o
@@ -5577,8 +5602,11 @@ $(OBJDIR_LINUX64STATICRELEASE)/external/lzham/lzhamdecomp/lzham_lzdecomp.o: exte
 $(OBJDIR_LINUX64STATICRELEASE)/external/lzham/lzhamdecomp/lzham_huffman_codes.o: external/lzham/lzhamdecomp/lzham_huffman_codes.cpp
 	$(CXX) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c external/lzham/lzhamdecomp/lzham_huffman_codes.cpp -o $(OBJDIR_LINUX64STATICRELEASE)/external/lzham/lzhamdecomp/lzham_huffman_codes.o
 
-$(OBJDIR_LINUX64STATICRELEASE)/external/lzma_sdk/C/BraIA64.o: external/lzma_sdk/C/BraIA64.c
-	$(CC) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c external/lzma_sdk/C/BraIA64.c -o $(OBJDIR_LINUX64STATICRELEASE)/external/lzma_sdk/C/BraIA64.o
+$(OBJDIR_LINUX64STATICRELEASE)/external/lzma_sdk/C/CpuArch.o: external/lzma_sdk/C/CpuArch.c
+	$(CC) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c external/lzma_sdk/C/CpuArch.c -o $(OBJDIR_LINUX64STATICRELEASE)/external/lzma_sdk/C/CpuArch.o
+
+$(OBJDIR_LINUX64STATICRELEASE)/external/lzma_sdk/C/Ppmd7Enc.o: external/lzma_sdk/C/Ppmd7Enc.c
+	$(CC) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c external/lzma_sdk/C/Ppmd7Enc.c -o $(OBJDIR_LINUX64STATICRELEASE)/external/lzma_sdk/C/Ppmd7Enc.o
 
 $(OBJDIR_LINUX64STATICRELEASE)/external/lzma_sdk/C/Ppmd7Dec.o: external/lzma_sdk/C/Ppmd7Dec.c
 	$(CC) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c external/lzma_sdk/C/Ppmd7Dec.c -o $(OBJDIR_LINUX64STATICRELEASE)/external/lzma_sdk/C/Ppmd7Dec.o
@@ -5610,8 +5638,8 @@ $(OBJDIR_LINUX64STATICRELEASE)/external/lzma_sdk/C/LZMASDK_Sha256.o: external/lz
 $(OBJDIR_LINUX64STATICRELEASE)/external/lzma_sdk/C/Delta.o: external/lzma_sdk/C/Delta.c
 	$(CC) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c external/lzma_sdk/C/Delta.c -o $(OBJDIR_LINUX64STATICRELEASE)/external/lzma_sdk/C/Delta.o
 
-$(OBJDIR_LINUX64STATICRELEASE)/external/lzma_sdk/C/CpuArch.o: external/lzma_sdk/C/CpuArch.c
-	$(CC) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c external/lzma_sdk/C/CpuArch.c -o $(OBJDIR_LINUX64STATICRELEASE)/external/lzma_sdk/C/CpuArch.o
+$(OBJDIR_LINUX64STATICRELEASE)/external/lzma_sdk/C/BraIA64.o: external/lzma_sdk/C/BraIA64.c
+	$(CC) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c external/lzma_sdk/C/BraIA64.c -o $(OBJDIR_LINUX64STATICRELEASE)/external/lzma_sdk/C/BraIA64.o
 
 $(OBJDIR_LINUX64STATICRELEASE)/external/lzma_sdk/C/Bra86.o: external/lzma_sdk/C/Bra86.c
 	$(CC) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c external/lzma_sdk/C/Bra86.c -o $(OBJDIR_LINUX64STATICRELEASE)/external/lzma_sdk/C/Bra86.o
@@ -5646,9 +5674,6 @@ $(OBJDIR_LINUX64STATICRELEASE)/external/lzma_sdk/C/7zBuf2.o: external/lzma_sdk/C
 $(OBJDIR_LINUX64STATICRELEASE)/external/lzma_sdk/C/7zBuf.o: external/lzma_sdk/C/7zBuf.c
 	$(CC) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c external/lzma_sdk/C/7zBuf.c -o $(OBJDIR_LINUX64STATICRELEASE)/external/lzma_sdk/C/7zBuf.o
 
-$(OBJDIR_LINUX64STATICRELEASE)/external/lzma_sdk/C/7zArcIn.o: external/lzma_sdk/C/7zArcIn.c
-	$(CC) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c external/lzma_sdk/C/7zArcIn.c -o $(OBJDIR_LINUX64STATICRELEASE)/external/lzma_sdk/C/7zArcIn.o
-
 $(OBJDIR_LINUX64STATICRELEASE)/external/fastlzlib/lz4/lz4hc.o: external/fastlzlib/lz4/lz4hc.c
 	$(CC) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c external/fastlzlib/lz4/lz4hc.c -o $(OBJDIR_LINUX64STATICRELEASE)/external/fastlzlib/lz4/lz4hc.o
 
@@ -5672,6 +5697,9 @@ $(OBJDIR_LINUX64STATICRELEASE)/external/fastlzlib/lzfse/src/lzfse_decode.o: exte
 
 $(OBJDIR_LINUX64STATICRELEASE)/external/fastlzlib/lz4/xxhash.o: external/fastlzlib/lz4/xxhash.c
 	$(CC) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c external/fastlzlib/lz4/xxhash.c -o $(OBJDIR_LINUX64STATICRELEASE)/external/fastlzlib/lz4/xxhash.o
+
+$(OBJDIR_LINUX64STATICRELEASE)/external/fastlzlib/lzfse/src/lzvn_encode_base.o: external/fastlzlib/lzfse/src/lzvn_encode_base.c
+	$(CC) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c external/fastlzlib/lzfse/src/lzvn_encode_base.c -o $(OBJDIR_LINUX64STATICRELEASE)/external/fastlzlib/lzfse/src/lzvn_encode_base.o
 
 $(OBJDIR_LINUX64STATICRELEASE)/external/fastlzlib/lz4/lz4frame.o: external/fastlzlib/lz4/lz4frame.c
 	$(CC) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c external/fastlzlib/lz4/lz4frame.c -o $(OBJDIR_LINUX64STATICRELEASE)/external/fastlzlib/lz4/lz4frame.o
@@ -5703,9 +5731,6 @@ $(OBJDIR_LINUX64STATICRELEASE)/external/bzip/compress.o: external/bzip/compress.
 $(OBJDIR_LINUX64STATICRELEASE)/external/bzip/bzlib.o: external/bzip/bzlib.c
 	$(CC) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c external/bzip/bzlib.c -o $(OBJDIR_LINUX64STATICRELEASE)/external/bzip/bzlib.o
 
-$(OBJDIR_LINUX64STATICRELEASE)/external/lzham/lzhamcomp/lzham_match_accel.o: external/lzham/lzhamcomp/lzham_match_accel.cpp
-	$(CXX) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c external/lzham/lzhamcomp/lzham_match_accel.cpp -o $(OBJDIR_LINUX64STATICRELEASE)/external/lzham/lzhamcomp/lzham_match_accel.o
-
 $(OBJDIR_LINUX64STATICRELEASE)/external/lzham/lzhamdecomp/lzham_checksum.o: external/lzham/lzhamdecomp/lzham_checksum.cpp
 	$(CXX) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c external/lzham/lzhamdecomp/lzham_checksum.cpp -o $(OBJDIR_LINUX64STATICRELEASE)/external/lzham/lzhamdecomp/lzham_checksum.o
 
@@ -5715,8 +5740,11 @@ $(OBJDIR_LINUX64STATICRELEASE)/external/lzham/lzhamdecomp/lzham_assert.o: extern
 $(OBJDIR_LINUX64STATICRELEASE)/external/lzham/lzhamcomp/lzham_pthreads_threading.o: external/lzham/lzhamcomp/lzham_pthreads_threading.cpp
 	$(CXX) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c external/lzham/lzhamcomp/lzham_pthreads_threading.cpp -o $(OBJDIR_LINUX64STATICRELEASE)/external/lzham/lzhamcomp/lzham_pthreads_threading.o
 
-$(OBJDIR_LINUX64STATICRELEASE)/external/lzma_sdk/C/Ppmd7Enc.o: external/lzma_sdk/C/Ppmd7Enc.c
-	$(CC) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c external/lzma_sdk/C/Ppmd7Enc.c -o $(OBJDIR_LINUX64STATICRELEASE)/external/lzma_sdk/C/Ppmd7Enc.o
+$(OBJDIR_LINUX64STATICRELEASE)/external/lzma_sdk/C/Sha256Opt.o: external/lzma_sdk/C/Sha256Opt.c
+	$(CC) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c external/lzma_sdk/C/Sha256Opt.c -o $(OBJDIR_LINUX64STATICRELEASE)/external/lzma_sdk/C/Sha256Opt.o
+
+$(OBJDIR_LINUX64STATICRELEASE)/external/lzham/lzhamcomp/lzham_match_accel.o: external/lzham/lzhamcomp/lzham_match_accel.cpp
+	$(CXX) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c external/lzham/lzhamcomp/lzham_match_accel.cpp -o $(OBJDIR_LINUX64STATICRELEASE)/external/lzham/lzhamcomp/lzham_match_accel.o
 
 $(OBJDIR_LINUX64STATICRELEASE)/external/lzham/lzhamcomp/lzham_lzcomp_state.o: external/lzham/lzhamcomp/lzham_lzcomp_state.cpp
 	$(CXX) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c external/lzham/lzhamcomp/lzham_lzcomp_state.cpp -o $(OBJDIR_LINUX64STATICRELEASE)/external/lzham/lzhamcomp/lzham_lzcomp_state.o
@@ -5730,11 +5758,11 @@ $(OBJDIR_LINUX64STATICRELEASE)/external/lzham/lzhamcomp/lzham_lzcomp.o: external
 $(OBJDIR_LINUX64STATICRELEASE)/external/lzham/lzhamcomp/lzham_lzbase.o: external/lzham/lzhamcomp/lzham_lzbase.cpp
 	$(CXX) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c external/lzham/lzhamcomp/lzham_lzbase.cpp -o $(OBJDIR_LINUX64STATICRELEASE)/external/lzham/lzhamcomp/lzham_lzbase.o
 
-$(OBJDIR_LINUX64STATICRELEASE)/external/fastlzlib/lzfse/src/lzvn_encode_base.o: external/fastlzlib/lzfse/src/lzvn_encode_base.c
-	$(CC) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c external/fastlzlib/lzfse/src/lzvn_encode_base.c -o $(OBJDIR_LINUX64STATICRELEASE)/external/fastlzlib/lzfse/src/lzvn_encode_base.o
+$(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/lz/lz_encoder.o: external/xz/src/liblzma/lz/lz_encoder.c
+	$(CC) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c external/xz/src/liblzma/lz/lz_encoder.c -o $(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/lz/lz_encoder.o
 
-$(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/lz/lz_decoder.o: external/xz/src/liblzma/lz/lz_decoder.c
-	$(CC) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c external/xz/src/liblzma/lz/lz_decoder.c -o $(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/lz/lz_decoder.o
+$(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/simple/armthumb.o: external/xz/src/liblzma/simple/armthumb.c
+	$(CC) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c external/xz/src/liblzma/simple/armthumb.c -o $(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/simple/armthumb.o
 
 $(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/simple/arm64.o: external/xz/src/liblzma/simple/arm64.c
 	$(CC) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c external/xz/src/liblzma/simple/arm64.c -o $(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/simple/arm64.o
@@ -5772,11 +5800,11 @@ $(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/lzma/fastpos_table.o: ext
 $(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/lz/lz_encoder_mf.o: external/xz/src/liblzma/lz/lz_encoder_mf.c
 	$(CC) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c external/xz/src/liblzma/lz/lz_encoder_mf.c -o $(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/lz/lz_encoder_mf.o
 
-$(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/lz/lz_encoder.o: external/xz/src/liblzma/lz/lz_encoder.c
-	$(CC) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c external/xz/src/liblzma/lz/lz_encoder.c -o $(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/lz/lz_encoder.o
+$(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/simple/ia64.o: external/xz/src/liblzma/simple/ia64.c
+	$(CC) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c external/xz/src/liblzma/simple/ia64.c -o $(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/simple/ia64.o
 
-$(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/simple/armthumb.o: external/xz/src/liblzma/simple/armthumb.c
-	$(CC) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c external/xz/src/liblzma/simple/armthumb.c -o $(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/simple/armthumb.o
+$(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/lz/lz_decoder.o: external/xz/src/liblzma/lz/lz_decoder.c
+	$(CC) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c external/xz/src/liblzma/lz/lz_decoder.c -o $(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/lz/lz_decoder.o
 
 $(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/delta/delta_encoder.o: external/xz/src/liblzma/delta/delta_encoder.c
 	$(CC) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c external/xz/src/liblzma/delta/delta_encoder.c -o $(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/delta/delta_encoder.o
@@ -5811,11 +5839,8 @@ $(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/common/stream_encoder_mt.
 $(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/common/stream_encoder.o: external/xz/src/liblzma/common/stream_encoder.c
 	$(CC) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c external/xz/src/liblzma/common/stream_encoder.c -o $(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/common/stream_encoder.o
 
-$(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/common/stream_decoder.o: external/xz/src/liblzma/common/stream_decoder.c
-	$(CC) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c external/xz/src/liblzma/common/stream_decoder.c -o $(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/common/stream_decoder.o
-
-$(OBJDIR_LINUX64STATICRELEASE)/external/zlib/inflate.o: external/zlib/inflate.c
-	$(CC) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c external/zlib/inflate.c -o $(OBJDIR_LINUX64STATICRELEASE)/external/zlib/inflate.o
+$(OBJDIR_LINUX64STATICRELEASE)/external/zlib/inftrees.o: external/zlib/inftrees.c
+	$(CC) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c external/zlib/inftrees.c -o $(OBJDIR_LINUX64STATICRELEASE)/external/zlib/inftrees.o
 
 $(OBJDIR_LINUX64STATICRELEASE)/external/zstd/lib/common/error_private.o: external/zstd/lib/common/error_private.c
 	$(CC) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c external/zstd/lib/common/error_private.c -o $(OBJDIR_LINUX64STATICRELEASE)/external/zstd/lib/common/error_private.o
@@ -5835,11 +5860,11 @@ $(OBJDIR_LINUX64STATICRELEASE)/external/zlib/zlibcompress.o: external/zlib/zlibc
 $(OBJDIR_LINUX64STATICRELEASE)/external/zlib/trees.o: external/zlib/trees.c
 	$(CC) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c external/zlib/trees.c -o $(OBJDIR_LINUX64STATICRELEASE)/external/zlib/trees.o
 
-$(OBJDIR_LINUX64STATICRELEASE)/external/zlib/inftrees.o: external/zlib/inftrees.c
-	$(CC) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c external/zlib/inftrees.c -o $(OBJDIR_LINUX64STATICRELEASE)/external/zlib/inftrees.o
+$(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/common/stream_decoder.o: external/xz/src/liblzma/common/stream_decoder.c
+	$(CC) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c external/xz/src/liblzma/common/stream_decoder.c -o $(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/common/stream_decoder.o
 
-$(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/common/stream_buffer_encoder.o: external/xz/src/liblzma/common/stream_buffer_encoder.c
-	$(CC) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c external/xz/src/liblzma/common/stream_buffer_encoder.c -o $(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/common/stream_buffer_encoder.o
+$(OBJDIR_LINUX64STATICRELEASE)/external/zlib/inflate.o: external/zlib/inflate.c
+	$(CC) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c external/zlib/inflate.c -o $(OBJDIR_LINUX64STATICRELEASE)/external/zlib/inflate.o
 
 $(OBJDIR_LINUX64STATICRELEASE)/external/zlib/inffast.o: external/zlib/inffast.c
 	$(CC) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c external/zlib/inffast.c -o $(OBJDIR_LINUX64STATICRELEASE)/external/zlib/inffast.o
@@ -5871,11 +5896,11 @@ $(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/simple/simple_coder.o: ex
 $(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/simple/powerpc.o: external/xz/src/liblzma/simple/powerpc.c
 	$(CC) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c external/xz/src/liblzma/simple/powerpc.c -o $(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/simple/powerpc.o
 
-$(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/simple/ia64.o: external/xz/src/liblzma/simple/ia64.c
-	$(CC) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c external/xz/src/liblzma/simple/ia64.c -o $(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/simple/ia64.o
+$(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/check/crc32_fast.o: external/xz/src/liblzma/check/crc32_fast.c
+	$(CC) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c external/xz/src/liblzma/check/crc32_fast.c -o $(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/check/crc32_fast.o
 
-$(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/check/check.o: external/xz/src/liblzma/check/check.c
-	$(CC) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c external/xz/src/liblzma/check/check.c -o $(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/check/check.o
+$(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/common/block_header_decoder.o: external/xz/src/liblzma/common/block_header_decoder.c
+	$(CC) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c external/xz/src/liblzma/common/block_header_decoder.c -o $(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/common/block_header_decoder.o
 
 $(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/common/block_encoder.o: external/xz/src/liblzma/common/block_encoder.c
 	$(CC) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c external/xz/src/liblzma/common/block_encoder.c -o $(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/common/block_encoder.o
@@ -5910,11 +5935,11 @@ $(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/check/crc64_fast.o: exter
 $(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/check/crc32_table.o: external/xz/src/liblzma/check/crc32_table.c
 	$(CC) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c external/xz/src/liblzma/check/crc32_table.c -o $(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/check/crc32_table.o
 
-$(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/check/crc32_fast.o: external/xz/src/liblzma/check/crc32_fast.c
-	$(CC) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c external/xz/src/liblzma/check/crc32_fast.c -o $(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/check/crc32_fast.o
+$(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/common/block_header_encoder.o: external/xz/src/liblzma/common/block_header_encoder.c
+	$(CC) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c external/xz/src/liblzma/common/block_header_encoder.c -o $(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/common/block_header_encoder.o
 
-$(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/common/block_header_decoder.o: external/xz/src/liblzma/common/block_header_decoder.c
-	$(CC) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c external/xz/src/liblzma/common/block_header_decoder.c -o $(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/common/block_header_decoder.o
+$(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/check/check.o: external/xz/src/liblzma/check/check.c
+	$(CC) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c external/xz/src/liblzma/check/check.c -o $(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/check/check.o
 
 $(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/common/tuklib_progname.o: external/xz/src/common/tuklib_progname.c
 	$(CC) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c external/xz/src/common/tuklib_progname.c -o $(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/common/tuklib_progname.o
@@ -5949,11 +5974,11 @@ $(OBJDIR_LINUX64STATICRELEASE)/external/lzma_sdk/C/XzCrc64.o: external/lzma_sdk/
 $(OBJDIR_LINUX64STATICRELEASE)/external/lzma_sdk/C/Xz.o: external/lzma_sdk/C/Xz.c
 	$(CC) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c external/lzma_sdk/C/Xz.c -o $(OBJDIR_LINUX64STATICRELEASE)/external/lzma_sdk/C/Xz.o
 
-$(OBJDIR_LINUX64STATICRELEASE)/external/lzma_sdk/C/Sha256Opt.o: external/lzma_sdk/C/Sha256Opt.c
-	$(CC) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c external/lzma_sdk/C/Sha256Opt.c -o $(OBJDIR_LINUX64STATICRELEASE)/external/lzma_sdk/C/Sha256Opt.o
+$(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/common/filter_flags_decoder.o: external/xz/src/liblzma/common/filter_flags_decoder.c
+	$(CC) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c external/xz/src/liblzma/common/filter_flags_decoder.c -o $(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/common/filter_flags_decoder.o
 
-$(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/common/filter_encoder.o: external/xz/src/liblzma/common/filter_encoder.c
-	$(CC) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c external/xz/src/liblzma/common/filter_encoder.c -o $(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/common/filter_encoder.o
+$(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/common/stream_buffer_encoder.o: external/xz/src/liblzma/common/stream_buffer_encoder.c
+	$(CC) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c external/xz/src/liblzma/common/stream_buffer_encoder.c -o $(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/common/stream_buffer_encoder.o
 
 $(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/common/stream_buffer_decoder.o: external/xz/src/liblzma/common/stream_buffer_decoder.c
 	$(CC) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c external/xz/src/liblzma/common/stream_buffer_decoder.c -o $(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/common/stream_buffer_decoder.o
@@ -5985,11 +6010,11 @@ $(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/common/hardware_cputhread
 $(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/common/filter_flags_encoder.o: external/xz/src/liblzma/common/filter_flags_encoder.c
 	$(CC) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c external/xz/src/liblzma/common/filter_flags_encoder.c -o $(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/common/filter_flags_encoder.o
 
-$(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/common/filter_flags_decoder.o: external/xz/src/liblzma/common/filter_flags_decoder.c
-	$(CC) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c external/xz/src/liblzma/common/filter_flags_decoder.c -o $(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/common/filter_flags_decoder.o
-
 $(OBJDIR_LINUX64STATICRELEASE)/external/bzip/blocksort.o: external/bzip/blocksort.c
 	$(CC) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c external/bzip/blocksort.c -o $(OBJDIR_LINUX64STATICRELEASE)/external/bzip/blocksort.o
+
+$(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/common/filter_encoder.o: external/xz/src/liblzma/common/filter_encoder.c
+	$(CC) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c external/xz/src/liblzma/common/filter_encoder.c -o $(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/common/filter_encoder.o
 
 $(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/common/filter_decoder.o: external/xz/src/liblzma/common/filter_decoder.c
 	$(CC) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c external/xz/src/liblzma/common/filter_decoder.c -o $(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/common/filter_decoder.o
@@ -6024,9 +6049,6 @@ $(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/common/common.o: external
 $(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/common/block_util.o: external/xz/src/liblzma/common/block_util.c
 	$(CC) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c external/xz/src/liblzma/common/block_util.c -o $(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/common/block_util.o
 
-$(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/common/block_header_encoder.o: external/xz/src/liblzma/common/block_header_encoder.c
-	$(CC) $(CFLAGS_LINUX64STATICRELEASE) $(INC_LINUX64STATICRELEASE) -c external/xz/src/liblzma/common/block_header_encoder.c -o $(OBJDIR_LINUX64STATICRELEASE)/external/xz/src/liblzma/common/block_header_encoder.o
-
 clean_linux64staticrelease: 
 	rm -f $(OBJ_LINUX64STATICRELEASE) $(OUT_LINUX64STATICRELEASE)
 	rm -rf bin/ReleaseStatic64
@@ -6045,13 +6067,13 @@ clean_linux64staticrelease:
 	rm -rf $(OBJDIR_LINUX64STATICRELEASE)/src/misc
 	rm -rf $(OBJDIR_LINUX64STATICRELEASE)/src/lib/helper/decompress
 	rm -rf $(OBJDIR_LINUX64STATICRELEASE)/src/lib/helper/compress
+	rm -rf $(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/patchstream/compress
 	rm -rf $(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/svfile/common
 	rm -rf $(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/patchstream/rebuild
 	rm -rf $(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/patchstream/decompress
-	rm -rf $(OBJDIR_LINUX64STATICRELEASE)/src/lib/engine/patchstream/compress
-	rm -rf $(OBJDIR_LINUX64STATICRELEASE)/external/lzham/lzhamdecomp
-	rm -rf $(OBJDIR_LINUX64STATICRELEASE)/external/lzham/lzhamlib
 	rm -rf $(OBJDIR_LINUX64STATICRELEASE)/external/lzma_sdk/C
+	rm -rf $(OBJDIR_LINUX64STATICRELEASE)/external/lzham/lzhamlib
+	rm -rf $(OBJDIR_LINUX64STATICRELEASE)/external/lzham/lzhamdecomp
 	rm -rf $(OBJDIR_LINUX64STATICRELEASE)/external/fastlzlib/lz4
 	rm -rf $(OBJDIR_LINUX64STATICRELEASE)/external/fastlzlib/lzfse/src
 	rm -rf $(OBJDIR_LINUX64STATICRELEASE)/external/fastlzlib
@@ -6085,13 +6107,13 @@ before_linux32staticrelease:
 	test -d $(OBJDIR_LINUX32STATICRELEASE)/src/misc || mkdir -p $(OBJDIR_LINUX32STATICRELEASE)/src/misc
 	test -d $(OBJDIR_LINUX32STATICRELEASE)/src/lib/helper/decompress || mkdir -p $(OBJDIR_LINUX32STATICRELEASE)/src/lib/helper/decompress
 	test -d $(OBJDIR_LINUX32STATICRELEASE)/src/lib/helper/compress || mkdir -p $(OBJDIR_LINUX32STATICRELEASE)/src/lib/helper/compress
+	test -d $(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/patchstream/compress || mkdir -p $(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/patchstream/compress
 	test -d $(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/svfile/common || mkdir -p $(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/svfile/common
 	test -d $(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/patchstream/rebuild || mkdir -p $(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/patchstream/rebuild
 	test -d $(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/patchstream/decompress || mkdir -p $(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/patchstream/decompress
-	test -d $(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/patchstream/compress || mkdir -p $(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/patchstream/compress
-	test -d $(OBJDIR_LINUX32STATICRELEASE)/external/lzham/lzhamdecomp || mkdir -p $(OBJDIR_LINUX32STATICRELEASE)/external/lzham/lzhamdecomp
-	test -d $(OBJDIR_LINUX32STATICRELEASE)/external/lzham/lzhamlib || mkdir -p $(OBJDIR_LINUX32STATICRELEASE)/external/lzham/lzhamlib
 	test -d $(OBJDIR_LINUX32STATICRELEASE)/external/lzma_sdk/C || mkdir -p $(OBJDIR_LINUX32STATICRELEASE)/external/lzma_sdk/C
+	test -d $(OBJDIR_LINUX32STATICRELEASE)/external/lzham/lzhamlib || mkdir -p $(OBJDIR_LINUX32STATICRELEASE)/external/lzham/lzhamlib
+	test -d $(OBJDIR_LINUX32STATICRELEASE)/external/lzham/lzhamdecomp || mkdir -p $(OBJDIR_LINUX32STATICRELEASE)/external/lzham/lzhamdecomp
 	test -d $(OBJDIR_LINUX32STATICRELEASE)/external/fastlzlib/lz4 || mkdir -p $(OBJDIR_LINUX32STATICRELEASE)/external/fastlzlib/lz4
 	test -d $(OBJDIR_LINUX32STATICRELEASE)/external/fastlzlib/lzfse/src || mkdir -p $(OBJDIR_LINUX32STATICRELEASE)/external/fastlzlib/lzfse/src
 	test -d $(OBJDIR_LINUX32STATICRELEASE)/external/fastlzlib || mkdir -p $(OBJDIR_LINUX32STATICRELEASE)/external/fastlzlib
@@ -6136,17 +6158,14 @@ $(OBJDIR_LINUX32STATICRELEASE)/src/cli/DifstrmMainPosix.o: src/cli/DifstrmMainPo
 $(OBJDIR_LINUX32STATICRELEASE)/src/cli/DfsCdLin.o: src/cli/DfsCdLin.c
 	$(CC) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c src/cli/DfsCdLin.c -o $(OBJDIR_LINUX32STATICRELEASE)/src/cli/DfsCdLin.o
 
-$(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/patchstream/common/DfsIoMemMutex.o: src/lib/engine/patchstream/common/DfsIoMemMutex.cpp
-	$(CXX) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c src/lib/engine/patchstream/common/DfsIoMemMutex.cpp -o $(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/patchstream/common/DfsIoMemMutex.o
-
 $(OBJDIR_LINUX32STATICRELEASE)/external/zstd/lib/dictBuilder/zdict.o: external/zstd/lib/dictBuilder/zdict.c
 	$(CC) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c external/zstd/lib/dictBuilder/zdict.c -o $(OBJDIR_LINUX32STATICRELEASE)/external/zstd/lib/dictBuilder/zdict.o
 
 $(OBJDIR_LINUX32STATICRELEASE)/external/zstd/lib/dictBuilder/fastcover.o: external/zstd/lib/dictBuilder/fastcover.c
 	$(CC) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c external/zstd/lib/dictBuilder/fastcover.c -o $(OBJDIR_LINUX32STATICRELEASE)/external/zstd/lib/dictBuilder/fastcover.o
 
-$(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/patchstream/common/ltoolsc.o: src/lib/engine/patchstream/common/ltoolsc.c
-	$(CC) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c src/lib/engine/patchstream/common/ltoolsc.c -o $(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/patchstream/common/ltoolsc.o
+$(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/patchstream/common/compress_store.o: src/lib/engine/patchstream/common/compress_store.c
+	$(CC) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c src/lib/engine/patchstream/common/compress_store.c -o $(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/patchstream/common/compress_store.o
 
 $(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/patchstream/common/difstool.o: src/lib/engine/patchstream/common/difstool.c
 	$(CC) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c src/lib/engine/patchstream/common/difstool.c -o $(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/patchstream/common/difstool.o
@@ -6163,14 +6182,17 @@ $(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/patchstream/common/dfsToolPosix.o:
 $(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/patchstream/common/dfsTool.o: src/lib/engine/patchstream/common/dfsTool.c
 	$(CC) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c src/lib/engine/patchstream/common/dfsTool.c -o $(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/patchstream/common/dfsTool.o
 
-$(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/patchstream/common/compress_store.o: src/lib/engine/patchstream/common/compress_store.c
-	$(CC) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c src/lib/engine/patchstream/common/compress_store.c -o $(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/patchstream/common/compress_store.o
+$(OBJDIR_LINUX32STATICRELEASE)/external/zstd/lib/dictBuilder/divsufsort.o: external/zstd/lib/dictBuilder/divsufsort.c
+	$(CC) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c external/zstd/lib/dictBuilder/divsufsort.c -o $(OBJDIR_LINUX32STATICRELEASE)/external/zstd/lib/dictBuilder/divsufsort.o
 
 $(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/patchstream/common/abstractDecompress.o: src/lib/engine/patchstream/common/abstractDecompress.c
 	$(CC) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c src/lib/engine/patchstream/common/abstractDecompress.c -o $(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/patchstream/common/abstractDecompress.o
 
 $(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/patchstream/common/DfsToolsPosixCPP.o: src/lib/engine/patchstream/common/DfsToolsPosixCPP.cpp
 	$(CXX) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c src/lib/engine/patchstream/common/DfsToolsPosixCPP.cpp -o $(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/patchstream/common/DfsToolsPosixCPP.o
+
+$(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/patchstream/common/DfsIoMemMutex.o: src/lib/engine/patchstream/common/DfsIoMemMutex.cpp
+	$(CXX) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c src/lib/engine/patchstream/common/DfsIoMemMutex.cpp -o $(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/patchstream/common/DfsIoMemMutex.o
 
 $(OBJDIR_LINUX32STATICRELEASE)/external/zstd/lib/compress/zstd_compress_superblock.o: external/zstd/lib/compress/zstd_compress_superblock.c
 	$(CC) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c external/zstd/lib/compress/zstd_compress_superblock.c -o $(OBJDIR_LINUX32STATICRELEASE)/external/zstd/lib/compress/zstd_compress_superblock.o
@@ -6205,15 +6227,6 @@ $(OBJDIR_LINUX32STATICRELEASE)/external/zstd/lib/common/threading.o: external/zs
 $(OBJDIR_LINUX32STATICRELEASE)/external/zstd/lib/common/pool.o: external/zstd/lib/common/pool.c
 	$(CC) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c external/zstd/lib/common/pool.c -o $(OBJDIR_LINUX32STATICRELEASE)/external/zstd/lib/common/pool.o
 
-$(OBJDIR_LINUX32STATICRELEASE)/external/zstd/lib/common/fse_decompress.o: external/zstd/lib/common/fse_decompress.c
-	$(CC) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c external/zstd/lib/common/fse_decompress.c -o $(OBJDIR_LINUX32STATICRELEASE)/external/zstd/lib/common/fse_decompress.o
-
-$(OBJDIR_LINUX32STATICRELEASE)/external/zstd/lib/compress/zstdmt_compress.o: external/zstd/lib/compress/zstdmt_compress.c
-	$(CC) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c external/zstd/lib/compress/zstdmt_compress.c -o $(OBJDIR_LINUX32STATICRELEASE)/external/zstd/lib/compress/zstdmt_compress.o
-
-$(OBJDIR_LINUX32STATICRELEASE)/external/zstd/lib/dictBuilder/divsufsort.o: external/zstd/lib/dictBuilder/divsufsort.c
-	$(CC) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c external/zstd/lib/dictBuilder/divsufsort.c -o $(OBJDIR_LINUX32STATICRELEASE)/external/zstd/lib/dictBuilder/divsufsort.o
-
 $(OBJDIR_LINUX32STATICRELEASE)/external/zstd/lib/dictBuilder/cover.o: external/zstd/lib/dictBuilder/cover.c
 	$(CC) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c external/zstd/lib/dictBuilder/cover.c -o $(OBJDIR_LINUX32STATICRELEASE)/external/zstd/lib/dictBuilder/cover.o
 
@@ -6231,6 +6244,15 @@ $(OBJDIR_LINUX32STATICRELEASE)/external/zstd/lib/decompress/huf_decompress_amd64
 
 $(OBJDIR_LINUX32STATICRELEASE)/external/zstd/lib/decompress/huf_decompress.o: external/zstd/lib/decompress/huf_decompress.c
 	$(CC) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c external/zstd/lib/decompress/huf_decompress.c -o $(OBJDIR_LINUX32STATICRELEASE)/external/zstd/lib/decompress/huf_decompress.o
+
+$(OBJDIR_LINUX32STATICRELEASE)/external/zstd/lib/compress/zstdmt_compress.o: external/zstd/lib/compress/zstdmt_compress.c
+	$(CC) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c external/zstd/lib/compress/zstdmt_compress.c -o $(OBJDIR_LINUX32STATICRELEASE)/external/zstd/lib/compress/zstdmt_compress.o
+
+$(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/patchstream/common/ltoolsc.o: src/lib/engine/patchstream/common/ltoolsc.c
+	$(CC) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c src/lib/engine/patchstream/common/ltoolsc.c -o $(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/patchstream/common/ltoolsc.o
+
+$(OBJDIR_LINUX32STATICRELEASE)/external/zstd/lib/compress/zstd_preSplit.o: external/zstd/lib/compress/zstd_preSplit.c
+	$(CC) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c external/zstd/lib/compress/zstd_preSplit.c -o $(OBJDIR_LINUX32STATICRELEASE)/external/zstd/lib/compress/zstd_preSplit.o
 
 $(OBJDIR_LINUX32STATICRELEASE)/external/zstd/lib/compress/zstd_opt.o: external/zstd/lib/compress/zstd_opt.c
 	$(CC) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c external/zstd/lib/compress/zstd_opt.c -o $(OBJDIR_LINUX32STATICRELEASE)/external/zstd/lib/compress/zstd_opt.o
@@ -6307,6 +6329,9 @@ $(OBJDIR_LINUX32STATICRELEASE)/src/lib/hash/sha256_from_openssl.o: src/lib/hash/
 $(OBJDIR_LINUX32STATICRELEASE)/src/lib/hash/sha1dgst.o: src/lib/hash/sha1dgst.c
 	$(CC) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c src/lib/hash/sha1dgst.c -o $(OBJDIR_LINUX32STATICRELEASE)/src/lib/hash/sha1dgst.o
 
+$(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/patchstream/compress/makdifst.o: src/lib/engine/patchstream/compress/makdifst.c
+	$(CC) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c src/lib/engine/patchstream/compress/makdifst.c -o $(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/patchstream/compress/makdifst.o
+
 $(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/svfile/common/ArrayTl.o: src/lib/engine/svfile/common/ArrayTl.c
 	$(CC) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c src/lib/engine/svfile/common/ArrayTl.c -o $(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/svfile/common/ArrayTl.o
 
@@ -6327,9 +6352,6 @@ $(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/patchstream/decompress/ApDifStm.o:
 
 $(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/svfile/common/DfsIntf.o: src/lib/engine/svfile/common/DfsIntf.c
 	$(CC) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c src/lib/engine/svfile/common/DfsIntf.c -o $(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/svfile/common/DfsIntf.o
-
-$(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/patchstream/compress/makdifst.o: src/lib/engine/patchstream/compress/makdifst.c
-	$(CC) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c src/lib/engine/patchstream/compress/makdifst.c -o $(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/patchstream/compress/makdifst.o
 
 $(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/patchstream/compress/makdifId.o: src/lib/engine/patchstream/compress/makdifId.c
 	$(CC) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c src/lib/engine/patchstream/compress/makdifId.c -o $(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/patchstream/compress/makdifId.o
@@ -6364,6 +6386,9 @@ $(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/svfile/common/DfsTagMg.o: src/lib/
 $(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/svfile/common/DfsTagBlockFloatTool.o: src/lib/engine/svfile/common/DfsTagBlockFloatTool.c
 	$(CC) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c src/lib/engine/svfile/common/DfsTagBlockFloatTool.c -o $(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/svfile/common/DfsTagBlockFloatTool.o
 
+$(OBJDIR_LINUX32STATICRELEASE)/external/zstd/lib/common/fse_decompress.o: external/zstd/lib/common/fse_decompress.c
+	$(CC) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c external/zstd/lib/common/fse_decompress.c -o $(OBJDIR_LINUX32STATICRELEASE)/external/zstd/lib/common/fse_decompress.o
+
 $(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/svfile/common/DfsTagBlockFloatEnd.o: src/lib/engine/svfile/common/DfsTagBlockFloatEnd.c
 	$(CC) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c src/lib/engine/svfile/common/DfsTagBlockFloatEnd.c -o $(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/svfile/common/DfsTagBlockFloatEnd.o
 
@@ -6382,8 +6407,8 @@ $(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/svfile/common/DfsMFile.o: src/lib/
 $(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/svfile/common/DfsIntfWr.o: src/lib/engine/svfile/common/DfsIntfWr.c
 	$(CC) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c src/lib/engine/svfile/common/DfsIntfWr.c -o $(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/svfile/common/DfsIntfWr.o
 
-$(OBJDIR_LINUX32STATICRELEASE)/external/lzham/lzhamdecomp/lzham_prefix_coding.o: external/lzham/lzhamdecomp/lzham_prefix_coding.cpp
-	$(CXX) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c external/lzham/lzhamdecomp/lzham_prefix_coding.cpp -o $(OBJDIR_LINUX32STATICRELEASE)/external/lzham/lzhamdecomp/lzham_prefix_coding.o
+$(OBJDIR_LINUX32STATICRELEASE)/external/lzma_sdk/C/7zAlloc.o: external/lzma_sdk/C/7zAlloc.c
+	$(CC) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c external/lzma_sdk/C/7zAlloc.c -o $(OBJDIR_LINUX32STATICRELEASE)/external/lzma_sdk/C/7zAlloc.o
 
 $(OBJDIR_LINUX32STATICRELEASE)/external/lzham/lzhamlib/lzham_lib.o: external/lzham/lzhamlib/lzham_lib.cpp
 	$(CXX) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c external/lzham/lzhamlib/lzham_lib.cpp -o $(OBJDIR_LINUX32STATICRELEASE)/external/lzham/lzhamlib/lzham_lib.o
@@ -6400,8 +6425,11 @@ $(OBJDIR_LINUX32STATICRELEASE)/external/lzham/lzhamdecomp/lzham_timer.o: externa
 $(OBJDIR_LINUX32STATICRELEASE)/external/lzham/lzhamdecomp/lzham_symbol_codec.o: external/lzham/lzhamdecomp/lzham_symbol_codec.cpp
 	$(CXX) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c external/lzham/lzhamdecomp/lzham_symbol_codec.cpp -o $(OBJDIR_LINUX32STATICRELEASE)/external/lzham/lzhamdecomp/lzham_symbol_codec.o
 
-$(OBJDIR_LINUX32STATICRELEASE)/external/lzma_sdk/C/7zAlloc.o: external/lzma_sdk/C/7zAlloc.c
-	$(CC) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c external/lzma_sdk/C/7zAlloc.c -o $(OBJDIR_LINUX32STATICRELEASE)/external/lzma_sdk/C/7zAlloc.o
+$(OBJDIR_LINUX32STATICRELEASE)/external/lzma_sdk/C/7zArcIn.o: external/lzma_sdk/C/7zArcIn.c
+	$(CC) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c external/lzma_sdk/C/7zArcIn.c -o $(OBJDIR_LINUX32STATICRELEASE)/external/lzma_sdk/C/7zArcIn.o
+
+$(OBJDIR_LINUX32STATICRELEASE)/external/lzham/lzhamdecomp/lzham_prefix_coding.o: external/lzham/lzhamdecomp/lzham_prefix_coding.cpp
+	$(CXX) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c external/lzham/lzhamdecomp/lzham_prefix_coding.cpp -o $(OBJDIR_LINUX32STATICRELEASE)/external/lzham/lzhamdecomp/lzham_prefix_coding.o
 
 $(OBJDIR_LINUX32STATICRELEASE)/external/lzham/lzhamdecomp/lzham_platform.o: external/lzham/lzhamdecomp/lzham_platform.cpp
 	$(CXX) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c external/lzham/lzhamdecomp/lzham_platform.cpp -o $(OBJDIR_LINUX32STATICRELEASE)/external/lzham/lzhamdecomp/lzham_platform.o
@@ -6418,8 +6446,11 @@ $(OBJDIR_LINUX32STATICRELEASE)/external/lzham/lzhamdecomp/lzham_lzdecomp.o: exte
 $(OBJDIR_LINUX32STATICRELEASE)/external/lzham/lzhamdecomp/lzham_huffman_codes.o: external/lzham/lzhamdecomp/lzham_huffman_codes.cpp
 	$(CXX) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c external/lzham/lzhamdecomp/lzham_huffman_codes.cpp -o $(OBJDIR_LINUX32STATICRELEASE)/external/lzham/lzhamdecomp/lzham_huffman_codes.o
 
-$(OBJDIR_LINUX32STATICRELEASE)/external/lzma_sdk/C/BraIA64.o: external/lzma_sdk/C/BraIA64.c
-	$(CC) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c external/lzma_sdk/C/BraIA64.c -o $(OBJDIR_LINUX32STATICRELEASE)/external/lzma_sdk/C/BraIA64.o
+$(OBJDIR_LINUX32STATICRELEASE)/external/lzma_sdk/C/CpuArch.o: external/lzma_sdk/C/CpuArch.c
+	$(CC) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c external/lzma_sdk/C/CpuArch.c -o $(OBJDIR_LINUX32STATICRELEASE)/external/lzma_sdk/C/CpuArch.o
+
+$(OBJDIR_LINUX32STATICRELEASE)/external/lzma_sdk/C/Ppmd7Enc.o: external/lzma_sdk/C/Ppmd7Enc.c
+	$(CC) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c external/lzma_sdk/C/Ppmd7Enc.c -o $(OBJDIR_LINUX32STATICRELEASE)/external/lzma_sdk/C/Ppmd7Enc.o
 
 $(OBJDIR_LINUX32STATICRELEASE)/external/lzma_sdk/C/Ppmd7Dec.o: external/lzma_sdk/C/Ppmd7Dec.c
 	$(CC) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c external/lzma_sdk/C/Ppmd7Dec.c -o $(OBJDIR_LINUX32STATICRELEASE)/external/lzma_sdk/C/Ppmd7Dec.o
@@ -6451,8 +6482,8 @@ $(OBJDIR_LINUX32STATICRELEASE)/external/lzma_sdk/C/LZMASDK_Sha256.o: external/lz
 $(OBJDIR_LINUX32STATICRELEASE)/external/lzma_sdk/C/Delta.o: external/lzma_sdk/C/Delta.c
 	$(CC) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c external/lzma_sdk/C/Delta.c -o $(OBJDIR_LINUX32STATICRELEASE)/external/lzma_sdk/C/Delta.o
 
-$(OBJDIR_LINUX32STATICRELEASE)/external/lzma_sdk/C/CpuArch.o: external/lzma_sdk/C/CpuArch.c
-	$(CC) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c external/lzma_sdk/C/CpuArch.c -o $(OBJDIR_LINUX32STATICRELEASE)/external/lzma_sdk/C/CpuArch.o
+$(OBJDIR_LINUX32STATICRELEASE)/external/lzma_sdk/C/BraIA64.o: external/lzma_sdk/C/BraIA64.c
+	$(CC) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c external/lzma_sdk/C/BraIA64.c -o $(OBJDIR_LINUX32STATICRELEASE)/external/lzma_sdk/C/BraIA64.o
 
 $(OBJDIR_LINUX32STATICRELEASE)/external/lzma_sdk/C/Bra86.o: external/lzma_sdk/C/Bra86.c
 	$(CC) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c external/lzma_sdk/C/Bra86.c -o $(OBJDIR_LINUX32STATICRELEASE)/external/lzma_sdk/C/Bra86.o
@@ -6487,9 +6518,6 @@ $(OBJDIR_LINUX32STATICRELEASE)/external/lzma_sdk/C/7zBuf2.o: external/lzma_sdk/C
 $(OBJDIR_LINUX32STATICRELEASE)/external/lzma_sdk/C/7zBuf.o: external/lzma_sdk/C/7zBuf.c
 	$(CC) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c external/lzma_sdk/C/7zBuf.c -o $(OBJDIR_LINUX32STATICRELEASE)/external/lzma_sdk/C/7zBuf.o
 
-$(OBJDIR_LINUX32STATICRELEASE)/external/lzma_sdk/C/7zArcIn.o: external/lzma_sdk/C/7zArcIn.c
-	$(CC) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c external/lzma_sdk/C/7zArcIn.c -o $(OBJDIR_LINUX32STATICRELEASE)/external/lzma_sdk/C/7zArcIn.o
-
 $(OBJDIR_LINUX32STATICRELEASE)/external/fastlzlib/lz4/lz4hc.o: external/fastlzlib/lz4/lz4hc.c
 	$(CC) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c external/fastlzlib/lz4/lz4hc.c -o $(OBJDIR_LINUX32STATICRELEASE)/external/fastlzlib/lz4/lz4hc.o
 
@@ -6513,6 +6541,9 @@ $(OBJDIR_LINUX32STATICRELEASE)/external/fastlzlib/lzfse/src/lzfse_decode.o: exte
 
 $(OBJDIR_LINUX32STATICRELEASE)/external/fastlzlib/lz4/xxhash.o: external/fastlzlib/lz4/xxhash.c
 	$(CC) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c external/fastlzlib/lz4/xxhash.c -o $(OBJDIR_LINUX32STATICRELEASE)/external/fastlzlib/lz4/xxhash.o
+
+$(OBJDIR_LINUX32STATICRELEASE)/external/fastlzlib/lzfse/src/lzvn_encode_base.o: external/fastlzlib/lzfse/src/lzvn_encode_base.c
+	$(CC) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c external/fastlzlib/lzfse/src/lzvn_encode_base.c -o $(OBJDIR_LINUX32STATICRELEASE)/external/fastlzlib/lzfse/src/lzvn_encode_base.o
 
 $(OBJDIR_LINUX32STATICRELEASE)/external/fastlzlib/lz4/lz4frame.o: external/fastlzlib/lz4/lz4frame.c
 	$(CC) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c external/fastlzlib/lz4/lz4frame.c -o $(OBJDIR_LINUX32STATICRELEASE)/external/fastlzlib/lz4/lz4frame.o
@@ -6544,9 +6575,6 @@ $(OBJDIR_LINUX32STATICRELEASE)/external/bzip/compress.o: external/bzip/compress.
 $(OBJDIR_LINUX32STATICRELEASE)/external/bzip/bzlib.o: external/bzip/bzlib.c
 	$(CC) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c external/bzip/bzlib.c -o $(OBJDIR_LINUX32STATICRELEASE)/external/bzip/bzlib.o
 
-$(OBJDIR_LINUX32STATICRELEASE)/external/lzham/lzhamcomp/lzham_match_accel.o: external/lzham/lzhamcomp/lzham_match_accel.cpp
-	$(CXX) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c external/lzham/lzhamcomp/lzham_match_accel.cpp -o $(OBJDIR_LINUX32STATICRELEASE)/external/lzham/lzhamcomp/lzham_match_accel.o
-
 $(OBJDIR_LINUX32STATICRELEASE)/external/lzham/lzhamdecomp/lzham_checksum.o: external/lzham/lzhamdecomp/lzham_checksum.cpp
 	$(CXX) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c external/lzham/lzhamdecomp/lzham_checksum.cpp -o $(OBJDIR_LINUX32STATICRELEASE)/external/lzham/lzhamdecomp/lzham_checksum.o
 
@@ -6556,8 +6584,11 @@ $(OBJDIR_LINUX32STATICRELEASE)/external/lzham/lzhamdecomp/lzham_assert.o: extern
 $(OBJDIR_LINUX32STATICRELEASE)/external/lzham/lzhamcomp/lzham_pthreads_threading.o: external/lzham/lzhamcomp/lzham_pthreads_threading.cpp
 	$(CXX) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c external/lzham/lzhamcomp/lzham_pthreads_threading.cpp -o $(OBJDIR_LINUX32STATICRELEASE)/external/lzham/lzhamcomp/lzham_pthreads_threading.o
 
-$(OBJDIR_LINUX32STATICRELEASE)/external/lzma_sdk/C/Ppmd7Enc.o: external/lzma_sdk/C/Ppmd7Enc.c
-	$(CC) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c external/lzma_sdk/C/Ppmd7Enc.c -o $(OBJDIR_LINUX32STATICRELEASE)/external/lzma_sdk/C/Ppmd7Enc.o
+$(OBJDIR_LINUX32STATICRELEASE)/external/lzma_sdk/C/Sha256Opt.o: external/lzma_sdk/C/Sha256Opt.c
+	$(CC) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c external/lzma_sdk/C/Sha256Opt.c -o $(OBJDIR_LINUX32STATICRELEASE)/external/lzma_sdk/C/Sha256Opt.o
+
+$(OBJDIR_LINUX32STATICRELEASE)/external/lzham/lzhamcomp/lzham_match_accel.o: external/lzham/lzhamcomp/lzham_match_accel.cpp
+	$(CXX) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c external/lzham/lzhamcomp/lzham_match_accel.cpp -o $(OBJDIR_LINUX32STATICRELEASE)/external/lzham/lzhamcomp/lzham_match_accel.o
 
 $(OBJDIR_LINUX32STATICRELEASE)/external/lzham/lzhamcomp/lzham_lzcomp_state.o: external/lzham/lzhamcomp/lzham_lzcomp_state.cpp
 	$(CXX) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c external/lzham/lzhamcomp/lzham_lzcomp_state.cpp -o $(OBJDIR_LINUX32STATICRELEASE)/external/lzham/lzhamcomp/lzham_lzcomp_state.o
@@ -6571,11 +6602,11 @@ $(OBJDIR_LINUX32STATICRELEASE)/external/lzham/lzhamcomp/lzham_lzcomp.o: external
 $(OBJDIR_LINUX32STATICRELEASE)/external/lzham/lzhamcomp/lzham_lzbase.o: external/lzham/lzhamcomp/lzham_lzbase.cpp
 	$(CXX) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c external/lzham/lzhamcomp/lzham_lzbase.cpp -o $(OBJDIR_LINUX32STATICRELEASE)/external/lzham/lzhamcomp/lzham_lzbase.o
 
-$(OBJDIR_LINUX32STATICRELEASE)/external/fastlzlib/lzfse/src/lzvn_encode_base.o: external/fastlzlib/lzfse/src/lzvn_encode_base.c
-	$(CC) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c external/fastlzlib/lzfse/src/lzvn_encode_base.c -o $(OBJDIR_LINUX32STATICRELEASE)/external/fastlzlib/lzfse/src/lzvn_encode_base.o
+$(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/lz/lz_encoder.o: external/xz/src/liblzma/lz/lz_encoder.c
+	$(CC) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c external/xz/src/liblzma/lz/lz_encoder.c -o $(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/lz/lz_encoder.o
 
-$(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/lz/lz_decoder.o: external/xz/src/liblzma/lz/lz_decoder.c
-	$(CC) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c external/xz/src/liblzma/lz/lz_decoder.c -o $(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/lz/lz_decoder.o
+$(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/simple/armthumb.o: external/xz/src/liblzma/simple/armthumb.c
+	$(CC) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c external/xz/src/liblzma/simple/armthumb.c -o $(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/simple/armthumb.o
 
 $(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/simple/arm64.o: external/xz/src/liblzma/simple/arm64.c
 	$(CC) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c external/xz/src/liblzma/simple/arm64.c -o $(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/simple/arm64.o
@@ -6613,11 +6644,11 @@ $(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/lzma/fastpos_table.o: ext
 $(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/lz/lz_encoder_mf.o: external/xz/src/liblzma/lz/lz_encoder_mf.c
 	$(CC) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c external/xz/src/liblzma/lz/lz_encoder_mf.c -o $(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/lz/lz_encoder_mf.o
 
-$(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/lz/lz_encoder.o: external/xz/src/liblzma/lz/lz_encoder.c
-	$(CC) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c external/xz/src/liblzma/lz/lz_encoder.c -o $(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/lz/lz_encoder.o
+$(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/simple/ia64.o: external/xz/src/liblzma/simple/ia64.c
+	$(CC) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c external/xz/src/liblzma/simple/ia64.c -o $(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/simple/ia64.o
 
-$(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/simple/armthumb.o: external/xz/src/liblzma/simple/armthumb.c
-	$(CC) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c external/xz/src/liblzma/simple/armthumb.c -o $(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/simple/armthumb.o
+$(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/lz/lz_decoder.o: external/xz/src/liblzma/lz/lz_decoder.c
+	$(CC) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c external/xz/src/liblzma/lz/lz_decoder.c -o $(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/lz/lz_decoder.o
 
 $(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/delta/delta_encoder.o: external/xz/src/liblzma/delta/delta_encoder.c
 	$(CC) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c external/xz/src/liblzma/delta/delta_encoder.c -o $(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/delta/delta_encoder.o
@@ -6652,11 +6683,8 @@ $(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/common/stream_encoder_mt.
 $(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/common/stream_encoder.o: external/xz/src/liblzma/common/stream_encoder.c
 	$(CC) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c external/xz/src/liblzma/common/stream_encoder.c -o $(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/common/stream_encoder.o
 
-$(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/common/stream_decoder.o: external/xz/src/liblzma/common/stream_decoder.c
-	$(CC) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c external/xz/src/liblzma/common/stream_decoder.c -o $(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/common/stream_decoder.o
-
-$(OBJDIR_LINUX32STATICRELEASE)/external/zlib/inflate.o: external/zlib/inflate.c
-	$(CC) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c external/zlib/inflate.c -o $(OBJDIR_LINUX32STATICRELEASE)/external/zlib/inflate.o
+$(OBJDIR_LINUX32STATICRELEASE)/external/zlib/inftrees.o: external/zlib/inftrees.c
+	$(CC) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c external/zlib/inftrees.c -o $(OBJDIR_LINUX32STATICRELEASE)/external/zlib/inftrees.o
 
 $(OBJDIR_LINUX32STATICRELEASE)/external/zstd/lib/common/error_private.o: external/zstd/lib/common/error_private.c
 	$(CC) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c external/zstd/lib/common/error_private.c -o $(OBJDIR_LINUX32STATICRELEASE)/external/zstd/lib/common/error_private.o
@@ -6676,11 +6704,11 @@ $(OBJDIR_LINUX32STATICRELEASE)/external/zlib/zlibcompress.o: external/zlib/zlibc
 $(OBJDIR_LINUX32STATICRELEASE)/external/zlib/trees.o: external/zlib/trees.c
 	$(CC) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c external/zlib/trees.c -o $(OBJDIR_LINUX32STATICRELEASE)/external/zlib/trees.o
 
-$(OBJDIR_LINUX32STATICRELEASE)/external/zlib/inftrees.o: external/zlib/inftrees.c
-	$(CC) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c external/zlib/inftrees.c -o $(OBJDIR_LINUX32STATICRELEASE)/external/zlib/inftrees.o
+$(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/common/stream_decoder.o: external/xz/src/liblzma/common/stream_decoder.c
+	$(CC) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c external/xz/src/liblzma/common/stream_decoder.c -o $(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/common/stream_decoder.o
 
-$(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/common/stream_buffer_encoder.o: external/xz/src/liblzma/common/stream_buffer_encoder.c
-	$(CC) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c external/xz/src/liblzma/common/stream_buffer_encoder.c -o $(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/common/stream_buffer_encoder.o
+$(OBJDIR_LINUX32STATICRELEASE)/external/zlib/inflate.o: external/zlib/inflate.c
+	$(CC) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c external/zlib/inflate.c -o $(OBJDIR_LINUX32STATICRELEASE)/external/zlib/inflate.o
 
 $(OBJDIR_LINUX32STATICRELEASE)/external/zlib/inffast.o: external/zlib/inffast.c
 	$(CC) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c external/zlib/inffast.c -o $(OBJDIR_LINUX32STATICRELEASE)/external/zlib/inffast.o
@@ -6712,11 +6740,11 @@ $(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/simple/simple_coder.o: ex
 $(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/simple/powerpc.o: external/xz/src/liblzma/simple/powerpc.c
 	$(CC) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c external/xz/src/liblzma/simple/powerpc.c -o $(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/simple/powerpc.o
 
-$(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/simple/ia64.o: external/xz/src/liblzma/simple/ia64.c
-	$(CC) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c external/xz/src/liblzma/simple/ia64.c -o $(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/simple/ia64.o
+$(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/check/crc32_fast.o: external/xz/src/liblzma/check/crc32_fast.c
+	$(CC) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c external/xz/src/liblzma/check/crc32_fast.c -o $(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/check/crc32_fast.o
 
-$(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/check/check.o: external/xz/src/liblzma/check/check.c
-	$(CC) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c external/xz/src/liblzma/check/check.c -o $(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/check/check.o
+$(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/common/block_header_decoder.o: external/xz/src/liblzma/common/block_header_decoder.c
+	$(CC) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c external/xz/src/liblzma/common/block_header_decoder.c -o $(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/common/block_header_decoder.o
 
 $(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/common/block_encoder.o: external/xz/src/liblzma/common/block_encoder.c
 	$(CC) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c external/xz/src/liblzma/common/block_encoder.c -o $(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/common/block_encoder.o
@@ -6751,11 +6779,11 @@ $(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/check/crc64_fast.o: exter
 $(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/check/crc32_table.o: external/xz/src/liblzma/check/crc32_table.c
 	$(CC) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c external/xz/src/liblzma/check/crc32_table.c -o $(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/check/crc32_table.o
 
-$(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/check/crc32_fast.o: external/xz/src/liblzma/check/crc32_fast.c
-	$(CC) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c external/xz/src/liblzma/check/crc32_fast.c -o $(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/check/crc32_fast.o
+$(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/common/block_header_encoder.o: external/xz/src/liblzma/common/block_header_encoder.c
+	$(CC) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c external/xz/src/liblzma/common/block_header_encoder.c -o $(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/common/block_header_encoder.o
 
-$(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/common/block_header_decoder.o: external/xz/src/liblzma/common/block_header_decoder.c
-	$(CC) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c external/xz/src/liblzma/common/block_header_decoder.c -o $(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/common/block_header_decoder.o
+$(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/check/check.o: external/xz/src/liblzma/check/check.c
+	$(CC) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c external/xz/src/liblzma/check/check.c -o $(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/check/check.o
 
 $(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/common/tuklib_progname.o: external/xz/src/common/tuklib_progname.c
 	$(CC) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c external/xz/src/common/tuklib_progname.c -o $(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/common/tuklib_progname.o
@@ -6790,11 +6818,11 @@ $(OBJDIR_LINUX32STATICRELEASE)/external/lzma_sdk/C/XzCrc64.o: external/lzma_sdk/
 $(OBJDIR_LINUX32STATICRELEASE)/external/lzma_sdk/C/Xz.o: external/lzma_sdk/C/Xz.c
 	$(CC) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c external/lzma_sdk/C/Xz.c -o $(OBJDIR_LINUX32STATICRELEASE)/external/lzma_sdk/C/Xz.o
 
-$(OBJDIR_LINUX32STATICRELEASE)/external/lzma_sdk/C/Sha256Opt.o: external/lzma_sdk/C/Sha256Opt.c
-	$(CC) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c external/lzma_sdk/C/Sha256Opt.c -o $(OBJDIR_LINUX32STATICRELEASE)/external/lzma_sdk/C/Sha256Opt.o
+$(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/common/filter_flags_decoder.o: external/xz/src/liblzma/common/filter_flags_decoder.c
+	$(CC) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c external/xz/src/liblzma/common/filter_flags_decoder.c -o $(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/common/filter_flags_decoder.o
 
-$(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/common/filter_encoder.o: external/xz/src/liblzma/common/filter_encoder.c
-	$(CC) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c external/xz/src/liblzma/common/filter_encoder.c -o $(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/common/filter_encoder.o
+$(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/common/stream_buffer_encoder.o: external/xz/src/liblzma/common/stream_buffer_encoder.c
+	$(CC) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c external/xz/src/liblzma/common/stream_buffer_encoder.c -o $(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/common/stream_buffer_encoder.o
 
 $(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/common/stream_buffer_decoder.o: external/xz/src/liblzma/common/stream_buffer_decoder.c
 	$(CC) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c external/xz/src/liblzma/common/stream_buffer_decoder.c -o $(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/common/stream_buffer_decoder.o
@@ -6826,11 +6854,11 @@ $(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/common/hardware_cputhread
 $(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/common/filter_flags_encoder.o: external/xz/src/liblzma/common/filter_flags_encoder.c
 	$(CC) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c external/xz/src/liblzma/common/filter_flags_encoder.c -o $(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/common/filter_flags_encoder.o
 
-$(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/common/filter_flags_decoder.o: external/xz/src/liblzma/common/filter_flags_decoder.c
-	$(CC) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c external/xz/src/liblzma/common/filter_flags_decoder.c -o $(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/common/filter_flags_decoder.o
-
 $(OBJDIR_LINUX32STATICRELEASE)/external/bzip/blocksort.o: external/bzip/blocksort.c
 	$(CC) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c external/bzip/blocksort.c -o $(OBJDIR_LINUX32STATICRELEASE)/external/bzip/blocksort.o
+
+$(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/common/filter_encoder.o: external/xz/src/liblzma/common/filter_encoder.c
+	$(CC) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c external/xz/src/liblzma/common/filter_encoder.c -o $(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/common/filter_encoder.o
 
 $(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/common/filter_decoder.o: external/xz/src/liblzma/common/filter_decoder.c
 	$(CC) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c external/xz/src/liblzma/common/filter_decoder.c -o $(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/common/filter_decoder.o
@@ -6865,9 +6893,6 @@ $(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/common/common.o: external
 $(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/common/block_util.o: external/xz/src/liblzma/common/block_util.c
 	$(CC) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c external/xz/src/liblzma/common/block_util.c -o $(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/common/block_util.o
 
-$(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/common/block_header_encoder.o: external/xz/src/liblzma/common/block_header_encoder.c
-	$(CC) $(CFLAGS_LINUX32STATICRELEASE) $(INC_LINUX32STATICRELEASE) -c external/xz/src/liblzma/common/block_header_encoder.c -o $(OBJDIR_LINUX32STATICRELEASE)/external/xz/src/liblzma/common/block_header_encoder.o
-
 clean_linux32staticrelease: 
 	rm -f $(OBJ_LINUX32STATICRELEASE) $(OUT_LINUX32STATICRELEASE)
 	rm -rf bin/ReleaseStatic32
@@ -6886,13 +6911,13 @@ clean_linux32staticrelease:
 	rm -rf $(OBJDIR_LINUX32STATICRELEASE)/src/misc
 	rm -rf $(OBJDIR_LINUX32STATICRELEASE)/src/lib/helper/decompress
 	rm -rf $(OBJDIR_LINUX32STATICRELEASE)/src/lib/helper/compress
+	rm -rf $(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/patchstream/compress
 	rm -rf $(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/svfile/common
 	rm -rf $(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/patchstream/rebuild
 	rm -rf $(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/patchstream/decompress
-	rm -rf $(OBJDIR_LINUX32STATICRELEASE)/src/lib/engine/patchstream/compress
-	rm -rf $(OBJDIR_LINUX32STATICRELEASE)/external/lzham/lzhamdecomp
-	rm -rf $(OBJDIR_LINUX32STATICRELEASE)/external/lzham/lzhamlib
 	rm -rf $(OBJDIR_LINUX32STATICRELEASE)/external/lzma_sdk/C
+	rm -rf $(OBJDIR_LINUX32STATICRELEASE)/external/lzham/lzhamlib
+	rm -rf $(OBJDIR_LINUX32STATICRELEASE)/external/lzham/lzhamdecomp
 	rm -rf $(OBJDIR_LINUX32STATICRELEASE)/external/fastlzlib/lz4
 	rm -rf $(OBJDIR_LINUX32STATICRELEASE)/external/fastlzlib/lzfse/src
 	rm -rf $(OBJDIR_LINUX32STATICRELEASE)/external/fastlzlib
@@ -6926,13 +6951,13 @@ before_debug32:
 	test -d $(OBJDIR_DEBUG32)/src/misc || mkdir -p $(OBJDIR_DEBUG32)/src/misc
 	test -d $(OBJDIR_DEBUG32)/src/lib/helper/decompress || mkdir -p $(OBJDIR_DEBUG32)/src/lib/helper/decompress
 	test -d $(OBJDIR_DEBUG32)/src/lib/helper/compress || mkdir -p $(OBJDIR_DEBUG32)/src/lib/helper/compress
+	test -d $(OBJDIR_DEBUG32)/src/lib/engine/patchstream/compress || mkdir -p $(OBJDIR_DEBUG32)/src/lib/engine/patchstream/compress
 	test -d $(OBJDIR_DEBUG32)/src/lib/engine/svfile/common || mkdir -p $(OBJDIR_DEBUG32)/src/lib/engine/svfile/common
 	test -d $(OBJDIR_DEBUG32)/src/lib/engine/patchstream/rebuild || mkdir -p $(OBJDIR_DEBUG32)/src/lib/engine/patchstream/rebuild
 	test -d $(OBJDIR_DEBUG32)/src/lib/engine/patchstream/decompress || mkdir -p $(OBJDIR_DEBUG32)/src/lib/engine/patchstream/decompress
-	test -d $(OBJDIR_DEBUG32)/src/lib/engine/patchstream/compress || mkdir -p $(OBJDIR_DEBUG32)/src/lib/engine/patchstream/compress
-	test -d $(OBJDIR_DEBUG32)/external/lzham/lzhamdecomp || mkdir -p $(OBJDIR_DEBUG32)/external/lzham/lzhamdecomp
-	test -d $(OBJDIR_DEBUG32)/external/lzham/lzhamlib || mkdir -p $(OBJDIR_DEBUG32)/external/lzham/lzhamlib
 	test -d $(OBJDIR_DEBUG32)/external/lzma_sdk/C || mkdir -p $(OBJDIR_DEBUG32)/external/lzma_sdk/C
+	test -d $(OBJDIR_DEBUG32)/external/lzham/lzhamlib || mkdir -p $(OBJDIR_DEBUG32)/external/lzham/lzhamlib
+	test -d $(OBJDIR_DEBUG32)/external/lzham/lzhamdecomp || mkdir -p $(OBJDIR_DEBUG32)/external/lzham/lzhamdecomp
 	test -d $(OBJDIR_DEBUG32)/external/fastlzlib/lz4 || mkdir -p $(OBJDIR_DEBUG32)/external/fastlzlib/lz4
 	test -d $(OBJDIR_DEBUG32)/external/fastlzlib/lzfse/src || mkdir -p $(OBJDIR_DEBUG32)/external/fastlzlib/lzfse/src
 	test -d $(OBJDIR_DEBUG32)/external/fastlzlib || mkdir -p $(OBJDIR_DEBUG32)/external/fastlzlib
@@ -6977,17 +7002,14 @@ $(OBJDIR_DEBUG32)/src/cli/DifstrmMainPosix.o: src/cli/DifstrmMainPosix.c
 $(OBJDIR_DEBUG32)/src/cli/DfsCdLin.o: src/cli/DfsCdLin.c
 	$(CC) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c src/cli/DfsCdLin.c -o $(OBJDIR_DEBUG32)/src/cli/DfsCdLin.o
 
-$(OBJDIR_DEBUG32)/src/lib/engine/patchstream/common/DfsIoMemMutex.o: src/lib/engine/patchstream/common/DfsIoMemMutex.cpp
-	$(CXX) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c src/lib/engine/patchstream/common/DfsIoMemMutex.cpp -o $(OBJDIR_DEBUG32)/src/lib/engine/patchstream/common/DfsIoMemMutex.o
-
 $(OBJDIR_DEBUG32)/external/zstd/lib/dictBuilder/zdict.o: external/zstd/lib/dictBuilder/zdict.c
 	$(CC) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c external/zstd/lib/dictBuilder/zdict.c -o $(OBJDIR_DEBUG32)/external/zstd/lib/dictBuilder/zdict.o
 
 $(OBJDIR_DEBUG32)/external/zstd/lib/dictBuilder/fastcover.o: external/zstd/lib/dictBuilder/fastcover.c
 	$(CC) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c external/zstd/lib/dictBuilder/fastcover.c -o $(OBJDIR_DEBUG32)/external/zstd/lib/dictBuilder/fastcover.o
 
-$(OBJDIR_DEBUG32)/src/lib/engine/patchstream/common/ltoolsc.o: src/lib/engine/patchstream/common/ltoolsc.c
-	$(CC) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c src/lib/engine/patchstream/common/ltoolsc.c -o $(OBJDIR_DEBUG32)/src/lib/engine/patchstream/common/ltoolsc.o
+$(OBJDIR_DEBUG32)/src/lib/engine/patchstream/common/compress_store.o: src/lib/engine/patchstream/common/compress_store.c
+	$(CC) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c src/lib/engine/patchstream/common/compress_store.c -o $(OBJDIR_DEBUG32)/src/lib/engine/patchstream/common/compress_store.o
 
 $(OBJDIR_DEBUG32)/src/lib/engine/patchstream/common/difstool.o: src/lib/engine/patchstream/common/difstool.c
 	$(CC) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c src/lib/engine/patchstream/common/difstool.c -o $(OBJDIR_DEBUG32)/src/lib/engine/patchstream/common/difstool.o
@@ -7004,14 +7026,17 @@ $(OBJDIR_DEBUG32)/src/lib/engine/patchstream/common/dfsToolPosix.o: src/lib/engi
 $(OBJDIR_DEBUG32)/src/lib/engine/patchstream/common/dfsTool.o: src/lib/engine/patchstream/common/dfsTool.c
 	$(CC) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c src/lib/engine/patchstream/common/dfsTool.c -o $(OBJDIR_DEBUG32)/src/lib/engine/patchstream/common/dfsTool.o
 
-$(OBJDIR_DEBUG32)/src/lib/engine/patchstream/common/compress_store.o: src/lib/engine/patchstream/common/compress_store.c
-	$(CC) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c src/lib/engine/patchstream/common/compress_store.c -o $(OBJDIR_DEBUG32)/src/lib/engine/patchstream/common/compress_store.o
+$(OBJDIR_DEBUG32)/external/zstd/lib/dictBuilder/divsufsort.o: external/zstd/lib/dictBuilder/divsufsort.c
+	$(CC) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c external/zstd/lib/dictBuilder/divsufsort.c -o $(OBJDIR_DEBUG32)/external/zstd/lib/dictBuilder/divsufsort.o
 
 $(OBJDIR_DEBUG32)/src/lib/engine/patchstream/common/abstractDecompress.o: src/lib/engine/patchstream/common/abstractDecompress.c
 	$(CC) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c src/lib/engine/patchstream/common/abstractDecompress.c -o $(OBJDIR_DEBUG32)/src/lib/engine/patchstream/common/abstractDecompress.o
 
 $(OBJDIR_DEBUG32)/src/lib/engine/patchstream/common/DfsToolsPosixCPP.o: src/lib/engine/patchstream/common/DfsToolsPosixCPP.cpp
 	$(CXX) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c src/lib/engine/patchstream/common/DfsToolsPosixCPP.cpp -o $(OBJDIR_DEBUG32)/src/lib/engine/patchstream/common/DfsToolsPosixCPP.o
+
+$(OBJDIR_DEBUG32)/src/lib/engine/patchstream/common/DfsIoMemMutex.o: src/lib/engine/patchstream/common/DfsIoMemMutex.cpp
+	$(CXX) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c src/lib/engine/patchstream/common/DfsIoMemMutex.cpp -o $(OBJDIR_DEBUG32)/src/lib/engine/patchstream/common/DfsIoMemMutex.o
 
 $(OBJDIR_DEBUG32)/external/zstd/lib/compress/zstd_compress_superblock.o: external/zstd/lib/compress/zstd_compress_superblock.c
 	$(CC) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c external/zstd/lib/compress/zstd_compress_superblock.c -o $(OBJDIR_DEBUG32)/external/zstd/lib/compress/zstd_compress_superblock.o
@@ -7046,15 +7071,6 @@ $(OBJDIR_DEBUG32)/external/zstd/lib/common/threading.o: external/zstd/lib/common
 $(OBJDIR_DEBUG32)/external/zstd/lib/common/pool.o: external/zstd/lib/common/pool.c
 	$(CC) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c external/zstd/lib/common/pool.c -o $(OBJDIR_DEBUG32)/external/zstd/lib/common/pool.o
 
-$(OBJDIR_DEBUG32)/external/zstd/lib/common/fse_decompress.o: external/zstd/lib/common/fse_decompress.c
-	$(CC) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c external/zstd/lib/common/fse_decompress.c -o $(OBJDIR_DEBUG32)/external/zstd/lib/common/fse_decompress.o
-
-$(OBJDIR_DEBUG32)/external/zstd/lib/compress/zstdmt_compress.o: external/zstd/lib/compress/zstdmt_compress.c
-	$(CC) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c external/zstd/lib/compress/zstdmt_compress.c -o $(OBJDIR_DEBUG32)/external/zstd/lib/compress/zstdmt_compress.o
-
-$(OBJDIR_DEBUG32)/external/zstd/lib/dictBuilder/divsufsort.o: external/zstd/lib/dictBuilder/divsufsort.c
-	$(CC) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c external/zstd/lib/dictBuilder/divsufsort.c -o $(OBJDIR_DEBUG32)/external/zstd/lib/dictBuilder/divsufsort.o
-
 $(OBJDIR_DEBUG32)/external/zstd/lib/dictBuilder/cover.o: external/zstd/lib/dictBuilder/cover.c
 	$(CC) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c external/zstd/lib/dictBuilder/cover.c -o $(OBJDIR_DEBUG32)/external/zstd/lib/dictBuilder/cover.o
 
@@ -7072,6 +7088,15 @@ $(OBJDIR_DEBUG32)/external/zstd/lib/decompress/huf_decompress_amd64.o: external/
 
 $(OBJDIR_DEBUG32)/external/zstd/lib/decompress/huf_decompress.o: external/zstd/lib/decompress/huf_decompress.c
 	$(CC) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c external/zstd/lib/decompress/huf_decompress.c -o $(OBJDIR_DEBUG32)/external/zstd/lib/decompress/huf_decompress.o
+
+$(OBJDIR_DEBUG32)/external/zstd/lib/compress/zstdmt_compress.o: external/zstd/lib/compress/zstdmt_compress.c
+	$(CC) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c external/zstd/lib/compress/zstdmt_compress.c -o $(OBJDIR_DEBUG32)/external/zstd/lib/compress/zstdmt_compress.o
+
+$(OBJDIR_DEBUG32)/src/lib/engine/patchstream/common/ltoolsc.o: src/lib/engine/patchstream/common/ltoolsc.c
+	$(CC) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c src/lib/engine/patchstream/common/ltoolsc.c -o $(OBJDIR_DEBUG32)/src/lib/engine/patchstream/common/ltoolsc.o
+
+$(OBJDIR_DEBUG32)/external/zstd/lib/compress/zstd_preSplit.o: external/zstd/lib/compress/zstd_preSplit.c
+	$(CC) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c external/zstd/lib/compress/zstd_preSplit.c -o $(OBJDIR_DEBUG32)/external/zstd/lib/compress/zstd_preSplit.o
 
 $(OBJDIR_DEBUG32)/external/zstd/lib/compress/zstd_opt.o: external/zstd/lib/compress/zstd_opt.c
 	$(CC) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c external/zstd/lib/compress/zstd_opt.c -o $(OBJDIR_DEBUG32)/external/zstd/lib/compress/zstd_opt.o
@@ -7148,6 +7173,9 @@ $(OBJDIR_DEBUG32)/src/lib/hash/sha256_from_openssl.o: src/lib/hash/sha256_from_o
 $(OBJDIR_DEBUG32)/src/lib/hash/sha1dgst.o: src/lib/hash/sha1dgst.c
 	$(CC) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c src/lib/hash/sha1dgst.c -o $(OBJDIR_DEBUG32)/src/lib/hash/sha1dgst.o
 
+$(OBJDIR_DEBUG32)/src/lib/engine/patchstream/compress/makdifst.o: src/lib/engine/patchstream/compress/makdifst.c
+	$(CC) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c src/lib/engine/patchstream/compress/makdifst.c -o $(OBJDIR_DEBUG32)/src/lib/engine/patchstream/compress/makdifst.o
+
 $(OBJDIR_DEBUG32)/src/lib/engine/svfile/common/ArrayTl.o: src/lib/engine/svfile/common/ArrayTl.c
 	$(CC) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c src/lib/engine/svfile/common/ArrayTl.c -o $(OBJDIR_DEBUG32)/src/lib/engine/svfile/common/ArrayTl.o
 
@@ -7168,9 +7196,6 @@ $(OBJDIR_DEBUG32)/src/lib/engine/patchstream/decompress/ApDifStm.o: src/lib/engi
 
 $(OBJDIR_DEBUG32)/src/lib/engine/svfile/common/DfsIntf.o: src/lib/engine/svfile/common/DfsIntf.c
 	$(CC) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c src/lib/engine/svfile/common/DfsIntf.c -o $(OBJDIR_DEBUG32)/src/lib/engine/svfile/common/DfsIntf.o
-
-$(OBJDIR_DEBUG32)/src/lib/engine/patchstream/compress/makdifst.o: src/lib/engine/patchstream/compress/makdifst.c
-	$(CC) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c src/lib/engine/patchstream/compress/makdifst.c -o $(OBJDIR_DEBUG32)/src/lib/engine/patchstream/compress/makdifst.o
 
 $(OBJDIR_DEBUG32)/src/lib/engine/patchstream/compress/makdifId.o: src/lib/engine/patchstream/compress/makdifId.c
 	$(CC) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c src/lib/engine/patchstream/compress/makdifId.c -o $(OBJDIR_DEBUG32)/src/lib/engine/patchstream/compress/makdifId.o
@@ -7205,6 +7230,9 @@ $(OBJDIR_DEBUG32)/src/lib/engine/svfile/common/DfsTagMg.o: src/lib/engine/svfile
 $(OBJDIR_DEBUG32)/src/lib/engine/svfile/common/DfsTagBlockFloatTool.o: src/lib/engine/svfile/common/DfsTagBlockFloatTool.c
 	$(CC) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c src/lib/engine/svfile/common/DfsTagBlockFloatTool.c -o $(OBJDIR_DEBUG32)/src/lib/engine/svfile/common/DfsTagBlockFloatTool.o
 
+$(OBJDIR_DEBUG32)/external/zstd/lib/common/fse_decompress.o: external/zstd/lib/common/fse_decompress.c
+	$(CC) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c external/zstd/lib/common/fse_decompress.c -o $(OBJDIR_DEBUG32)/external/zstd/lib/common/fse_decompress.o
+
 $(OBJDIR_DEBUG32)/src/lib/engine/svfile/common/DfsTagBlockFloatEnd.o: src/lib/engine/svfile/common/DfsTagBlockFloatEnd.c
 	$(CC) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c src/lib/engine/svfile/common/DfsTagBlockFloatEnd.c -o $(OBJDIR_DEBUG32)/src/lib/engine/svfile/common/DfsTagBlockFloatEnd.o
 
@@ -7223,8 +7251,8 @@ $(OBJDIR_DEBUG32)/src/lib/engine/svfile/common/DfsMFile.o: src/lib/engine/svfile
 $(OBJDIR_DEBUG32)/src/lib/engine/svfile/common/DfsIntfWr.o: src/lib/engine/svfile/common/DfsIntfWr.c
 	$(CC) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c src/lib/engine/svfile/common/DfsIntfWr.c -o $(OBJDIR_DEBUG32)/src/lib/engine/svfile/common/DfsIntfWr.o
 
-$(OBJDIR_DEBUG32)/external/lzham/lzhamdecomp/lzham_prefix_coding.o: external/lzham/lzhamdecomp/lzham_prefix_coding.cpp
-	$(CXX) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c external/lzham/lzhamdecomp/lzham_prefix_coding.cpp -o $(OBJDIR_DEBUG32)/external/lzham/lzhamdecomp/lzham_prefix_coding.o
+$(OBJDIR_DEBUG32)/external/lzma_sdk/C/7zAlloc.o: external/lzma_sdk/C/7zAlloc.c
+	$(CC) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c external/lzma_sdk/C/7zAlloc.c -o $(OBJDIR_DEBUG32)/external/lzma_sdk/C/7zAlloc.o
 
 $(OBJDIR_DEBUG32)/external/lzham/lzhamlib/lzham_lib.o: external/lzham/lzhamlib/lzham_lib.cpp
 	$(CXX) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c external/lzham/lzhamlib/lzham_lib.cpp -o $(OBJDIR_DEBUG32)/external/lzham/lzhamlib/lzham_lib.o
@@ -7241,8 +7269,11 @@ $(OBJDIR_DEBUG32)/external/lzham/lzhamdecomp/lzham_timer.o: external/lzham/lzham
 $(OBJDIR_DEBUG32)/external/lzham/lzhamdecomp/lzham_symbol_codec.o: external/lzham/lzhamdecomp/lzham_symbol_codec.cpp
 	$(CXX) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c external/lzham/lzhamdecomp/lzham_symbol_codec.cpp -o $(OBJDIR_DEBUG32)/external/lzham/lzhamdecomp/lzham_symbol_codec.o
 
-$(OBJDIR_DEBUG32)/external/lzma_sdk/C/7zAlloc.o: external/lzma_sdk/C/7zAlloc.c
-	$(CC) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c external/lzma_sdk/C/7zAlloc.c -o $(OBJDIR_DEBUG32)/external/lzma_sdk/C/7zAlloc.o
+$(OBJDIR_DEBUG32)/external/lzma_sdk/C/7zArcIn.o: external/lzma_sdk/C/7zArcIn.c
+	$(CC) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c external/lzma_sdk/C/7zArcIn.c -o $(OBJDIR_DEBUG32)/external/lzma_sdk/C/7zArcIn.o
+
+$(OBJDIR_DEBUG32)/external/lzham/lzhamdecomp/lzham_prefix_coding.o: external/lzham/lzhamdecomp/lzham_prefix_coding.cpp
+	$(CXX) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c external/lzham/lzhamdecomp/lzham_prefix_coding.cpp -o $(OBJDIR_DEBUG32)/external/lzham/lzhamdecomp/lzham_prefix_coding.o
 
 $(OBJDIR_DEBUG32)/external/lzham/lzhamdecomp/lzham_platform.o: external/lzham/lzhamdecomp/lzham_platform.cpp
 	$(CXX) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c external/lzham/lzhamdecomp/lzham_platform.cpp -o $(OBJDIR_DEBUG32)/external/lzham/lzhamdecomp/lzham_platform.o
@@ -7259,8 +7290,11 @@ $(OBJDIR_DEBUG32)/external/lzham/lzhamdecomp/lzham_lzdecomp.o: external/lzham/lz
 $(OBJDIR_DEBUG32)/external/lzham/lzhamdecomp/lzham_huffman_codes.o: external/lzham/lzhamdecomp/lzham_huffman_codes.cpp
 	$(CXX) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c external/lzham/lzhamdecomp/lzham_huffman_codes.cpp -o $(OBJDIR_DEBUG32)/external/lzham/lzhamdecomp/lzham_huffman_codes.o
 
-$(OBJDIR_DEBUG32)/external/lzma_sdk/C/BraIA64.o: external/lzma_sdk/C/BraIA64.c
-	$(CC) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c external/lzma_sdk/C/BraIA64.c -o $(OBJDIR_DEBUG32)/external/lzma_sdk/C/BraIA64.o
+$(OBJDIR_DEBUG32)/external/lzma_sdk/C/CpuArch.o: external/lzma_sdk/C/CpuArch.c
+	$(CC) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c external/lzma_sdk/C/CpuArch.c -o $(OBJDIR_DEBUG32)/external/lzma_sdk/C/CpuArch.o
+
+$(OBJDIR_DEBUG32)/external/lzma_sdk/C/Ppmd7Enc.o: external/lzma_sdk/C/Ppmd7Enc.c
+	$(CC) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c external/lzma_sdk/C/Ppmd7Enc.c -o $(OBJDIR_DEBUG32)/external/lzma_sdk/C/Ppmd7Enc.o
 
 $(OBJDIR_DEBUG32)/external/lzma_sdk/C/Ppmd7Dec.o: external/lzma_sdk/C/Ppmd7Dec.c
 	$(CC) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c external/lzma_sdk/C/Ppmd7Dec.c -o $(OBJDIR_DEBUG32)/external/lzma_sdk/C/Ppmd7Dec.o
@@ -7292,8 +7326,8 @@ $(OBJDIR_DEBUG32)/external/lzma_sdk/C/LZMASDK_Sha256.o: external/lzma_sdk/C/LZMA
 $(OBJDIR_DEBUG32)/external/lzma_sdk/C/Delta.o: external/lzma_sdk/C/Delta.c
 	$(CC) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c external/lzma_sdk/C/Delta.c -o $(OBJDIR_DEBUG32)/external/lzma_sdk/C/Delta.o
 
-$(OBJDIR_DEBUG32)/external/lzma_sdk/C/CpuArch.o: external/lzma_sdk/C/CpuArch.c
-	$(CC) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c external/lzma_sdk/C/CpuArch.c -o $(OBJDIR_DEBUG32)/external/lzma_sdk/C/CpuArch.o
+$(OBJDIR_DEBUG32)/external/lzma_sdk/C/BraIA64.o: external/lzma_sdk/C/BraIA64.c
+	$(CC) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c external/lzma_sdk/C/BraIA64.c -o $(OBJDIR_DEBUG32)/external/lzma_sdk/C/BraIA64.o
 
 $(OBJDIR_DEBUG32)/external/lzma_sdk/C/Bra86.o: external/lzma_sdk/C/Bra86.c
 	$(CC) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c external/lzma_sdk/C/Bra86.c -o $(OBJDIR_DEBUG32)/external/lzma_sdk/C/Bra86.o
@@ -7328,9 +7362,6 @@ $(OBJDIR_DEBUG32)/external/lzma_sdk/C/7zBuf2.o: external/lzma_sdk/C/7zBuf2.c
 $(OBJDIR_DEBUG32)/external/lzma_sdk/C/7zBuf.o: external/lzma_sdk/C/7zBuf.c
 	$(CC) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c external/lzma_sdk/C/7zBuf.c -o $(OBJDIR_DEBUG32)/external/lzma_sdk/C/7zBuf.o
 
-$(OBJDIR_DEBUG32)/external/lzma_sdk/C/7zArcIn.o: external/lzma_sdk/C/7zArcIn.c
-	$(CC) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c external/lzma_sdk/C/7zArcIn.c -o $(OBJDIR_DEBUG32)/external/lzma_sdk/C/7zArcIn.o
-
 $(OBJDIR_DEBUG32)/external/fastlzlib/lz4/lz4hc.o: external/fastlzlib/lz4/lz4hc.c
 	$(CC) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c external/fastlzlib/lz4/lz4hc.c -o $(OBJDIR_DEBUG32)/external/fastlzlib/lz4/lz4hc.o
 
@@ -7354,6 +7385,9 @@ $(OBJDIR_DEBUG32)/external/fastlzlib/lzfse/src/lzfse_decode.o: external/fastlzli
 
 $(OBJDIR_DEBUG32)/external/fastlzlib/lz4/xxhash.o: external/fastlzlib/lz4/xxhash.c
 	$(CC) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c external/fastlzlib/lz4/xxhash.c -o $(OBJDIR_DEBUG32)/external/fastlzlib/lz4/xxhash.o
+
+$(OBJDIR_DEBUG32)/external/fastlzlib/lzfse/src/lzvn_encode_base.o: external/fastlzlib/lzfse/src/lzvn_encode_base.c
+	$(CC) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c external/fastlzlib/lzfse/src/lzvn_encode_base.c -o $(OBJDIR_DEBUG32)/external/fastlzlib/lzfse/src/lzvn_encode_base.o
 
 $(OBJDIR_DEBUG32)/external/fastlzlib/lz4/lz4frame.o: external/fastlzlib/lz4/lz4frame.c
 	$(CC) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c external/fastlzlib/lz4/lz4frame.c -o $(OBJDIR_DEBUG32)/external/fastlzlib/lz4/lz4frame.o
@@ -7385,9 +7419,6 @@ $(OBJDIR_DEBUG32)/external/bzip/compress.o: external/bzip/compress.c
 $(OBJDIR_DEBUG32)/external/bzip/bzlib.o: external/bzip/bzlib.c
 	$(CC) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c external/bzip/bzlib.c -o $(OBJDIR_DEBUG32)/external/bzip/bzlib.o
 
-$(OBJDIR_DEBUG32)/external/lzham/lzhamcomp/lzham_match_accel.o: external/lzham/lzhamcomp/lzham_match_accel.cpp
-	$(CXX) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c external/lzham/lzhamcomp/lzham_match_accel.cpp -o $(OBJDIR_DEBUG32)/external/lzham/lzhamcomp/lzham_match_accel.o
-
 $(OBJDIR_DEBUG32)/external/lzham/lzhamdecomp/lzham_checksum.o: external/lzham/lzhamdecomp/lzham_checksum.cpp
 	$(CXX) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c external/lzham/lzhamdecomp/lzham_checksum.cpp -o $(OBJDIR_DEBUG32)/external/lzham/lzhamdecomp/lzham_checksum.o
 
@@ -7397,8 +7428,11 @@ $(OBJDIR_DEBUG32)/external/lzham/lzhamdecomp/lzham_assert.o: external/lzham/lzha
 $(OBJDIR_DEBUG32)/external/lzham/lzhamcomp/lzham_pthreads_threading.o: external/lzham/lzhamcomp/lzham_pthreads_threading.cpp
 	$(CXX) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c external/lzham/lzhamcomp/lzham_pthreads_threading.cpp -o $(OBJDIR_DEBUG32)/external/lzham/lzhamcomp/lzham_pthreads_threading.o
 
-$(OBJDIR_DEBUG32)/external/lzma_sdk/C/Ppmd7Enc.o: external/lzma_sdk/C/Ppmd7Enc.c
-	$(CC) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c external/lzma_sdk/C/Ppmd7Enc.c -o $(OBJDIR_DEBUG32)/external/lzma_sdk/C/Ppmd7Enc.o
+$(OBJDIR_DEBUG32)/external/lzma_sdk/C/Sha256Opt.o: external/lzma_sdk/C/Sha256Opt.c
+	$(CC) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c external/lzma_sdk/C/Sha256Opt.c -o $(OBJDIR_DEBUG32)/external/lzma_sdk/C/Sha256Opt.o
+
+$(OBJDIR_DEBUG32)/external/lzham/lzhamcomp/lzham_match_accel.o: external/lzham/lzhamcomp/lzham_match_accel.cpp
+	$(CXX) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c external/lzham/lzhamcomp/lzham_match_accel.cpp -o $(OBJDIR_DEBUG32)/external/lzham/lzhamcomp/lzham_match_accel.o
 
 $(OBJDIR_DEBUG32)/external/lzham/lzhamcomp/lzham_lzcomp_state.o: external/lzham/lzhamcomp/lzham_lzcomp_state.cpp
 	$(CXX) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c external/lzham/lzhamcomp/lzham_lzcomp_state.cpp -o $(OBJDIR_DEBUG32)/external/lzham/lzhamcomp/lzham_lzcomp_state.o
@@ -7412,11 +7446,11 @@ $(OBJDIR_DEBUG32)/external/lzham/lzhamcomp/lzham_lzcomp.o: external/lzham/lzhamc
 $(OBJDIR_DEBUG32)/external/lzham/lzhamcomp/lzham_lzbase.o: external/lzham/lzhamcomp/lzham_lzbase.cpp
 	$(CXX) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c external/lzham/lzhamcomp/lzham_lzbase.cpp -o $(OBJDIR_DEBUG32)/external/lzham/lzhamcomp/lzham_lzbase.o
 
-$(OBJDIR_DEBUG32)/external/fastlzlib/lzfse/src/lzvn_encode_base.o: external/fastlzlib/lzfse/src/lzvn_encode_base.c
-	$(CC) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c external/fastlzlib/lzfse/src/lzvn_encode_base.c -o $(OBJDIR_DEBUG32)/external/fastlzlib/lzfse/src/lzvn_encode_base.o
+$(OBJDIR_DEBUG32)/external/xz/src/liblzma/lz/lz_encoder.o: external/xz/src/liblzma/lz/lz_encoder.c
+	$(CC) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c external/xz/src/liblzma/lz/lz_encoder.c -o $(OBJDIR_DEBUG32)/external/xz/src/liblzma/lz/lz_encoder.o
 
-$(OBJDIR_DEBUG32)/external/xz/src/liblzma/lz/lz_decoder.o: external/xz/src/liblzma/lz/lz_decoder.c
-	$(CC) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c external/xz/src/liblzma/lz/lz_decoder.c -o $(OBJDIR_DEBUG32)/external/xz/src/liblzma/lz/lz_decoder.o
+$(OBJDIR_DEBUG32)/external/xz/src/liblzma/simple/armthumb.o: external/xz/src/liblzma/simple/armthumb.c
+	$(CC) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c external/xz/src/liblzma/simple/armthumb.c -o $(OBJDIR_DEBUG32)/external/xz/src/liblzma/simple/armthumb.o
 
 $(OBJDIR_DEBUG32)/external/xz/src/liblzma/simple/arm64.o: external/xz/src/liblzma/simple/arm64.c
 	$(CC) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c external/xz/src/liblzma/simple/arm64.c -o $(OBJDIR_DEBUG32)/external/xz/src/liblzma/simple/arm64.o
@@ -7454,11 +7488,11 @@ $(OBJDIR_DEBUG32)/external/xz/src/liblzma/lzma/fastpos_table.o: external/xz/src/
 $(OBJDIR_DEBUG32)/external/xz/src/liblzma/lz/lz_encoder_mf.o: external/xz/src/liblzma/lz/lz_encoder_mf.c
 	$(CC) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c external/xz/src/liblzma/lz/lz_encoder_mf.c -o $(OBJDIR_DEBUG32)/external/xz/src/liblzma/lz/lz_encoder_mf.o
 
-$(OBJDIR_DEBUG32)/external/xz/src/liblzma/lz/lz_encoder.o: external/xz/src/liblzma/lz/lz_encoder.c
-	$(CC) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c external/xz/src/liblzma/lz/lz_encoder.c -o $(OBJDIR_DEBUG32)/external/xz/src/liblzma/lz/lz_encoder.o
+$(OBJDIR_DEBUG32)/external/xz/src/liblzma/simple/ia64.o: external/xz/src/liblzma/simple/ia64.c
+	$(CC) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c external/xz/src/liblzma/simple/ia64.c -o $(OBJDIR_DEBUG32)/external/xz/src/liblzma/simple/ia64.o
 
-$(OBJDIR_DEBUG32)/external/xz/src/liblzma/simple/armthumb.o: external/xz/src/liblzma/simple/armthumb.c
-	$(CC) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c external/xz/src/liblzma/simple/armthumb.c -o $(OBJDIR_DEBUG32)/external/xz/src/liblzma/simple/armthumb.o
+$(OBJDIR_DEBUG32)/external/xz/src/liblzma/lz/lz_decoder.o: external/xz/src/liblzma/lz/lz_decoder.c
+	$(CC) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c external/xz/src/liblzma/lz/lz_decoder.c -o $(OBJDIR_DEBUG32)/external/xz/src/liblzma/lz/lz_decoder.o
 
 $(OBJDIR_DEBUG32)/external/xz/src/liblzma/delta/delta_encoder.o: external/xz/src/liblzma/delta/delta_encoder.c
 	$(CC) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c external/xz/src/liblzma/delta/delta_encoder.c -o $(OBJDIR_DEBUG32)/external/xz/src/liblzma/delta/delta_encoder.o
@@ -7493,11 +7527,8 @@ $(OBJDIR_DEBUG32)/external/xz/src/liblzma/common/stream_encoder_mt.o: external/x
 $(OBJDIR_DEBUG32)/external/xz/src/liblzma/common/stream_encoder.o: external/xz/src/liblzma/common/stream_encoder.c
 	$(CC) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c external/xz/src/liblzma/common/stream_encoder.c -o $(OBJDIR_DEBUG32)/external/xz/src/liblzma/common/stream_encoder.o
 
-$(OBJDIR_DEBUG32)/external/xz/src/liblzma/common/stream_decoder.o: external/xz/src/liblzma/common/stream_decoder.c
-	$(CC) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c external/xz/src/liblzma/common/stream_decoder.c -o $(OBJDIR_DEBUG32)/external/xz/src/liblzma/common/stream_decoder.o
-
-$(OBJDIR_DEBUG32)/external/zlib/inflate.o: external/zlib/inflate.c
-	$(CC) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c external/zlib/inflate.c -o $(OBJDIR_DEBUG32)/external/zlib/inflate.o
+$(OBJDIR_DEBUG32)/external/zlib/inftrees.o: external/zlib/inftrees.c
+	$(CC) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c external/zlib/inftrees.c -o $(OBJDIR_DEBUG32)/external/zlib/inftrees.o
 
 $(OBJDIR_DEBUG32)/external/zstd/lib/common/error_private.o: external/zstd/lib/common/error_private.c
 	$(CC) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c external/zstd/lib/common/error_private.c -o $(OBJDIR_DEBUG32)/external/zstd/lib/common/error_private.o
@@ -7517,11 +7548,11 @@ $(OBJDIR_DEBUG32)/external/zlib/zlibcompress.o: external/zlib/zlibcompress.c
 $(OBJDIR_DEBUG32)/external/zlib/trees.o: external/zlib/trees.c
 	$(CC) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c external/zlib/trees.c -o $(OBJDIR_DEBUG32)/external/zlib/trees.o
 
-$(OBJDIR_DEBUG32)/external/zlib/inftrees.o: external/zlib/inftrees.c
-	$(CC) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c external/zlib/inftrees.c -o $(OBJDIR_DEBUG32)/external/zlib/inftrees.o
+$(OBJDIR_DEBUG32)/external/xz/src/liblzma/common/stream_decoder.o: external/xz/src/liblzma/common/stream_decoder.c
+	$(CC) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c external/xz/src/liblzma/common/stream_decoder.c -o $(OBJDIR_DEBUG32)/external/xz/src/liblzma/common/stream_decoder.o
 
-$(OBJDIR_DEBUG32)/external/xz/src/liblzma/common/stream_buffer_encoder.o: external/xz/src/liblzma/common/stream_buffer_encoder.c
-	$(CC) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c external/xz/src/liblzma/common/stream_buffer_encoder.c -o $(OBJDIR_DEBUG32)/external/xz/src/liblzma/common/stream_buffer_encoder.o
+$(OBJDIR_DEBUG32)/external/zlib/inflate.o: external/zlib/inflate.c
+	$(CC) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c external/zlib/inflate.c -o $(OBJDIR_DEBUG32)/external/zlib/inflate.o
 
 $(OBJDIR_DEBUG32)/external/zlib/inffast.o: external/zlib/inffast.c
 	$(CC) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c external/zlib/inffast.c -o $(OBJDIR_DEBUG32)/external/zlib/inffast.o
@@ -7553,11 +7584,11 @@ $(OBJDIR_DEBUG32)/external/xz/src/liblzma/simple/simple_coder.o: external/xz/src
 $(OBJDIR_DEBUG32)/external/xz/src/liblzma/simple/powerpc.o: external/xz/src/liblzma/simple/powerpc.c
 	$(CC) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c external/xz/src/liblzma/simple/powerpc.c -o $(OBJDIR_DEBUG32)/external/xz/src/liblzma/simple/powerpc.o
 
-$(OBJDIR_DEBUG32)/external/xz/src/liblzma/simple/ia64.o: external/xz/src/liblzma/simple/ia64.c
-	$(CC) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c external/xz/src/liblzma/simple/ia64.c -o $(OBJDIR_DEBUG32)/external/xz/src/liblzma/simple/ia64.o
+$(OBJDIR_DEBUG32)/external/xz/src/liblzma/check/crc32_fast.o: external/xz/src/liblzma/check/crc32_fast.c
+	$(CC) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c external/xz/src/liblzma/check/crc32_fast.c -o $(OBJDIR_DEBUG32)/external/xz/src/liblzma/check/crc32_fast.o
 
-$(OBJDIR_DEBUG32)/external/xz/src/liblzma/check/check.o: external/xz/src/liblzma/check/check.c
-	$(CC) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c external/xz/src/liblzma/check/check.c -o $(OBJDIR_DEBUG32)/external/xz/src/liblzma/check/check.o
+$(OBJDIR_DEBUG32)/external/xz/src/liblzma/common/block_header_decoder.o: external/xz/src/liblzma/common/block_header_decoder.c
+	$(CC) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c external/xz/src/liblzma/common/block_header_decoder.c -o $(OBJDIR_DEBUG32)/external/xz/src/liblzma/common/block_header_decoder.o
 
 $(OBJDIR_DEBUG32)/external/xz/src/liblzma/common/block_encoder.o: external/xz/src/liblzma/common/block_encoder.c
 	$(CC) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c external/xz/src/liblzma/common/block_encoder.c -o $(OBJDIR_DEBUG32)/external/xz/src/liblzma/common/block_encoder.o
@@ -7592,11 +7623,11 @@ $(OBJDIR_DEBUG32)/external/xz/src/liblzma/check/crc64_fast.o: external/xz/src/li
 $(OBJDIR_DEBUG32)/external/xz/src/liblzma/check/crc32_table.o: external/xz/src/liblzma/check/crc32_table.c
 	$(CC) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c external/xz/src/liblzma/check/crc32_table.c -o $(OBJDIR_DEBUG32)/external/xz/src/liblzma/check/crc32_table.o
 
-$(OBJDIR_DEBUG32)/external/xz/src/liblzma/check/crc32_fast.o: external/xz/src/liblzma/check/crc32_fast.c
-	$(CC) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c external/xz/src/liblzma/check/crc32_fast.c -o $(OBJDIR_DEBUG32)/external/xz/src/liblzma/check/crc32_fast.o
+$(OBJDIR_DEBUG32)/external/xz/src/liblzma/common/block_header_encoder.o: external/xz/src/liblzma/common/block_header_encoder.c
+	$(CC) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c external/xz/src/liblzma/common/block_header_encoder.c -o $(OBJDIR_DEBUG32)/external/xz/src/liblzma/common/block_header_encoder.o
 
-$(OBJDIR_DEBUG32)/external/xz/src/liblzma/common/block_header_decoder.o: external/xz/src/liblzma/common/block_header_decoder.c
-	$(CC) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c external/xz/src/liblzma/common/block_header_decoder.c -o $(OBJDIR_DEBUG32)/external/xz/src/liblzma/common/block_header_decoder.o
+$(OBJDIR_DEBUG32)/external/xz/src/liblzma/check/check.o: external/xz/src/liblzma/check/check.c
+	$(CC) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c external/xz/src/liblzma/check/check.c -o $(OBJDIR_DEBUG32)/external/xz/src/liblzma/check/check.o
 
 $(OBJDIR_DEBUG32)/external/xz/src/common/tuklib_progname.o: external/xz/src/common/tuklib_progname.c
 	$(CC) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c external/xz/src/common/tuklib_progname.c -o $(OBJDIR_DEBUG32)/external/xz/src/common/tuklib_progname.o
@@ -7631,11 +7662,11 @@ $(OBJDIR_DEBUG32)/external/lzma_sdk/C/XzCrc64.o: external/lzma_sdk/C/XzCrc64.c
 $(OBJDIR_DEBUG32)/external/lzma_sdk/C/Xz.o: external/lzma_sdk/C/Xz.c
 	$(CC) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c external/lzma_sdk/C/Xz.c -o $(OBJDIR_DEBUG32)/external/lzma_sdk/C/Xz.o
 
-$(OBJDIR_DEBUG32)/external/lzma_sdk/C/Sha256Opt.o: external/lzma_sdk/C/Sha256Opt.c
-	$(CC) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c external/lzma_sdk/C/Sha256Opt.c -o $(OBJDIR_DEBUG32)/external/lzma_sdk/C/Sha256Opt.o
+$(OBJDIR_DEBUG32)/external/xz/src/liblzma/common/filter_flags_decoder.o: external/xz/src/liblzma/common/filter_flags_decoder.c
+	$(CC) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c external/xz/src/liblzma/common/filter_flags_decoder.c -o $(OBJDIR_DEBUG32)/external/xz/src/liblzma/common/filter_flags_decoder.o
 
-$(OBJDIR_DEBUG32)/external/xz/src/liblzma/common/filter_encoder.o: external/xz/src/liblzma/common/filter_encoder.c
-	$(CC) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c external/xz/src/liblzma/common/filter_encoder.c -o $(OBJDIR_DEBUG32)/external/xz/src/liblzma/common/filter_encoder.o
+$(OBJDIR_DEBUG32)/external/xz/src/liblzma/common/stream_buffer_encoder.o: external/xz/src/liblzma/common/stream_buffer_encoder.c
+	$(CC) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c external/xz/src/liblzma/common/stream_buffer_encoder.c -o $(OBJDIR_DEBUG32)/external/xz/src/liblzma/common/stream_buffer_encoder.o
 
 $(OBJDIR_DEBUG32)/external/xz/src/liblzma/common/stream_buffer_decoder.o: external/xz/src/liblzma/common/stream_buffer_decoder.c
 	$(CC) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c external/xz/src/liblzma/common/stream_buffer_decoder.c -o $(OBJDIR_DEBUG32)/external/xz/src/liblzma/common/stream_buffer_decoder.o
@@ -7667,11 +7698,11 @@ $(OBJDIR_DEBUG32)/external/xz/src/liblzma/common/hardware_cputhreads.o: external
 $(OBJDIR_DEBUG32)/external/xz/src/liblzma/common/filter_flags_encoder.o: external/xz/src/liblzma/common/filter_flags_encoder.c
 	$(CC) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c external/xz/src/liblzma/common/filter_flags_encoder.c -o $(OBJDIR_DEBUG32)/external/xz/src/liblzma/common/filter_flags_encoder.o
 
-$(OBJDIR_DEBUG32)/external/xz/src/liblzma/common/filter_flags_decoder.o: external/xz/src/liblzma/common/filter_flags_decoder.c
-	$(CC) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c external/xz/src/liblzma/common/filter_flags_decoder.c -o $(OBJDIR_DEBUG32)/external/xz/src/liblzma/common/filter_flags_decoder.o
-
 $(OBJDIR_DEBUG32)/external/bzip/blocksort.o: external/bzip/blocksort.c
 	$(CC) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c external/bzip/blocksort.c -o $(OBJDIR_DEBUG32)/external/bzip/blocksort.o
+
+$(OBJDIR_DEBUG32)/external/xz/src/liblzma/common/filter_encoder.o: external/xz/src/liblzma/common/filter_encoder.c
+	$(CC) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c external/xz/src/liblzma/common/filter_encoder.c -o $(OBJDIR_DEBUG32)/external/xz/src/liblzma/common/filter_encoder.o
 
 $(OBJDIR_DEBUG32)/external/xz/src/liblzma/common/filter_decoder.o: external/xz/src/liblzma/common/filter_decoder.c
 	$(CC) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c external/xz/src/liblzma/common/filter_decoder.c -o $(OBJDIR_DEBUG32)/external/xz/src/liblzma/common/filter_decoder.o
@@ -7706,9 +7737,6 @@ $(OBJDIR_DEBUG32)/external/xz/src/liblzma/common/common.o: external/xz/src/liblz
 $(OBJDIR_DEBUG32)/external/xz/src/liblzma/common/block_util.o: external/xz/src/liblzma/common/block_util.c
 	$(CC) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c external/xz/src/liblzma/common/block_util.c -o $(OBJDIR_DEBUG32)/external/xz/src/liblzma/common/block_util.o
 
-$(OBJDIR_DEBUG32)/external/xz/src/liblzma/common/block_header_encoder.o: external/xz/src/liblzma/common/block_header_encoder.c
-	$(CC) $(CFLAGS_DEBUG32) $(INC_DEBUG32) -c external/xz/src/liblzma/common/block_header_encoder.c -o $(OBJDIR_DEBUG32)/external/xz/src/liblzma/common/block_header_encoder.o
-
 clean_debug32: 
 	rm -f $(OBJ_DEBUG32) $(OUT_DEBUG32)
 	rm -rf bin/Debug32
@@ -7727,13 +7755,13 @@ clean_debug32:
 	rm -rf $(OBJDIR_DEBUG32)/src/misc
 	rm -rf $(OBJDIR_DEBUG32)/src/lib/helper/decompress
 	rm -rf $(OBJDIR_DEBUG32)/src/lib/helper/compress
+	rm -rf $(OBJDIR_DEBUG32)/src/lib/engine/patchstream/compress
 	rm -rf $(OBJDIR_DEBUG32)/src/lib/engine/svfile/common
 	rm -rf $(OBJDIR_DEBUG32)/src/lib/engine/patchstream/rebuild
 	rm -rf $(OBJDIR_DEBUG32)/src/lib/engine/patchstream/decompress
-	rm -rf $(OBJDIR_DEBUG32)/src/lib/engine/patchstream/compress
-	rm -rf $(OBJDIR_DEBUG32)/external/lzham/lzhamdecomp
-	rm -rf $(OBJDIR_DEBUG32)/external/lzham/lzhamlib
 	rm -rf $(OBJDIR_DEBUG32)/external/lzma_sdk/C
+	rm -rf $(OBJDIR_DEBUG32)/external/lzham/lzhamlib
+	rm -rf $(OBJDIR_DEBUG32)/external/lzham/lzhamdecomp
 	rm -rf $(OBJDIR_DEBUG32)/external/fastlzlib/lz4
 	rm -rf $(OBJDIR_DEBUG32)/external/fastlzlib/lzfse/src
 	rm -rf $(OBJDIR_DEBUG32)/external/fastlzlib

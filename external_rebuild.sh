@@ -36,8 +36,8 @@ do_download http://zlib.net/zlib-1.3.1.tar.gz zlib.tar.gz
 do_download http://zlib.net/zlib131.zip zlib.zip
 
 
-do_download https://github.com/facebook/zstd/archive/refs/tags/v1.5.6.tar.gz zstd.tar.gz
-do_download https://github.com/facebook/zstd/archive/refs/tags/v1.5.6.zip zstd.zip
+do_download https://github.com/facebook/zstd/archive/refs/tags/v1.5.7.tar.gz zstd.tar.gz
+do_download https://github.com/facebook/zstd/archive/refs/tags/v1.5.7.zip zstd.zip
 
 do_download https://github.com/lzfse/lzfse/archive/refs/tags/lzfse-1.0.zip lzfse.zip
 do_download https://github.com/lzfse/lzfse/archive/refs/tags/lzfse-1.0.tar.gz lzfse.tar.gz

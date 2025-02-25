@@ -793,6 +793,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="external/zstd/lib/compress/zstd_opt.h" />
+		<Unit filename="external/zstd/lib/compress/zstd_preSplit.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="external/zstd/lib/compress/zstd_preSplit.h" />
 		<Unit filename="external/zstd/lib/compress/zstdmt_compress.c">
 			<Option compilerVar="CC" />
 		</Unit>

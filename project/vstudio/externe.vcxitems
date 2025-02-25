@@ -202,6 +202,7 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\zstd\lib\compress\zstd_lazy.c" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\zstd\lib\compress\zstd_ldm.c" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\zstd\lib\compress\zstd_opt.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\zstd\lib\compress\zstd_preSplit.c" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\zstd\lib\decompress\huf_decompress.c" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\zstd\lib\decompress\zstd_ddict.c" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\external\zstd\lib\decompress\zstd_decompress.c" />
@@ -369,6 +370,7 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\zstd\lib\compress\zstd_compress_sequences.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\zstd\lib\compress\zstd_compress_superblock.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\zstd\lib\compress\zstd_opt.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\zstd\lib\compress\zstd_preSplit.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\external\zstd\lib\zstd.h" />
   </ItemGroup>
   <ItemGroup>

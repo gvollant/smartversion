@@ -274,6 +274,7 @@
 		225CC84427A5859C00CD6927 /* Threads.c in Sources */ = {isa = PBXBuildFile; fileRef = 225CC7FC27A5859C00CD6927 /* Threads.c */; };
 		225CC84527A5859C00CD6927 /* 7zBuf.c in Sources */ = {isa = PBXBuildFile; fileRef = 225CC7FE27A5859C00CD6927 /* 7zBuf.c */; };
 		225CC84627A5859C00CD6927 /* LzmaLib.c in Sources */ = {isa = PBXBuildFile; fileRef = 225CC7FF27A5859C00CD6927 /* LzmaLib.c */; };
+		22E08E332D6E0FED00428D0D /* zstd_preSplit.c in Sources */ = {isa = PBXBuildFile; fileRef = 22E08E312D6E0FEC00428D0D /* zstd_preSplit.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -839,6 +840,8 @@
 		225CC7FF27A5859C00CD6927 /* LzmaLib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = LzmaLib.c; sourceTree = "<group>"; };
 		225CC80027A5859C00CD6927 /* XzEnc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XzEnc.h; sourceTree = "<group>"; };
 		225CC84E27A5877500CD6927 /* svf_md5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = svf_md5.h; sourceTree = "<group>"; };
+		22E08E312D6E0FEC00428D0D /* zstd_preSplit.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = zstd_preSplit.c; sourceTree = "<group>"; };
+		22E08E322D6E0FEC00428D0D /* zstd_preSplit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zstd_preSplit.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1593,6 +1596,8 @@
 		225CC09B27A5827C00CD6927 /* compress */ = {
 			isa = PBXGroup;
 			children = (
+				22E08E312D6E0FEC00428D0D /* zstd_preSplit.c */,
+				22E08E322D6E0FEC00428D0D /* zstd_preSplit.h */,
 				225CC09C27A5827C00CD6927 /* zstd_compress_internal.h */,
 				225CC09D27A5827C00CD6927 /* hist.h */,
 				225CC09E27A5827C00CD6927 /* zstd_ldm.h */,
@@ -2031,6 +2036,7 @@
 				225CC30627A5828000CD6927 /* filter_common.c in Sources */,
 				225CC24A27A5827F00CD6927 /* xxhash.c in Sources */,
 				225CC83627A5859C00CD6927 /* Delta.c in Sources */,
+				22E08E332D6E0FED00428D0D /* zstd_preSplit.c in Sources */,
 				225CC80327A5859C00CD6927 /* Ppmd7Dec.c in Sources */,
 				225CB08F27A581B100CD6927 /* DoExtrSubDfs.c in Sources */,
 				225CB0AE27A581B100CD6927 /* SmartVersionExtracter.c in Sources */,
