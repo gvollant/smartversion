@@ -48,7 +48,10 @@ cd ..
 mkdir xz
 cd xz
 tar xvf ../../rbldext/xz.tar.gz  --strip-components=1
+mkdir -p msvc
 cp ../../config.h.xz config.h
+cp ../../config.h.xz msvc/config.h
+sed -i 's/HAVE_WCWIDTH/HAVE_no_WCWIDTH/g' msvc/config.h
 cd ..
 
 
