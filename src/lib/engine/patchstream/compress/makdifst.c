@@ -1604,7 +1604,7 @@ int SVFAPI DoMakeDifWork(WRITEDIF_STREAM * write_stream)
                   if (internal->cprParam.dfNbHashBit != COMPRESSIONPARAM_AUTOVALUE)
                   {
                     dfNbHashBit = internal->cprParam.dfNbHashBit & 0xff;
-                    if ((dfNbHashBit == 0) || (dfNbHashBit > 31)) dfNbHashBit = COMPRESSIONPARAM_AUTOVALUE;
+                    if ((dfNbHashBit == 0) || (dfNbHashBit > (((sizeof(void*)>=8) ? 38 : 31)))) dfNbHashBit = COMPRESSIONPARAM_AUTOVALUE;
                     if (((internal->cprParam.dfNbHashBit / 0x100) > 0) && ((internal->cprParam.dfNbHashBit / 0x100) <= 0x0f) && (internal->sizeorg>0))
                     {
                       dfPreselectedNbArray = internal->cprParam.dfNbHashBit / 0x100;
