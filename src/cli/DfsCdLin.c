@@ -220,6 +220,7 @@ void SVFAPI help()
          "    [-blocksize #] : select the internal blocksize (8 to 8192, power of 2)\n" \
          "    [-minalign #] : select the minimal alignement of data. Default 1\n" \
          "    [-nbhashbits #] : select the internal number of hash bits\n" \
+         "    [-memoryMB #] : set the physical memory limit (MB)\n" \
          "    [-sha1] : for cz,czz, cr or crz : compute sha1 checksum\n" \
          "\n"\
          "Options for smv x,t,m,cr,cz,i,a before [List of file, dir, wilcard]:\n" \
@@ -1434,6 +1435,21 @@ BOOL SVFAPI BuildPatchCmdLine(dfwcharpc lpszDfsFileName, dfwcharpc pCommandLine)
 
             lValue=ConvertUnicodeStringToLong(szTextNumber);
             cprParam.dfMinimalSearchAlignement=lValue;
+        }
+        else
+        if (((dfCompareUnicodeArgumentWithAnsiString(szPortionLine, "/memoryMB") == 0)) ||
+            ((dfCompareUnicodeArgumentWithAnsiString(szPortionLine, "-memoryMB") == 0)))
+        {
+            dfwchar szBlockSize[MAX_PATH_LENGTH];
+            unsigned long lValue;
+
+            szBlockSize[0]=0;
+            pCommandLine =
+                CopyStrWord(pCommandLine, szBlockSize,
+                            (sizeof(szBlockSize) / sizeof(dfwchar)) - 2);
+
+            lValue=ConvertUnicodeStringToLong(szBlockSize);
+            cprParam.dfPhysicalMemoryKB=lValue*1024;
         }
         else
             if (((dfCompareUnicodeArgumentWithAnsiString(szPortionLine, "/compressratio") == 0)) ||
