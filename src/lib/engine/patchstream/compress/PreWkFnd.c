@@ -420,7 +420,7 @@ HPREWKFND BuildPreWKFnd(ORIGDATA* pOrig, dfuLong64 sizeData,
   {
     pPreWkFnd =
       (PREWKFND *) DfsMalloc(sizeof(PREWKFND) +
-                             ((dfNbBlockHash + 1) * sizeof(PBLOCKHASH_FATLIKE)));
+                             ((dfNbBlockHash + 1) * ((size_t)sizeof(PBLOCKHASH_FATLIKE))));
 
     if (pPreWkFnd != NULL)
     {
