@@ -464,7 +464,16 @@ dfwcharpc SVFAPI GetUnicodeStringDirectorySeparator()
 #include <stdio.h>
 void SVFAPI DispOutUnicodeString(dfwcharpc str)
 {
-    if (str!=NULL)
+    if (str==NULL)
+        return;
+    if (IsUnicodeApiSupported()) {
+      HANDLE hConsoleHandle = GetStdHandle(/*std_out ? */STD_OUTPUT_HANDLE /*: STD_ERROR_HANDLE*/);
+      DWORD nbw;
+      WriteConsoleW(hConsoleHandle, str, (DWORD)dfUnicodeStrlen(str), &nbw, NULL);
+    }
+    else
+    {
       printf("%ws",str);
+    }
 }
 #endif
