@@ -802,9 +802,10 @@ int SVFAPI ApplyMultiFilePatchMemoryEx3(const char* base, int base_only_dir,
 	return ret;
 }
 
-int SVFAPI ApplyMonofilePatchMemoryToMemoryEx(const char* base, int base_only_dir,
+int SVFAPI ApplyMonofilePatchMemoryToMemoryEx2(const char* base, int base_only_dir,
 	const void*patch_buffer, size_t patch_size,
 	const char*destfilename, void** destBuffer, size_t *dest_size,
+	tCustomMallocCallBack pCustomMallocCallBack, dfvoidp dfMallocUserPtr,
 	ERROR_MOMENT *perr_moment,
 	int* perrinfo, char* errBufTxt, int errBufSize, dfuLong32 dfExtractingMethod,
 	dfuLong32 dfBaseVersionSpecified, dfuLong32 dfVersionSpecified,
@@ -865,8 +866,15 @@ int SVFAPI ApplyMonofilePatchMemoryToMemoryEx(const char* base, int base_only_di
 		size_t return_size = (size_t)dfFileFoundSize;
 
 		void* dataBuf = NULL;
-		if ((return_size == dfFileFoundSize) && (destBuffer != NULL))
-			dataBuf = (void*)malloc(return_size);
+		if ((return_size == dfFileFoundSize) && (destBuffer != NULL)) {
+            if (pCustomMallocCallBack != NULL) {
+				dataBuf = pCustomMallocCallBack(return_size, dfMallocUserPtr);
+			}
+			else
+			{
+			    dataBuf = (void*)malloc(return_size);
+			}
+		}
 		if (dataBuf != NULL)
 		{
 			*destBuffer = dataBuf;
@@ -913,6 +921,25 @@ int SVFAPI ApplyMonofilePatchMemoryToMemoryEx(const char* base, int base_only_di
 	return ret;
 }
 
+int SVFAPI ApplyMonofilePatchMemoryToMemoryEx(const char* base, int base_only_dir,
+	const void*patch_buffer, size_t patch_size,
+	const char*destfilename, void** destBuffer, size_t *dest_size,
+	ERROR_MOMENT *perr_moment,
+	int* perrinfo, char* errBufTxt, int errBufSize, dfuLong32 dfExtractingMethod,
+	dfuLong32 dfBaseVersionSpecified, dfuLong32 dfVersionSpecified,
+	tSetExtractPosCallBack pSetExtractPosCallBack, dfvoidp dfUserPtr,
+	dfuLong32 dwMinProgress, dfuLong32 dwMaxProgress)
+{
+    return ApplyMonofilePatchMemoryToMemoryEx2(base, base_only_dir,
+		patch_buffer, patch_size,
+		destfilename, destBuffer, dest_size,
+		NULL, NULL,
+		perr_moment,
+		perrinfo, errBufTxt, errBufSize, dfExtractingMethod,
+		dfBaseVersionSpecified, dfVersionSpecified,
+		pSetExtractPosCallBack, dfUserPtr,
+        dwMinProgress, dwMaxProgress);
+}
 
 int SVFAPI ApplyMonofilePatchMemoryToMemory(const char* base, int base_only_dir,
 	const void*patch_buffer, size_t patch_size,
@@ -2069,31 +2096,35 @@ int SVFAPI WriteBaseFileUncompress(const char* srcfilename, const char* targetFi
 	dfuLong64 write_size = 0;
 
 
-	unsigned char* byteArray = (unsigned char*)malloc(SIZE_BUFFER_READBASE);
+	unsigned char* byteArray = (unsigned char*)DfsMalloc(SIZE_BUFFER_READBASE);
+	if (byteArray == NULL)
+	{
+		return 0;
+	}
 
 	abstract_decompress_stream stream;
 	memset(&stream, 0, sizeof(stream));
 
 
 	size_t size_uncompress_buffer = SIZE_BUFFER_WRITEBASE;
-	void* out_buffer = malloc(size_uncompress_buffer);
-	if (out_buffer == NULL)
+	void* out_buffer = (void*)DfsMalloc(size_uncompress_buffer);
+    if (out_buffer == NULL)
 	{
-		free(byteArray);
+		DfsFree(byteArray);
 		return 0;
 	}
 	FILE* fi = fopen(srcfilename, "rb");
 	if (fi == NULL)
 	{
-		free(out_buffer);
-		free(byteArray);
+		DfsFree(out_buffer);
+		DfsFree(byteArray);
 		return 0;
 	}
 	FILE* fo = fopen(targetFileName, "wb");
 	if (fo == NULL)
 	{
-		free(out_buffer);
-		free(byteArray);
+		DfsFree(out_buffer);
+		DfsFree(byteArray);
 		fclose(fi);
 		return 0;
 	}
@@ -2186,8 +2217,8 @@ int SVFAPI WriteBaseFileUncompress(const char* srcfilename, const char* targetFi
 	fclose(fo);
 	fclose(fi);
 	abstract_decompress_end(&stream);
-	free(out_buffer);
-	free(byteArray);
+	DfsFree(out_buffer);
+	DfsFree(byteArray);
 
   {
     BOOL success = ((write_size == expected_size) && (compute_crc == expected_crc32) && (!source_error) && (!write_error));

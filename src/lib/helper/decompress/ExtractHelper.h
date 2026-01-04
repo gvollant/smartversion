@@ -51,6 +51,12 @@ typedef BOOL(DFSCALLBACK * tSetExtractPosCallBack) (dfuLong32 dwPos,
                                                     dfvoidp dfUserPtr);
 #endif
 
+#ifndef T_CUSTOM_MALLOC_CALLBACK_DEFINED
+#define T_CUSTOM_MALLOC_CALLBACK_DEFINED
+typedef void* (DFSCALLBACK * tCustomMallocCallBack) (dfuIntPtr dfSize,
+                                                     dfvoidp dfUserPtr);
+#endif
+
 typedef enum
 {
   COMPARE_RES_GOOD,
@@ -373,6 +379,16 @@ int SVFAPI ApplyMonofilePatchMemoryToMemory(const char* base,int base_only_dir,
 int SVFAPI ApplyMonofilePatchMemoryToMemoryEx(const char* base, int base_only_dir,
                        const void*patch_buffer, size_t patch_size,
                        const char*destfilename, void** destBuffer, size_t *dest_size,
+                       ERROR_MOMENT *perr_moment,
+                       int* perrinfo, char* errBufTxt, int errBufSize, dfuLong32 dfExtractingMethod,
+                       dfuLong32 dfBaseVersionSpecified, dfuLong32 dfVersionSpecified,
+                       tSetExtractPosCallBack pSetExtractPosCallBack, dfvoidp dfUserPtr,
+                       dfuLong32 dwMinProgress, dfuLong32 dwMaxProgress);
+
+int SVFAPI ApplyMonofilePatchMemoryToMemoryEx2(const char* base, int base_only_dir,
+                       const void*patch_buffer, size_t patch_size,
+                       const char*destfilename, void** destBuffer, size_t *dest_size,
+                       tCustomMallocCallBack pCustomMallocCallBack, dfvoidp dfMallocUserPtr,
                        ERROR_MOMENT *perr_moment,
                        int* perrinfo, char* errBufTxt, int errBufSize, dfuLong32 dfExtractingMethod,
                        dfuLong32 dfBaseVersionSpecified, dfuLong32 dfVersionSpecified,
