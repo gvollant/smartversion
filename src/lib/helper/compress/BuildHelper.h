@@ -58,6 +58,8 @@ int SVFAPI BuildPatchFromTwoFileEx3(const char*DfsToBuild, const char*FirstFilen
 int SVFAPI BuildPatchFromTwoFileExCprParam(const char*DfsToBuild, const char*FirstFilename, const char*SecondFileName, char*errText, dfuLong32 dwErrTextSize,
     COMPRESSIONPARAM* pCprParamToBuildFnc, signed long supp_flags);
 #endif
+
+int SVFAPI AppendPatch(const char* szDfsWork, const char* szDfsToAppend, char* errText, dfuLong32 dwErrTextSize);
 int SVFAPI RecompressPatch(const char* DfsOrg,const char*DfsToBuild, char*errText, dfuLong32 dwErrTextSize,
 	signed long CompressRatio, signed long HashBits, signed long BlockSize, signed long supp_flags);
 #ifdef __cplusplus
